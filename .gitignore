@@ -1,0 +1,20 @@
+# 秘密情報は絶対にコミットしない
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials*.json
+token*.json
+
+# 生成物・作業ファイル
+node_modules/
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db
+
+# 大きめのローデータ（必要なら個別に -f で追加）
+dev/*/data/*.csv
+dev/*/data/*.json
+!dev/*/data/.gitkeep

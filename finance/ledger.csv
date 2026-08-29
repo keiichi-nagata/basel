@@ -1,0 +1,3 @@
+date,type,category,description,amount_jpy,counterparty,memo
+2026-08-29,expense,ai_api,サンプル行（実データ入力時に削除）,0,,家事按分など注記をここに
+2026-08-29,income,paid_note,サンプル行（実データ入力時に削除）,0,note,note #_
