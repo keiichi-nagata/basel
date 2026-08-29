@@ -5,7 +5,10 @@
 ## 今週の焦点
 
 - [ ] リポジトリ雛形の運用開始（本ファイル含む各部READMEを実データで埋める）
-- [ ] 開発3部（ドラマ）1本目を手動で下書き → データソース確定
+- [x] 開発3部 データソース＆合成式の確定（→ `dev/3-drama/sources.md`、`docs/decisions/0002-*`）
+- [ ] 開発3部 自動収集スクリプト `dev/3-drama/pipeline/collect.*` の実装（言語未定）
+- [ ] TMDB APIキーの取得（無料）
+- [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 - [ ] 開発2部の既存note情報を `dev/2-cars/published/0001-first-note.md` に記録
 - [ ] Threads 現行設定を `marketing/threads/config.md` に書き出す
 - [ ] `finance/ledger.csv` に直近の売上・経費を入力
@@ -39,8 +42,9 @@
 - Instagram: （@）／プロアカウント化: 未 / 済
 
 ### ASP
-- A8.net: 審査通過済み
-- もしもアフィリエイト: 未登録（Amazon/楽天をまとめたい → 登録予定）
+- A8.net: 審査通過済み。ABEMA提携済み。U-NEXT案件は無い
+- バリューコマース / アクセストレード: 審査落ち
+- もしもアフィリエイト / afb: 未登録 → **次に申請**（U-NEXT・Amazon Prime Video 用）
 - 楽天アフィリエイト: 未登録
 
 ## 直近KPI（サマリ）
