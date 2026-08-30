@@ -20,11 +20,18 @@ TVer週間 + Netflix Japan Top10 + Google検索トレンド を各0〜100正規�
 
 - `sources.md` — データソース・合成式・パイプライン設計・アフィリ対応表（確定版）
 - `template.md` — note雛形
+- `affiliates.json` — 配信サービス名→アフィリLPのURL。URLを入れるとその週から配信欄が自動でリンク化（`[PR]`付き）。空＝「提携準備中」表示
 - `pipeline/collect.py` — 自動収集スクリプト（+ `requirements.txt`）
 - `data/` — 週次の生データ＋スコア内訳（`YYYY-Www.json`）
 - `data/inputs/` — 自動取得が失敗したときの手動フォールバック（`inputs/README.md`）
-- `drafts/` — `YYYY-Www.md`（`collect.py` が生成、`ranking-writer` が分析を追記）
+- `drafts/` — `YYYY-Www.md`（本文下書き、`ranking-writer` が分析を追記）＋ `YYYY-Www.png`（note/SNS貼付用のランキング表画像）
 - `published/` — `YYYY-Www.md`（公開済みのメタ記録）
+
+## note への貼り方
+
+- ランキング表は `drafts/YYYY-Www.png` を画像として貼る（Markdownの表はnoteで崩れる）。同じ画像を Threads/Instagram にも流用。
+- 各作品の詳細・アフィリリンクは `drafts/YYYY-Www.md` の各作品セクションをそのまま本文に。
+- 冒頭の「本記事はアフィリエイト広告（PR）を含みます」は、アフィリリンクを含む号では景表法（ステマ規制）上**必須**。テンプレに常時入れておく。
 
 ## 実行
 

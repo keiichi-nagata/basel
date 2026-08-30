@@ -1,0 +1,9 @@
+{
+  "_comment": "配信サービス名 -> アフィリエイトのリンク先URL（無料トライアルLP等）。URLを入れると collect.py がその週から配信欄をリンク化する。空文字＝未提携（『提携準備中』表示）。サービス名は draft の表記に合わせる（Netflix / Amazon Prime Video / U-NEXT / Hulu / Disney+ / ABEMA / FOD / TELASA / DMM TV / Lemino / dアニメストア）。",
+  "ABEMA": "",
+  "U-NEXT": "",
+  "Amazon Prime Video": "",
+  "Hulu": "",
+  "DMM TV": "",
+  "Lemino": ""
+}

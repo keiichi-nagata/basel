@@ -84,14 +84,25 @@ TMDB_ATTRIBUTION = (
     "This product uses the TMDB API and JustWatch data but is not endorsed "
     "or certified by TMDB or JustWatch."
 )
-ANIMATION_GENRE_ID = 16
+# ドラマ以外として除外する TMDB TV ジャンル（アニメ・リアリティ・トーク・ニュース）
+EXCLUDE_GENRES = {16: "アニメ", 10764: "リアリティ", 10767: "トーク", 10763: "ニュース"}
 
-# TMDB の provider 名 -> 記事で使うアフィリ区分。提携済み/申請中のみ有効。
-AFFILIATE_BY_PROVIDER = {
-    "ABEMA": "abema",           # 提携済み
-    "Abema TV": "abema",
-    "Amazon Prime Video": "amazon",  # もしも/Amazonアソシエイト 承認後に有効
-}
+# もしも承認等で扱えるようになったら affiliates.json に URL を入れる（下で読み込み）
+AFFILIATE_CANDIDATES = {"ABEMA", "Abema TV", "Amazon Prime Video", "U-NEXT", "Hulu",
+                        "DMM TV", "Lemino", "dアニメストア", "TELASA", "FOD"}
+AFFILIATES_PATH = DRAMA_DIR / "affiliates.json"
+
+
+def _load_affiliates() -> dict[str, str]:
+    try:
+        raw = json.loads(AFFILIATES_PATH.read_text(encoding="utf-8"))
+        return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, str) and v}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+AFFILIATE_URLS = _load_affiliates()
+
 # 見放題だけを見る。rent/buy は含めない。
 SVOD_KINDS = ("flatrate", "free", "ads")
 PROVIDER_NORMALIZE = {
@@ -427,12 +438,12 @@ def enrich_tmdb(title: str, ref_year: int) -> dict:
         "tmdb_id": None,
         "matched_title": None,
         "match_confidence": "low",
-        "is_anime": False,
+        "excluded_genre": None,   # "アニメ" / "リアリティ" 等。非Noneならランク対象外
         "overview": "",
-        "overview_source": "TMDB (要・公式サイトで確認して自分の言葉に書き直す)",
         "season_number": None,
         "episodes_aired": None,
         "episodes_total": None,
+        "episodes_uncertain": True,
         "first_air_date": "",
         "providers_jp": [],
         "needs_check": True,
@@ -453,12 +464,19 @@ def enrich_tmdb(title: str, ref_year: int) -> dict:
         matched = clean_title(detail.get("name") or orig)
         info["tmdb_id"] = tid
         info["matched_title"] = matched
-        info["is_anime"] = ANIMATION_GENRE_ID in genres
+        info["excluded_genre"] = next(
+            (label for gid, label in EXCLUDE_GENRES.items() if gid in genres), None
+        )
         info["overview"] = (detail.get("overview") or "").strip()
-        info["episodes_total"] = detail.get("number_of_episodes")
+        total = detail.get("number_of_episodes")
         lea = detail.get("last_episode_to_air") or {}
         info["season_number"] = lea.get("season_number")
         info["episodes_aired"] = lea.get("episode_number")
+        # TMDB は地上波作品で number_of_episodes が実話数より小さいことがある → 無効化
+        if total and info["episodes_aired"] and total < info["episodes_aired"]:
+            total = None
+        info["episodes_total"] = total
+        info["episodes_uncertain"] = info["episodes_aired"] is None or total is None
         info["first_air_date"] = detail.get("first_air_date") or ""
         jp = (tmdb_get(f"/tv/{tid}/watch/providers").get("results") or {}).get("JP") or {}
         info["providers_jp"] = clean_providers(jp)
@@ -479,6 +497,7 @@ def enrich_tmdb(title: str, ref_year: int) -> dict:
         else:
             info["match_confidence"] = "low"
             info["needs_check"] = True
+            info["episodes_uncertain"] = True
     except Exception as exc:  # noqa: BLE001
         print(f"[tmdb] '{title}' 取得失敗: {exc}")
     return info
@@ -524,18 +543,28 @@ def finalize_ranking(slots: dict[str, dict]) -> list[dict]:
 
 
 # ------------------------------------------------------------------------ output
+def provider_affiliate(name: str) -> str:
+    if AFFILIATE_URLS.get(name):
+        return "linked"
+    if name in AFFILIATE_CANDIDATES:
+        return "pending"
+    return "none"
+
+
 def provider_label(name: str) -> str:
-    aff = AFFILIATE_BY_PROVIDER.get(name, "none")
-    if aff == "abema":
-        return f"{name} [PR]（★ABEMAアフィリリンクを差し込む）"
-    if aff == "amazon":
-        return f"{name} [PR]（★もしも/Amazonアソシエイト承認後にリンク）"
+    url = AFFILIATE_URLS.get(name)
+    if url:
+        return f"[{name}（無料トライアル）]({url}) [PR]"
+    if name in AFFILIATE_CANDIDATES:
+        return f"{name}（提携準備中）"
     return name
 
 
 def episode_text(meta: dict) -> str:
     ep = meta.get("episodes_aired")
-    return f"第{ep}話まで" if ep else "【話数要確認】"
+    if not ep:
+        return "【話数要確認】"
+    return f"第{ep}話まで【要確認】" if meta.get("episodes_uncertain") else f"第{ep}話まで"
 
 
 def assemble_json(wk: dict, items: list[dict], excluded: list[dict],
@@ -558,11 +587,11 @@ def assemble_json(wk: dict, items: list[dict], excluded: list[dict],
                     "season": meta.get("season_number"),
                     "aired": meta.get("episodes_aired"),
                     "total": meta.get("episodes_total"),
-                    "needs_check": meta.get("needs_check", True),
+                    "uncertain": meta.get("episodes_uncertain", True),
                 },
                 "overview": meta.get("overview", ""),
                 "providers_jp": [
-                    {"name": n, "affiliate": AFFILIATE_BY_PROVIDER.get(n, "none")}
+                    {"name": n, "affiliate": provider_affiliate(n)}
                     for n in meta.get("providers_jp", [])
                 ],
                 "first_air_date": meta.get("first_air_date", ""),
@@ -579,8 +608,8 @@ def assemble_json(wk: dict, items: list[dict], excluded: list[dict],
                               "fetched_at": now},
             "tmdb": {"attribution": TMDB_ATTRIBUTION, "fetched_at": now},
         },
-        "excluded_anime": [{"title": e["title"], "matched": e["meta"].get("matched_title")}
-                           for e in excluded],
+        "excluded": [{"title": e["title"], "matched": e["meta"].get("matched_title"),
+                      "reason": e["meta"].get("excluded_genre")} for e in excluded],
         "items": out_items,
     }
 
@@ -594,7 +623,7 @@ def render_draft(wk: dict, items: list[dict]) -> str:
     L.append(
         "TVer週間ランキング・Netflix Japan 週間Top10・Google検索トレンドを合成した"
         "「話題度」の総合指標です。横断的な視聴数そのものを測ったものではありません。"
-        "対象は民放ドラマ＋配信ドラマ（NHK作品・アニメは指標の性質上ランク外）。"
+        "対象は民放ドラマ＋配信ドラマ（NHK作品・アニメ・リアリティ番組は指標の性質上ランク外）。"
     )
     L.append("")
     L.append("| 順位 | 作品 | 合成 | TVer(A) | Netflix(B) | トレンド(C) | 話数 | 主な配信 |")
@@ -650,8 +679,8 @@ def render_draft(wk: dict, items: list[dict]) -> str:
     L.append(
         "TVer週間ランキング順位、Netflix Japan 週間Top10順位、Google検索トレンド（過去7日）の"
         "3要素を各0〜100に正規化し、その作品に存在する要素の単純平均を合成スコアとしています。"
-        "TVer・Netflixのいずれにも入らない作品、およびアニメは対象外です。配信状況は "
-        "TMDB / JustWatch のデータを利用しています（TMDBの公認を受けたものではありません）。"
+        "TVer・Netflixのいずれにも入らない作品、アニメ、恋愛リアリティー等のバラエティは対象外です。"
+        "配信状況は TMDB / JustWatch のデータを利用しています（TMDBの公認を受けたものではありません）。"
     )
     L.append("")
     L.append("## 次回")
@@ -660,6 +689,76 @@ def render_draft(wk: dict, items: list[dict]) -> str:
     L.append("（開発1部の有料noteへの1行導線）")
     L.append("")
     return "\n".join(L)
+
+
+def _jp_font() -> str | None:
+    from matplotlib import font_manager
+
+    for name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic", "IPAGothic",
+                 "TakaoPGothic", "Yu Gothic", "Meiryo", "MS Gothic", "Hiragino Sans"):
+        try:
+            if font_manager.findfont(name, fallback_to_default=False):
+                return name
+        except Exception:  # noqa: BLE001
+            continue
+    return None
+
+
+def render_png(wk: dict, items: list[dict], out_path: Path) -> bool:
+    """note / SNS にそのまま貼れるランキング表の画像を書き出す。失敗しても致命的にしない。"""
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+
+        font = _jp_font()
+        if font:
+            matplotlib.rcParams["font.family"] = font
+        else:
+            print("[png] 日本語フォントが見つからず文字化けの可能性（fonts-noto-cjk を導入）")
+
+        headers = ["順位", "作品", "合成", "TVer", "Netflix", "トレンド"]
+        rows = []
+        for s in items:
+            rows.append([
+                str(s["rank"]),
+                s["title"] + ("  ※要確認" if s["meta"].get("match_confidence") == "low" else ""),
+                f"{s['composite']:.0f}",
+                f"{s['A']['rank']}位" if s["A"] else "—",
+                f"{s['B']['rank']}位" if s["B"] else "—",
+                f"{s['C']:.0f}" if s["C"] is not None else "—",
+            ])
+
+        fig, ax = plt.subplots(figsize=(9.2, 1.3 + 0.5 * len(rows)))
+        ax.axis("off")
+        ax.set_title(f"話題のドラマ総合ランキング  {wk['from']}〜{wk['to']}",
+                     fontsize=15, fontweight="bold", pad=18, loc="left")
+        tbl = ax.table(cellText=rows, colLabels=headers, loc="center", cellLoc="center")
+        tbl.auto_set_font_size(False)
+        tbl.set_fontsize(11)
+        tbl.scale(1, 1.6)
+        widths = [0.07, 0.5, 0.09, 0.1, 0.11, 0.12]
+        for (r, col), cell in tbl.get_celld().items():
+            cell.set_width(widths[col])
+            cell.set_edgecolor("#d0d0d0")
+            if r == 0:
+                cell.set_facecolor("#2b2b2b")
+                cell.set_text_props(color="white", fontweight="bold")
+            else:
+                if col == 1:
+                    cell.set_text_props(ha="left")
+                    cell.PAD = 0.03
+                cell.set_facecolor("#ffffff" if r % 2 else "#f4f6f8")
+        fig.text(0.5, 0.02,
+                 "TVer週間 / Netflix Japan Top10 / Google トレンドの合成指標（横断視聴数ではありません）",
+                 ha="center", fontsize=8, color="#888888")
+        fig.savefig(out_path, dpi=200, bbox_inches="tight", facecolor="white")
+        plt.close(fig)
+        print(f"生成: {out_path.relative_to(REPO_ROOT)}")
+        return True
+    except Exception as exc:  # noqa: BLE001
+        print(f"[png] 生成失敗（スキップ）: {exc}")
+        return False
 
 
 # -------------------------------------------------------------------------- main
@@ -689,8 +788,8 @@ def main() -> int:
             or any(ord(ch) > 0x2E7F for ch in matched)
         ):
             s["title"] = matched
-        if meta.get("is_anime"):
-            print(f"  除外(アニメ): {s['source_title']} -> {matched}")
+        if meta.get("excluded_genre"):
+            print(f"  除外({meta['excluded_genre']}): {s['source_title']} -> {matched}")
             excluded.append(s)
             continue
         kept[key] = s
@@ -726,6 +825,7 @@ def main() -> int:
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     (DRAFT_DIR / f"{wk['week']}.md").write_text(render_draft(wk, items), encoding="utf-8")
+    render_png(wk, items, DRAFT_DIR / f"{wk['week']}.png")
 
     available = [
         name for name, ok in (("TVer", tver), ("Netflix", netflix), ("Trends", trends)) if ok
