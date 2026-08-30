@@ -1,18 +1,20 @@
 # STATE — 現在地（毎週月曜に更新）
 
-最終更新: 2026-08-29
+最終更新: 2026-08-30
 
 ## 今週の焦点
 
-- [ ] リポジトリ雛形の運用開始（本ファイル含む各部READMEを実データで埋める）
 - [x] 開発3部 データソース＆合成式の確定（→ `dev/3-drama/sources.md`、`docs/decisions/0002-*`）
-- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成
+- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成・ローカル検証（2026-W34）
 - [x] TMDB APIキー取得・Secret/.env 登録
-- [ ] リポジトリを GitHub に push（`main`）
-- [ ] Actions を手動実行（Run workflow）して1周目のPRを確認 → スクレイパーの当たり外れを見る
-- [ ] 必要なら `data/inputs/` に手動データを置いて再実行
+- [x] リポジトリを GitHub `keiichi-nagata/basel` に push（`main` = 62da40c）
+- [x] 秘密情報インシデント対応（誤混入した `.enc` を履歴から除去、TMDBトークン再発行、force-push）
+- [ ] GitHub Actions の権限設定（Settings→Actions→General→Read and write + Allow PRs）
+- [ ] Actions を手動実行（Run workflow）して本番週で1周 → PR作成まで確認
+- [ ] TVer をどうするか決定（毎週 `data/inputs/*.tver.json` 手貼り or Netflix+Trendsのみ）
 - [ ] `ranking-writer` で下書きの分析欄を執筆 → レビュー → 1本目公開
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
+- [ ] リポジトリ雛形の運用開始（各部READMEを実データで埋める）
 - [ ] 開発2部の既存note情報を `dev/2-cars/published/0001-first-note.md` に記録
 - [ ] Threads 現行設定を `marketing/threads/config.md` に書き出す
 - [ ] `finance/ledger.csv` に直近の売上・経費を入力
