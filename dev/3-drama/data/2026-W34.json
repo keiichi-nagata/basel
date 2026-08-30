@@ -4,26 +4,26 @@
     "from": "2026-08-17",
     "to": "2026-08-23"
   },
-  "collected_at": "2026-08-30T15:49:07+09:00",
+  "collected_at": "2026-08-30T16:34:17+09:00",
   "sources": {
     "tver": {
-      "count": 0,
-      "fetched_at": "2026-08-30T15:49:07+09:00"
+      "count": 10,
+      "fetched_at": "2026-08-30T16:34:17+09:00"
     },
     "netflix": {
       "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
       "count": 10,
-      "fetched_at": "2026-08-30T15:49:07+09:00"
+      "fetched_at": "2026-08-30T16:34:17+09:00"
     },
     "google_trends": {
       "timeframe": "now 7-d",
       "geo": "JP",
-      "count": 8,
-      "fetched_at": "2026-08-30T15:49:07+09:00"
+      "count": 15,
+      "fetched_at": "2026-08-30T16:34:17+09:00"
     },
     "tmdb": {
       "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
-      "fetched_at": "2026-08-30T15:49:07+09:00"
+      "fetched_at": "2026-08-30T16:34:17+09:00"
     }
   },
   "excluded_anime": [
@@ -40,10 +40,13 @@
     {
       "rank": 1,
       "title": "VIVANT",
-      "source_title": "Vivant",
-      "composite_score": 85.0,
+      "source_title": "VIVANT",
+      "composite_score": 86.7,
       "components": {
-        "A_tver": null,
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
         "B_netflix": {
           "rank": 4,
           "weeks": 12,
@@ -84,16 +87,19 @@
     {
       "rank": 2,
       "title": "Tシャツが乾くまで",
-      "source_title": "Until the T-shirt Dries",
-      "composite_score": 63.5,
+      "source_title": "Ｔシャツが乾くまで",
+      "composite_score": 75.6,
       "components": {
-        "A_tver": null,
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
         "B_netflix": {
           "rank": 2,
           "weeks": 7,
           "score": 90.0
         },
-        "C_trends": 36.9
+        "C_trends": 36.7
       },
       "tmdb_id": 322570,
       "matched_title": "Tシャツが乾くまで",
@@ -121,7 +127,7 @@
       "rank": 3,
       "title": "ラヴ上等",
       "source_title": "Badly in Love",
-      "composite_score": 59.0,
+      "composite_score": 59.1,
       "components": {
         "A_tver": null,
         "B_netflix": {
@@ -129,7 +135,7 @@
           "weeks": 3,
           "score": 100.0
         },
-        "C_trends": 18.0
+        "C_trends": 18.3
       },
       "tmdb_id": 305379,
       "matched_title": "ラヴ上等",
@@ -153,7 +159,7 @@
       "rank": 4,
       "title": "SとX",
       "source_title": "S&X",
-      "composite_score": 42.1,
+      "composite_score": 42.0,
       "components": {
         "A_tver": null,
         "B_netflix": {
@@ -161,7 +167,7 @@
           "weeks": 1,
           "score": 80.0
         },
-        "C_trends": 4.3
+        "C_trends": 4.1
       },
       "tmdb_id": 312523,
       "matched_title": "SとX",
@@ -183,17 +189,90 @@
     },
     {
       "rank": 5,
-      "title": "大空港～GATE24～",
-      "source_title": "GATE24:The Border",
-      "composite_score": 30.2,
+      "title": "告白ー25年目の秘密ー",
+      "source_title": "告白―25年目の秘密―",
+      "composite_score": 40.0,
       "components": {
-        "A_tver": null,
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326063,
+      "matched_title": "告白ー25年目の秘密ー",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 9,
+        "needs_check": false
+      },
+      "overview": "一人の女性に、幼い頃から25年間、片想いし続けてきた主人公。\n\nそれは、「純愛」なのか、それとも執着という名の「狂気」なのか。\n\n陰から彼女を追い続ける理由。\n\nその裏側には、25年前に起きた凄惨な事件と\n\nそれぞれが抱える秘密が深く関係している。\n\n長きにわたる沈黙を破り、彼女と接点を持ったその日から、\n\n日常がスリリングに動き始める。\n\n人は好きな人のことならなんでも知りたい。\n\nだけど、それはどこまでなら許されるのか。\n\nもしも、この愛が全て仕組まれたものだとしたら・・・。\n\n最も無垢で、最も危険なラブサスペンスが幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-11"
+    },
+    {
+      "rank": 6,
+      "title": "ラストノート",
+      "source_title": "ラストノート",
+      "composite_score": 38.8,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 7.6
+      },
+      "tmdb_id": 324581,
+      "matched_title": "ラストノート",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 11,
+        "needs_check": false
+      },
+      "overview": "香料会社の営業部で働く主人公・一瀬葵は、結婚や離婚、仕事での挫折など、49年の人生でさまざまなことを経験していくうちに、あらゆることにしがみつくことをやめ、「これ以上、変化もサプライズもいらない」と、現状維持の日常を送っていた。そんな時、親友に起こったトラブルをきっかけに、夢を諦めてしまった青年、樋口澄晴と出会う。澄晴は、厳しい周囲の環境に打ちのめされた暗い過去があり、自分の本当の想いにフタをしてしまい、流れのままに人生を生きていた。 年齢も、過ごしてきた環境も全く違う二人に、恋の香りがただよう予感なんてなかった。しかし、今の人生を受け入れていたはずの二人がお互いの本当の想いに触れあったとき、隠しきれない本音や、諦めきれない思いがあふれていく。そして、それがまるで香水の最後に香る余韻“ラストノート”のように、お互いの心に溶け合い、二人の運命を変えていく。\n\n20歳近い年の差や、二人を取り巻くさまざまな人間関係など、乗り越えられない壁に何度も襲われる葵と澄晴。しかし、どんなに過酷な現実に阻まれても、大人ぶることをやめた大人たちは、どうしても惹かれ合っていく…。",
+      "providers_jp": [
+        {
+          "name": "FOD Channel Amazon Channel",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-09"
+    },
+    {
+      "rank": 7,
+      "title": "大空港～GATE24～",
+      "source_title": "大空港～GATE24～",
+      "composite_score": 37.1,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
         "B_netflix": {
           "rank": 5,
           "weeks": 5,
           "score": 60.0
         },
-        "C_trends": 0.5
+        "C_trends": 1.4
       },
       "tmdb_id": 323579,
       "matched_title": "大空港～GATE24～",
@@ -214,7 +293,33 @@
       "first_air_date": "2026-07-23"
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "title": "リーガルビート –逆転の法廷–",
+      "source_title": "リーガルビート -逆転の法廷-",
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326139,
+      "matched_title": "リーガルビート –逆転の法廷–",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 3,
+        "needs_check": false
+      },
+      "overview": "声をあげられない人たちの力になりたいと思い、弁護士になった泰地空（鈴鹿央士）。しかし、司法試験に一発合格したにもかかわらず、就職活動の面接では吃音のためうまく話せず、全滅。そんな彼がたどり着いたのは、一風変わった弱小弁護士事務所だった。彼を引き入れたのは「法律で人は救えない」と言う所長の雪村明日実（小雪）と、「勝てない勝負はしない」と豪語する偏屈エリートの星秀幸（稲垣吾郎）。 凸凹すぎる弱小チームが挑むのは、現代社会の闇が潜む難案件ばかり。言葉に詰まり何度も悔しい思いをしてきた泰地だが、彼には「ラップのリズムに乗れば、吃音の症状が出ずに思いのまま話せる」という武器があった。依頼人の‟心の声“を拾い、ラップの爆発力で法廷の絶体絶命なピンチをひっくり返す！個性派弁護士たちが真実を導き出す、痛快逆転リーガルドラマ！",
+      "providers_jp": [],
+      "first_air_date": "2026-07-24"
+    },
+    {
+      "rank": 9,
       "title": "恋は飴模様",
       "source_title": "Our Sticky Love",
       "composite_score": 25.4,
@@ -225,7 +330,7 @@
           "weeks": 2,
           "score": 50.0
         },
-        "C_trends": 0.9
+        "C_trends": 0.7
       },
       "tmdb_id": 291496,
       "matched_title": "恋は飴模様",
@@ -246,63 +351,35 @@
       "first_air_date": "2026-08-07"
     },
     {
-      "rank": 7,
-      "title": "Sai",
-      "source_title": "Sai",
-      "composite_score": 16.2,
+      "rank": 10,
+      "title": "名探偵のままでいて",
+      "source_title": "名探偵のままでいて",
+      "composite_score": 20.9,
       "components": {
-        "A_tver": null,
-        "B_netflix": {
-          "rank": 8,
-          "weeks": 1,
-          "score": 30.0
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
         },
-        "C_trends": 2.4
+        "B_netflix": null,
+        "C_trends": 1.8
       },
-      "tmdb_id": 8576,
-      "matched_title": "Shirdi Wale Sai Baba",
-      "match_confidence": "low",
+      "tmdb_id": 325021,
+      "matched_title": "名探偵のままでいて",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
-        "aired": 13,
-        "total": 13,
-        "needs_check": true
+        "aired": 7,
+        "total": 3,
+        "needs_check": false
       },
-      "overview": "",
-      "providers_jp": [],
-      "first_air_date": "2025-04-21"
-    },
-    {
-      "rank": 8,
-      "title": "오싹한 연애",
-      "source_title": "Spooky in Love",
-      "composite_score": 10.0,
-      "components": {
-        "A_tver": null,
-        "B_netflix": {
-          "rank": 9,
-          "weeks": 3,
-          "score": 20.0
-        },
-        "C_trends": 0.0
-      },
-      "tmdb_id": 298610,
-      "matched_title": "오싹한 연애",
-      "match_confidence": "low",
-      "episodes": {
-        "season": 1,
-        "aired": 12,
-        "total": 12,
-        "needs_check": true
-      },
-      "overview": "",
+      "overview": "物語の主人公は、ミステリー好きの小学校教諭・楓（かえで）。彼女にミステリーの面白さを教えてくれたのは、元小学校校長で、自分を育ててくれた大好きな“祖父”です。しかし71歳の今、祖父は“レビー小体型認知症”を患っており、彼の目には時折、現実のものではない不思議な光景が映っているようでした…。",
       "providers_jp": [
         {
-          "name": "Netflix",
+          "name": "TELESA Amazon Channel",
           "affiliate": "none"
         }
       ],
-      "first_air_date": "2026-07-18"
+      "first_air_date": "2026-07-17"
     }
   ]
 }

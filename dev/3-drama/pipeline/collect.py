@@ -98,6 +98,7 @@ PROVIDER_NORMALIZE = {
     "Disney Plus": "Disney+",
     "Netflix Standard with Ads": "Netflix",
     "Amazon Prime Video with Ads": "Amazon Prime Video",
+    "TELESA": "TELASA",
 }
 
 
@@ -185,39 +186,117 @@ def fetch_netflix(week_sunday: str, week: str) -> list[dict]:
     return load_manual(week, "netflix") or []
 
 
+TVER_PLATFORM_API = "https://platform-api.tver.jp"
+TVER_HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Origin": "https://tver.jp",
+    "Referer": "https://tver.jp/",
+    "x-tver-platform-type": "web",
+}
+# callEpisodeRanking は13ジャンルのランキング束を返す。その中の group id を選ぶ。
+TVER_RANKING_PATH_DEFAULT = "/service/api/v1/callEpisodeRanking"
+TVER_RANKING_GROUP = os.environ.get("TVER_RANKING_GROUP", "drama")  # drama / classicdrama 等
+
+
+def _tver_auth() -> dict | None:
+    """browser/create ハンドシェイクで platform_uid / platform_token を得る。"""
+    try:
+        resp = requests.post(
+            f"{TVER_PLATFORM_API}/v2/api/platform_users/browser/create",
+            headers={**TVER_HEADERS, "Content-Type": "application/x-www-form-urlencoded"},
+            data="device_type=pc",
+            timeout=HTTP_TIMEOUT,
+        )
+        resp.raise_for_status()
+        r = resp.json().get("result", {})
+        if r.get("platform_uid") and r.get("platform_token"):
+            return {"platform_uid": r["platform_uid"], "platform_token": r["platform_token"]}
+    except Exception as exc:  # noqa: BLE001
+        print(f"[tver] 認証取得失敗: {exc}")
+    return None
+
+
+def _tver_episodes_to_rows(episodes: list, exclude_nhk: bool = True) -> list[dict]:
+    out, seen = [], set()
+    for ep in episodes or []:
+        if not isinstance(ep, dict):
+            continue
+        c = ep.get("content") if isinstance(ep.get("content"), dict) else ep
+        if exclude_nhk and c.get("isNHKContent"):
+            continue
+        title = (c.get("seriesTitle") or c.get("title") or "").strip()
+        if not title or title in seen:
+            continue
+        seen.add(title)
+        out.append({"rank": ep.get("rank", len(out) + 1), "title": title,
+                    "broadcaster": c.get("broadcasterName")})
+        if len(out) >= TVER_LIST_LEN_CAP:
+            break
+    for i, r in enumerate(out, start=1):
+        r["rank"] = i
+    return out
+
+
+def _tver_parse(payload: Any, group: str = TVER_RANKING_GROUP) -> list[dict]:
+    """callEpisodeRanking 応答から指定ジャンルグループの [{"rank","title"}] を取り出す。
+
+    応答は result.contents = [ {type:"...Ranking", content:{id:"drama"...}, contents:[episode...]}, ... ]
+    という13ジャンルの束。id が一致するグループの内側 contents を使う。
+    グループ構造でない場合はフラットに episode 列として解釈する。
+    """
+    node = payload.get("result", payload) if isinstance(payload, dict) else payload
+    groups = node.get("contents") if isinstance(node, dict) else node
+    if not isinstance(groups, list) or not groups:
+        return []
+    if isinstance(groups[0], dict) and isinstance(groups[0].get("contents"), list):
+        chosen = next(
+            (g for g in groups if str((g.get("content") or {}).get("id", "")).lower() == group),
+            None,
+        )
+        if chosen is None:
+            avail = [str((g.get("content") or {}).get("id")) for g in groups]
+            print(f"[tver] グループ '{group}' が無い。利用可能: {', '.join(avail)}")
+            return []
+        return _tver_episodes_to_rows(chosen.get("contents", []))
+    return _tver_episodes_to_rows(groups)
+
+
 def fetch_tver(week: str) -> list[dict]:
     """TVer 週間ドラマランキング。
 
-    TVer には公式に開かれたランキングAPIが無い。非公開エンドポイントは仕様変更・
-    規約リスクがあるため v1 では自動取得を試みたうえで、失敗時は手動入力
+    browser/create ハンドシェイク → callEpisodeRanking を叩き、応答内の
+    '{TVER_RANKING_GROUP}' グループ（既定: drama）を取り出す。失敗時は手動入力
     （data/inputs/<week>.tver.json）へ自動フォールバックする。
+    環境変数: TVER_RANKING_URL（完全URL上書き）/ TVER_RANKING_PATH（パス上書き）/
+    TVER_RANKING_GROUP（グループid）。
     """
-    endpoint = os.environ.get("TVER_RANKING_URL", "").strip()
-    if endpoint:
-        try:
-            resp = requests.get(
-                endpoint, headers={"User-Agent": USER_AGENT}, timeout=HTTP_TIMEOUT
-            )
-            resp.raise_for_status()
-            payload = resp.json()
-            rows = payload if isinstance(payload, list) else payload.get("contents", [])
-            result = []
-            for i, row in enumerate(rows[:TVER_LIST_LEN_CAP], start=1):
-                title = (
-                    row.get("title")
-                    or row.get("seriesTitle")
-                    or (row.get("content") or {}).get("title")
-                    or ""
-                ).strip()
-                if title:
-                    result.append({"rank": row.get("rank", i), "title": title})
-            if result:
-                return result
-            print("[tver] エンドポイントから0件。フォールバックへ")
-        except Exception as exc:  # noqa: BLE001
-            print(f"[tver] 自動取得失敗: {exc}")
-    else:
-        print("[tver] TVER_RANKING_URL 未設定。手動入力を使用")
+    full_url = os.environ.get("TVER_RANKING_URL", "").strip()
+    path = os.environ.get("TVER_RANKING_PATH", "").strip() or TVER_RANKING_PATH_DEFAULT
+
+    auth = _tver_auth()
+    if not auth:
+        print("[tver] 認証取れず。手動入力（inputs/README.md）を使用")
+        return load_manual(week, "tver") or []
+
+    url = full_url or f"{TVER_PLATFORM_API}{path}"
+    try:
+        resp = requests.get(url, headers=TVER_HEADERS, params=auth, timeout=HTTP_TIMEOUT)
+        if resp.status_code != 200:
+            print(f"[tver] {url} -> HTTP {resp.status_code}")
+            return load_manual(week, "tver") or []
+        payload = resp.json()
+        raw_dir = DATA_DIR / "raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        (raw_dir / f"tver_{week}.json").write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        rows = _tver_parse(payload)
+        if rows:
+            print(f"[tver] {TVER_RANKING_GROUP} グループから {len(rows)}件")
+            return rows
+        print("[tver] 0件。フォールバックへ")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[tver] 取得失敗: {exc}")
     return load_manual(week, "tver") or []
 
 
@@ -332,8 +411,13 @@ def clean_providers(jp_block: dict) -> list[str]:
     names: list[str] = []
     for kind in SVOD_KINDS:
         for p in jp_block.get(kind, []) or []:
-            name = PROVIDER_NORMALIZE.get(p["provider_name"], p["provider_name"])
-            if name not in names:
+            name = p["provider_name"]
+            # 「◯◯ Amazon Channel」等のチャンネル販売はベース名に寄せる
+            for suffix in (" Amazon Channel", " Apple TV Channel", " Channel"):
+                if name.endswith(suffix):
+                    name = name[: -len(suffix)]
+            name = PROVIDER_NORMALIZE.get(name, name)
+            if name and name not in names:
                 names.append(name)
     return names
 
