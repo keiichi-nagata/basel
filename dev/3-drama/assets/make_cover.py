@@ -42,19 +42,21 @@ ax.set_ylim(0, 1)
 
 ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=BG))
 ax.add_patch(plt.Rectangle((0, 0), 1, 0.02, color=ACCENT))          # 下端ライン（SNS用）
-ax.add_patch(plt.Rectangle((0.075, 0.865), 0.08, 0.02, color=ACCENT))  # タイトル上バー
+# マガジントップは中央の細い横帯（おおよそ y=0.33〜0.67）だけ表示される。
+# タイトル＋タグラインをその中に収める。
+ax.add_patch(plt.Rectangle((0.075, 0.635), 0.075, 0.017, color=ACCENT))  # タイトル上バー
 
-_title = ax.text(0.072, 0.60, "話題のドラマ\n総合ランキング",
-                 fontsize=37, color=TITLE, fontweight="bold", va="center", linespacing=1.15)
-_title.set_path_effects([pe.withStroke(linewidth=1.8, foreground=TITLE)])
+_title = ax.text(0.072, 0.535, "話題のドラマ総合ランキング",
+                 fontsize=28, color=TITLE, fontweight="bold", va="center")
+_title.set_path_effects([pe.withStroke(linewidth=1.4, foreground=TITLE)])
 
-ax.text(0.075, 0.29,
-        "TVer週間  ・  Netflix Japan Top10  ・  検索トレンドを合成した独自指標",
-        fontsize=13, color=SUB, va="center")
+ax.text(0.075, 0.43,
+        "TVer ・ Netflix Japan ・ Google検索トレンド を合成した独自の“話題度”指標",
+        fontsize=12, color=SUB, va="center")
 
 # 安全帯の外（SNSシェア時のみ見える）
-ax.text(0.075, 0.13, "毎週月曜更新   ｜   無料マガジン",
-        fontsize=11.5, color=MUTE, va="center")
+ax.text(0.075, 0.23, "毎週月曜更新   ｜   無料マガジン",
+        fontsize=11, color=MUTE, va="center")
 
 fig.savefig(OUT, dpi=200, facecolor=BG)
 plt.close(fig)
