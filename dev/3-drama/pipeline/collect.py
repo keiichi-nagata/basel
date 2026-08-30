@@ -775,7 +775,14 @@ def main() -> int:
 
     slots = assemble_slots(tver, netflix)
 
-    # TMDB 補完 → 日本語タイトル確定・アニメ除外
+    # 手動の除外リスト（data/inputs/YYYY-Www.drop.json = ["作品名の一部", ...]）。
+    # 特定できない/誤マッチのNetflix英題などをレビュー時に落とすための逃げ道。
+    drop_terms = [str(d).lower() for d in (load_manual(wk["week"], "drop") or [])]
+    # 手動の確認済みリスト（data/inputs/YYYY-Www.confirm.json）。
+    # 目視で正しいと確認した作品の照合フラグを ok に上書きし、⚠️/要確認を消す。
+    confirm_terms = [str(d).lower() for d in (load_manual(wk["week"], "confirm") or [])]
+
+    # TMDB 補完 → 日本語タイトル確定・アニメ/リアリティ除外・手動除外
     kept: dict[str, dict] = {}
     excluded: list[dict] = []
     for key, s in slots.items():
@@ -792,6 +799,15 @@ def main() -> int:
             print(f"  除外({meta['excluded_genre']}): {s['source_title']} -> {matched}")
             excluded.append(s)
             continue
+        hay = f"{s['source_title']} {s['title']} {matched}".lower()
+        if drop_terms and any(t in hay for t in drop_terms):
+            print(f"  除外(手動): {s['source_title']} -> {matched}")
+            meta["excluded_genre"] = "手動除外"
+            excluded.append(s)
+            continue
+        if confirm_terms and any(t in hay for t in confirm_terms):
+            meta["match_confidence"] = "ok"
+            meta["needs_check"] = False
         kept[key] = s
         time.sleep(0.25)
 

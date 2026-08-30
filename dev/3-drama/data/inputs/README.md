@@ -38,6 +38,15 @@ trends.google.co.jp で対象作品名を比較し、相対値（0〜100）を�
 }
 ```
 
+## `2026-W36.drop.json` — 手動除外リスト（任意）
+
+特定できない／TMDBが誤マッチしたNetflix英題などを、レビュー時にランキングから外す。
+文字列の部分一致（大文字小文字無視）で `source_title` / 日本語タイトル / TMDB一致名 のどれかに当たれば除外。
+
+```json
+["Sai", "Shirdi Wale Sai Baba"]
+```
+
 ## 注意
 
 - `title` は TVer / Netflix の表記に合わせる。表記ゆれがあると別作品として扱われる。

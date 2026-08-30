@@ -4,26 +4,26 @@
     "from": "2026-08-24",
     "to": "2026-08-30"
   },
-  "collected_at": "2026-08-31T02:04:32+09:00",
+  "collected_at": "2026-08-31T02:39:45+09:00",
   "sources": {
     "tver": {
       "count": 10,
-      "fetched_at": "2026-08-31T02:04:32+09:00"
+      "fetched_at": "2026-08-31T02:39:45+09:00"
     },
     "netflix": {
       "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
       "count": 10,
-      "fetched_at": "2026-08-31T02:04:32+09:00"
+      "fetched_at": "2026-08-31T02:39:45+09:00"
     },
     "google_trends": {
       "timeframe": "now 7-d",
       "geo": "JP",
-      "count": 14,
-      "fetched_at": "2026-08-31T02:04:32+09:00"
+      "count": 13,
+      "fetched_at": "2026-08-31T02:39:45+09:00"
     },
     "tmdb": {
       "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
-      "fetched_at": "2026-08-31T02:04:32+09:00"
+      "fetched_at": "2026-08-31T02:39:45+09:00"
     }
   },
   "excluded": [
@@ -36,6 +36,11 @@
       "title": "スーパーの裏でヤニ吸うふたり",
       "matched": "スーパーの裏でヤニ吸うふたり",
       "reason": "アニメ"
+    },
+    {
+      "title": "Sai",
+      "matched": "Shirdi Wale Sai Baba",
+      "reason": "手動除外"
     },
     {
       "title": "無職転生 ～異世界行ったら本気だす～",
@@ -106,7 +111,7 @@
           "weeks": 7,
           "score": 90.0
         },
-        "C_trends": 37.7
+        "C_trends": 37.8
       },
       "tmdb_id": 322570,
       "matched_title": "Tシャツが乾くまで",
@@ -243,7 +248,7 @@
           "weeks": 5,
           "score": 60.0
         },
-        "C_trends": 0.7
+        "C_trends": 0.8
       },
       "tmdb_id": 323579,
       "matched_title": "大空港～GATE24～",
@@ -341,7 +346,7 @@
       },
       "tmdb_id": 325124,
       "matched_title": "Tokyo middle 30",
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
         "aired": 6,
@@ -354,30 +359,34 @@
     },
     {
       "rank": 10,
-      "title": "Sai",
-      "source_title": "Sai",
-      "composite_score": 15.8,
+      "title": "名探偵のままでいて",
+      "source_title": "名探偵のままでいて",
+      "composite_score": 15.7,
       "components": {
-        "A_tver": null,
-        "B_netflix": {
+        "A_tver": {
           "rank": 8,
-          "weeks": 1,
           "score": 30.0
         },
-        "C_trends": 1.5
+        "B_netflix": null,
+        "C_trends": 1.3
       },
-      "tmdb_id": 8576,
-      "matched_title": "Shirdi Wale Sai Baba",
-      "match_confidence": "low",
+      "tmdb_id": 325021,
+      "matched_title": "名探偵のままでいて",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
-        "aired": 13,
-        "total": 13,
+        "aired": 7,
+        "total": null,
         "uncertain": true
       },
-      "overview": "",
-      "providers_jp": [],
-      "first_air_date": "2025-04-21"
+      "overview": "物語の主人公は、ミステリー好きの小学校教諭・楓（かえで）。彼女にミステリーの面白さを教えてくれたのは、元小学校校長で、自分を育ててくれた大好きな“祖父”です。しかし71歳の今、祖父は“レビー小体型認知症”を患っており、彼の目には時折、現実のものではない不思議な光景が映っているようでした…。",
+      "providers_jp": [
+        {
+          "name": "TELASA",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-17"
     }
   ]
 }
