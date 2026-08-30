@@ -1,0 +1,308 @@
+{
+  "week": "2026-W34",
+  "range": {
+    "from": "2026-08-17",
+    "to": "2026-08-23"
+  },
+  "collected_at": "2026-08-30T15:49:07+09:00",
+  "sources": {
+    "tver": {
+      "count": 0,
+      "fetched_at": "2026-08-30T15:49:07+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-08-30T15:49:07+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 8,
+      "fetched_at": "2026-08-30T15:49:07+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-08-30T15:49:07+09:00"
+    }
+  },
+  "excluded_anime": [
+    {
+      "title": "スーパーの裏でヤニ吸うふたり",
+      "matched": "スーパーの裏でヤニ吸うふたり"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "Vivant",
+      "composite_score": 85.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 12,
+          "score": 70.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 5,
+        "total": 21,
+        "needs_check": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "amazon"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "Tシャツが乾くまで",
+      "source_title": "Until the T-shirt Dries",
+      "composite_score": 63.5,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 7,
+          "score": 90.0
+        },
+        "C_trends": 36.9
+      },
+      "tmdb_id": 322570,
+      "matched_title": "Tシャツが乾くまで",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 10,
+        "needs_check": false
+      },
+      "overview": "ある夏の日、二組の夫婦がとある事故に巻き込まれてしまう。それがきっかけで、当たり前に続いていくと思っていた二組の夫婦の幸せな日常が、突如として崩れ去っていくことに。さらに、その事故が暴いたのは、愛する人の“第３金曜日の秘密”だった——。第３金曜日、行方不明、Ｔシャツ…これらのワードが意味することとは？あらすじさえ語れない、「二組の夫婦の喪失から始まる“愛”と“秘密”の物語」がこの夏、幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-10"
+    },
+    {
+      "rank": 3,
+      "title": "ラヴ上等",
+      "source_title": "Badly in Love",
+      "composite_score": 59.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 1,
+          "weeks": 3,
+          "score": 100.0
+        },
+        "C_trends": 18.0
+      },
+      "tmdb_id": 305379,
+      "matched_title": "ラヴ上等",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 13,
+        "total": 20,
+        "needs_check": false
+      },
+      "overview": "元暴走族総長に少年院上がり、足を洗ったインテリヤクザなど、壮絶な過去を持つヤンキー男女11人が、激情に満ちた14日間を共に過ごす。常に一触即発のなか、生まれるのはロマンスか、大惨事か。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2025-12-09"
+    },
+    {
+      "rank": 4,
+      "title": "SとX",
+      "source_title": "S&X",
+      "composite_score": 42.1,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 1,
+          "score": 80.0
+        },
+        "C_trends": 4.3
+      },
+      "tmdb_id": 312523,
+      "matched_title": "SとX",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 7,
+        "needs_check": false
+      },
+      "overview": "セックスセラピスト・霜鳥壱人のクリニックには、多様で切実な性の悩みが日々寄せられる。霜鳥はそれぞれの声に誠実に向き合うが、彼自身もまた人知れず悩みを抱えていた。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-20"
+    },
+    {
+      "rank": 5,
+      "title": "大空港～GATE24～",
+      "source_title": "GATE24:The Border",
+      "composite_score": 30.2,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 5,
+          "score": 60.0
+        },
+        "C_trends": 0.5
+      },
+      "tmdb_id": 323579,
+      "matched_title": "大空港～GATE24～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 10,
+        "needs_check": false
+      },
+      "overview": "密輸、偽造パスポート、人身売買、テロ――。国際犯罪を水際で防ぐ“国の最終防衛ライン”である空港。その要となるのが《税関》と《入管》。人の心を読むのは苦手だが、モノには鋭い観察眼を持つ税関職員・森万智（趣里）をはじめ、超エリートの入国審査官・早見圭一郎（眞栄田郷敦）、たたき上げの税関職員・松山篤志（板垣李光人）…など各省庁から寄せ集められた個性あふれるメンバーが、スペシャルユニット《GATE24》を結成！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-23"
+    },
+    {
+      "rank": 6,
+      "title": "恋は飴模様",
+      "source_title": "Our Sticky Love",
+      "composite_score": 25.4,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 2,
+          "score": 50.0
+        },
+        "C_trends": 0.9
+      },
+      "tmdb_id": 291496,
+      "matched_title": "恋は飴模様",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 12,
+        "total": 12,
+        "needs_check": false
+      },
+      "overview": "記憶を失ったバリキャリ検事が、彼氏を名乗るボクシングコーチと一緒に暮らすことに。果たしてこんなベタな状況から本当の愛は生まれるの?",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-07"
+    },
+    {
+      "rank": 7,
+      "title": "Sai",
+      "source_title": "Sai",
+      "composite_score": 16.2,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 8,
+          "weeks": 1,
+          "score": 30.0
+        },
+        "C_trends": 2.4
+      },
+      "tmdb_id": 8576,
+      "matched_title": "Shirdi Wale Sai Baba",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 13,
+        "total": 13,
+        "needs_check": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": "2025-04-21"
+    },
+    {
+      "rank": 8,
+      "title": "오싹한 연애",
+      "source_title": "Spooky in Love",
+      "composite_score": 10.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 9,
+          "weeks": 3,
+          "score": 20.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 298610,
+      "matched_title": "오싹한 연애",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 12,
+        "total": 12,
+        "needs_check": true
+      },
+      "overview": "",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-18"
+    }
+  ]
+}

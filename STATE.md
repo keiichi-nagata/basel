@@ -6,8 +6,12 @@
 
 - [ ] リポジトリ雛形の運用開始（本ファイル含む各部READMEを実データで埋める）
 - [x] 開発3部 データソース＆合成式の確定（→ `dev/3-drama/sources.md`、`docs/decisions/0002-*`）
-- [ ] 開発3部 自動収集スクリプト `dev/3-drama/pipeline/collect.*` の実装（言語未定）
-- [ ] TMDB APIキーの取得（無料）
+- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成
+- [x] TMDB APIキー取得・Secret/.env 登録
+- [ ] リポジトリを GitHub に push（`main`）
+- [ ] Actions を手動実行（Run workflow）して1周目のPRを確認 → スクレイパーの当たり外れを見る
+- [ ] 必要なら `data/inputs/` に手動データを置いて再実行
+- [ ] `ranking-writer` で下書きの分析欄を執筆 → レビュー → 1本目公開
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 - [ ] 開発2部の既存note情報を `dev/2-cars/published/0001-first-note.md` に記録
 - [ ] Threads 現行設定を `marketing/threads/config.md` に書き出す

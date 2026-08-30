@@ -1,0 +1,56 @@
+name: drama-weekly
+
+# 毎週月曜 06:00 JST（= 日曜 21:00 UTC）に週次データを収集し、
+# レビュー用のプルリクを開く。手動実行も可（Actions タブ → Run workflow）。
+on:
+  schedule:
+    - cron: "0 21 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: dev/3-drama/pipeline/requirements.txt
+
+      - name: Install deps
+        run: pip install -r dev/3-drama/pipeline/requirements.txt
+
+      - name: Collect weekly data
+        env:
+          TMDB_API_TOKEN: ${{ secrets.TMDB_API_TOKEN }}
+          # TVer 自動取得を有効化する場合のみ設定（未設定なら手動入力を使用）
+          TVER_RANKING_URL: ${{ secrets.TVER_RANKING_URL }}
+        run: python dev/3-drama/pipeline/collect.py
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: drama/auto-collect
+          base: main
+          title: "3-drama: 週次データ収集"
+          commit-message: "chore(3-drama): 週次データ収集"
+          add-paths: |
+            dev/3-drama/data/**
+            dev/3-drama/drafts/**
+          body: |
+            自動収集の下書きです。マージせず、下記を済ませてから note へ公開してください。
+
+            1. `ranking-writer` エージェントで「人気の理由」「定点観測」「来週の注目」を執筆
+            2. `【話数要確認】` `【要確認】` `【要記入】` を解消（番組公式サイト/番組表で確認）
+            3. あらすじを公式ベースで自分の言葉に書き直す
+            4. 冒頭の広告表記、配信リンクの `[PR]` 差し込みを確認
+            5. 公開後、`published/` にメタ記録、`finance/kpi.csv` に初速
+
+            ※ 取得できたソースが2つ未満の場合は `dev/3-drama/data/inputs/`
+              （`inputs/README.md` 参照）に手動データを置き、`workflow_dispatch` で再実行。

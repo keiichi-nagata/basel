@@ -20,10 +20,17 @@ TVer週間 + Netflix Japan Top10 + Google検索トレンド を各0〜100正規�
 
 - `sources.md` — データソース・合成式・パイプライン設計・アフィリ対応表（確定版）
 - `template.md` — note雛形
-- `pipeline/` — 自動収集スクリプト（`collect.*`）
-- `data/` — 週次の生データ＋スコア内訳（JSONスキーマは `sources.md`）
-- `drafts/` — `YYYY-Www.md`（作業中）
+- `pipeline/collect.py` — 自動収集スクリプト（+ `requirements.txt`）
+- `data/` — 週次の生データ＋スコア内訳（`YYYY-Www.json`）
+- `data/inputs/` — 自動取得が失敗したときの手動フォールバック（`inputs/README.md`）
+- `drafts/` — `YYYY-Www.md`（`collect.py` が生成、`ranking-writer` が分析を追記）
 - `published/` — `YYYY-Www.md`（公開済みのメタ記録）
+
+## 実行
+
+- 自動: `.github/workflows/drama-weekly.yml`（毎週月曜 06:00 JST → レビュー用PRを作成）
+- 手動: Actions タブ → drama-weekly → Run workflow、またはローカルで
+  `python dev/3-drama/pipeline/collect.py`（`.env` に `TMDB_API_TOKEN`）
 
 ## ワークフロー
 
