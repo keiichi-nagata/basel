@@ -4,26 +4,26 @@
     "from": "2026-08-24",
     "to": "2026-08-30"
   },
-  "collected_at": "2026-08-31T02:39:45+09:00",
+  "collected_at": "2026-08-31T03:31:35+09:00",
   "sources": {
     "tver": {
       "count": 10,
-      "fetched_at": "2026-08-31T02:39:45+09:00"
+      "fetched_at": "2026-08-31T03:31:35+09:00"
     },
     "netflix": {
       "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
       "count": 10,
-      "fetched_at": "2026-08-31T02:39:45+09:00"
+      "fetched_at": "2026-08-31T03:31:35+09:00"
     },
     "google_trends": {
       "timeframe": "now 7-d",
       "geo": "JP",
       "count": 13,
-      "fetched_at": "2026-08-31T02:39:45+09:00"
+      "fetched_at": "2026-08-31T03:31:35+09:00"
     },
     "tmdb": {
       "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
-      "fetched_at": "2026-08-31T02:39:45+09:00"
+      "fetched_at": "2026-08-31T03:31:35+09:00"
     }
   },
   "excluded": [
@@ -53,6 +53,7 @@
       "rank": 1,
       "title": "VIVANT",
       "source_title": "VIVANT",
+      "broadcaster": "TBS",
       "composite_score": 90.0,
       "components": {
         "A_tver": {
@@ -100,6 +101,7 @@
       "rank": 2,
       "title": "Tシャツが乾くまで",
       "source_title": "Ｔシャツが乾くまで",
+      "broadcaster": "TBS",
       "composite_score": 72.6,
       "components": {
         "A_tver": {
@@ -111,7 +113,7 @@
           "weeks": 7,
           "score": 90.0
         },
-        "C_trends": 37.8
+        "C_trends": 37.9
       },
       "tmdb_id": 322570,
       "matched_title": "Tシャツが乾くまで",
@@ -139,7 +141,8 @@
       "rank": 3,
       "title": "SとX",
       "source_title": "S&X",
-      "composite_score": 42.2,
+      "broadcaster": null,
+      "composite_score": 42.1,
       "components": {
         "A_tver": null,
         "B_netflix": {
@@ -147,7 +150,7 @@
           "weeks": 1,
           "score": 80.0
         },
-        "C_trends": 4.4
+        "C_trends": 4.3
       },
       "tmdb_id": 312523,
       "matched_title": "SとX",
@@ -171,6 +174,7 @@
       "rank": 4,
       "title": "告白ー25年目の秘密ー",
       "source_title": "告白―25年目の秘密―",
+      "broadcaster": "日テレ",
       "composite_score": 40.0,
       "components": {
         "A_tver": {
@@ -206,6 +210,7 @@
       "rank": 5,
       "title": "ラストノート",
       "source_title": "ラストノート",
+      "broadcaster": "フジテレビ",
       "composite_score": 38.6,
       "components": {
         "A_tver": {
@@ -237,6 +242,7 @@
       "rank": 6,
       "title": "大空港～GATE24～",
       "source_title": "大空港～GATE24～",
+      "broadcaster": "テレビ朝日",
       "composite_score": 36.9,
       "components": {
         "A_tver": {
@@ -248,7 +254,7 @@
           "weeks": 5,
           "score": 60.0
         },
-        "C_trends": 0.8
+        "C_trends": 0.7
       },
       "tmdb_id": 323579,
       "matched_title": "大空港～GATE24～",
@@ -272,6 +278,7 @@
       "rank": 7,
       "title": "リーガルビート –逆転の法廷–",
       "source_title": "リーガルビート -逆転の法廷-",
+      "broadcaster": "テレ東",
       "composite_score": 30.0,
       "components": {
         "A_tver": {
@@ -303,6 +310,7 @@
       "rank": 8,
       "title": "恋は飴模様",
       "source_title": "Our Sticky Love",
+      "broadcaster": null,
       "composite_score": 25.0,
       "components": {
         "A_tver": null,
@@ -335,6 +343,7 @@
       "rank": 9,
       "title": "Tokyo middle 30",
       "source_title": "Tokyo middle 30",
+      "broadcaster": "フジテレビ",
       "composite_score": 20.2,
       "components": {
         "A_tver": {
@@ -361,14 +370,15 @@
       "rank": 10,
       "title": "名探偵のままでいて",
       "source_title": "名探偵のままでいて",
-      "composite_score": 15.7,
+      "broadcaster": "テレビ朝日",
+      "composite_score": 15.6,
       "components": {
         "A_tver": {
           "rank": 8,
           "score": 30.0
         },
         "B_netflix": null,
-        "C_trends": 1.3
+        "C_trends": 1.2
       },
       "tmdb_id": 325021,
       "matched_title": "名探偵のままでいて",

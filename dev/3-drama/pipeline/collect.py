@@ -511,11 +511,13 @@ def assemble_slots(tver: list[dict], netflix: list[dict]) -> dict[str, dict]:
     def slot(t: str) -> dict:
         return slots.setdefault(
             squash(t), {"title": t.strip(), "source_title": t.strip(),
-                        "A": None, "B": None, "C": None}
+                        "A": None, "B": None, "C": None, "broadcaster": None}
         )
 
     for row in tver:
-        slot(row["title"])["A"] = {"rank": row["rank"], "score": norm_rank(row["rank"], tver_len)}
+        sl = slot(row["title"])
+        sl["A"] = {"rank": row["rank"], "score": norm_rank(row["rank"], tver_len)}
+        sl["broadcaster"] = row.get("broadcaster")
     for row in netflix:
         slot(row["title"])["B"] = {
             "rank": row["rank"], "weeks": row.get("weeks"),
@@ -567,6 +569,22 @@ def episode_text(meta: dict) -> str:
     return f"第{ep}話まで【要確認】" if meta.get("episodes_uncertain") else f"第{ep}話まで"
 
 
+def watch_summary(item: dict, compact: bool = False) -> str:
+    """視聴手段。TVer上位＝民放で放送中とみなし、放送局＋TVerを先頭に置く。"""
+    provs = item.get("meta", {}).get("providers_jp", [])
+    parts: list[str] = []
+    if item.get("A"):
+        bc = item.get("broadcaster")
+        head = f"{bc}系" if bc else "民放"
+        parts.append(head if compact else f"{head}で放送／見逃し配信 TVer")
+    if compact:
+        parts += list(provs[:2])
+    else:
+        parts += [provider_label(n) for n in provs]
+    sep = "／" if compact else " ／ "
+    return sep.join(parts) if parts else "【要確認】"
+
+
 def assemble_json(wk: dict, items: list[dict], excluded: list[dict],
                   tver, netflix, trends) -> dict:
     now = datetime.now(JST).isoformat(timespec="seconds")
@@ -578,6 +596,7 @@ def assemble_json(wk: dict, items: list[dict], excluded: list[dict],
                 "rank": s["rank"],
                 "title": s["title"],
                 "source_title": s.get("source_title", s["title"]),
+                "broadcaster": s.get("broadcaster"),
                 "composite_score": s["composite"],
                 "components": {"A_tver": s["A"], "B_netflix": s["B"], "C_trends": s["C"]},
                 "tmdb_id": meta.get("tmdb_id"),
@@ -626,18 +645,17 @@ def render_draft(wk: dict, items: list[dict]) -> str:
         "対象は民放ドラマ＋配信ドラマ（NHK作品・アニメ・リアリティ番組は指標の性質上ランク外）。"
     )
     L.append("")
-    L.append("| 順位 | 作品 | 合成 | TVer(A) | Netflix(B) | トレンド(C) | 話数 | 主な配信 |")
+    L.append("| 順位 | 作品 | 合成 | TVer(A) | Netflix(B) | トレンド(C) | 話数 | 主な視聴方法 |")
     L.append("|---|---|---|---|---|---|---|---|")
     for s in items:
         meta = s.get("meta", {})
         a = f"{s['A']['rank']}位" if s["A"] else "—"
         b = f"{s['B']['rank']}位" if s["B"] else "—"
         c = f"{s['C']}" if s["C"] is not None else "—"
-        provs = "／".join(meta.get("providers_jp", [])[:3]) or "【要確認】"
         flag = " ⚠️別作品の可能性" if meta.get("match_confidence") == "low" else ""
         L.append(
             f"| {s['rank']} | {s['title']}{flag} | {s['composite']} | {a} | {b} | {c} "
-            f"| {episode_text(meta)} | {provs} |"
+            f"| {episode_text(meta)} | {watch_summary(s, compact=True)} |"
         )
     L.append("")
     L.append(
@@ -660,8 +678,7 @@ def render_draft(wk: dict, items: list[dict]) -> str:
         L.append(f"- **あらすじ**: {ov if ov else '【要記入: 公式サイトを基に2〜3文で】'}")
         if ov:
             L.append("  - ※TMDB由来。公式サイトで確認し、自分の言葉に書き直すこと")
-        prov_lines = [provider_label(n) for n in meta.get("providers_jp", [])]
-        L.append(f"- **配信**: {' / '.join(prov_lines) if prov_lines else '【要確認】'}")
+        L.append(f"- **視聴方法**: {watch_summary(s)}")
         L.append("- **人気の理由（AI分析）**: 【ranking-writer 記入】事実（キャスト・原作・話題の"
                  "出来事）と指標の動き（トレンドがスパイク型かじわ伸びか／TVerとNetflixどちらで強いか）を根拠に")
         L.append("")
@@ -822,6 +839,7 @@ def main() -> int:
         m = merged[mkey]
         m["A"] = m["A"] or s["A"]
         m["B"] = m["B"] or s["B"]
+        m["broadcaster"] = m.get("broadcaster") or s.get("broadcaster")
         if s["meta"].get("match_confidence") == "ok" and m["meta"].get("match_confidence") != "ok":
             m["meta"], m["title"] = s["meta"], s["title"]
 
