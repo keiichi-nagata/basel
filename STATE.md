@@ -5,13 +5,14 @@
 ## 今週の焦点
 
 - [x] 開発3部 データソース＆合成式の確定（→ `dev/3-drama/sources.md`、`docs/decisions/0002-*`）
-- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成・ローカル検証（2026-W34）
+- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成
 - [x] TMDB APIキー取得・Secret/.env 登録
-- [x] リポジトリを GitHub `keiichi-nagata/basel` に push（`main` = 62da40c）
+- [x] リポジトリを GitHub `keiichi-nagata/basel` に push
 - [x] 秘密情報インシデント対応（誤混入した `.enc` を履歴から除去、TMDBトークン再発行、force-push）
-- [ ] GitHub Actions の権限設定（Settings→Actions→General→Read and write + Allow PRs）
-- [ ] Actions を手動実行（Run workflow）して本番週で1周 → PR作成まで確認
-- [ ] TVer をどうするか決定（毎週 `data/inputs/*.tver.json` 手貼り or Netflix+Trendsのみ）
+- [x] GitHub Actions 権限設定＋手動実行 #2 成功（TMDB/Netflix/Trends 動作確認）
+- [x] TVer 自動取得を実装（callEpisodeRanking の drama グループ）→ 3ソース全自動・手貼り不要
+- [ ] Actions を再実行し、3ソース揃った本番週のPRを確認
+- [ ] 2026-W34 のテスト生成物（data/drafts）を消すか、初回本番実行で上書き
 - [ ] `ranking-writer` で下書きの分析欄を執筆 → レビュー → 1本目公開
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 - [ ] リポジトリ雛形の運用開始（各部READMEを実データで埋める）
