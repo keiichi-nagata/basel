@@ -41,3 +41,42 @@ Midjourney等で画像を生成するときの「見た目の固定」用。キ�
 - キャラ絵とは別レイヤーで、Canvaの図形・アイコンで作る（生成に頼らない）
 - 色は2〜3色に絞る。数字は大きく。矢印で流れを示す
 - 図解こそがこの教材の価値の中心。1回に1〜2枚は必ず入れる
+
+---
+
+# キャラクター作成ブリーフ（1回だけ・Midjourney）
+
+序章を実際に描く前に、この手順でキャラの「基準画像」を作り、下の欄にURLを固定する。
+
+## 手順
+
+1. 下のプロンプトで **キャラシート** と **単体ポートレート2〜3枚** を各キャラ生成
+2. いちばん線がきれいで表情がニュートラルな **単体ポートレート1枚** を各キャラでアップスケール
+   → その画像のURLが、そのキャラの `--cref`（毎コマ固定）
+3. 全体の色・絵柄がいちばん好みの1枚を選び、そのURLを `--sref`（シリーズ通して固定）
+4. `--cw`（キャラ強度 0-100）は **100 から**（顔・髪・服をしっかり固定）。ポーズを大きく変えたいコマだけ 60〜80 に下げる
+5. 選んだURLとseedを下の「基準」欄に記入 → 脚本の `<URL>` を実値に置き換える
+
+## ミオ（疑問役）
+
+- キャラシート:
+  `character reference sheet of "Mio", a 14-year-old Japanese middle-school girl, short black bob with straight blunt bangs, mustard-yellow zip hoodie over a white tee, green backpack, no glasses, cheerful and expressive. front view and 3/4 view, plus 5 facial expressions (bright smile, surprised, thinking with finger on chin, sulking, eager leaning-in). plain light-grey background, flat modern anime style, thin clean linework, soft muted colors, no text --ar 3:2`
+- 単体ポートレート:
+  `flat modern anime style, Mio (14yo Japanese girl, short black bob with blunt bangs, mustard-yellow zip hoodie, white tee), neutral friendly expression, plain light-grey background, thin clean linework, soft muted colors, waist up, no text --ar 3:4`
+
+## センセ（解説役）
+
+- キャラシート:
+  `character reference sheet of "Sensei", a friendly Japanese man in his early 30s, short black hair, light stubble, round glasses, blue collared shirt under a grey cardigan, calm and warm. front view and 3/4 view, plus 4 facial expressions (gentle smile, explaining with raised index finger, troubled smile, serious). plain light-grey background, flat modern anime style, thin clean linework, soft muted colors, no text --ar 3:2`
+- 単体ポートレート:
+  `flat modern anime style, Sensei (Japanese man early 30s, short black hair, light stubble, round glasses, blue collared shirt, grey cardigan), calm warm expression, plain light-grey background, thin clean linework, soft muted colors, waist up, no text --ar 3:4`
+
+## 基準（生成したら記入）
+
+| 項目 | 値 |
+|---|---|
+| ミオ `--cref` URL | （記入） |
+| センセ `--cref` URL | （記入） |
+| 共通 `--sref` URL | （記入） |
+| `--cw` | 100（既定） |
+| seed（あれば） | （記入） |
