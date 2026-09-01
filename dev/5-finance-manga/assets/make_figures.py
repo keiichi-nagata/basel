@@ -119,6 +119,69 @@ def shime() -> None:
     print("saved:", OUT / "shime.png")
 
 
+# -------------------------------------------------- 第1回 図1「2つの稼ぎ方」
+def zu_two_ways() -> None:
+    out = Path(__file__).with_name("01")
+    out.mkdir(parents=True, exist_ok=True)
+    ink = "#1f2937"
+    paper = "#fbf7ee"
+    left_c = "#5b7a99"    # 労働＝落ち着いた青
+    right_c = "#d99b3d"   # 投資＝ゴールド
+    band = "#16233a"
+
+    W, H = 1080, 820
+    fig = plt.figure(figsize=(W / 200, H / 200), dpi=200)
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.axis("off")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=paper))
+    ax.text(0.5, 0.93, "2つの稼ぎ方", fontsize=24, color=ink,
+            fontweight="bold", ha="center", va="center")
+
+    # 中央の仕切り
+    ax.plot([0.5, 0.5], [0.16, 0.84], color="#d8d2c4", lw=2)
+
+    def column(cx, color, head, sub, icon, bullets):
+        ax.text(cx, 0.80, head, fontsize=19, color=color, fontweight="bold",
+                ha="center", va="center")
+        ax.text(cx, 0.745, sub, fontsize=12, color=ink, ha="center", va="center")
+        icon(cx, 0.62)
+        for i, b in enumerate(bullets):
+            ax.text(cx, 0.45 - i * 0.09, "・" + b, fontsize=14, color=ink,
+                    ha="center", va="center")
+
+    def person(cx, cy):
+        ax.add_patch(plt.Circle((cx, cy + 0.055), 0.028, color=left_c))
+        ax.add_patch(plt.Polygon([[cx - 0.055, cy - 0.06], [cx + 0.055, cy - 0.06],
+                                  [cx + 0.035, cy + 0.02], [cx - 0.035, cy + 0.02]],
+                                 closed=True, color=left_c))
+
+    def coins(cx, cy):
+        for k, dx in enumerate((-0.05, 0.0, 0.05)):
+            ax.add_patch(plt.Circle((cx + dx, cy - 0.02 + k * 0.012), 0.033,
+                                    color=right_c, ec=paper, lw=2))
+        ax.text(cx + 0.05, cy + 0.0, "¥", fontsize=15, color=paper,
+                ha="center", va="center", fontweight="bold")
+
+    column(0.25, left_c, "自分が働く", "（労働収入）", person,
+           ["時間と体力を使う", "1日24時間まで", "休むと止まる"])
+    column(0.75, right_c, "お金に働いてもらう", "（投資収入）", coins,
+           ["お金がお金を生む", "いくつも“働き手”を持てる", "休んでも動く"])
+
+    ax.add_patch(plt.Rectangle((0.08, 0.05), 0.84, 0.08, color=band))
+    ax.text(0.5, 0.09, "両方を使うのが、お金の育て方",
+            fontsize=16, color=paper, fontweight="bold", ha="center", va="center")
+
+    fig.savefig(out / "zu1-two-ways.png", dpi=200, facecolor=paper)
+    plt.close(fig)
+    print("saved:", out / "zu1-two-ways.png")
+
+
 if __name__ == "__main__":
-    zu1()
-    shime()
+    import sys
+    if "01" in sys.argv:
+        zu_two_ways()
+    else:
+        zu1()
+        shime()
