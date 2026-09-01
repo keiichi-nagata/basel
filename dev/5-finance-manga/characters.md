@@ -17,7 +17,7 @@ Midjourney等で画像を生成するときの「見た目の固定」用。キ�
 - 中学2年・14歳。お金の話は苦手。素直でツッコミ役。行動が先に出るタイプ
 - 外見: 肩までの黒髪ボブ、前髪ぱっつん、からし色のフーディー、緑のリュック。メガネなし
 - 表情バリエーション: 驚き / きょとん / ひらめき / むくれ / 前のめり
-- Midjourney基準プロンプト（英語）:
+- **コマ用ベースプロンプト**（← 後で「コマを描く」ときに使う。`<URL>` は §キャラクター作成ブリーフ で基準画像を作ってから埋める）:
   `flat modern anime style, a 14-year-old Japanese girl named Mio, short black bob with straight bangs, mustard yellow hoodie, expressive, simple classroom background, soft muted colors, thin clean linework, waist up --ar 3:4 --cref <URL> --sref <URL>`
 
 ## センセ（解説役 / ナビゲーター）
@@ -25,7 +25,7 @@ Midjourney等で画像を生成するときの「見た目の固定」用。キ�
 - 30代。ミオの担任 or 近所の頼れる大人。おだやかで、たとえ話がうまい。時々おおげさ
 - 外見: 短めの黒髪、無精ひげ薄め、ラフな襟付きシャツ（青系）＋カーディガン、丸メガネ
 - 表情バリエーション: にっこり / 説明中（人差し指を立てる）/ 困り笑い / 真剣
-- Midjourney基準プロンプト（英語）:
+- **コマ用ベースプロンプト**（後で使う。`<URL>` は基準画像を作ってから埋める）:
   `flat modern anime style, a friendly Japanese man in his 30s named Sensei, short black hair, light stubble, round glasses, blue collared shirt with cardigan, warm calm expression, simple background, soft muted colors, thin clean linework, waist up --ar 3:4 --cref <URL> --sref <URL>`
 
 ## 一貫性を保つコツ（Midjourneyの弱点対策）
@@ -51,11 +51,17 @@ Midjourney等で画像を生成するときの「見た目の固定」用。キ�
 ## 手順
 
 1. 下のプロンプトで **キャラシート** と **単体ポートレート2〜3枚** を各キャラ生成
+   （**この段階のプロンプトには `--cref` / `--sref` / `--oref` を付けない**。いま作っているのが、その"参照画像"だから）
 2. いちばん線がきれいで表情がニュートラルな **単体ポートレート1枚** を各キャラでアップスケール
    → その画像のURLが、そのキャラの `--cref`（毎コマ固定）
 3. 全体の色・絵柄がいちばん好みの1枚を選び、そのURLを `--sref`（シリーズ通して固定）
 4. `--cw`（キャラ強度 0-100）は **100 から**（顔・髪・服をしっかり固定）。ポーズを大きく変えたいコマだけ 60〜80 に下げる
-5. 選んだURLとseedを下の「基準」欄に記入 → 脚本の `<URL>` を実値に置き換える
+5. 選んだURLとseedを下の「基準」欄に記入 → 脚本と「コマ用ベースプロンプト」の `<URL>` を実値に置き換える
+
+## プロンプトの貼り方
+
+- 下の各プロンプトを囲む `` ` `` （バッククォート）は Markdown の装飾。**バッククォートは含めず、中身だけ**をコピーする
+- 1プロンプト＝1行。先頭の `character reference sheet ...` から末尾の `--ar 3:2`（or `--ar 3:4`）までを全部コピーして、Midjourneyの入力欄に貼って Enter
 
 ## ミオ（疑問役）
 
