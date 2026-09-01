@@ -5,59 +5,69 @@
 - **想定コマ数**: 16 ＋ 締め
 - **この回の図解**: 図1「うまい棒の値段の推移（10円→12円→15円）」
 
+## 画像生成の共通設定（Midjourney）
+
+下の各コマのプロンプトは**描写だけ**。生成時に毎回これを効かせる（`characters.md` の基準URL）:
+
+- **Webアプリ**: imagine bar の参照スロットに、そのコマに写るキャラの `--cref` 画像 と、共通の `--sref` 画像を入れる。`--cw` は 100。→ プロンプトは各コマの文をそのまま貼るだけ
+- **パラメータで書く場合**: 各コマのプロンプト末尾に付ける
+  `--cref <そのコマのキャラURL> --sref <共通URL> --cw 100`（V7なら `--cref` は `--oref`／`--cw` は `--ow`）
+- コマにミオが写る→ミオの `--cref`／センセが写る→センセの `--cref`
+- コマ16は2人。ミオの `--cref` を使い、センセはプロンプトの描写で寄せる（崩れたら1人ずつ生成してCanvaで合成）
+
 ## コマ構成（縦スクロール順）
 
 ### コマ1
 - **画**: 放課後の教室。ミオが机で原稿用紙に向かい、ペンを持ったまま頭を抱えている。バストアップ
-- **Midjourneyプロンプト**: `flat modern anime style, Mio (14yo Japanese girl, short black bob with straight bangs, mustard yellow hoodie), sitting at a school desk after class, holding a pen, frustrated thinking expression, empty manuscript paper, warm afternoon light, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio (14yo Japanese girl, short black bob with straight bangs, mustard yellow hoodie), sitting at a school desk after class, holding a pen, frustrated thinking expression, empty manuscript paper, warm afternoon light, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「うーん……『10年後のわたしへ』……なに書けばいいの」
 - **ナレ / 図解**: なし
 - **Canvaメモ**: タイトル文字「序章 10年後のわたしへ、10万円」を上に重ねる
 
 ### コマ2
 - **画**: センセが横に立って原稿用紙をのぞき込む。おだやかな表情
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei (friendly Japanese man in his 30s, short black hair, light stubble, round glasses, blue collared shirt with cardigan) standing beside a school desk, looking down kindly, calm smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei (friendly Japanese man in his 30s, short black hair, light stubble, round glasses, blue collared shirt with cardigan) standing beside a school desk, looking down kindly, calm smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「キャリア学習のタイムカプセルだね。10年後、24歳の自分に届く手紙だ」
 - **Canvaメモ**: 吹き出し右上
 
 ### コマ3
 - **画**: ミオ、ペンを置いて振り返る。きょとん顔
-- **Midjourneyプロンプト**: `flat modern anime style, Mio turning around in her chair, puzzled expression, pen set down on desk, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio turning around in her chair, puzzled expression, pen set down on desk, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「24歳かー。想像つかない。夢とか目標とか書けばいいの？」
 
 ### コマ4
 - **画**: センセ、少しいたずらっぽい笑み。人差し指を立てる
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a playful smile, raising one index finger, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a playful smile, raising one index finger, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「じゃあ質問。手紙といっしょに“10万円”も送れるとしたら、どうする？」
 
 ### コマ5
 - **画**: ミオ、目を輝かせて前のめり
-- **Midjourneyプロンプト**: `flat modern anime style, Mio leaning forward, eyes sparkling with excitement, big smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio leaning forward, eyes sparkling with excitement, big smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「10万円！？ 10年後のわたし、めっちゃ喜ぶじゃん！」
 
 ### コマ6
 - **画**: ミオ、指を折りながら考える
-- **Midjourneyプロンプト**: `flat modern anime style, Mio counting on her fingers, thinking, small confident smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio counting on her fingers, thinking, small confident smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「えーっと……封筒に入れて、机の引き出しにしまっておけば……」
 
 ### コマ7
 - **画**: センセ、やわらかいが少し真剣な表情。首をかしげる
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei tilting his head slightly, gentle but serious expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei tilting his head slightly, gentle but serious expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「それ、10年後には“10万円ぶんの価値”じゃなくなってるかもしれないよ」
 
 ### コマ8
 - **画**: ミオ、きょとん＆ちょっとムッ
-- **Midjourneyプロンプト**: `flat modern anime style, Mio with a blank then slightly annoyed expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio with a blank then slightly annoyed expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「は？ 10万円は10万円でしょ。減るわけないじゃん」
 
 ### コマ9
 - **画**: センセ、たとえ話モード。おだやかに笑う
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei smiling gently, explaining, one hand open, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei smiling gently, explaining, one hand open, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「駄菓子の“うまい棒”、知ってる？ 値段、覚えてる？」
 
 ### コマ10
 - **画**: ミオ、思い出しかけて、途中で「あれ？」となる
-- **Midjourneyプロンプト**: `flat modern anime style, Mio starting to answer confidently then hesitating, half-raised hand, uncertain expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio starting to answer confidently then hesitating, half-raised hand, uncertain expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「10円！……あれ、12円になって……今って15円じゃなかったっけ？」
 - **ナレ / 図解**: このコマの下に **図1** を差し込む
 
@@ -73,33 +83,33 @@
 
 ### コマ11
 - **画**: センセ、少し眉を上げて（強調）
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei with eyebrows slightly raised for emphasis, calm but earnest expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei with eyebrows slightly raised for emphasis, calm but earnest expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「42年ずっと10円だったのに、この2〜3年で立て続けに上がった。“お金の価値が下がるスピード”が、最近ちょっと速いんだ」
 - **出典メモ**: うまい棒は1979年発売以来10円、2022年4月に12円、2024年10月に15円（税別）。記事末尾で出典を明記
 
 ### コマ12
 - **画**: ミオ、じわっと衝撃を受ける
-- **Midjourneyプロンプト**: `flat modern anime style, Mio with a slowly dawning shocked expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio with a slowly dawning shocked expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「じゃあ引き出しにしまった10万円……思ってるより早く目減りするってこと！？」
 
 ### コマ13
 - **画**: センセ、静かに
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a quiet, serious but kind expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a quiet, serious but kind expression, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「その可能性はある。何もしないでいると、“こっそり”ね」
 
 ### コマ14
 - **画**: ミオ、勢いよく立ち上がる。前のめり、やる気
-- **Midjourneyプロンプト**: `flat modern anime style, Mio standing up abruptly from her chair, determined and eager expression, fists slightly clenched, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Mio standing up abruptly from her chair, determined and eager expression, fists slightly clenched, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（ミオ）**: 「えー！ じゃあどうすればいいの！？ 10年後のわたしを、がっかりさせたくない！」
 
 ### コマ15
 - **画**: センセ、にっこり
-- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a warm encouraging smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, Sensei with a warm encouraging smile, classroom, thin clean linework, soft muted colors, waist up --ar 3:4`
 - **セリフ（センセ）**: 「“お金の置き場所”には選択肢がある。減らさない方法も、増やす方法もある」
 
 ### コマ16
 - **画**: 引きのコマ。教室で向かい合う2人（横並び／斜め）。窓の外は夕方
-- **Midjourneyプロンプト**: `flat modern anime style, wide shot, Mio and Sensei facing each other in a classroom, evening light through the window, calm hopeful mood, thin clean linework, soft muted colors --ar 3:4 --cref <URL> --sref <URL>`
+- **Midjourneyプロンプト**: `flat modern anime style, wide shot, Mio and Sensei facing each other in a classroom, evening light through the window, calm hopeful mood, thin clean linework, soft muted colors --ar 3:4`
 - **セリフ（センセ）**: 「これから10回かけて、その仕組みを一緒に見ていこう。“未来の自分に10万円を託す”練習だ」
 - **セリフ（ミオ）**: 「よし、やる！ 未来のわたし、待ってて！」
 
