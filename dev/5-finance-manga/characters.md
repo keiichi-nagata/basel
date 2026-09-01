@@ -17,16 +17,15 @@ Midjourney等で画像を生成するときの「見た目の固定」用。キ�
 - 中学2年・14歳。お金の話は苦手。素直でツッコミ役。行動が先に出るタイプ
 - 外見: 肩までの黒髪ボブ、前髪ぱっつん、からし色のフーディー、緑のリュック。メガネなし
 - 表情バリエーション: 驚き / きょとん / ひらめき / むくれ / 前のめり
-- **コマ用ベースプロンプト**（← 後で「コマを描く」ときに使う。`<URL>` は §キャラクター作成ブリーフ で基準画像を作ってから埋める）:
-  `flat modern anime style, a 14-year-old Japanese girl named Mio, short black bob with straight bangs, mustard yellow hoodie, expressive, simple classroom background, soft muted colors, thin clean linework, waist up --ar 3:4 --cref <URL> --sref <URL>`
 
 ## センセ（解説役 / ナビゲーター）
 
 - 30代。ミオの担任 or 近所の頼れる大人。おだやかで、たとえ話がうまい。時々おおげさ
 - 外見: 短めの黒髪、無精ひげ薄め、ラフな襟付きシャツ（青系）＋カーディガン、丸メガネ
 - 表情バリエーション: にっこり / 説明中（人差し指を立てる）/ 困り笑い / 真剣
-- **コマ用ベースプロンプト**（後で使う。`<URL>` は基準画像を作ってから埋める）:
-  `flat modern anime style, a friendly Japanese man in his 30s named Sensei, short black hair, light stubble, round glasses, blue collared shirt with cardigan, warm calm expression, simple background, soft muted colors, thin clean linework, waist up --ar 3:4 --cref <URL> --sref <URL>`
+
+> 実際に使うMidjourneyプロンプトは、下の「# キャラクター作成ブリーフ」にまとめてあります。
+> コマを描くときのプロンプトは `dev/5-finance-manga/scripts/00-prologue.md` の各コマに書いてあります。
 
 ## 一貫性を保つコツ（Midjourneyの弱点対策）
 
