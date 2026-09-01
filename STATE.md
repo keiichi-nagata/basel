@@ -29,9 +29,10 @@
 パイプライン完成・全自動。2026-W35 を初公開。以降は毎週月曜 cron → PR → 分析執筆 → 公開。
 
 ### 開発5部 — 金融マンガ（有料・プロダクト主軸）
-新設。カリキュラム＝A案 微修正版（序章＋10回、`dev/5-finance-manga/curriculum.md`）。
-制作: 脚本(Claude/`manga-edu-writer`) → Midjourney → Canva → note。
-状態: キャラ未作成、脚本未着手。マガジン未作成。
+カリキュラム＝A案 微修正版（序章＋10回、`dev/5-finance-manga/curriculum.md`）。
+制作: 脚本(Claude) → Midjourney(コマ絵) → Canva(組版) → note。図/見出しはmatplotlib生成。
+**序章を2026-09-02に無料公開**: https://note.com/basel5/n/n8ddb16b8b430
+無料マガジン「中学生からの金融の授業」。次は第1回（無料）。
 
 ### マーケ部 — Threads
 - 自動投稿: 1日2本（実行環境・スクリプトは `marketing/threads/config.md` に記録）
