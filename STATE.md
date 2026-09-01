@@ -1,43 +1,37 @@
 # STATE — 現在地（毎週月曜に更新）
 
-最終更新: 2026-08-30
+最終更新: 2026-09-01
 
 ## 今週の焦点
 
-- [x] 開発3部 データソース＆合成式の確定（→ `dev/3-drama/sources.md`、`docs/decisions/0002-*`）
-- [x] 開発3部 収集スクリプト `collect.py` + GitHub Actions ワークフロー作成
-- [x] TMDB APIキー取得・Secret/.env 登録
-- [x] リポジトリを GitHub `keiichi-nagata/basel` に push
-- [x] 秘密情報インシデント対応（誤混入した `.enc` を履歴から除去、TMDBトークン再発行、force-push）
-- [x] GitHub Actions 権限設定＋手動実行 #2 成功（TMDB/Netflix/Trends 動作確認）
-- [x] TVer 自動取得を実装（callEpisodeRanking の drama グループ）→ 3ソース全自動・手貼り不要
-- [ ] Actions を再実行し、3ソース揃った本番週のPRを確認
-- [ ] 2026-W34 のテスト生成物（data/drafts）を消すか、初回本番実行で上書き
-- [ ] `ranking-writer` で下書きの分析欄を執筆 → レビュー → 1本目公開
+- [x] 開発3部 パイプライン完成・CI検証・2026-W35 を初公開（`published/2026-W35.md` にURL記入）
+- [x] 開発5部 新設（金融マンガ有料マガジン）＝有料プロダクトの主軸に。開発1部は維持モード（`docs/decisions/0003-*`）
+- [ ] 開発5部 キャラ2人をMidjourneyで作成 → `characters.md` に基準画像URL（`--cref`/`--sref`）を追記
+- [ ] 開発5部 `manga-edu-writer` で「序章」の脚本を作成 → 画像生成 → Canva組版 → 無料公開
+- [ ] 開発5部 有料マガジン作成（序章〜第2回無料／第3回〜有料 ¥200〜300／一括 ¥1,480）
+- [ ] 開発3部 来週月曜: PRブランチを開き分析を依頼 → レビュー → 公開（手動2周目）
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
-- [ ] リポジトリ雛形の運用開始（各部READMEを実データで埋める）
+- [ ] `finance/ledger.csv` に直近の売上・経費（有料note5本ぶん）を入力
 - [ ] 開発2部の既存note情報を `dev/2-cars/published/0001-first-note.md` に記録
 - [ ] Threads 現行設定を `marketing/threads/config.md` に書き出す
-- [ ] `finance/ledger.csv` に直近の売上・経費を入力
 
 ## 資産インベントリ
 
-### 開発1部 — アプリ + 有料note
-| # | タイトル | 公開日 | 価格 | 累計売上 | URL |
-|---|---|---|---|---|---|
-| 1 | （記入） | | | | |
-| 2 | （記入） | | | | |
-| 3 | （記入） | | | | |
-| 4 | （記入） | | | | |
-| 5 | （準備中） | | | | |
+### 開発1部 — アプリ + 有料note（維持モード・新規停止）
+5本公開済み。詳細は `dev/1-apps/catalog.md`（未記入）。売れないため新規制作停止。
 
 ### 開発2部 — 車販売ランキング
 | # | タイトル | 公開日 | 形態 | アフィリ | URL |
 |---|---|---|---|---|---|
 | 1 | （記入） | | 単発note | なし | |
 
-### 開発3部 — ドラマランキング
-準備中。データソース候補は `dev/3-drama/sources.md`。
+### 開発3部 — ドラマランキング（無料・集客エンジン）
+パイプライン完成・全自動。2026-W35 を初公開。以降は毎週月曜 cron → PR → 分析執筆 → 公開。
+
+### 開発5部 — 金融マンガ（有料・プロダクト主軸）
+新設。カリキュラム＝A案 微修正版（序章＋10回、`dev/5-finance-manga/curriculum.md`）。
+制作: 脚本(Claude/`manga-edu-writer`) → Midjourney → Canva → note。
+状態: キャラ未作成、脚本未着手。マガジン未作成。
 
 ### マーケ部 — Threads
 - 自動投稿: 1日2本（実行環境・スクリプトは `marketing/threads/config.md` に記録）

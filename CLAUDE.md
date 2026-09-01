@@ -21,10 +21,11 @@ SNS収益化を目的に、Claude Code で運営する一人会社（個人事�
 ## 部門とエージェント
 | 部門 | フォルダ | エージェント | 主な手順書 |
 |---|---|---|---|
-| 開発1部 アプリ+有料note | `dev/1-apps/` | `app-note-writer` | `sop/publish-note.md` |
+| 開発1部 アプリ+有料note（**維持モード**・新規停止） | `dev/1-apps/` | `app-note-writer` | `sop/publish-note.md` |
 | 開発2部 車ランキング | `dev/2-cars/` | `ranking-writer` | `sop/ranking-magazine-workflow.md` |
-| 開発3部 ドラマランキング(MVP) | `dev/3-drama/` | `ranking-writer` | `sop/ranking-magazine-workflow.md` |
+| 開発3部 ドラマランキング（無料・集客エンジン） | `dev/3-drama/` | `ranking-writer` | `sop/ranking-magazine-workflow.md` |
 | 開発4部 温泉ランキング | `dev/4-onsen/` | `ranking-writer` | （3部の型を流用） |
+| 開発5部 金融マンガ（**有料・プロダクト主軸**） | `dev/5-finance-manga/` | `manga-edu-writer` | `sop/manga-episode-workflow.md` |
 | マーケ部 | `marketing/` | `social-writer` | `marketing/README.md` |
 | 企画部 | `planning/` | `researcher` | `planning/README.md` |
 | 経理部 | `finance/` | `bookkeeper` | `sop/weekly-close.md` |

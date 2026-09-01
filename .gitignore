@@ -21,3 +21,6 @@ Thumbs.db
 # 週次サマリJSON・手動入力は小さいのでコミットする。
 # 肥大化するローデータを置く場合のみ raw/ に入れて除外。
 dev/*/data/raw/
+
+# 開発5部: Midjourney原寸・Canva作業ファイルは raw/ に。公開用縮小版のみコミット
+dev/5-finance-manga/assets/raw/
