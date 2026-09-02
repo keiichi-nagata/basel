@@ -178,10 +178,63 @@ def zu_two_ways() -> None:
     print("saved:", out / "zu1-two-ways.png")
 
 
+# -------------------------------------------------- 第2回 図1「価値のうまれかた」
+def zu_value_cycle() -> None:
+    out = Path(__file__).with_name("02")
+    out.mkdir(parents=True, exist_ok=True)
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+    ink = "#1f2937"
+    paper = "#fbf7ee"
+    box_c = "#5b7a99"
+    arrow_c = "#d99b3d"
+
+    W, H = 1080, 900
+    fig = plt.figure(figsize=(W / 200, H / 200), dpi=200)
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.axis("off")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=paper))
+    ax.text(0.5, 0.95, "価値のうまれかた", fontsize=23, color=ink,
+            fontweight="bold", ha="center", va="center")
+
+    nodes = {
+        "top": (0.5, 0.80, "困っている人がいる"),
+        "right": (0.77, 0.5, "あなたが解決する\n（＝働く）"),
+        "bottom": (0.5, 0.20, "“ありがとう” と お金"),
+        "left": (0.23, 0.5, "そのお金で\nまた誰かを助ける"),
+    }
+    for x, y, label in nodes.values():
+        ax.add_patch(FancyBboxPatch((x - 0.15, y - 0.058), 0.30, 0.116,
+                                    boxstyle="round,pad=0.012,rounding_size=0.02",
+                                    fc="white", ec=box_c, lw=2))
+        ax.text(x, y, label, fontsize=13.5, color=ink, ha="center", va="center",
+                linespacing=1.4)
+
+    ax.text(0.5, 0.5, "価値", fontsize=25, color=arrow_c, fontweight="bold",
+            ha="center", va="center")
+
+    order = ["top", "right", "bottom", "left", "top"]
+    for a, b in zip(order[:-1], order[1:]):
+        xa, ya, _ = nodes[a]
+        xb, yb, _ = nodes[b]
+        ax.add_patch(FancyArrowPatch((xa, ya), (xb, yb),
+                                     connectionstyle="arc3,rad=0.32",
+                                     arrowstyle="-|>", mutation_scale=20,
+                                     lw=2.5, color=arrow_c,
+                                     shrinkA=55, shrinkB=55))
+
+    fig.savefig(out / "zu1-value-cycle.png", dpi=200, facecolor=paper)
+    plt.close(fig)
+    print("saved:", out / "zu1-value-cycle.png")
+
+
 if __name__ == "__main__":
     import sys
     if "01" in sys.argv:
         zu_two_ways()
+    elif "02" in sys.argv:
+        zu_value_cycle()
     else:
         zu1()
         shime()

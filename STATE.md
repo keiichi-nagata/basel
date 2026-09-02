@@ -28,8 +28,10 @@
 ### 開発5部 — 金融マンガ（有料・プロダクト主軸）
 カリキュラム＝A案 微修正版（序章＋10回、`dev/5-finance-manga/curriculum.md`）。
 制作: 脚本(Claude) → Midjourney(コマ絵) → Canva(組版) → note。図/見出しはmatplotlib生成。
-**序章を2026-09-02に無料公開**: https://note.com/basel5/n/n8ddb16b8b430
-無料マガジン「中学生からの金融の授業」。次は第1回（無料）。
+無料マガジン「中学生からの金融の授業」。
+- 序章（2026-09-02）: https://note.com/basel5/n/n8ddb16b8b430
+- 第1回（2026-09-03）: https://note.com/basel5/n/nc7c5b170893f
+次は第2回（無料・これで無料枠おわり）→ 第3回から有料。
 
 ### マーケ部 — Threads
 - 自動投稿: 1日2本（実行環境・スクリプトは `marketing/threads/config.md` に記録）
