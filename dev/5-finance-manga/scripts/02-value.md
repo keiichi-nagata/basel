@@ -1,6 +1,10 @@
 # 第2回: 働いて稼ぐ！「労働」と価値のしくみ
 
-- **区分**: 無料（試し読み・集客。※これで無料枠は終わり、第3回から有料）
+- **区分**: **有料**（¥200〜300）。無料はここまで＝序章・第1回まで
+- **有料ラインの位置**: コマ8 の直後（＝図1の手前）に置く
+  - 無料部分: コマ1〜8（「給料がもらえるのは "困りごとを解決した" から」という問いと気づきまで）
+  - 有料部分: 図1「価値のうまれかた」以降（価値が大きくなる条件・自己投資・まとめ）
+  - 無料部分だけでも1つ学びが完結するように、コマ8のミオのセリフで「それが"価値"？」と言わせて締める
 - **腹落ち一文**: 「給料は “誰かの困りごとを解決した” ぶんもらえる」
 - **想定コマ数**: 16 ＋ 図1
 - **この回の図解**: 図1「価値のうまれかた」（循環図）
@@ -56,6 +60,11 @@
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a "starting to get it" expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「なるほど。それが “価値” ってこと？」
 
+---
+＝＝＝ ここに note の有料ライン ＝＝＝
+（無料で読めるのはここまで。以降は有料）
+---
+
 ### コマ9（センセ）
 - **画**: センセ、うなずいて要点
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, nodding while making a key point, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
@@ -103,7 +112,7 @@
 ### コマ16（センセ＆ミオ）
 - **画**: 2人。センセが軽く前置き、ミオが期待顔
 - **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking curious, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「次回は “貯金だけじゃダメ？ 投資ってなに？”。ここから先は、じっくり読みたい人向けに有料回になる」
+- **セリフ（センセ）**: 「次回は “貯金だけじゃダメ？ 投資ってなに？”。“貯金＝安全” って本当なのか、から」
 - **セリフ（ミオ）**: 「気になるところで！」
 
 ## 図解素材リスト（Canvaで作図）
@@ -128,4 +137,6 @@
 
 ## 次回予告
 
-第3回「貯金だけじゃダメ？『投資』ってなに？」——“貯金＝安全”は本当か、投資とギャンブルは何が違うのか。※第3回から有料（各¥200〜300 / 無料部分あり）。マガジンのフォローで更新が届きます。
+第3回「貯金だけじゃダメ？『投資』ってなに？」——“貯金＝安全”は本当か、投資とギャンブルは何が違うのか。マガジンのフォローで更新が届きます。
+
+（※本連載は序章・第1回が無料、第2回以降は有料です。各回とも冒頭〜図解の手前までは無料で読めます）
