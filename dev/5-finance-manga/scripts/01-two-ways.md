@@ -2,7 +2,7 @@
 
 - **区分**: 無料（試し読み・集客）
 - **腹落ち一文**: 「稼ぎ方には “自分が働く” と “お金に働いてもらう” の2つがある」
-- **想定コマ数**: 19 ＋ 図1（うち コマ13〜15 は note AIレビューを受けて追加。既存の旧13〜16は 16〜19 に後ろへずれる）
+- **想定コマ数**: 19 ＋ 図1（コマ15〜17 が note AIレビューで追加した新規。旧13〜16は 13・14・18・19 に移動＝話の流れを整理）
 - **この回の図解**: 図1「2つの稼ぎ方」（`assets/01/zu1-two-ways.png` 作成済み）
 
 ## 画像生成の共通設定
@@ -80,31 +80,31 @@
 ### 図1（コマ12の直後・作成済み `assets/01/zu1-two-ways.png` を1枚まるごと）
 - 左「自分が働く（労働収入）」／右「お金に働いてもらう（投資収入）」の対比。下帯「両方を使うのが、お金の育て方」
 
-### コマ13（ミオ）★新規
-- **画**: ミオ、素朴な疑問。首をかしげる
-- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, tilting her head with an honest question, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（ミオ）**: 「でも、なんで置いておくだけで増えるの？」
-
-### コマ14（センセ）★新規
-- **画**: センセ、やさしく説明
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, explaining gently with an open hand, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「置いておくだけじゃないよ。会社を応援したり、誰かにお金を貸したりする。その “ありがとう” として増えるんだ」
-
-### コマ15（センセ）★新規
-- **画**: センセ、少し真剣に
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a calm but serious expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「ただし、うまくいかないと逆に減ることもある。“増えるかも” と “減るかも” はいつもセット。そこは第7回でじっくりやる」
-- **セリフ（ミオ・小さめ）**: 「タダで増える魔法じゃないんだ」
-
-### コマ16（ミオ）
+### コマ13（ミオ）
 - **画**: ミオ、口をとがらせて反論
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, pouting slightly, a skeptical expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「でも自販機なんて、中学生が持てないじゃん」
 
-### コマ17（センセ）
+### コマ14（センセ）
 - **画**: センセ、人差し指を立てる
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, raising one index finger with a bright expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「そう。だからこの連載では “少しのお金でも同じことができる方法” を見ていく。“株” や “投資信託” っていう言葉、そのための道具だよ」
+
+### コマ15（ミオ）★新規
+- **画**: ミオ、素朴な疑問。首をかしげる
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, tilting her head with an honest question, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「その株とかを買って、置いておくだけで増えるの？ なんで？」
+
+### コマ16（センセ）★新規
+- **画**: センセ、やさしく説明
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, explaining gently with an open hand, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「置いておくだけじゃないよ。そのお金で、会社を応援したり、誰かにお金を貸したりしている。その “ありがとう” として増えるんだ」
+
+### コマ17（センセ）★新規
+- **画**: センセ、少し真剣に
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a calm but serious expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「ただし、うまくいかないと逆に減ることもある。“増えるかも” と “減るかも” はいつもセット。そこは第7回でじっくりやる」
+- **セリフ（ミオ・小さめ）**: 「タダで増える魔法じゃないんだ」
 
 ### コマ18（ミオ）
 - **画**: ミオ、ひらめき顔
