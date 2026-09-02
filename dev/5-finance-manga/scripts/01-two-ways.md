@@ -2,7 +2,7 @@
 
 - **区分**: 無料（試し読み・集客）
 - **腹落ち一文**: 「稼ぎ方には “自分が働く” と “お金に働いてもらう” の2つがある」
-- **想定コマ数**: 19 ＋ 図1（コマ15〜17 が note AIレビューで追加した新規。旧13〜16は 13・14・18・19 に移動＝話の流れを整理）
+- **想定コマ数**: 16 ＋ 図1
 - **この回の図解**: 図1「2つの稼ぎ方」（`assets/01/zu1-two-ways.png` 作成済み）
 
 ## 画像生成の共通設定
@@ -90,28 +90,12 @@
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, raising one index finger with a bright expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「そう。だからこの連載では “少しのお金でも同じことができる方法” を見ていく。“株” や “投資信託” っていう言葉、そのための道具だよ」
 
-### コマ15（ミオ）★新規
-- **画**: ミオ、素朴な疑問。首をかしげる
-- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, tilting her head with an honest question, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（ミオ）**: 「その株とかを買って、置いておくだけで増えるの？ なんで？」
-
-### コマ16（センセ）★新規
-- **画**: センセ、やさしく説明
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, explaining gently with an open hand, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「置いておくだけじゃないよ。そのお金で、会社を応援したり、誰かにお金を貸したりしている。その “ありがとう” として増えるんだ」
-
-### コマ17（センセ）★新規
-- **画**: センセ、少し真剣に
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a calm but serious expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「ただし、うまくいかないと逆に減ることもある。“増えるかも” と “減るかも” はいつもセット。そこは第7回でじっくりやる」
-- **セリフ（ミオ・小さめ）**: 「タダで増える魔法じゃないんだ」
-
-### コマ18（ミオ）
+### コマ15（ミオ）
 - **画**: ミオ、ひらめき顔
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, an "aha!" expression with wide eyes, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「自分は1人だけど、お金は何個も “働き手” にできるってことか」
 
-### コマ19（センセ＆ミオ）
+### コマ16（センセ＆ミオ）
 - **画**: センセがうなずき、ミオが前向き
 - **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan nodding, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking forward with a bright expression, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「この2つを両方使うのが、これからの時代の “お金の育て方” だ」
@@ -128,7 +112,9 @@
 
 自販機のたとえは「所有しているものが収益を生む」イメージのためで、実際に自販機の設置を勧めるものではありません。ご家庭では、身の回りにある“働いてくれている仕組み”（預金の利息、加入している保険、持ち家など）を話題にしてみてください。「なぜそれがお金を生む（守る）のか」を一緒に考えるだけで十分です。
 
-なお本編では、「お金に働いてもらう」ことには“減る可能性（元本割れ）”がセットである点にも軽く触れています。リスクとリターンの関係は第7回で正面から扱います。「増えるかも」と「減るかも」は必ず一緒に来る、という感覚だけ、この段階で持っておければ十分です。
+「お金に働いてもらう」ことには、うまくいかないと“減る”可能性（元本割れ）もセットです。この回では深入りせず、リスクとリターンの関係は第7回で正面から扱います。ご家庭では、「増えるかもしれないものは、減るかもしれない」という一対の感覚だけ先に共有しておいていただけると、後半がスムーズです。
+
+また、お金が増えるのは「置いておくだけ」ではなく、会社を応援したり（株）、みんなでまとめて世界中に投資したり（投資信託）といった“誰かの役に立つこと”への対価だ、というニュアンスも第3〜5回で扱っていきます。
 
 ## 出典
 
