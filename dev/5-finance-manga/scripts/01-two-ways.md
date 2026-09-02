@@ -2,8 +2,8 @@
 
 - **区分**: 無料（試し読み・集客）
 - **腹落ち一文**: 「稼ぎ方には “自分が働く” と “お金に働いてもらう” の2つがある」
-- **想定コマ数**: 12 ＋ 図1
-- **この回の図解**: 図1「2つの稼ぎ方」
+- **想定コマ数**: 16 ＋ 図1
+- **この回の図解**: 図1「2つの稼ぎ方」（`assets/01/zu1-two-ways.png` 作成済み）
 
 ## 画像生成の共通設定
 
@@ -29,66 +29,82 @@
 ### コマ3（センセ）
 - **画**: センセ、片手を差し出す（1つ目）
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, gesturing with one open hand, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「1つ目は “自分が働く”。時間と力を使って稼ぐ。これを労働収入という」
+- **セリフ（センセ）**: 「1つ目は “自分が働く”」
 
 ### コマ4（ミオ）
-- **画**: ミオ、納得顔
-- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a nodding "I see" expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（ミオ）**: 「バイトとか、大人の仕事とかね」
+- **画**: ミオ、指を折って考える
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, counting on her fingers while thinking, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「バイトとか、大人の仕事とか？」
 
 ### コマ5（センセ）
-- **画**: センセ、少し困り笑い
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a slightly troubled smile, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「でも、寝てる間は増えない。1日は24時間しかないし、体は1つだけ」
+- **画**: センセ、うなずく
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, nodding warmly, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「そう。お手伝いでお小遣いをもらうのも同じ仲間。時間と力を使って稼ぐ、これを労働収入という」
 
 ### コマ6（ミオ）
+- **画**: ミオ、納得
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a satisfied "makes sense" nod, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「シンプルだね。働いたぶん、もらえる」
+
+### コマ7（センセ）
+- **画**: センセ、少し困り笑い
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a slightly troubled smile, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「でも弱点がある。寝てる間は増えないし、体は1つ、1日は24時間しかない」
+
+### コマ8（ミオ）
+- **画**: ミオ、はっとする
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a small realization on her face, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「たしかに。体調くずしたら止まっちゃうのか」
+
+### コマ9（ミオ）
 - **画**: ミオ、身を乗り出す
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, leaning forward with curiosity, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「じゃあ2つ目は？」
 
-### コマ7（センセ）
+### コマ10（センセ）
 - **画**: センセ、もう片方の手
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, gesturing with the other hand, a knowing look, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「2つ目は “お金に働いてもらう”。お金が、別のお金を生む」
 
-### コマ8（ミオ）
+### コマ11（ミオ）
 - **画**: ミオ、ぽかん
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a blank confused expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「え、お金が働く？ 意味わからん」
 
-### コマ9（センセ）
+### コマ12（センセ）
 - **画**: センセ、たとえ話モード
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, smiling gently while explaining, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「たとえば君がジュースの自販機を1台持っていたら、学校に行ってる間も売れて、お金が入るよね」
 - **ナレ / 図解**: このコマの下に **図1** を差し込む
 
-### 図1（コマ9の直後・Canvaで作図。Midjourney不要）
-- 左右2列の対比:
-  - **左：自分が働く（労働収入）** — 人のアイコン＋時計。「時間と体力を使う／1日24時間まで／休むと止まる」
-  - **右：お金に働いてもらう（投資収入）** — コインが増えるアイコン。「お金がお金を生む／いくつも“働き手”を持てる／休んでも動く」
-  - **下の帯**：「両方を使うのが、お金の育て方」
-- 横書き・2〜3色・アイコン中心
+### 図1（コマ12の直後・作成済み `assets/01/zu1-two-ways.png` を1枚まるごと）
+- 左「自分が働く（労働収入）」／右「お金に働いてもらう（投資収入）」の対比。下帯「両方を使うのが、お金の育て方」
 
-### コマ10（ミオ）
+### コマ13（ミオ）
+- **画**: ミオ、口をとがらせて反論
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, pouting slightly, a skeptical expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「でも自販機なんて、中学生が持てないじゃん」
+
+### コマ14（センセ）
+- **画**: センセ、人差し指を立てる
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, raising one index finger with a bright expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「そう。だからこの連載では “少しのお金でも同じことができる方法” を見ていく。“株” や “投資信託” っていう言葉、そのための道具だよ」
+
+### コマ15（ミオ）
 - **画**: ミオ、ひらめき顔
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, an "aha!" expression with wide eyes, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（ミオ）**: 「自分は1人だけど、お金は何個も “働き手” にできるってこと？」
+- **セリフ（ミオ）**: 「自分は1人だけど、お金は何個も “働き手” にできるってことか」
 
-### コマ11（センセ）
-- **画**: センセ、うなずく
-- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, nodding with a warm smile, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（センセ）**: 「そう。この2つを両方使うのが、これからの時代の “お金の育て方” だ」
+### コマ16（センセ＆ミオ）
+- **画**: センセがうなずき、ミオが前向き
+- **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan nodding, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking forward with a bright expression, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「この2つを両方使うのが、これからの時代の “お金の育て方” だ」
+- **セリフ（ミオ）**: 「じゃあ、まず “自分が働く” の方から知りたい」
+- **セリフ（センセ）**: 「次回はそこ。“働いてお金をもらう” しくみからいこう」
 
-### コマ12（ミオ）
-- **画**: ミオ、前向き
-- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, a determined forward-looking expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
-- **セリフ（ミオ）**: 「まず “自分が働く” から。次はそこ？」
-- **セリフ（センセ）**: 「そう。次回は “働いてお金をもらう” のしくみから」
+## 図解素材リスト
 
-## 図解素材リスト（Canvaで作図）
-
-- **図1「2つの稼ぎ方」**: 左「自分が働く（労働収入）」／右「お金に働いてもらう（投資収入）」の対比。
-  各列に3つの短い特徴。下に「両方を使うのが、お金の育て方」。横書き・アイコン中心・2〜3色。
+- **図1「2つの稼ぎ方」**: 作成済み（`assets/01/zu1-two-ways.png`）。文言変更は `assets/make_figures.py` の `zu_two_ways()` を編集して `python make_figures.py 01`。
 
 ## 保護者向けあとがき
 
