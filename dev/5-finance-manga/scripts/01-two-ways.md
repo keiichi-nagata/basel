@@ -2,7 +2,7 @@
 
 - **区分**: 無料（試し読み・集客）
 - **腹落ち一文**: 「稼ぎ方には “自分が働く” と “お金に働いてもらう” の2つがある」
-- **想定コマ数**: 16 ＋ 図1
+- **想定コマ数**: 19 ＋ 図1（うち コマ13〜15 は note AIレビューを受けて追加。既存の旧13〜16は 16〜19 に後ろへずれる）
 - **この回の図解**: 図1「2つの稼ぎ方」（`assets/01/zu1-two-ways.png` 作成済み）
 
 ## 画像生成の共通設定
@@ -80,22 +80,38 @@
 ### 図1（コマ12の直後・作成済み `assets/01/zu1-two-ways.png` を1枚まるごと）
 - 左「自分が働く（労働収入）」／右「お金に働いてもらう（投資収入）」の対比。下帯「両方を使うのが、お金の育て方」
 
-### コマ13（ミオ）
+### コマ13（ミオ）★新規
+- **画**: ミオ、素朴な疑問。首をかしげる
+- **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, tilting her head with an honest question, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（ミオ）**: 「でも、なんで置いておくだけで増えるの？」
+
+### コマ14（センセ）★新規
+- **画**: センセ、やさしく説明
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, explaining gently with an open hand, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「置いておくだけじゃないよ。会社を応援したり、誰かにお金を貸したりする。その “ありがとう” として増えるんだ」
+
+### コマ15（センセ）★新規
+- **画**: センセ、少し真剣に
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, a calm but serious expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
+- **セリフ（センセ）**: 「ただし、うまくいかないと逆に減ることもある。“増えるかも” と “減るかも” はいつもセット。そこは第7回でじっくりやる」
+- **セリフ（ミオ・小さめ）**: 「タダで増える魔法じゃないんだ」
+
+### コマ16（ミオ）
 - **画**: ミオ、口をとがらせて反論
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, pouting slightly, a skeptical expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「でも自販機なんて、中学生が持てないじゃん」
 
-### コマ14（センセ）
+### コマ17（センセ）
 - **画**: センセ、人差し指を立てる
 - **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, raising one index finger with a bright expression, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「そう。だからこの連載では “少しのお金でも同じことができる方法” を見ていく。“株” や “投資信託” っていう言葉、そのための道具だよ」
 
-### コマ15（ミオ）
+### コマ18（ミオ）
 - **画**: ミオ、ひらめき顔
 - **Midj**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs, wearing a mustard-yellow zip hoodie over a white t-shirt, an "aha!" expression with wide eyes, flat modern anime style, clean thin linework, soft muted colors, simple classroom background, waist-up shot --ar 3:4`
 - **セリフ（ミオ）**: 「自分は1人だけど、お金は何個も “働き手” にできるってことか」
 
-### コマ16（センセ＆ミオ）
+### コマ19（センセ＆ミオ）
 - **画**: センセがうなずき、ミオが前向き
 - **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan nodding, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking forward with a bright expression, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「この2つを両方使うのが、これからの時代の “お金の育て方” だ」
@@ -111,6 +127,8 @@
 第1回では「不労所得」という言葉をあえて使っていません。響きから「働かずに楽して儲ける」という誤解につながりやすいためです。代わりに「お金に働いてもらう」という言い方で、労働収入と投資収入は“対立”ではなく“両輪”だと伝えることを重視しました。
 
 自販機のたとえは「所有しているものが収益を生む」イメージのためで、実際に自販機の設置を勧めるものではありません。ご家庭では、身の回りにある“働いてくれている仕組み”（預金の利息、加入している保険、持ち家など）を話題にしてみてください。「なぜそれがお金を生む（守る）のか」を一緒に考えるだけで十分です。
+
+なお本編では、「お金に働いてもらう」ことには“減る可能性（元本割れ）”がセットである点にも軽く触れています。リスクとリターンの関係は第7回で正面から扱います。「増えるかも」と「減るかも」は必ず一緒に来る、という感覚だけ、この段階で持っておければ十分です。
 
 ## 出典
 
