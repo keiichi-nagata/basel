@@ -7,6 +7,7 @@ SNS収益化を目的に、Claude Code で運営する一人会社（個人事�
 ## まず読むもの
 - `README.md` — 会社概要・意思決定ルール・KPI定義
 - `STATE.md` — 現在地（毎週月曜に更新する生きたダッシュボード）
+- `TODO.md` — 社長の残タスク一覧（定例＋今週＋バックログ）
 - `docs/org.md` — 各部の責務と定期業務カレンダー
 - `docs/roadmap-90days.md` — フェーズ計画
 - `docs/decisions/` — 意思決定ログ
