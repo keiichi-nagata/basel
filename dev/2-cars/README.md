@@ -12,11 +12,12 @@
 
 ## パイプライン
 
-1. **データ貼付**（約10分・手動）: 自販連（登録車）・全軽自協（軽）の月報PDFの車名別上位を
-   `data/inputs/YYYY-MM.json` に貼る（`data/inputs/README.md`）
-2. **組み立て**（自動）: `python dev/2-cars/pipeline/collect.py [YYYY-MM]`
+1. **組み立て**（自動）: `python dev/2-cars/pipeline/collect.py [YYYY-MM]`
+   → 自販連（登録車エクセル）・全軽自協（軽の速報テーブル/xls）をDL・解析
    → 登録車＋軽を台数降順にして総合TOP5 → `prices.json` の価格を結合 → 前月比を算出
    → `data/YYYY-MM.json` と `drafts/YYYY-MM.md`（表入り・分析欄は空）
+   （毎月8日ごろ GitHub Actions `cars-monthly` が実行して PR を開く）
+2. **取得失敗時のみ**: `data/inputs/YYYY-MM.json` に車名別上位を手貼りして再実行（`sources.md` 参照）
 3. **執筆**: `car-column-writer` エージェントが各車の理由（WebSearch）・共通構造・示唆を執筆
 4. **レビュー → note公開 → マガジン追加 → `published/YYYY-MM.md` 記録**
 
@@ -25,8 +26,9 @@
 - `sources.md` — データソース（自販連/全軽自協/価格）と運用（確定版）
 - `template.md` — 記事の型（7セクション固定）
 - `prices.json` — 車名 → 最安グレード価格の蓄積（TOP5に未登録なら記事に `【価格要確認】`）
-- `pipeline/collect.py` — 総合TOP5の組み立て（Webスクレイピングはしない・入力必須）
-- `data/inputs/` — 月次の手動入力（`YYYY-MM.json`）
+- `pipeline/collect.py` — 自販連/全軽自協からエクセルを取得 → 総合TOP5を組み立て
+- `pipeline/requirements.txt` — `requests` / `openpyxl` / `xlrd==1.2.0`（旧 .xls 用）
+- `data/inputs/` — 取得失敗時の手動フォールバック（`YYYY-MM.json`。`2026-07.json` が例）
 - `data/` — `YYYY-MM.json`（生成データ。前月比の計算に使う）
 - `drafts/` — `YYYY-MM.md`（下書き）
 - `published/` — `YYYY-MM.md`（公開記録）

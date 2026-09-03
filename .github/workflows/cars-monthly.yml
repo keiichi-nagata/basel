@@ -1,8 +1,9 @@
 name: cars-monthly
 
-# 毎月8日 06:00 JST（= 7日 21:00 UTC）。前月の入力（data/inputs/YYYY-MM.json）が
-# 置いてあれば TOP5 を組み立ててレビュー用PRを開く。無ければ何もしない（no-op）。
-# 手動実行も可（Actions → Run workflow）。
+# 毎月8日 06:00 JST（= 7日 21:00 UTC）。自販連・全軽自協のサイトから前月の車名別
+# エクセルを取得して総合TOP5を組み立て、レビュー用PRを開く。取得に失敗した場合は
+# data/inputs/YYYY-MM.json（手動貼付）へフォールバック。両方無ければ step が失敗し
+# PRは開かない。手動実行も可（Actions → Run workflow）。
 on:
   schedule:
     - cron: "0 21 7 * *"
@@ -21,16 +22,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build TOP5 draft if input exists
+      - name: Install deps
+        run: pip install -r dev/2-cars/pipeline/requirements.txt
+
+      - name: Build TOP5 draft
         id: build
         run: |
           MONTH=$(date -u -d "$(date -u +%Y-%m-01) -1 month" +%Y-%m)
           echo "month=$MONTH" >> "$GITHUB_OUTPUT"
-          if [ -f "dev/2-cars/data/inputs/$MONTH.json" ]; then
-            python dev/2-cars/pipeline/collect.py "$MONTH"
+          if python dev/2-cars/pipeline/collect.py "$MONTH"; then
             echo "built=1" >> "$GITHUB_OUTPUT"
           else
-            echo "::notice::dev/2-cars/data/inputs/$MONTH.json が無いので何もしません（自販連PDFから数字を貼ってください）"
+            echo "::warning::collect.py が台数データを取得できませんでした（自販連/全軽自協のサイト変更の可能性）。dev/2-cars/data/inputs/$MONTH.json に手動で貼って再実行してください"
             echo "built=0" >> "$GITHUB_OUTPUT"
           fi
 

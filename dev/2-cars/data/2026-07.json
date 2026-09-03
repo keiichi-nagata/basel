@@ -3,12 +3,10 @@
   "collected_at": "2026-09-04",
   "sources": {
     "registered": {
-      "url": "自販連 2026年7月 車名別（乗用車）月報PDF",
-      "published": "2026-08-06"
+      "url": "https://www.jada.or.jp/pages/340/"
     },
     "kei": {
-      "url": "全軽自協 2026年7月 車名別 新車販売確報PDF",
-      "published": "2026-08-05"
+      "url": "https://www.zenkeijikyo.or.jp/statistics/tushosoku"
     },
     "prices": "dev/2-cars/prices.json"
   },
