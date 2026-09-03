@@ -47,7 +47,7 @@
 - [x] 開発2部 — パイプライン整備（collect.py / car-column-writer / SOP / prices.json / 月次Action）
 - [x] 開発2部 — 7月記事 note 公開済み（https://note.com/basel5/n/n400eac7620fd）→ `published/2026-07.md` にURL記入
 - [ ] 開発2部 — マガジン（名称未定）を作成し、7月記事を追加。冒頭に注記・シリーズ説明を整える
-- [ ] 開発2部 — 8日ごろ: 8月分の車名別を `data/inputs/2026-08.json` に貼る → collect.py → car-column-writer で執筆 → 公開
+- [ ] 開発2部 — 8日ごろ: `python dev/2-cars/pipeline/collect.py 2026-08`（台数は自動取得。失敗時のみ `data/inputs/2026-08.json` に手貼り）→ car-column-writer で執筆 → 公開
 - [ ] 経理 — 8月PL締め（`sop/weekly-close.md` 月次）→ `finance/reports/2026-08.md`。会計ソフト導入の判断
 - [ ] Instagram — プロアカウント化＋Facebookページ連携（開発3部が軌道に乗ったら）
 - [ ] 開発5部 — 序章〜第2回まで無料で出し、読まれ方を見て有料ラインの引き方・コマ数を確定
