@@ -1,0 +1,53 @@
+name: cars-monthly
+
+# 毎月8日 06:00 JST（= 7日 21:00 UTC）。前月の入力（data/inputs/YYYY-MM.json）が
+# 置いてあれば TOP5 を組み立ててレビュー用PRを開く。無ければ何もしない（no-op）。
+# 手動実行も可（Actions → Run workflow）。
+on:
+  schedule:
+    - cron: "0 21 7 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build TOP5 draft if input exists
+        id: build
+        run: |
+          MONTH=$(date -u -d "$(date -u +%Y-%m-01) -1 month" +%Y-%m)
+          echo "month=$MONTH" >> "$GITHUB_OUTPUT"
+          if [ -f "dev/2-cars/data/inputs/$MONTH.json" ]; then
+            python dev/2-cars/pipeline/collect.py "$MONTH"
+            echo "built=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::dev/2-cars/data/inputs/$MONTH.json が無いので何もしません（自販連PDFから数字を貼ってください）"
+            echo "built=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request
+        if: steps.build.outputs.built == '1'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: cars/auto-build
+          base: main
+          title: "2-cars: ${{ steps.build.outputs.month }} TOP5 下書き"
+          commit-message: "chore(2-cars): ${{ steps.build.outputs.month }} データ組み立て"
+          add-paths: |
+            dev/2-cars/data/**
+            dev/2-cars/drafts/**
+          body: |
+            自販連・全軽自協の入力から総合TOP5を組み立てた下書きです。マージ前に:
+            1. `car-column-writer` で「各車の理由／共通構造／働き方・投資への示唆」を執筆
+            2. `【要確認】` `【価格要確認】` を解消（数字・価格は一次PDFと照合）
+            3. 「自販連・全軽自協発表の統計をもとに集計」の注記を確認
+            4. note へ公開 → マガジン追加 → `published/${{ steps.build.outputs.month }}.md` 記録

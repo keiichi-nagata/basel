@@ -44,7 +44,9 @@
 
 ## 🗓 近いうち（Phase 1〜2）
 
-- [ ] 開発2部 — 既存の車note1本をマガジン化＋記録（`dev/2-cars/published/0001-first-note.md`）
+- [x] 開発2部 — パイプライン整備（collect.py / car-column-writer / SOP / prices.json / 月次Action）
+- [ ] 開発2部 — 7月記事を note 公開（未公開なら）→ マガジン作成・追加 → `published/2026-07.md` にURL記入
+- [ ] 開発2部 — 8日ごろ: 8月分の車名別を `data/inputs/2026-08.json` に貼る → collect.py → car-column-writer で執筆 → 公開
 - [ ] 経理 — 8月PL締め（`sop/weekly-close.md` 月次）→ `finance/reports/2026-08.md`。会計ソフト導入の判断
 - [ ] Instagram — プロアカウント化＋Facebookページ連携（開発3部が軌道に乗ったら）
 - [ ] 開発5部 — 序章〜第2回まで無料で出し、読まれ方を見て有料ラインの引き方・コマ数を確定

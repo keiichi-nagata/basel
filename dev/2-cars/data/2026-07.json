@@ -1,0 +1,83 @@
+{
+  "month": "2026-07",
+  "collected_at": "2026-09-04",
+  "sources": {
+    "registered": {
+      "url": "自販連 2026年7月 車名別（乗用車）月報PDF",
+      "published": "2026-08-06"
+    },
+    "kei": {
+      "url": "全軽自協 2026年7月 車名別 新車販売確報PDF",
+      "published": "2026-08-05"
+    },
+    "prices": "dev/2-cars/prices.json"
+  },
+  "price_needs_check": [],
+  "items": [
+    {
+      "model": "N-BOX",
+      "maker": "ホンダ",
+      "units": 22506,
+      "yoy_pct": 34.7,
+      "segment": "軽",
+      "rank": 1,
+      "price_from_yen": 1769000,
+      "price_as_of": "2026-07",
+      "price_source": "honda.co.jp（7月一部改良後）",
+      "prev_rank": null,
+      "rank_change": null
+    },
+    {
+      "model": "スペーシア",
+      "maker": "スズキ",
+      "units": 13883,
+      "yoy_pct": -5.3,
+      "segment": "軽",
+      "rank": 2,
+      "price_from_yen": 1530000,
+      "price_as_of": "2026-07",
+      "price_source": "suzuki.co.jp",
+      "prev_rank": null,
+      "rank_change": null
+    },
+    {
+      "model": "ヤリス",
+      "maker": "トヨタ",
+      "units": 13679,
+      "yoy_pct": -1.6,
+      "segment": "登録車",
+      "rank": 3,
+      "price_from_yen": 1697000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": null,
+      "rank_change": null
+    },
+    {
+      "model": "ライズ",
+      "maker": "トヨタ",
+      "units": 13068,
+      "yoy_pct": 83.2,
+      "segment": "登録車",
+      "rank": 4,
+      "price_from_yen": 1800000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": null,
+      "rank_change": null
+    },
+    {
+      "model": "シエンタ",
+      "maker": "トヨタ",
+      "units": 12196,
+      "yoy_pct": 31.3,
+      "segment": "登録車",
+      "rank": 5,
+      "price_from_yen": 1995000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": null,
+      "rank_change": null
+    }
+  ]
+}

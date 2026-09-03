@@ -1,0 +1,14 @@
+{
+  "month": "2026-07",
+  "source_registered": { "url": "自販連 2026年7月 車名別（乗用車）月報PDF", "published": "2026-08-06" },
+  "source_kei": { "url": "全軽自協 2026年7月 車名別 新車販売確報PDF", "published": "2026-08-05" },
+  "registered": [
+    { "model": "ヤリス", "maker": "トヨタ", "units": 13679, "yoy_pct": -1.6 },
+    { "model": "ライズ", "maker": "トヨタ", "units": 13068, "yoy_pct": 83.2 },
+    { "model": "シエンタ", "maker": "トヨタ", "units": 12196, "yoy_pct": 31.3 }
+  ],
+  "kei": [
+    { "model": "N-BOX", "maker": "ホンダ", "units": 22506, "yoy_pct": 34.7 },
+    { "model": "スペーシア", "maker": "スズキ", "units": 13883, "yoy_pct": -5.3 }
+  ]
+}
