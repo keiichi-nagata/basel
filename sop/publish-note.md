@@ -28,5 +28,6 @@
 ## 公開後
 
 - [ ] SNS文面を `marketing/threads/queue.md` へ
+- [ ] `marketing/threads/queue_to_pending.py` で threads-app の承認待ちに登録（社長が承認すると自動投稿）
 - [ ] `finance/ledger.csv`（有料note初売上）/ `kpi.csv`（初速）に反映
 - [ ] git コミット（「publish: <部> <タイトル>」）

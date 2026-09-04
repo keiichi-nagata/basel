@@ -41,6 +41,8 @@ python dev/2-cars/pipeline/collect.py 2026-08    # 月を明示
 - `sop/publish-note.md` に沿ってnote公開、マガジンに追加
 - `dev/2-cars/published/YYYY-MM.md` に URL・公開時刻・初速メモ
 - SNS文面を `marketing/threads/queue.md` / `marketing/instagram/queue.md` へ
+- Threadsは `python marketing/threads/queue_to_pending.py --source "basel:2-cars:YYYY-MM" --content "..." --link "note URL"`
+  で threads-app の承認待ちに登録 → 社長がStreamlit画面で承認すると自動投稿される
 - 公開48時間後の初速を published に記録 → 週次で `finance/kpi.csv`
 
 ## 品質の下限

@@ -35,16 +35,32 @@
 
 ## 会社化にあたっての方針
 
-- **公式APIなのでこのまま継続**（移行不要）。ただし現状は Basel の `queue.md` と完全に独立した
-  別物の仕組み（RSS×Claudeで経済/投資/フリーランス/Claudeねたを自動生成・自動投稿）で、
-  Basel各部（開発2/3/5部）の告知は乗っていない
-- 選択肢:
-  1. **このまま2本立てで運用**（自動＝汎用ねた保険、queue.md＝Basel各部の告知は手動投稿）
-  2. `threads-app` の note誘導ロジック（3件に1回）に Basel の `queue.md` を読ませて統合する
-     （要改修。効果が見えてから検討でよい）
-- 当面は 1. で運用し、手動投稿の手間が無視できなくなったら 2. を検討
+- **公式APIなのでこのまま継続**（移行不要）。1日2本の自動投稿（経済/投資/フリーランス/Claudeねた）
+  はそのまま。Basel各部の告知は下の「承認キュー」経由で同じ投稿基盤に相乗りする形にした
+  （2026-09-05、`decision`不要の実装タスクとして実施）
+
+## 開発部の告知 → 承認 → 自動投稿（2026-09-05 実装）
+
+Basel で記事/アプリを公開したら、この経路で告知できる:
+
+1. Claude が告知文を作成（`marketing/threads/queue.md` に記載するのと同時に）
+2. `python marketing/threads/queue_to_pending.py --source "basel:<部>:<回>" --content "..." --link "URL"`
+   で threads-app の Supabase（`manual_posts`テーブル、status=pending）に登録
+   - Supabase接続情報は threads-app の `.env` をそのまま読む（Baselには複製しない）
+3. 社長が threads-app の Streamlit画面「承認待ち」ページで内容を確認し、
+   **「承認して投稿」を押すと、既存の `threads_client.post()`（公式Threads API）でその場で投稿**
+   - 却下も可（status=rejected のまま残る。再送するなら手動でThreads投稿）
+4. 投稿後は `threads_posts`（投稿履歴）にも記録され、トップページの履歴一覧にも出る
+
+1日2回の自動生成投稿とは完全に独立（お互いのcron・ロジックに影響しない）。
+
+**導入時に一度だけ必要な作業（社長）**:
+- [ ] threads-app の Supabase SQL Editor で `supabase_schema.sql` の `manual_posts` テーブル作成分を実行
+- [ ] Streamlit アプリ（threads-app）を再デプロイ／再起動して `pages/1_承認待ち.py` を反映
+- [ ] テスト投稿1件（`queue_to_pending.py` → Streamlitで承認）して一連の流れを確認
 
 ## 移行後の連携
 
-- 投稿ネタ: `marketing/threads/queue.md` に集約 → `social-writer` がカレンダー化 → スクリプトはそのカレンダーを読む
+- 投稿ネタ: `marketing/threads/queue.md` に集約 → `social-writer` がカレンダー化。実際の投稿は
+  上記の承認キュー経由（Threads自動投稿本体の改修は不要）
 - 実績: 週次で `marketing/threads/log.csv` に記録

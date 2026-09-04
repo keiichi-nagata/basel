@@ -44,6 +44,7 @@
 ## 5. 引き渡し・記録
 
 - SNS文面が `marketing/threads/queue.md` に入っていることを確認
+- `marketing/threads/queue_to_pending.py` で threads-app の承認待ちに登録（社長が承認すると自動投稿）
 - 公開24〜48時間後の初速（閲覧・スキ・アフィリクリック）を `published/<期間>.md` にメモ
 - 週次締めで `finance/kpi.csv` に反映
 

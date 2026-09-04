@@ -55,6 +55,8 @@
 
 - `dev/5-finance-manga/published/XX.md` に URL・価格・公開時刻・初速メモ欄
 - SNS文面を `marketing/threads/queue.md` へ（種別=誘導、買い手＝親向けの言い回し）
+- `python marketing/threads/queue_to_pending.py --source "basel:5-finance-manga:XX" --content "..." --link "note URL"`
+  で threads-app の承認待ちに登録 → 社長がStreamlit画面で承認すると自動投稿される
 - 公開48時間後の初速（閲覧・スキ・購入数）を published に記録 → 週次で `finance/kpi.csv`
 
 ## 品質の下限
