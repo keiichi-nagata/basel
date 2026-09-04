@@ -5,6 +5,8 @@
 ## 現状（記入）
 
 - **アカウント**: @【要確認】（`threads-app` は投稿先アカウント名を設定に持たない。認証トークンに紐づく1アカウント運用）
+- **管理画面（Streamlit）**: https://investment-apps-2y8upkj8jzy75k4xtykzpy.streamlit.app/
+  （投稿履歴の確認・「承認待ち」ページはここ）
 - **投稿頻度**: 1日2本（午前・午後、JST）
 - **投稿時間**: cron-job.org 側の設定次第（`threads-app` 自体はスケジュールを持たない）
 - **実行環境**: GitHub Actions（`workflow_dispatch`）。内蔵の `schedule` は遅延が大きいため使わず、
