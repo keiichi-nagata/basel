@@ -24,6 +24,12 @@ from pathlib import Path
 
 import requests
 
+try:  # Windows コンソールの文字化け対策
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:  # noqa: BLE001
+    pass
+
 THREADS_APP_ENV = Path(r"C:\Claude\プライベート\投資\threads-app\.env")
 THREADS_CHAR_LIMIT = 500
 
