@@ -97,7 +97,7 @@
 
 ### コマ16（センセ＆ミオ）
 - **画**: センセがうなずき、ミオが前向き
-- **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan nodding, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking forward with a bright expression, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, nodding, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking forward with a bright expression, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「この2つを両方使うのが、これからの時代の “お金の育て方” だ」
 - **セリフ（ミオ）**: 「じゃあ、まず “自分が働く” の方から知りたい」
 - **セリフ（センセ）**: 「次回はそこ。“働いてお金をもらう” しくみからいこう」

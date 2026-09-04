@@ -106,7 +106,7 @@
 
 ### コマ16（2人・引き）
 - **画**: 教室の窓ぎわで向かい合う2人。夕方の光
-- **Midjourneyプロンプト**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs in a mustard-yellow zip hoodie, and a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan, facing each other in a classroom by the window, evening light, calm hopeful mood, flat modern anime style, clean thin linework, soft muted colors, wide shot --ar 3:4`
+- **Midjourneyプロンプト**: `a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs in a mustard-yellow zip hoodie, and a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, facing each other in a classroom by the window, evening light, calm hopeful mood, flat modern anime style, clean thin linework, soft muted colors, wide shot --ar 3:4`
 - **セリフ（センセ）**: 「これから10回かけて、その仕組みを一緒に見ていこう。“未来の自分に10万円を託す”練習だ」
 - **セリフ（ミオ）**: 「よし、やる！ 未来のわたし、待ってて！」
 

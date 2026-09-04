@@ -111,7 +111,7 @@
 
 ### コマ16（センセ＆ミオ）
 - **画**: 2人。センセが軽く前置き、ミオが期待顔
-- **Midj**: `a friendly Japanese man in his early 30s with round glasses in a blue shirt and grey cardigan, and a cheerful 14-year-old Japanese schoolgirl with a black bob in a mustard-yellow hoodie looking curious, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
+- **Midj**: `a friendly Japanese man in his early 30s with short black hair, light stubble and round glasses, wearing a blue collared shirt under a grey cardigan, and a cheerful 14-year-old Japanese schoolgirl with a chin-length black bob and blunt bangs in a mustard-yellow zip hoodie looking curious, in a classroom, flat modern anime style, clean thin linework, soft muted colors, waist-up shot --ar 3:4`
 - **セリフ（センセ）**: 「次回は “貯金だけじゃダメ？ 投資ってなに？”。“貯金＝安全” って本当なのか、から」
 - **セリフ（ミオ）**: 「気になるところで！」
 
