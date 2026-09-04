@@ -28,6 +28,9 @@
 - [ ] 来週月曜、手動2周目（分析執筆→公開）。問題なければ次週 `/schedule` 化
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
+### 開発2部（車）— アフィリエイト
+- [ ] A8.net で車関連に提携申請（第一候補：自動車保険 一括見積もり。余裕あれば カーリース）→ 発行URLを `dev/2-cars/affiliates.json` の `url` に貼る（以降は毎号の下書きに自動挿入）
+
 ### 開発5部（金融マンガ）
 - [ ] 序章の初速を `dev/5-finance-manga/published/00.md` に記入（9/4ごろ）＋振り返り欄
 - [x] 第1回を公開（2026-09-03 https://note.com/basel5/n/nc7c5b170893f）

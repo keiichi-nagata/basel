@@ -39,6 +39,7 @@ INPUT_DIR = DATA_DIR / "inputs"
 RAW_DIR = DATA_DIR / "raw"
 DRAFT_DIR = CARS_DIR / "drafts"
 PRICES_PATH = CARS_DIR / "prices.json"
+AFFILIATES_PATH = CARS_DIR / "affiliates.json"
 
 JADA_PAGE = "https://www.jada.or.jp/pages/340/"
 JLMA_TUSHO = "https://www.zenkeijikyo.or.jp/statistics/tushosoku"  # 軽 通称名別 新車販売速報（最新月）
@@ -74,6 +75,15 @@ def load_prices() -> dict:
         return {k: v for k, v in raw.items() if not k.startswith("_")}
     except Exception:  # noqa: BLE001
         return {}
+
+
+def load_affiliates() -> list[dict]:
+    """affiliates.json のうち url が入っているものだけ返す（未提携はスキップ）。"""
+    try:
+        raw = json.loads(AFFILIATES_PATH.read_text(encoding="utf-8"))
+        return [it for it in raw.get("items", []) if str(it.get("url", "")).strip()]
+    except Exception:  # noqa: BLE001
+        return []
 
 
 def yen_to_man(yen: int | None) -> str:
@@ -394,9 +404,13 @@ def build(month: str) -> dict:
 
 def render_draft(data: dict) -> str:
     y, m = data["month"].split("-")
+    affs = load_affiliates()
     L: list[str] = []
     L.append(f"# 【{y}年{int(m)}月】新車販売台数ランキングTOP5から見える、〔その月のテーマ1フレーズ〕")
     L.append("")
+    if affs:
+        L.append("> この記事はプロモーション（アフィリエイトリンク）を含みます。")
+        L.append("")
     L.append("〔導入：今月のデータである旨。2回目以降は前月からの変化に軽く触れる〕")
     ch = [f"{r['model']}（前月{r['prev_rank']}位→{r['rank']}位）" for r in data["items"]
           if isinstance(r.get("rank_change"), int) and r["rank_change"] != 0]
@@ -443,13 +457,25 @@ def render_draft(data: dict) -> str:
     L.append("- 投資は「積立投資」「複利」など行動に移しやすいキーワードと結びつける")
     L.append("- 段落の最後に読者への問いかけ1行 ＋ 小さな行動を促す一言で締める")
     L.append("")
+    if affs:
+        L.append("## 関連リンク（PR）")
+        L.append("")
+        L.append("〔car-column-writer 記入〕直前の『働き方・投資への示唆』の流れから各リンクを"
+                 "1〜2文でつないでから置く（唐突に貼らない）。体験していないことを体験談として書かない。")
+        for a in affs:
+            L.append("")
+            L.append(a.get("lead", "").strip())
+            L.append(f"→ {a.get('slot', 'リンク').strip()} [PR]：{a['url'].strip()}")
+        L.append("")
     L.append("---")
     L.append("このシリーズは毎月更新予定です。次回もぜひ読みにきてください。")
     L.append("")
     L.append("より踏み込んだ分析（個別モデルの戦略分析や投資的な視点）は有料note側でも発信しています。")
     L.append("")
-    L.append("〔アフィリンクを入れる号は冒頭に広告表記（`sop/disclosure.md`）。相性の良い案件を1〜2個まで〕")
-    L.append("")
+    if not affs:
+        L.append("〔アフィリンクを入れる号は `dev/2-cars/affiliates.json` の url を埋める"
+                 "→ 冒頭の広告表記と『関連リンク（PR）』節が自動で入る。相性の良い案件を1〜2個まで〕")
+        L.append("")
     return "\n".join(L)
 
 
