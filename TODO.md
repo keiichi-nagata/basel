@@ -44,11 +44,9 @@
 ### マーケ部
 - [x] `marketing/threads/config.md` に現行の自動投稿の仕組みを書き出す
   → **判明**: 自動投稿（1日2本）は `queue.md` を読まない別基盤（RSS×Claude自動生成、公式API）
-- [x] 開発部の告知 → 承認 → 自動投稿の仕組みを実装（`queue_to_pending.py` ＋ threads-app「承認待ち」画面）
-- [ ] **導入作業（社長・1回だけ）**: threads-app の Supabase SQL Editor で `manual_posts` テーブルを作成
-      （`supabase_schema.sql` 参照）→ Streamlitアプリを再デプロイ → テスト投稿1件で流れを確認
-- [ ] threads-app 側の変更（ローカルにコミット済み・未push）を確認して `git push`
-      （`C:\Claude\プライベート\投資` monorepo。stock-app/note-appと共有のリポジトリのため確認してから）
+- [x] 開発部の告知 → 承認 → 自動投稿の仕組みを実装・導入完了（2026-09-05）
+      `queue_to_pending.py` ＋ threads-app「承認待ち」画面（https://investment-apps-2y8upkj8jzy75k4xtykzpy.streamlit.app/）
+      manual_postsテーブル作成・再デプロイ・テスト投稿の却下まで確認済み。次回公開から実運用
 
 ---
 
@@ -75,6 +73,7 @@
 
 ## ✅ 完了ログ（直近のみ）
 
+- [x] 2026-09-05 マーケ部 開発部の告知→承認→Threads自動投稿の仕組みを導入（threads-app「承認待ち」画面）
 - [x] 2026-09-05 開発5部 第2回を¥200で公開（初の有料回。https://note.com/basel5/n/n111a2e726a2d）
 - [x] 2026-09-03 開発5部 第1回を無料公開（https://note.com/basel5/n/nc7c5b170893f）
 - [x] 2026-09-02 開発5部 序章を無料公開（https://note.com/basel5/n/n8ddb16b8b430）
