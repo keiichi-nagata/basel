@@ -36,13 +36,13 @@
 無料は序章・第1回まで。第2回以降は有料（¥200、図解の手前まで無料）。
 
 ### マーケ部 — Threads
-- 自動投稿: 1日2本（実行環境・スクリプトは `marketing/threads/config.md` に記録）
-- アカウント: （@ユーザー名を記入）
+- 自動投稿: 1日2本（9時・17時。実行環境・スクリプトは `marketing/threads/config.md` に記録）
+- アカウント: @basel_freedom
 
 ### アカウント
-- note: （URL）
-- Threads: （@）
-- Instagram: （@）／プロアカウント化: 未 / 済
+- note: https://note.com/basel5
+- Threads: @basel_freedom
+- Instagram: （@を記入）／プロアカウント化: 未 / 済
 
 ### ASP
 - A8.net: 審査通過済み。ABEMA提携済み。U-NEXT案件は無い
