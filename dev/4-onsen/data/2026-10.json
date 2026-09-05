@@ -1,0 +1,69 @@
+{
+  "month": "2026-10",
+  "area": "北海道",
+  "collected_at": "2026-09-05",
+  "methodology": "独自採点 = 楽天トラベル総合評価 + じゃらん総合評価（各5点満点）の単純平均。両サイトとも口コミ20件以上の宿のみ対象。",
+  "items": [
+    {
+      "rank": 1,
+      "name": "心のリゾート 海の別邸ふる川",
+      "location": "白老（登別エリア）",
+      "score": 4.78,
+      "rakuten": {"score": 4.76, "review_count": 660, "url": "https://travel.rakuten.co.jp/HOTEL/109022/review.html"},
+      "jalan": {"score": 4.80, "review_count": 1703, "url": "https://www.jalan.net/yad340836/"},
+      "price_from_yen": null,
+      "good_points_summary": "海に面した露天風呂の開放感と、潮騒を聞きながら入れる湯を評価する声が多い。スタッフの気遣い・接客の丁寧さへの言及も目立つ。",
+      "concerns_summary": "夕食については、冷菜が多い・お造りの量が少ない・しゃぶしゃぶが牛から豚肉に変更されているプランがある、といった指摘が複数見られる。",
+      "recommended_for": "食事より温泉・眺望・静けさを重視したい人"
+    },
+    {
+      "rank": 2,
+      "name": "洞爺湖 鶴雅リゾート 洸の謌",
+      "location": "洞爺湖",
+      "score": 4.59,
+      "rakuten": {"score": 4.68, "review_count": 134, "url": ""},
+      "jalan": {"score": 4.50, "review_count": 81, "url": "https://www.jalan.net/yad328168/"},
+      "price_from_yen": null,
+      "good_points_summary": "洞爺湖を望む眺望と露天風呂付き客室、フレンチベースの夕食への評価が高い。スタッフの対応が丁寧という声も多い。",
+      "concerns_summary": "小さな子ども連れの客がいると声が響きやすいという指摘や、新築特有のにおい・温泉の塩素臭を感じたという声が一部にある。",
+      "recommended_for": "洞爺湖の景観と静かな滞在を重視するカップル・夫婦"
+    },
+    {
+      "rank": 3,
+      "name": "登別温泉 第一滝本館",
+      "location": "登別",
+      "score": 4.58,
+      "rakuten": {"score": 4.55, "review_count": 3823, "url": "https://travel.rakuten.co.jp/HOTEL/30109/review.html"},
+      "jalan": {"score": 4.60, "review_count": 7335, "url": "https://www.jalan.net/yad364904/"},
+      "price_from_yen": null,
+      "good_points_summary": "1858年創業の登別温泉最古参の宿。5泉質を1軒で楽しめる日本最大級級の大浴場と、地獄谷を望む眺めへの評価が突出して高い（じゃらんの項目別評価で風呂4.8点）。",
+      "concerns_summary": "口コミ件数が多く大規模な宿のため、部屋の評価（じゃらん項目別4.3点）は温泉ほど突出していない。時間帯によって大浴場が混み合うとの声もある。",
+      "recommended_for": "とにかく温泉そのものの充実度・種類を重視したい人"
+    },
+    {
+      "rank": 4,
+      "name": "ザ・レイクスイート湖の栖",
+      "location": "洞爺湖",
+      "score": 4.46,
+      "rakuten": {"score": 4.52, "review_count": 902, "url": ""},
+      "jalan": {"score": 4.40, "review_count": 105, "url": "https://www.jalan.net/yad352222/"},
+      "price_from_yen": null,
+      "good_points_summary": "全室に露天風呂付き。じゃらんアワードの北海道エリアで5年連続受賞歴があり、客室の快適さ・プライベート感への評価が高い。",
+      "concerns_summary": "夕食の評価は分かれており、満足という声がある一方、内容が価格に見合わないという指摘も見られる。清掃状態への指摘も一部あった。",
+      "recommended_for": "部屋にこもってプライベートな温泉時間を楽しみたい人"
+    },
+    {
+      "rank": 5,
+      "name": "定山渓万世閣ホテルミリオーネ",
+      "location": "定山渓（札幌近郊）",
+      "score": 4.22,
+      "rakuten": {"score": 4.23, "review_count": 2190, "url": "https://travel.rakuten.co.jp/HOTEL/20619/20619_onsen.html"},
+      "jalan": {"score": 4.20, "review_count": 7922, "url": "https://www.jalan.net/yad319724/"},
+      "price_from_yen": null,
+      "good_points_summary": "札幌駅からの無料送迎バスがあり、80品目ほどの和洋中バイキングとコストパフォーマンスの良さを評価する声が多い。",
+      "concerns_summary": "バイキングの配膳場所が数カ所に分かれていて把握しづらいという声や、サービス面の評価が他項目よりやや控えめ（じゃらん項目別4.0点）という傾向がある。",
+      "recommended_for": "札幌から近場で気軽に、コスパよく温泉旅行を楽しみたい人"
+    }
+  ],
+  "excluded": []
+}
