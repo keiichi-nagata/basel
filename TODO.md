@@ -22,8 +22,9 @@
 - [x] `STATE.md` の資産インベントリを実データで記入（note/Threads @basel_freedom/IG @basel_freed・プロ済）
 - [x] `dev/1-apps/catalog.md` に5本のタイトル・価格(¥1,200)・売上0円を記入
 - [x] `finance/ledger.csv` にMidjourney経費($8/月)を記入。売上は現状すべて0円のため計上なし
-- [ ] Midjourney $8/月の**円換算額**をカード明細で確認して `finance/ledger.csv` に記入
-- [ ] `dev/1-apps/catalog.md` の公開日・note URL・元アプリのリポジトリを埋める（分かる範囲で）
+- [x] Midjourneyの実額を記入（年払い ¥17,075、2026-09-01購入）
+- [x] `dev/1-apps/catalog.md` の公開日・note URLを記入（5本とも8/13〜9/1に公開済み・売上0円）
+- [ ] `dev/1-apps/catalog.md` の元アプリのリポジトリ（ローカルパス）を埋める（分かる範囲で・後回し可）
 
 ### 開発3部（ドラマ）
 - [ ] 来週月曜、手動2周目（分析執筆→公開）。問題なければ次週 `/schedule` 化
