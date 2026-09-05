@@ -7,7 +7,7 @@
     {
       "rank": 1,
       "name": "心のリゾート 海の別邸ふる川",
-      "location": "白老（登別エリア）",
+      "location": "白老",
       "score": 4.78,
       "rakuten": {"score": 4.76, "review_count": 660, "url": "https://travel.rakuten.co.jp/HOTEL/109022/review.html"},
       "jalan": {"score": 4.80, "review_count": 1703, "url": "https://www.jalan.net/yad340836/"},
@@ -55,7 +55,7 @@
     {
       "rank": 5,
       "name": "定山渓万世閣ホテルミリオーネ",
-      "location": "定山渓（札幌近郊）",
+      "location": "定山渓",
       "score": 4.22,
       "rakuten": {"score": 4.23, "review_count": 2190, "url": "https://travel.rakuten.co.jp/HOTEL/20619/20619_onsen.html"},
       "jalan": {"score": 4.20, "review_count": 7922, "url": "https://www.jalan.net/yad319724/"},

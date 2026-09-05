@@ -41,8 +41,12 @@ TOP5はエリア内の都道府県をまたいで選ぶ（例: 北海道エリ�
 - `affiliates.json` — **汎用**の楽天トラベル・JTB旅行予約バナーリンク（個別宿の楽天トラベルリンクは
   月ごとに変わるため、ここではなく `drafts/<期間>.md` に直接記載する）
 - `data/` — 月次の候補宿データ（評価点・出典URL。`YYYY-MM.json`）
-- `drafts/` — `YYYY-MM.md`（下書き）
+- `drafts/` — `YYYY-MM.md`（下書き）＋ `YYYY-MM.png`（note/SNS貼付用のランキング表画像）
 - `published/` — `YYYY-MM.md`（公開記録）
+- `assets/make_ranking_table.py` — `data/YYYY-MM.json` からランキング表画像を生成（note で
+  Markdown表が崩れるため、開発3部と同様に画像で貼る）
+
+価格は掲載しない（変動が激しく確認の手間が大きいため。予約リンク先で確認してもらう）。
 
 ## ワークフロー
 
