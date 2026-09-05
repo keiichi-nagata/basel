@@ -53,7 +53,7 @@
 - Instagram: @basel_freed／プロアカウント化: 済
 
 ### ASP
-- A8.net: 審査通過済み。提携済み: ABEMA、JTB旅行予約「首都圏発」（開発4部用）。申請中: akippa（駐車場
+- A8.net: 審査通過済み。提携済み: ABEMA、JTB旅行予約「首都圏発」・じゃらんnet（開発4部用）。申請中: akippa（駐車場
   シェア）・保険スクエアbang!（自動車保険、開発2部用）。U-NEXT案件は無い
 - バリューコマース / アクセストレード: 審査落ち
 - もしもアフィリエイト / afb: 未登録 → **次に申請**（U-NEXT・Amazon Prime Video 用）

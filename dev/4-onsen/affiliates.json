@@ -16,6 +16,14 @@
       "url": "https://px.a8.net/svt/ejp?a8mat=4BC36M+61WO6Q+15A4+1NK7CX&a8sns=note",
       "lead": "JTBのプランもあわせてチェックしたい方はこちら。",
       "note": "「首都圏発」の旅物語プログラム。noteに貼るとOGP画像なしのリンクカードになるが機能に問題なし"
+    },
+    {
+      "slot": "じゃらんnet（汎用）",
+      "asp": "A8.net",
+      "status": "提携済み",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4BC3YR+9ZLU5U+14CS+6GZCH&a8sns=note",
+      "lead": "じゃらんの口コミ・空室状況もあわせて確認したい方はこちら。",
+      "note": "宿泊予約の汎用リンク（個別宿ページへの深いリンクではない）"
     }
   ],
   "rakuten_area_links": {
