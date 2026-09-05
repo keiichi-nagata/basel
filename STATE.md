@@ -42,7 +42,7 @@
 ### アカウント
 - note: https://note.com/basel5
 - Threads: @basel_freedom
-- Instagram: （@を記入）／プロアカウント化: 未 / 済
+- Instagram: @basel_freed／プロアカウント化: 済
 
 ### ASP
 - A8.net: 審査通過済み。ABEMA提携済み。U-NEXT案件は無い
