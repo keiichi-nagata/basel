@@ -19,9 +19,11 @@
 ## 🔥 今すぐ / 今週
 
 ### 会社全体
-- [ ] `finance/ledger.csv` に直近の売上・経費（有料note5本、Midjourney/Canva等のサブスク）を入力
-- [ ] `STATE.md` の「資産インベントリ」空欄（note/Threads/IG のURL・ハンドル、ASP）を実データで埋める
-- [ ] `dev/1-apps/catalog.md` に有料note4〜5本の情報を記入（維持モードでも記録は残す）
+- [x] `STATE.md` の資産インベントリを実データで記入（note/Threads @basel_freedom/IG @basel_freed・プロ済）
+- [x] `dev/1-apps/catalog.md` に5本のタイトル・価格(¥1,200)・売上0円を記入
+- [x] `finance/ledger.csv` にMidjourney経費($8/月)を記入。売上は現状すべて0円のため計上なし
+- [ ] Midjourney $8/月の**円換算額**をカード明細で確認して `finance/ledger.csv` に記入
+- [ ] `dev/1-apps/catalog.md` の公開日・note URL・元アプリのリポジトリを埋める（分かる範囲で）
 
 ### 開発3部（ドラマ）
 - [ ] 来週月曜、手動2周目（分析執筆→公開）。問題なければ次週 `/schedule` 化
