@@ -2,7 +2,7 @@
 """各号（各エリア）のnote見出し画像（サムネイル）を生成する。
 
 使い方:
-  python make_eyecatch.py                              → 北海道編を assets/2026-10/eyecatch.png に生成
+  python make_eyecatch.py                              → 北海道編を assets/2026-09/eyecatch.png に生成
   python make_eyecatch.py "2026年11月" "東北編" assets/2026-11/eyecatch.png [motif]
 
 motif はエリアを連想させる簡単な自作イラスト（写真は著作権リスクがあるため使わない）。
@@ -116,7 +116,7 @@ if __name__ == "__main__":
         out = Path(sys.argv[3]) if len(sys.argv) >= 4 else here / "eyecatch.png"
         motif = sys.argv[4] if len(sys.argv) >= 5 else None
     else:
-        label, subtitle = "2026年10月", "北海道温泉編"
-        out = here / "2026-10" / "eyecatch.png"
+        label, subtitle = "2026年9月", "北海道温泉編"
+        out = here / "2026-09" / "eyecatch.png"
         motif = "hokkaido"
     eyecatch(label, subtitle, out, motif)

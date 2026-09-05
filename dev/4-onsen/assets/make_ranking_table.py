@@ -6,7 +6,7 @@
 開発3部（`dev/3-drama/pipeline/collect.py` の render_png）と同じ方式。
 
 使い方:
-  python dev/4-onsen/assets/make_ranking_table.py 2026-10
+  python dev/4-onsen/assets/make_ranking_table.py 2026-09
 """
 from __future__ import annotations
 
