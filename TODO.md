@@ -32,8 +32,7 @@
 
 ### 開発4部（温泉宿ランキング・2026-09-05 新設）
 - [x] 2026年9月号（北海道）を公開（2026-09-06 https://note.com/basel5/n/n15a2f404324c）
-- [x] Threads告知を承認待ちキューに登録（threads-app「承認待ち」で承認 → 投稿）
-- [ ] Instagram告知（`marketing/instagram/queue.md`、eyecatch 1枚＋キャプション）を投稿
+- [x] Threads・Instagramで告知（2026-09-06）
 - [ ] 9月号の初速を `published/2026-09.md` に記入（9/8ごろ）
 - [ ] 10月号: 東北エリアのリサーチ・執筆（9月下旬〜10月初旬に着手）
 
