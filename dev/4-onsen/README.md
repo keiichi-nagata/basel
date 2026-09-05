@@ -48,7 +48,8 @@ TOP5はエリア内の都道府県をまたいで選ぶ（例: 北海道エリ�
   Markdown表が崩れるため、開発3部と同様に画像で貼る）
 - `assets/make_cover.py` — マガジン表紙画像（`assets/magazine-cover.png`）。**他部と違う明るい配色**
   （クリーム地＋テラコッタ）で差別化
-- `assets/make_eyecatch.py` — 各号のサムネイル画像（`assets/YYYY-MM/eyecatch.png`）。表紙と同じ配色
+- `assets/make_eyecatch.py` — 各号のサムネイル画像を2サイズ生成（`assets/YYYY-MM/eyecatch.png`
+  = note用 1280x670、`eyecatch-ig.png` = Instagram用 4:5・1080x1350）。表紙と同じ配色
 
 価格は掲載しない（変動が激しく確認の手間が大きいため。予約リンク先で確認してもらう）。
 
