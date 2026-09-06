@@ -1,0 +1,397 @@
+{
+  "week": "2026-W36",
+  "range": {
+    "from": "2026-08-31",
+    "to": "2026-09-06"
+  },
+  "collected_at": "2026-09-07T07:30:23+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-09-07T07:30:23+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-09-07T07:30:23+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 14,
+      "fetched_at": "2026-09-07T07:30:23+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-09-07T07:30:23+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "ラヴ上等",
+      "matched": "ラヴ上等",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "スーパーの裏でヤニ吸うふたり",
+      "matched": "スーパーの裏でヤニ吸うふたり",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 90.0,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 12,
+          "score": 70.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 6,
+        "total": 21,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "pending"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "Tシャツが乾くまで",
+      "source_title": "Ｔシャツが乾くまで",
+      "broadcaster": "TBS",
+      "composite_score": 69.9,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 7,
+          "score": 90.0
+        },
+        "C_trends": 39.6
+      },
+      "tmdb_id": 322570,
+      "matched_title": "Tシャツが乾くまで",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "ある夏の日、二組の夫婦がとある事故に巻き込まれてしまう。それがきっかけで、当たり前に続いていくと思っていた二組の夫婦の幸せな日常が、突如として崩れ去っていくことに。さらに、その事故が暴いたのは、愛する人の“第３金曜日の秘密”だった——。第３金曜日、行方不明、Ｔシャツ…これらのワードが意味することとは？あらすじさえ語れない、「二組の夫婦の喪失から始まる“愛”と“秘密”の物語」がこの夏、幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-10"
+    },
+    {
+      "rank": 3,
+      "title": "告白ー25年目の秘密ー",
+      "source_title": "告白―25年目の秘密―",
+      "broadcaster": "日テレ",
+      "composite_score": 45.0,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326063,
+      "matched_title": "告白ー25年目の秘密ー",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 9,
+        "uncertain": false
+      },
+      "overview": "一人の女性に、幼い頃から25年間、片想いし続けてきた主人公。\n\nそれは、「純愛」なのか、それとも執着という名の「狂気」なのか。\n\n陰から彼女を追い続ける理由。\n\nその裏側には、25年前に起きた凄惨な事件と\n\nそれぞれが抱える秘密が深く関係している。\n\n長きにわたる沈黙を破り、彼女と接点を持ったその日から、\n\n日常がスリリングに動き始める。\n\n人は好きな人のことならなんでも知りたい。\n\nだけど、それはどこまでなら許されるのか。\n\nもしも、この愛が全て仕組まれたものだとしたら・・・。\n\n最も無垢で、最も危険なラブサスペンスが幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-11"
+    },
+    {
+      "rank": 4,
+      "title": "SとX",
+      "source_title": "S&X",
+      "broadcaster": null,
+      "composite_score": 40.2,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 1,
+          "score": 80.0
+        },
+        "C_trends": 0.4
+      },
+      "tmdb_id": 312523,
+      "matched_title": "SとX",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 7,
+        "uncertain": false
+      },
+      "overview": "セックスセラピスト・霜鳥壱人のクリニックには、多様で切実な性の悩みが日々寄せられる。霜鳥はそれぞれの声に誠実に向き合うが、彼自身もまた人知れず悩みを抱えていた。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-20"
+    },
+    {
+      "rank": 5,
+      "title": "一次元の挿し木",
+      "source_title": "一次元の挿し木",
+      "broadcaster": "読売テレビ",
+      "composite_score": 38.0,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.1
+      },
+      "tmdb_id": 322420,
+      "matched_title": "一次元の挿し木",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "ヒマラヤ山中で発掘された２００年前の人骨が、失踪した義理の妹のDNAと完全に一致――関係者の不審な死、盗まれた人骨、消えた過去の記憶、そして、明かされる妹の“正体”とは……二転三転する真実の果てに待つ、想像を絶する結末。時を超えた謎に挑むヒューマンミステリー！！",
+      "providers_jp": [
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-05"
+    },
+    {
+      "rank": 6,
+      "title": "大空港～GATE24～",
+      "source_title": "大空港～GATE24～",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 36.8,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 5,
+          "score": 60.0
+        },
+        "C_trends": 0.4
+      },
+      "tmdb_id": 323579,
+      "matched_title": "大空港～GATE24～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "密輸、偽造パスポート、人身売買、テロ――。国際犯罪を水際で防ぐ“国の最終防衛ライン”である空港。その要となるのが《税関》と《入管》。人の心を読むのは苦手だが、モノには鋭い観察眼を持つ税関職員・森万智（趣里）をはじめ、超エリートの入国審査官・早見圭一郎（眞栄田郷敦）、たたき上げの税関職員・松山篤志（板垣李光人）…など各省庁から寄せ集められた個性あふれるメンバーが、スペシャルユニット《GATE24》を結成！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-23"
+    },
+    {
+      "rank": 7,
+      "title": "ラストノート",
+      "source_title": "ラストノート",
+      "broadcaster": "フジテレビ",
+      "composite_score": 33.1,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.2
+      },
+      "tmdb_id": 324581,
+      "matched_title": "ラストノート",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "香料会社の営業部で働く主人公・一瀬葵は、結婚や離婚、仕事での挫折など、49年の人生でさまざまなことを経験していくうちに、あらゆることにしがみつくことをやめ、「これ以上、変化もサプライズもいらない」と、現状維持の日常を送っていた。そんな時、親友に起こったトラブルをきっかけに、夢を諦めてしまった青年、樋口澄晴と出会う。澄晴は、厳しい周囲の環境に打ちのめされた暗い過去があり、自分の本当の想いにフタをしてしまい、流れのままに人生を生きていた。 年齢も、過ごしてきた環境も全く違う二人に、恋の香りがただよう予感なんてなかった。しかし、今の人生を受け入れていたはずの二人がお互いの本当の想いに触れあったとき、隠しきれない本音や、諦めきれない思いがあふれていく。そして、それがまるで香水の最後に香る余韻“ラストノート”のように、お互いの心に溶け合い、二人の運命を変えていく。\n\n20歳近い年の差や、二人を取り巻くさまざまな人間関係など、乗り越えられない壁に何度も襲われる葵と澄晴。しかし、どんなに過酷な現実に阻まれても、大人ぶることをやめた大人たちは、どうしても惹かれ合っていく…。",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-09"
+    },
+    {
+      "rank": 8,
+      "title": "恋は飴模様",
+      "source_title": "Our Sticky Love",
+      "broadcaster": null,
+      "composite_score": 25.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 2,
+          "score": 50.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 291496,
+      "matched_title": "恋は飴模様",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 12,
+        "total": 12,
+        "uncertain": false
+      },
+      "overview": "記憶を失ったバリキャリ検事が、彼氏を名乗るボクシングコーチと一緒に暮らすことに。果たしてこんなベタな状況から本当の愛は生まれるの?",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-07"
+    },
+    {
+      "rank": 9,
+      "title": "リーガルビート –逆転の法廷–",
+      "source_title": "リーガルビート -逆転の法廷-",
+      "broadcaster": "テレ東",
+      "composite_score": 20.0,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326139,
+      "matched_title": "リーガルビート –逆転の法廷–",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": null,
+        "uncertain": true
+      },
+      "overview": "声をあげられない人たちの力になりたいと思い、弁護士になった泰地空（鈴鹿央士）。しかし、司法試験に一発合格したにもかかわらず、就職活動の面接では吃音のためうまく話せず、全滅。そんな彼がたどり着いたのは、一風変わった弱小弁護士事務所だった。彼を引き入れたのは「法律で人は救えない」と言う所長の雪村明日実（小雪）と、「勝てない勝負はしない」と豪語する偏屈エリートの星秀幸（稲垣吾郎）。 凸凹すぎる弱小チームが挑むのは、現代社会の闇が潜む難案件ばかり。言葉に詰まり何度も悔しい思いをしてきた泰地だが、彼には「ラップのリズムに乗れば、吃音の症状が出ずに思いのまま話せる」という武器があった。依頼人の‟心の声“を拾い、ラップの爆発力で法廷の絶体絶命なピンチをひっくり返す！個性派弁護士たちが真実を導き出す、痛快逆転リーガルドラマ！",
+      "providers_jp": [
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-24"
+    },
+    {
+      "rank": 10,
+      "title": "Tokyo middle 30",
+      "source_title": "Tokyo middle 30",
+      "broadcaster": "フジテレビ",
+      "composite_score": 15.1,
+      "components": {
+        "A_tver": {
+          "rank": 8,
+          "score": 30.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.2
+      },
+      "tmdb_id": 325124,
+      "matched_title": "Tokyo middle 30",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 7,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": "2026-07-22"
+    }
+  ]
+}
