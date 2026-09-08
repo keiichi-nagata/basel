@@ -49,7 +49,7 @@
 
 - [x] 開発2部 — パイプライン整備（collect.py / car-column-writer / SOP / prices.json / 月次Action）
 - [x] 開発2部 — 7月記事 note 公開済み（https://note.com/basel5/n/n400eac7620fd）→ `published/2026-07.md` にURL記入
-- [ ] 開発2部 — マガジン（名称未定）を作成し、7月記事を追加。冒頭に注記・シリーズ説明を整える
+- [ ] 開発2部 — noteでマガジン「新車ランキングで読む 働き方と投資（月刊）」を作成（表紙=`assets/magazine-cover.png`）し、7月号・8月号を追加
 - [x] 開発2部 — 8月号: collect.py で自動取得＋分析執筆済み（`drafts/2026-08.md`。TOP5にカローラNEW）
 - [ ] 開発2部 — 8月号を社長レビュー（`published/2026-08.md` のチェックリスト。熊本地震・カローラ価格の要確認あり）→ note公開 → URL記入
 - [ ] 開発2部 — 8月号を Threads/IG で告知（アース・カー案件を含むので「（PR）」表記）

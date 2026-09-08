@@ -23,7 +23,8 @@
 （`collect.py`→`car-column-writer`→公開。8日ごろ Action が PR）。
 - 2026年7月号: https://note.com/basel5/n/n400eac7620fd （公開済み・マガジン未所属）
 - 2026年8月号: `drafts/2026-08.md` 執筆済み（カローラがNEWでTOP5入り）→ 社長レビュー待ち
-次: マガジン作成、8月号のレビュー→公開→告知。
+マガジン名「新車ランキングで読む 働き方と投資（月刊）」に決定（表紙 `assets/magazine-cover.png`）。
+次: noteでマガジン作成、8月号のレビュー→公開→告知。
 
 ### 開発3部 — ドラマランキング（無料・集客エンジン）
 W35・W36 を公開。毎週月曜、GitHub Action（6:00 JST・データ収集）→ `/schedule` ルーチン

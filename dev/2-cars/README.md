@@ -2,8 +2,9 @@
 
 ## 成果物
 
-月次・無料note（マガジン）。「車種別TOP5 → 各車の理由 → 共通構造 → 働き方・投資への示唆」の
-エッセイ型。アフィリンクは当面なし（入れるなら保険・書籍・生活系を1〜2個・広告表記つき）。
+月次・無料note（マガジン「**新車ランキングで読む 働き方と投資（月刊）**」）。
+「車種別TOP5 → 各車の理由 → 共通構造 → 働き方・投資への示唆」のエッセイ型。
+アフィリンクは提携済みのものを1〜2個・広告表記つき（現状は `affiliates.json` にアース・カー）。
 
 ## 更新サイクル
 
@@ -29,6 +30,7 @@
 - `affiliates.json` — 車関連アフィリンク（A8/afb で提携 → url を貼ると毎号の下書きに広告表記＋関連リンク節を自動挿入）
 - `assets/make_ranking_table.py` — `data/YYYY-MM.json` から表画像（`drafts/YYYY-MM.png`）を生成（noteでMarkdown表が崩れるため）
 - `assets/make_eyecatch.py` — サムネイル画像 2サイズ（`assets/YYYY-MM/eyecatch.png` note用1280x670、`eyecatch-ig.png` IG用4:5）。濃紺＋アンバー配色で他部と差別化
+- `assets/make_cover.py` — マガジン表紙画像（`assets/magazine-cover.png`）。文言・色を変えたら再実行
 - `pipeline/collect.py` — 自販連/全軽自協からエクセルを取得 → 総合TOP5を組み立て
 - `pipeline/requirements.txt` — `requests` / `openpyxl` / `xlrd==1.2.0`（旧 .xls 用）
 - `data/inputs/` — 取得失敗時の手動フォールバック（`YYYY-MM.json`。`2026-07.json` が例）
