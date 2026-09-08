@@ -1,0 +1,394 @@
+{
+  "week": "2026-W36",
+  "range": {
+    "from": "2026-08-31",
+    "to": "2026-09-06"
+  },
+  "collected_at": "2026-09-09T01:33:37+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-09-09T01:33:37+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-09-09T01:33:37+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 15,
+      "fetched_at": "2026-09-09T01:33:37+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-09-09T01:33:37+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "ラヴ上等",
+      "matched": "ラヴ上等",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "スーパーの裏でヤニ吸うふたり",
+      "matched": "スーパーの裏でヤニ吸うふたり",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 90.0,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 12,
+          "score": 70.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 7,
+        "total": 21,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "pending"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "Tシャツが乾くまで",
+      "source_title": "Ｔシャツが乾くまで",
+      "broadcaster": "TBS",
+      "composite_score": 53.1,
+      "components": {
+        "A_tver": {
+          "rank": 8,
+          "score": 30.0
+        },
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 7,
+          "score": 90.0
+        },
+        "C_trends": 39.4
+      },
+      "tmdb_id": 322570,
+      "matched_title": "Tシャツが乾くまで",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "ある夏の日、二組の夫婦がとある事故に巻き込まれてしまう。それがきっかけで、当たり前に続いていくと思っていた二組の夫婦の幸せな日常が、突如として崩れ去っていくことに。さらに、その事故が暴いたのは、愛する人の“第３金曜日の秘密”だった——。第３金曜日、行方不明、Ｔシャツ…これらのワードが意味することとは？あらすじさえ語れない、「二組の夫婦の喪失から始まる“愛”と“秘密”の物語」がこの夏、幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-10"
+    },
+    {
+      "rank": 3,
+      "title": "GTO",
+      "source_title": "GTO",
+      "broadcaster": "カンテレ",
+      "composite_score": 50.5,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 11.0
+      },
+      "tmdb_id": 325022,
+      "matched_title": "GTO",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "反町隆史主演のカンテレ・フジテレビ系全国ネット・月曜10時ドラマ『GTO』(7月20日スタート)。先日、主人公・鬼塚英吉(反町隆史)が今作で新たに赴任し、担任を務めることになる“私立誠進学園”1年B組の生徒役キャスト・全28名が一挙に解禁され、瞬く間にYahoo！ニューストピックスの「主要」に掲載されるなど、大きな話題を呼んでいる。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-20"
+    },
+    {
+      "rank": 4,
+      "title": "SとX",
+      "source_title": "S&X",
+      "broadcaster": null,
+      "composite_score": 40.2,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 1,
+          "score": 80.0
+        },
+        "C_trends": 0.4
+      },
+      "tmdb_id": 312523,
+      "matched_title": "SとX",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 7,
+        "uncertain": false
+      },
+      "overview": "セックスセラピスト・霜鳥壱人のクリニックには、多様で切実な性の悩みが日々寄せられる。霜鳥はそれぞれの声に誠実に向き合うが、彼自身もまた人知れず悩みを抱えていた。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-20"
+    },
+    {
+      "rank": 5,
+      "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～",
+      "source_title": "もう1度夫婦になりますか？～カモフラージュ夫婦～",
+      "broadcaster": "日テレ",
+      "composite_score": 40.0,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 325605,
+      "matched_title": "もう1度夫婦になりますか？～カモフラージュ夫婦～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": 5,
+        "uncertain": false
+      },
+      "overview": "“終わった夫婦の、始め方。”\n\n裏切りから始まる夫婦の物語\n\n家庭に入り、幸せな結婚生活を過ごしていた妻・愛子。\n\nしかし一流企業に勤める夫・誠一の不倫に気づいてしまう。\n\n戻ってくると信じて耐え続けていた夫婦生活だが、不倫という裏切り以上の衝撃の「ある真実」が…!!\n\n妊娠した愛子は一人で産んで育てることを決意し、自分と子供の幸せだけを考え、動き出す。\n\n私はもう1度自分らしさを取り戻してこの子と一緒に前を向きたい。\n\n一方、自らの愚かさと愛子への愛の深さに気づいた誠一はやり直しを願い、奮闘していく。  俺はもう1度愛子と向き合いたい。できることなら支えていきたい。\n\n自分の気持ちに素直になった夫婦が再び動き出す！\n\n不倫サスペンス × ラブ × ヒューマン\n\nもう1度夫婦になりますか？",
+      "providers_jp": [
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "pending"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-07"
+    },
+    {
+      "rank": 6,
+      "title": "一次元の挿し木",
+      "source_title": "一次元の挿し木",
+      "broadcaster": "読売テレビ",
+      "composite_score": 38.5,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.9
+      },
+      "tmdb_id": 322420,
+      "matched_title": "一次元の挿し木",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "ヒマラヤ山中で発掘された２００年前の人骨が、失踪した義理の妹のDNAと完全に一致――関係者の不審な死、盗まれた人骨、消えた過去の記憶、そして、明かされる妹の“正体”とは……二転三転する真実の果てに待つ、想像を絶する結末。時を超えた謎に挑むヒューマンミステリー！！",
+      "providers_jp": [
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-05"
+    },
+    {
+      "rank": 7,
+      "title": "大空港～GATE24～",
+      "source_title": "GATE24:The Border",
+      "broadcaster": null,
+      "composite_score": 30.1,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 5,
+          "score": 60.0
+        },
+        "C_trends": 0.3
+      },
+      "tmdb_id": 323579,
+      "matched_title": "大空港～GATE24～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 7,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "密輸、偽造パスポート、人身売買、テロ――。国際犯罪を水際で防ぐ“国の最終防衛ライン”である空港。その要となるのが《税関》と《入管》。人の心を読むのは苦手だが、モノには鋭い観察眼を持つ税関職員・森万智（趣里）をはじめ、超エリートの入国審査官・早見圭一郎（眞栄田郷敦）、たたき上げの税関職員・松山篤志（板垣李光人）…など各省庁から寄せ集められた個性あふれるメンバーが、スペシャルユニット《GATE24》を結成！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-23"
+    },
+    {
+      "rank": 8,
+      "title": "ブラックトリック～裁きを操る弁護人～",
+      "source_title": "ブラックトリック～裁きを操る弁護人～",
+      "broadcaster": "フジテレビ",
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 322852,
+      "matched_title": "ブラックトリック～裁きを操る弁護人～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "敏腕弁護士と一級建築士の二刀流で活躍する異色の主人公を演じる\n\nでっち上げの“嘘”を武器に真実を暴く痛快リーガルドラマ！",
+      "providers_jp": [],
+      "first_air_date": "2026-07-20"
+    },
+    {
+      "rank": 9,
+      "title": "夫を殺したはずなのに",
+      "source_title": "夫を殺したはずなのに",
+      "broadcaster": "テレ東",
+      "composite_score": 25.1,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.2
+      },
+      "tmdb_id": 324584,
+      "matched_title": "夫を殺したはずなのに",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "料理上手な妻・莉乃と優しい夫・慶太。幸せな日々を送る夫婦だったが、結婚記念日の夜、莉乃の元に届いた一本の生配信動画によって、その日常は崩壊する。画面の中で覆面を被り、見知らぬ女と絡み合う夫…。裏切りを知った莉乃は、密会現場へ乗り込み、怒りに任せて夫・慶太をメッタ刺しにする。しかし、愛人・エレナの返り討ちに遭い、莉乃も命を落としてしまう。次に目が覚めると「夫の不倫が発覚した日」に戻っていた――。夫と愛人に復讐するために、ありとあらゆる方法を駆使するも、その度に命を落とし、また過去に巻き戻ってしまう。なぜ巻き戻るのか？自分の“復讐”が間違っていたのか？繰り返される “死のループ”の中で、莉乃はやがて衝撃の真実へと辿り着く。終わりのない愛と狂気が加速させる、底知れぬスパイラル。",
+      "providers_jp": [
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-06"
+    },
+    {
+      "rank": 10,
+      "title": "恋は飴模様",
+      "source_title": "Our Sticky Love",
+      "broadcaster": null,
+      "composite_score": 25.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 2,
+          "score": 50.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 291496,
+      "matched_title": "恋は飴模様",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 12,
+        "total": 12,
+        "uncertain": false
+      },
+      "overview": "記憶を失ったバリキャリ検事が、彼氏を名乗るボクシングコーチと一緒に暮らすことに。果たしてこんなベタな状況から本当の愛は生まれるの?",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-08-07"
+    }
+  ]
+}
