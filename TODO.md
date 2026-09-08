@@ -19,8 +19,8 @@
 ## 🔥 今すぐ / 今週
 
 ### 開発3部（ドラマ）
-- [x] 2周目（2026-W36）公開（2026-09-09 https://note.com/basel5/n/n373dc87cf1de、PR #3 マージ済み）
-- [ ] W36 の Threads告知を threads-app「承認待ち」で承認 → 投稿
+- [x] 2周目（2026-W36）公開＋Threads/Instagram告知（2026-09-09 https://note.com/basel5/n/n373dc87cf1de、PR #3 マージ済み）
+- [ ] W36 の初速を `published/2026-W36.md` に記入（9/11ごろ）
 - [ ] 3周目（2026-W37、9/15前後）。問題なければ以降 `/schedule` 化を検討
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
