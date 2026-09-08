@@ -1,0 +1,81 @@
+{
+  "month": "2026-08",
+  "collected_at": "2026-09-09",
+  "sources": {
+    "registered": {
+      "url": "https://www.jada.or.jp/pages/340/"
+    },
+    "kei": {
+      "url": "https://www.zenkeijikyo.or.jp/statistics/tushosoku"
+    },
+    "prices": "dev/2-cars/prices.json"
+  },
+  "price_needs_check": [],
+  "items": [
+    {
+      "model": "N-BOX",
+      "maker": "ホンダ",
+      "units": 13917,
+      "yoy_pct": -6.8,
+      "segment": "軽",
+      "rank": 1,
+      "price_from_yen": 1769000,
+      "price_as_of": "2026-07",
+      "price_source": "honda.co.jp（7月一部改良後）",
+      "prev_rank": 1,
+      "rank_change": 0
+    },
+    {
+      "model": "スペーシア",
+      "maker": "スズキ",
+      "units": 11624,
+      "yoy_pct": 1.3,
+      "segment": "軽",
+      "rank": 2,
+      "price_from_yen": 1530000,
+      "price_as_of": "2026-07",
+      "price_source": "suzuki.co.jp",
+      "prev_rank": 2,
+      "rank_change": 0
+    },
+    {
+      "model": "ヤリス",
+      "maker": "トヨタ",
+      "units": 10077,
+      "yoy_pct": 14.3,
+      "segment": "登録車",
+      "rank": 3,
+      "price_from_yen": 1697000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": 3,
+      "rank_change": 0
+    },
+    {
+      "model": "ライズ",
+      "maker": "トヨタ",
+      "units": 8824,
+      "yoy_pct": 17.9,
+      "segment": "登録車",
+      "rank": 4,
+      "price_from_yen": 1800000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": 4,
+      "rank_change": 0
+    },
+    {
+      "model": "カローラ",
+      "maker": "トヨタ",
+      "units": 8335,
+      "yoy_pct": -3.0,
+      "segment": "登録車",
+      "rank": 5,
+      "price_from_yen": 2380400,
+      "price_as_of": "2026-05",
+      "price_source": "カローラ（セダン）2026-05一部改良後の最安グレードX。価格.com掲載のメーカー希望小売価格。公開前にtoyota.jpで要再確認",
+      "prev_rank": null,
+      "rank_change": "NEW"
+    }
+  ]
+}

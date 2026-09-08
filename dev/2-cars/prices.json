@@ -4,5 +4,6 @@
   "スペーシア": { "from": 1530000, "as_of": "2026-07", "source": "suzuki.co.jp" },
   "ヤリス":     { "from": 1697000, "as_of": "2026-07", "source": "toyota.jp" },
   "ライズ":     { "from": 1800000, "as_of": "2026-07", "source": "toyota.jp" },
-  "シエンタ":   { "from": 1995000, "as_of": "2026-07", "source": "toyota.jp" }
+  "シエンタ":   { "from": 1995000, "as_of": "2026-07", "source": "toyota.jp" },
+  "カローラ":   { "from": 2380400, "as_of": "2026-05", "source": "カローラ（セダン）2026-05一部改良後の最安グレードX。価格.com掲載のメーカー希望小売価格。公開前にtoyota.jpで要再確認" }
 }
