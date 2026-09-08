@@ -51,8 +51,9 @@
 - [x] 開発2部 — 7月記事 note 公開済み（https://note.com/basel5/n/n400eac7620fd）→ `published/2026-07.md` にURL記入
 - [ ] 開発2部 — noteでマガジン「新車ランキングで読む 働き方と投資（月刊）」を作成（表紙=`assets/magazine-cover.png`）し、7月号・8月号を追加
 - [x] 開発2部 — 8月号: collect.py で自動取得＋分析執筆済み（`drafts/2026-08.md`。TOP5にカローラNEW）
-- [ ] 開発2部 — 8月号を社長レビュー（`published/2026-08.md` のチェックリスト。熊本地震・カローラ価格の要確認あり）→ note公開 → URL記入
-- [ ] 開発2部 — 8月号を Threads/IG で告知（アース・カー案件を含むので「（PR）」表記）
+- [x] 開発2部 — 8月号を公開（2026-09-09 https://note.com/basel5/n/na441df85b797）
+- [ ] 開発2部 — 8月号の Threads告知を threads-app「承認待ち」で承認 → 投稿。IGは `eyecatch-ig.png` で投稿
+- [ ] 開発2部 — 8月号の初速を `published/2026-08.md` に記入（9/11ごろ）
 - [ ] 経理 — 8月PL締め（`sop/weekly-close.md` 月次）→ `finance/reports/2026-08.md`。会計ソフト導入の判断
 - [x] Instagram — プロアカウント化（@basel_freed）
 - [ ] Instagram — Facebookページ連携（開発3部が軌道に乗ったら。プロアカウント化は済）
