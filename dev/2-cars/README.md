@@ -27,6 +27,8 @@
 - `template.md` — 記事の型（7セクション固定）
 - `prices.json` — 車名 → 最安グレード価格の蓄積（TOP5に未登録なら記事に `【価格要確認】`）
 - `affiliates.json` — 車関連アフィリンク（A8/afb で提携 → url を貼ると毎号の下書きに広告表記＋関連リンク節を自動挿入）
+- `assets/make_ranking_table.py` — `data/YYYY-MM.json` から表画像（`drafts/YYYY-MM.png`）を生成（noteでMarkdown表が崩れるため）
+- `assets/make_eyecatch.py` — サムネイル画像 2サイズ（`assets/YYYY-MM/eyecatch.png` note用1280x670、`eyecatch-ig.png` IG用4:5）。濃紺＋アンバー配色で他部と差別化
 - `pipeline/collect.py` — 自販連/全軽自協からエクセルを取得 → 総合TOP5を組み立て
 - `pipeline/requirements.txt` — `requests` / `openpyxl` / `xlrd==1.2.0`（旧 .xls 用）
 - `data/inputs/` — 取得失敗時の手動フォールバック（`YYYY-MM.json`。`2026-07.json` が例）
