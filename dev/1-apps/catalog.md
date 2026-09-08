@@ -11,9 +11,10 @@
 | 3 | GitHub Driveの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-08-17 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/github-drive-app | なし（開発フォルダがそのまま公開リポジトリを指す。個人情報削除等の移行工程を経ていない） | https://note.com/basel5/n/n8ac12f4c5834 |
 | 4 | 医療費控除明細自動作成アプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-08-24 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/iryouhi-kojo-meisai | https://github.com/keiichi-nagata/iryouhi-kojo-meisai（個人情報等あり・非公開想定） | https://note.com/basel5/n/nd22238facdea |
 | 5 | 家族アルバムアプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-09-01 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/family-album | https://github.com/keiichi-nagata/family-album（非公開） | https://note.com/basel5/n/ncbc5331a45b2 |
+| 6 | 旅のしおりアプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-09-08 | 【要確認】 | 0 | ¥0 | 【要確認】（basel5freedom/…） | 【要確認】 | https://note.com/basel5/n/n72ad0d071fc1 |
 
-売上0円（2026-09-05時点、社長確認）。5本とも公開済み（8/13〜9/1）だが、購入は出ていない状態。#は公開順。
-**公開リポジトリはすべて `basel5freedom`**（2026-09-05に実リポジトリを確認）。
+売上0円（2026-09-05時点、社長確認）。6本公開済み（8/13〜9/8）だが、購入は出ていない状態。#は公開順。
+**公開リポジトリはすべて `basel5freedom`**（2026-09-05に1〜5を確認。6は要確認）。
 
 ## 公開の作り方（ワークフロー）
 
