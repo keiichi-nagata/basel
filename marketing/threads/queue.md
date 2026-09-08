@@ -20,7 +20,7 @@
 - [ ] 2026-09-08 | 単発 | 開発5部 | 「お金に働いてもらう」＝自販機を1台持っていたら、学校に行ってる間も売れてお金が入る、みたいなこと。中学生に投資の入口を説明するときのたとえに。 | （なし。第1回へ軽く誘導可） | assets/01/zu1-two-ways.png
 ## 消化済み（直近のみ残す）
 
-- [x] 2026-09-09 投稿 | 誘導 | 開発2部 | 2026年8月の新車販売台数ランキング（総合TOP5）。熊本地震で「いま作れる車」が伸びた月＝収入源の分散・積立投資の発想。1位N-BOX〜5位カローラ(新規)。（PR） | https://note.com/basel5/n/na441df85b797
+- [x] 2026-09-09 投稿 | 誘導 | 開発2部 | 2026年8月の新車販売台数ランキング（総合TOP5）。熊本地震で「いま作れる車」が伸びた月＝収入源の分散・積立投資の発想。1位N-BOX〜5位カローラ(新規)。（PR） | 記事 https://note.com/basel5/n/na441df85b797 ／ 投稿 https://www.threads.com/@basel_freedom/post/DdCbfoqj-Xl
 
 - [x] 2026-09-09 投稿 | 誘導 | 開発3部 | 話題のドラマ総合ランキング W36（8/31〜9/6）。1位VIVANT第2シーズン＝リアタイ型／2位Tシャツが乾くまで＝配信型の対比。 | 記事 https://note.com/basel5/n/n373dc87cf1de ／ 投稿 https://www.threads.com/@basel_freedom/post/DdCQ7EHmuED
 - [x] 2026-09-06 投稿 | 誘導 | 開発4部 | 北海道の温泉宿ランキング（楽天トラベル×じゃらん独自採点）。1位「海の別邸ふる川」。（PR） | 記事 https://note.com/basel5/n/n15a2f404324c ／ 投稿 https://www.threads.com/@basel_freedom/post/Dc6sYZWD_k5
