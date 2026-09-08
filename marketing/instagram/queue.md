@@ -11,7 +11,7 @@
 - [ ] 2026-09-10 | ストーリーズ | 開発5部 | `dev/5-finance-manga/assets/02/eyecatch.png` | 第2回のリマインド。リンクスティッカーで note へ
 ## 消化済み（直近のみ残す）
 
-- [x] 2026-09-09 投稿 | 1枚 | 開発3部 | `dev/3-drama/drafts/2026-W36-ig.png`（4:5・TOP5） | 話題のドラマ総合ランキング W36。1位VIVANT＝リアタイ型／2位Tシャツが乾くまで＝配信型の対比。
+- [x] 2026-09-09 投稿 | 1枚 | 開発3部 | `dev/3-drama/drafts/2026-W36-ig.png`（4:5・TOP5） | 話題のドラマ総合ランキング W36。1位VIVANT＝リアタイ型／2位Tシャツが乾くまで＝配信型の対比。 | https://www.instagram.com/p/DdCR5ZtD5iS/
 
 - [x] 2026-09-06 投稿 | 1枚 | 開発4部 | `dev/4-onsen/assets/2026-09/eyecatch-ig.png` | 北海道の温泉宿ランキングTOP5（楽天トラベル×じゃらん独自採点）。（PR） | https://www.instagram.com/p/Dc6ty6SE1LS/
 
