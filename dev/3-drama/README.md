@@ -33,11 +33,20 @@ TVer週間 + Netflix Japan Top10 + Google検索トレンド を各0〜100正規�
 - 各作品の詳細・アフィリリンクは `drafts/YYYY-Www.md` の各作品セクションをそのまま本文に。
 - 冒頭の「本記事はアフィリエイト広告（PR）を含みます」は、アフィリリンクを含む号では景表法（ステマ規制）上**必須**。テンプレに常時入れておく。
 
-## 実行
+## 実行（毎週自動・2段構え）
 
-- 自動: `.github/workflows/drama-weekly.yml`（毎週月曜 06:00 JST → レビュー用PRを作成）
-- 手動: Actions タブ → drama-weekly → Run workflow、またはローカルで
-  `python dev/3-drama/pipeline/collect.py`（`.env` に `TMDB_API_TOKEN`）
+1. **データ収集**: `.github/workflows/drama-weekly.yml`（毎週月曜 06:00 JST）が `collect.py` を実行し、
+   ブランチ `drama/auto-collect` にデータ＋PNG＋分析欄が空の下書きをコミットしてPRを開く
+   （TMDBトークンは GitHub Secret）
+2. **分析執筆**: `/schedule` ルーチン `drama-weekly-analysis`（毎週月曜 08:30 JST、
+   cron `30 23 * * 0`、`trig_01NSjEFvcB9YmbPstbaWC8s8`）がクラウドで起動し、`drama/auto-collect`
+   をチェックアウト → 各作品の分析を WebSearch で裏取りして執筆 → `make_ig_table.py` でIG画像生成 →
+   `published/YYYY-Www.md` 作成 → コミット＆push → PRにレビュー観点をコメント。
+   note公開・SNS投稿・PRマージはしない
+3. **社長**: PRをレビュー → note公開 → `published/` にURL記入 → PRマージ → Threads/IG告知
+
+- 手動実行: Actions タブ → drama-weekly → Run workflow ／ ルーチンは claude.ai/code/routines から Run now ／
+  ローカルは `python dev/3-drama/pipeline/collect.py`（`.env` に `TMDB_API_TOKEN`）
 
 ## ワークフロー
 

@@ -10,7 +10,7 @@
 ## 🔁 毎週の定例（くり返し・消さない）
 
 - [ ] **月曜**: 週次締め（`sop/weekly-close.md`）→ KPI更新 → STATE.md 更新 → `planning/ideas.md` 棚卸し
-- [ ] **月曜**: 開発3部 — PRブランチを開く → 分析を依頼 → レビュー → note公開（`published/` 記録・PRマージ）
+- [ ] **月曜**: 開発3部 — Action＋`/schedule`ルーチンが `drama/auto-collect` に分析入りPRを用意する → 社長はレビュー → note公開（`published/` 記録・PRマージ）→ Threads/IG告知
 - [ ] **毎日**: Threads 2本（`marketing/threads/queue.md` から）
 - [ ] 開発5部 — 1話ずつ制作（脚本は依頼済みが先行。コマ生成＋Canva＋公開）
 
@@ -21,7 +21,9 @@
 ### 開発3部（ドラマ）
 - [x] 2周目（2026-W36）公開＋Threads/Instagram告知（2026-09-09 https://note.com/basel5/n/n373dc87cf1de、PR #3 マージ済み）
 - [ ] W36 の初速を `published/2026-W36.md` に記入（9/11ごろ）
-- [ ] 3周目（2026-W37、9/15前後）。問題なければ以降 `/schedule` 化を検討
+- [x] `/schedule` ルーチン `drama-weekly-analysis` を作成（毎週月曜8:30 JST、cron `30 23 * * 0`、
+      trig_01NSjEFvcB9YmbPstbaWC8s8）。Action収集 → ルーチンが分析執筆＋IG画像＋PR仕上げ
+- [ ] 初回自動実行（2026-09-14 8:30 JST、W37）の結果をレビュー → 問題なければ運用に乗せる
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
 ### 開発2部（車）— アフィリエイト
@@ -50,7 +52,7 @@
 - [x] Instagram — プロアカウント化（@basel_freed）
 - [ ] Instagram — Facebookページ連携（開発3部が軌道に乗ったら。プロアカウント化は済）
 - [ ] 開発5部 — 序章〜第2回まで無料で出し、読まれ方を見て有料ラインの引き方・コマ数を確定
-- [ ] 開発3部 — 分析執筆まで自動化する `/schedule` routine 化
+- [x] 開発3部 — 分析執筆まで自動化する `/schedule` routine 化（2026-09-09）
 
 ## 📦 あとで（Phase 2〜3）
 
