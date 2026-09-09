@@ -12,11 +12,12 @@ kabuステーションAPI（三菱UFJ eスマート証券）を使った完全�
   - やり方を売る有料note（「おすすめ株アプリの作り方」「デイトレ完全自動化のやり方」）→ **開発1部**（`dev/1-apps/catalog.md` #7-8）
   - 構築記録・実績の SNS 発信 → マーケ部
 
-## 仕組みの全体像
+## 仕組みの全体像（v1）
 
-`stock-app`（毎朝 JST 7:00 におすすめ銘柄を選定）→ Supabase `recommendations` → `daytrade-bot` が
-寄り付きで買い、利確+3%/損切り-2%/引け前成行、当日決済（`strategy.md`）。**kabuステーションAPIは
-デスクトップアプリ経由なので、bot を動かす常時起動Windows環境が要る**（`kabu-api-notes.md`）。
+**1日1銘柄・前場だけで完結**。`stock-app`（毎朝 JST 7:00 におすすめ株を1銘柄選定）→ Supabase
+`recommendations` → `daytrade-bot` が 9:00 に始値を確認して指値買い＋損切り逆指値 → 利確/損切りが
+当たらなければ 11:30 の前場引けで成行決済（`strategy.md`）。kabuステーションと bot は**この
+Claude Code が動く PC**で常時起動（`kabu-api-notes.md`）。Claude/エージェントは発注・稼働操作をしない。
 
 ## 絶対ルール（CLAUDE.md より）
 

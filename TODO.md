@@ -43,10 +43,11 @@
 
 ### トレード部（自動デイトレード・2026-09-10 新設。口座開設待ち）
 - [x] 部を新設（`trade/` scaffold・戦略v1・kabu-api-notes・`docs/decisions/0005`・`trade-ops` エージェント・各docs更新）
-- [x] bot本体の置き場所を決定：`投資/daytrade-bot/`（`stock-app` と同じ場所）
-- [ ] 三菱UFJ eスマート証券の口座開設 → kabuステーションDL → API有効化・APIキー発行
-- [ ] `trade/guardrails.md` の `【要確認】` を実数で確定（運用総資金・1銘柄上限・日次最大損失＝キルスイッチ・稼働時間・対象銘柄）
-- [ ] bot を動かす常時起動Windows環境の用意（kabuステーションが起動している必要がある）
+- [x] bot本体の置き場所を決定：`投資/daytrade-bot/`。kabuステーション＋botはこのClaude Code PCで常時起動
+- [x] v1 の流れを確定：1日1銘柄／9:00に始値基準で指値買い＋損切り逆指値／11:30前場引けで成行決済（`trade/strategy.md`）
+- [ ] 三菱UFJ eスマート証券の口座開設 → このPCにkabuステーションDL → API有効化・APIキー発行
+- [ ] `trade/guardrails.md` の `【要確認】` を実数で確定（1トレード投入額・買い指値の置き方・利確%・損切り%・ギャップ許容・キルスイッチ・週損失上限）
+- [ ] PCを平日8:30〜11:45は起動・kabuステーション常駐に（スリープ／自動更新再起動に注意）
 - [ ] kabuステーションAPI 利用規定PDFを通読
 - [ ] 税理士に所得区分（事業所得 / 譲渡所得）を相談
 - [ ] `finance/trade-pnl.csv` を作成（列: date,realized_pnl_jpy,fees_jpy,memo）
