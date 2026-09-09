@@ -27,6 +27,14 @@ SNS由来の収益とコストを管理する。KPIは週次、PLは月次。
 - `fees` — 振込・決済手数料
 - `other`
 
+## トレード部の売買損益（SNS事業とは分ける）
+
+- 自動デイトレの売買損益は `ledger.csv` に混ぜず、`finance/trade-pnl.csv`（別ファイル）で日次集計する。
+  列: `date,realized_pnl_jpy,fees_jpy,memo`。数値は約定履歴の実データのみ（推測しない）。
+- **確定申告の所得区分は税理士に確認**（原則は譲渡所得＝申告分離課税。事業所得のハードルは高い）。
+  ここでの集計は経営判断用の速報値で、申告は会計ソフト／税理士が正。
+- 開発1部の「作り方note」の販売売上は従来どおり `ledger.csv` の `paid_note`。
+
 ## 週次（月曜）
 
 1. `bookkeeper` に前週の `ledger.csv` 追加分と `marketing/threads/log.csv`、各部の初速メモを集計させる

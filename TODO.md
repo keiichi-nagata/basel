@@ -41,6 +41,16 @@
 - [ ] 9月号の初速を `published/2026-09.md` に記入（9/8ごろ）
 - [ ] 10月号: 東北エリアのリサーチ・執筆（9月下旬〜10月初旬に着手）
 
+### トレード部（自動デイトレード・2026-09-10 新設）
+- [x] 部を新設（`trade/` scaffold・`docs/decisions/0005`・`.claude/agents/trade-ops.md`・CLAUDE.md/org.md/STATE.md/finance 更新）
+- [ ] `trade/guardrails.md` の `【要確認】` を実数で確定（1銘柄上限・日次最大損失＝キルスイッチ・稼働時間・対象銘柄・運用総資金）
+- [ ] bot本体リポを用意（`投資` monorepo か新規）。証券API認証情報はそこの `.env`
+- [ ] kabuステーションAPI 利用規約の自動売買条件を確認
+- [ ] 税理士に所得区分（事業所得 / 譲渡所得）を相談
+- [ ] `finance/trade-pnl.csv` を作成（列: date,realized_pnl_jpy,fees_jpy,memo）
+- [ ] 少額・短時間で試験運用 → `trade/journal/` に日誌
+- [ ] 開発1部 catalog #7-8（おすすめ株アプリの作り方 / デイトレ自動化のやり方）を執筆（免責は `sop/publish-note.md` の投資・トレード系note節）
+
 ---
 
 ## 🗓 近いうち（Phase 1〜2）

@@ -12,9 +12,20 @@
 | 4 | 医療費控除明細自動作成アプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-08-24 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/iryouhi-kojo-meisai | https://github.com/keiichi-nagata/iryouhi-kojo-meisai（個人情報等あり・非公開想定） | https://note.com/basel5/n/nd22238facdea |
 | 5 | 家族アルバムアプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-09-01 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/family-album | https://github.com/keiichi-nagata/family-album（非公開） | https://note.com/basel5/n/ncbc5331a45b2 |
 | 6 | 旅のしおりアプリの入手・公開ガイド＆Claude Codeカスタマイズ手順 | 2026-09-08 | ¥1,200 | 0 | ¥0 | https://github.com/basel5freedom/tabi-no-shiori | https://github.com/keiichi-nagata/tabi-no-shiori（`C:\Claude\プライベート\旅のしおり`） | https://note.com/basel5/n/n72ad0d071fc1 |
+| 7 | おすすめ株アプリ（毎朝AIが値上がりしそうな株を教える）の作り方 | 【準備中】 | 【未定】 | 0 | ¥0 | 【準備中】 | 【準備中】 | 【準備中】 |
+| 8 | デイトレード完全自動化（kabuステーションAPI）のやり方 | 【準備中】 | 【未定】 | 0 | ¥0 | 【準備中】 | 【準備中】 | 【準備中】 |
 
-売上0円（2026-09-05時点、社長確認。6本目は9/8公開のため未計測）。6本公開済み（8/13〜9/8）。#は公開順。
+売上0円（2026-09-05時点、社長確認。6本目は9/8公開のため未計測）。6本公開済み（8/13〜9/8）＋準備中2本（#7-8）。#は公開順。
 **公開リポジトリはすべて `basel5freedom`**（実リポジトリで確認済み）。
+
+### #7-8（投資・トレード系）についての注意
+
+- 買った人が実際に証券口座のAPIキーをつないで自動売買を走らせる、リスクの高い手順。
+  **専用の免責を厚くする**（投資は自己責任／利益が出る保証はない／過去実績は将来を保証しない／
+  動作環境・前提／サポート範囲）。`sop/publish-note.md` の「投資・トレード系note」節に沿う。
+- kabuステーションAPIの利用規約（自動売買条件・発注頻度制限など）を公開前に確認する。
+- 自動デイトレードの**運用そのもの**は **トレード部**（`trade/`、`docs/decisions/0005-trade-dept-auto-daytrade.md`）。
+  開発1部が扱うのはこの2本の有料noteとその販売売上のみ。bot本体・API認証情報は Basel 外の別リポ。
 
 ## 公開の作り方（ワークフロー）
 
