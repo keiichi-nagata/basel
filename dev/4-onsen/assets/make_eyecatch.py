@@ -91,18 +91,18 @@ def _hokkaido_bottom(ax) -> None:
 MOTIFS = {"hokkaido": (_hokkaido_side, _hokkaido_bottom)}
 
 
-def _render(label, subtitle, out, motif, size) -> None:
+def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=None) -> None:
     if size == "ig":
         W, H = 1080, 1350
         y_series, y_tick, y_label, y_sub, y_tag = 0.905, 0.815, 0.745, 0.645, 0.545
         fs_label, fs_sub, fs_tag = 24, 34, 15
-        tagline = "楽天トラベル×じゃらんの独自採点"
+        tagline = tagline_ig or "楽天トラベル×じゃらんの独自採点"
         motif_idx = 1
     else:  # note
         W, H = 1280, 670
         y_series, y_tick, y_label, y_sub, y_tag = 0.775, 0.715, 0.60, 0.45, 0.22
         fs_label, fs_sub, fs_tag = 20, 25, 12
-        tagline = "楽天トラベル×じゃらん 独自採点 ｜ 宿ランキングTOP5"
+        tagline = tagline_note or "楽天トラベル×じゃらん 独自採点 ｜ 宿ランキングTOP5"
         motif_idx = 0
 
     fig = plt.figure(figsize=(W / 200, H / 200), dpi=200)
@@ -128,10 +128,20 @@ def _render(label, subtitle, out, motif, size) -> None:
     print("saved:", out)
 
 
-def eyecatch(label: str, subtitle: str, out_dir: Path, motif: str | None = None) -> None:
-    """note用（eyecatch.png）とInstagram用（eyecatch-ig.png）を両方生成する。"""
-    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note")
-    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig")
+def eyecatch(label: str, subtitle: str, out_dir: Path, motif: str | None = None,
+             kind: str = "onsen") -> None:
+    """note用（eyecatch.png）とInstagram用（eyecatch-ig.png）を両方生成する。
+
+    kind="omiyage" にすると、タグラインを「お土産ランキング」向けに差し替える
+    （マガジンは温泉宿ランキングと共通のため SERIES 表記はそのまま）。
+    """
+    if kind == "omiyage":
+        tn = "楽天市場×Amazon 独自採点 ｜ お土産ランキングTOP5"
+        ti = "楽天市場×Amazonのレビュー独自採点"
+    else:
+        tn = ti = None
+    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note", tn, ti)
+    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig", tn, ti)
 
 
 if __name__ == "__main__":
@@ -140,8 +150,10 @@ if __name__ == "__main__":
         label, subtitle = sys.argv[1], sys.argv[2]
         out_dir = Path(sys.argv[3]) if len(sys.argv) >= 4 else here
         motif = sys.argv[4] if len(sys.argv) >= 5 else None
+        kind = sys.argv[5] if len(sys.argv) >= 6 else "onsen"
     else:
         label, subtitle = "2026年9月", "北海道温泉編"
         out_dir = here / "2026-09"
         motif = "hokkaido"
-    eyecatch(label, subtitle, out_dir, motif)
+        kind = "onsen"
+    eyecatch(label, subtitle, out_dir, motif, kind)
