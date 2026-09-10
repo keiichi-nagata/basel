@@ -31,6 +31,7 @@ SNS収益化を目的に、Claude Code で運営する一人会社（個人事�
 | 開発3部 ドラマランキング（無料・集客エンジン） | `dev/3-drama/` | `ranking-writer` | `sop/ranking-magazine-workflow.md` |
 | 開発4部 温泉ランキング | `dev/4-onsen/` | `ranking-writer` | （3部の型を流用） |
 | 開発5部 金融マンガ（**有料・プロダクト主軸**） | `dev/5-finance-manga/` | `manga-edu-writer` | `sop/manga-episode-workflow.md` |
+| 開発6部 資産クラス別 月間リターンランキング（**無料・集客**） | `dev/6-markets/` | `ranking-writer` | `sop/ranking-magazine-workflow.md`・`docs/decisions/0006` |
 | トレード部 自動デイトレード（**売買損益・自己資金**） | `trade/` | `trade-ops` | `trade/README.md`・`docs/decisions/0005` |
 | マーケ部 | `marketing/` | `social-writer` | `marketing/README.md` |
 | 企画部 | `planning/` | `researcher` | `planning/README.md` |
@@ -40,7 +41,7 @@ SNS収益化を目的に、Claude Code で運営する一人会社（個人事�
 - 毎日: Threads 2本（マーケ）／トレード部が稼働日は `trade/journal/` に日誌
 - 月曜: 週次締め（`sop/weekly-close.md`）→ KPI更新 → STATE.md 更新 → 企画の棚卸し ／ トレード部 週次成績レビュー
 - 週次(曜日固定): ドラマnote 1本
-- 月初: 車note 1本、前月PL締め（`finance/trade-pnl.csv` の集計も）
+- 月初: 車note 1本、資産クラス月間リターンnote 1本（開発6部）、前月PL締め（`finance/trade-pnl.csv` の集計も）
 
 ## コミット
 公開・週次締め・大きな更新のたびにコミット。メッセージ例: `publish: 3-drama 2026-W36` / `weekly: 2026-W36`。

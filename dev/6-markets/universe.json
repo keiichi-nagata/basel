@@ -1,0 +1,16 @@
+{
+  "_comment": "資産クラス別 月間リターンランキングの対象。各クラスは東京市場に上場する円建てETF等の終値でリターンを計算する（為替換算不要・分配金は含まない=価格リターン）。ティッカーはyfinance形式。ETFは対象指数への連動を目的とした代表的な銘柄を1本ずつ選定。",
+  "as_of": "2026-09-11",
+  "classes": [
+    {"key": "jp_stock",   "name": "日本株",            "ticker": "1306.T",  "tracks": "TOPIX（東証株価指数）", "vehicle": "NEXT FUNDS TOPIX連動型上場投信"},
+    {"key": "us_stock",   "name": "米国株",            "ticker": "1655.T",  "tracks": "S&P500指数（円建て・ヘッジなし）", "vehicle": "iシェアーズ S&P500 米国株 ETF"},
+    {"key": "dev_stock",  "name": "先進国株",          "ticker": "2513.T",  "tracks": "MSCIコクサイ指数（円建て・ヘッジなし）", "vehicle": "NEXT FUNDS 外国株式・MSCI-KOKUSAI（除く日本）"},
+    {"key": "em_stock",   "name": "新興国株",          "ticker": "2520.T",  "tracks": "MSCI エマージング指数（円建て）", "vehicle": "NEXT FUNDS 新興国株式・MSCI-EM"},
+    {"key": "jp_reit",    "name": "日本REIT",          "ticker": "1343.T",  "tracks": "東証REIT指数", "vehicle": "NEXT FUNDS 東証REIT指数連動型上場投信"},
+    {"key": "us_reit",    "name": "米国REIT",          "ticker": "1659.T",  "tracks": "米国リート指数（円建て・ヘッジなし）", "vehicle": "iシェアーズ 米国リート ETF"},
+    {"key": "gold",       "name": "金（ゴールド）",      "ticker": "1540.T",  "tracks": "金地金の国内円建て価格（1gあたり）", "vehicle": "純金上場信託（現物国内保管型）"},
+    {"key": "oil",        "name": "原油",              "ticker": "1699.T",  "tracks": "WTI原油先物指数（円建て）", "vehicle": "NEXT FUNDS 原油インデックス連動型上場投信"},
+    {"key": "dev_bond",   "name": "先進国債券",         "ticker": "2511.T",  "tracks": "FTSE世界国債（除く日本・円建て・ヘッジなし）", "vehicle": "NEXT FUNDS 外国債券・FTSE世界国債"},
+    {"key": "bitcoin",    "name": "ビットコイン",        "ticker": "BTC-JPY", "tracks": "ビットコインの円建て価格", "vehicle": "（暗号資産の現物価格）"}
+  ]
+}
