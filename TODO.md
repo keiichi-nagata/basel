@@ -42,9 +42,8 @@
 - [x] お土産ランキングを新設（`omiyage/` 一式・独自採点＝楽天市場＋Amazonレビュー平均・`docs/decisions/0004` 第7項）
 - [x] 2026年9月号（北海道・お土産）を公開（2026-09-11 https://note.com/basel5/n/na14b74a39363）
 - [x] 楽天アフィリエイトでお土産TOP5各商品の楽天市場リンクを発行 →「買う」欄に反映（2026-09-11）
+- [x] お土産9月号: Threads/Instagram告知（2026-09-11。`omiyage/published/2026-09.md` にURL記入済み）
 - [ ] お土産9月号: 温泉宿と同じマガジン「エリア別 温泉宿ランキング（月刊）」に追加
-- [ ] お土産9月号: Threads告知を threads-app「承認待ち」画面で承認 → 投稿URLを `omiyage/published/2026-09.md` に記入
-- [ ] お土産9月号: Instagram告知（`marketing/instagram/queue.md`・eyecatch-ig.png）→ 投稿URLを記入
 - [ ] お土産9月号の初速を `omiyage/published/2026-09.md` に記入（9/13ごろ）
 - [ ] 10月号: 東北エリアのリサーチ・執筆（温泉宿＋お土産の2本。9月下旬〜10月初旬に着手）
 

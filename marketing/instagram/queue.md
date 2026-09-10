@@ -9,8 +9,9 @@
 ## キュー
 
 - [ ] 2026-09-10 | ストーリーズ | 開発5部 | `dev/5-finance-manga/assets/02/eyecatch.png` | 第2回のリマインド。リンクスティッカーで note へ
-- [ ] 2026-09-11 | 1枚 | 開発4部（お土産） | `dev/4-onsen/omiyage/assets/2026-09/eyecatch-ig.png`（4:5） | 北海道の定番お土産ランキングTOP5（楽天市場×Amazonのレビュー独自採点）。1位「白い恋人」。温泉宿ランキングと対になる記事です。（PR） | https://note.com/basel5/n/na14b74a39363
 ## 消化済み（直近のみ残す）
+
+- [x] 2026-09-11 投稿 | 1枚 | 開発4部（お土産） | `dev/4-onsen/omiyage/assets/2026-09/eyecatch-ig.png`（4:5） | 北海道の定番お土産ランキングTOP5（楽天市場×Amazonのレビュー独自採点）。1位「白い恋人」。温泉宿ランキングと対。（PR） | https://www.instagram.com/p/DdHdebqj371/
 
 - [x] 2026-09-09 投稿 | 1枚 | 開発2部 | `dev/2-cars/assets/2026-08/eyecatch-ig.png`（4:5） | 2026年8月 新車販売台数ランキング TOP5。1位N-BOX〜5位カローラ(新規)。熊本地震で「いま作れる車」が伸びた月＝収入源の分散・積立投資の発想。（PR） | https://www.instagram.com/p/DdCcHIck2Ws/
 
