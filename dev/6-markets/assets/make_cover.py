@@ -3,9 +3,9 @@
 
 使い方: python dev/6-markets/assets/make_cover.py
 
-noteのマガジン表紙は一覧・関連表示で**中央の正方形にトリミングされる**ため、
-文字は必ずキャンバス中央の正方形（1280x670なら幅670pxぶん＝x軸で0.24〜0.76）に収める。
-バーの装飾も同じ安全域内に収め、キャンバスの左右は余白として残す。
+noteのマガジン表紙は一覧・関連表示で**中央付近が正方形/円形にトリミングされる**ため、
+文字はキャンバスの上下左右に大きく余白を残し、**縦横とも中央のごく狭い帯**（目安: 幅60%・
+高さ40%）に収める。装飾の棒グラフは省き、テキストだけをコンパクトに中央配置する。
 配色は各号のサムネイル（make_eyecatch.py）と揃える。
 """
 from __future__ import annotations
@@ -31,12 +31,8 @@ BG = "#20242e"
 TITLE = "#f3f4f6"
 MUTE = "#9aa2ad"
 UP = "#38b676"
-DOWN = "#e0605f"
-BARS = [0.30, 0.55, 0.85, 0.50, 0.95, 0.35, 0.70]
-DIRS = [1, 1, 1, -1, 1, -1, 1]
 
-CX = 0.5           # 中央正方形の中心（キャンバス中央と一致）
-SAFE_W = 0.50       # 中央正方形の内側にさらに少し余白を取った安全域の幅
+CX, CY = 0.5, 0.5  # キャンバス中央＝トリミングの中心と仮定
 
 
 def main() -> None:
@@ -48,22 +44,14 @@ def main() -> None:
     ax.set_ylim(0, 1)
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=BG))
 
-    # 中央正方形の安全域にだけ棒グラフを置く（装飾）
-    x0, y0, w, h = CX - SAFE_W / 2, 0.09, SAFE_W, 0.19
-    n = len(BARS)
-    for i, (bh, d) in enumerate(zip(BARS, DIRS)):
-        x = x0 + i * (w / n)
-        ax.add_patch(plt.Rectangle((x, y0), w / (n * 1.5), h * bh,
-                                    facecolor=UP if d > 0 else DOWN, edgecolor="none", alpha=0.9))
-
-    ax.add_patch(plt.Rectangle((0, 0), 1, 0.016, color=UP))
-    ax.add_patch(plt.Rectangle((CX - 0.035, 0.875), 0.07, 0.013, color=UP))
-    ax.text(CX, 0.815, "月刊", fontsize=14, color=UP, fontweight="bold", ha="center", va="center")
-    t = ax.text(CX, 0.635, "資産クラス別\n月間リターンランキング", fontsize=18.5, color=TITLE,
-                fontweight="bold", ha="center", va="center", linespacing=1.35)
-    t.set_path_effects([pe.withStroke(linewidth=1.2, foreground=BG)])
-    ax.text(CX, 0.44, "株・金・債券・REIT・原油\nビットコイン。円建てで並べて読む。",
-            fontsize=10.5, color=MUTE, ha="center", va="center", linespacing=1.5)
+    # 縦方向も中央に寄せ、上下左右に大きく余白を残す（トリミングで欠けない狭い帯に収める）
+    ax.add_patch(plt.Rectangle((CX - 0.035, CY + 0.225), 0.07, 0.012, color=UP))
+    ax.text(CX, CY + 0.175, "月刊", fontsize=12, color=UP, fontweight="bold", ha="center", va="center")
+    t = ax.text(CX, CY + 0.015, "資産クラス別\n月間リターンランキング", fontsize=15.5, color=TITLE,
+                fontweight="bold", ha="center", va="center", linespacing=1.5)
+    t.set_path_effects([pe.withStroke(linewidth=1.0, foreground=BG)])
+    ax.text(CX, CY - 0.16, "株・金・債券・REIT・原油\nビットコイン。円建てで並べて読む。",
+            fontsize=9.5, color=MUTE, ha="center", va="center", linespacing=1.6)
 
     out = Path(__file__).parent / "magazine-cover.png"
     fig.savefig(out, dpi=200, facecolor=BG)
