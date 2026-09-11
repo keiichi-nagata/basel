@@ -9,8 +9,9 @@
 ## キュー
 
 - [ ] 2026-09-10 | ストーリーズ | 開発5部 | `dev/5-finance-manga/assets/02/eyecatch.png` | 第2回のリマインド。リンクスティッカーで note へ
-- [ ] 2026-09-12 | 1枚 | 開発6部 | `dev/6-markets/assets/2026-08/eyecatch-ig.png`（4:5） | 資産クラス別 月間リターンランキング、始めました。8月の1位はビットコイン+26.9%、でも年初来では最下位クラス。株・金・債券・REIT・原油・ビットコインを円建てで毎月ランキング化。 | https://note.com/basel5/n/n27e046cffded
 ## 消化済み（直近のみ残す）
+
+- [x] 2026-09-12 投稿 | 1枚 | 開発6部 | `dev/6-markets/assets/2026-08/eyecatch-ig.png`（4:5） | 資産クラス別 月間リターンランキング、始めました。8月の1位はビットコイン+26.9%、でも年初来では最下位クラス。株・金・債券・REIT・原油・ビットコインを円建てで毎月ランキング化。 | https://www.instagram.com/p/DdKOAE9E8Xd/
 
 - [x] 2026-09-11 投稿 | 1枚 | 開発4部（お土産） | `dev/4-onsen/omiyage/assets/2026-09/eyecatch-ig.png`（4:5） | 北海道の定番お土産ランキングTOP5（楽天市場×Amazonのレビュー独自採点）。1位「白い恋人」。温泉宿ランキングと対。（PR） | https://www.instagram.com/p/DdHdebqj371/
 

@@ -60,7 +60,7 @@ W35・W36 を公開。毎週月曜、GitHub Action（6:00 JST・データ収集�
 `dev/6-markets/`（`universe.json`／`pipeline/collect.py`＝yfinance／`ranking-writer`流用）。`docs/decisions/0006`。
 - **無料維持**（金商法の助言業に非該当）・個別商品の推奨なし・指数表の転載なし（終値から自己計算）
 - 2026年8月号: 2026-09-12 公開 https://note.com/basel5/n/n27e046cffded（1位BTC+26.9%／最下位 米REIT▲3.9%。
-  アフィリなし・PR表記なし）。Threads告知は承認待ちキューに登録済み／IG告知は `marketing/instagram/queue.md`
+  アフィリなし・PR表記なし）。Threads/IG告知済み（2026-09-12。DdKN4y2DzEx／DdKOAE9E8Xd）
 - 次: マガジン作成・追加／初速記録（9/14ごろ）／証券・NISA・純金積立・暗号資産のA8案件を精査（提携後の号から「口座」節）／9月号は四半期振り返り回
 
 ### トレード部 — 自動デイトレード（2026-09-10 新設・準備中）

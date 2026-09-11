@@ -52,8 +52,7 @@
       `ranking-writer`/`org.md`/`disclosure.md` 更新）
 - [x] 2026年8月号の下書き・表画像・サムネイル・マガジン表紙を作成（`drafts/2026-08.md`。1位BTC+26.9%）
 - [x] 2026年8月号を公開（2026-09-12 https://note.com/basel5/n/n27e046cffded。アフィリなし・PR表記なし）
-- [ ] お土産と同様、Threads承認待ち画面で承認 → 投稿URLを `published/2026-08.md` に記入
-- [ ] Instagram投稿（`marketing/instagram/queue.md`・eyecatch-ig.png）→ URLを記入
+- [x] Threads/Instagram告知（2026-09-12。`published/2026-08.md` にURL記入済み）
 - [ ] noteでマガジン「資産クラス別 月間リターンランキング（月刊）」を作成し8月号を追加（表紙は作成済み）
 - [ ] A8で証券口座・NISA・純金積立・暗号資産取引所の案件を精査（開設のみで成果のもの）→ 提携 → 9月号から「口座」節を追加
 - [ ] 8月号の初速を `published/2026-08.md` に記入（9/14ごろ）
