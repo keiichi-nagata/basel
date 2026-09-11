@@ -51,9 +51,12 @@
 - [x] 企画I-002を採用 → 開発6部を新設（`dev/6-markets/` 一式・`universe.json`・`collect.py`・`docs/decisions/0006`・
       `ranking-writer`/`org.md`/`disclosure.md` 更新）
 - [x] 2026年8月号の下書き・表画像・サムネイル・マガジン表紙を作成（`drafts/2026-08.md`。1位BTC+26.9%）
-- [ ] 2026年8月号を社長レビュー（終値の再確認・煽り表現・地政学記述のファクト）→ **アフィリなし**でnote公開
-      → マガジン作成・追加 → 承認フローでSNS告知 → `published/2026-08.md` にURL記入
+- [x] 2026年8月号を公開（2026-09-12 https://note.com/basel5/n/n27e046cffded。アフィリなし・PR表記なし）
+- [ ] お土産と同様、Threads承認待ち画面で承認 → 投稿URLを `published/2026-08.md` に記入
+- [ ] Instagram投稿（`marketing/instagram/queue.md`・eyecatch-ig.png）→ URLを記入
+- [ ] noteでマガジン「資産クラス別 月間リターンランキング（月刊）」を作成し8月号を追加（表紙は作成済み）
 - [ ] A8で証券口座・NISA・純金積立・暗号資産取引所の案件を精査（開設のみで成果のもの）→ 提携 → 9月号から「口座」節を追加
+- [ ] 8月号の初速を `published/2026-08.md` に記入（9/14ごろ）
 - [ ] 9月号（＝四半期振り返り回）を月初に作成。反応が良ければ Action＋`/schedule` で半自動化を検討
 
 ### トレード部（自動デイトレード・2026-09-10 新設。口座開設待ち）
