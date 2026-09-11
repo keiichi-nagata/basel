@@ -50,8 +50,8 @@ def main() -> None:
     t = ax.text(CX, CY + 0.015, "資産クラス別\n月間リターンランキング", fontsize=15.5, color=TITLE,
                 fontweight="bold", ha="center", va="center", linespacing=1.5)
     t.set_path_effects([pe.withStroke(linewidth=1.0, foreground=BG)])
-    ax.text(CX, CY - 0.16, "株・金・債券・REIT・原油\nビットコイン。円建てで並べて読む。",
-            fontsize=9.5, color=MUTE, ha="center", va="center", linespacing=1.6)
+    ax.text(CX, CY - 0.14, "株・金・債券・REIT・原油・ビットコイン。円建てで並べて読む。",
+            fontsize=9, color=MUTE, ha="center", va="center")
 
     out = Path(__file__).parent / "magazine-cover.png"
     fig.savefig(out, dpi=200, facecolor=BG)
