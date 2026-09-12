@@ -93,7 +93,12 @@
 - [x] `daytrade-bot/` Stage A（発注しないログモード。yfinanceでシミュレーション）を実装（2026-09-13）
       → `migrations/2026-09-13_trade_log_columns.sql` をSupabase SQL Editorで実行
       → `python scripts/run_daily.py --date 2026-09-12` で動作確認
-- [ ] Stage B: kabuステーション検証用APIで`common/kabu_client.py`（未検証ドラフト）の動作確認 → 最小ロット実発注（Stage C）→ `trade/journal/` に日誌
+- [x] Stage B: kabuステーション検証用APIで`common/kabu_client.py`の動作確認完了（2026-09-13）。
+      token/board/positions/ordersは本番で実機確認、sendorderもDelivType修正後Result:0を確認。
+      検証用環境はOrderId=null等で実際の約定はシミュレートせず、検証はここが天井と判断
+- [ ] Stage C: 月曜（平日）に本番でごく小さく試す（予算額を一時的に30万円に）。
+      `daytrade-bot/scripts/run_live_once.py`で買いのみ自動化・利確損切り/強制決済は
+      kabuステーション画面から手動のハイブリッド運用。結果を`trade/journal/`に記録
 - [ ] 開発1部 catalog #7-8（おすすめ株アプリの作り方 / デイトレ自動化のやり方）を執筆（免責は `sop/publish-note.md` の投資・トレード系note節）
 
 ---
