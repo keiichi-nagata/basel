@@ -76,8 +76,12 @@
 - [ ] **kabuステーションの「ソフトリミット」（現状300万円）を、v1の想定投入額に見合う額まで下げる**（多重防御）
 - [x] 戦略をv1.1に更新（1銘柄→複数銘柄・株数は予算額から逆算・決済セッションは前場固定/設定上は後場も選べる・
       購入条件と売買履歴はGitHub管理。`trade/strategy.md` 判断ログ参照）
-- [x] `投資/daytrade-bot/` に設定ファイル（`config/settings.yaml`）と検証スクリプトのスキャフォールド作成（2026-09-12）
-- [ ] `config/settings.yaml` の【要確認】項目を埋める（`guardrails.md`の数値確定と同時に）
+- [x] `投資/daytrade-bot/` に設定Web画面（stock-app方式・Streamlit+Supabase）のスキャフォールド作成（2026-09-12。
+      当初GitHub編集のYAML方式で作ったが想定と違ったため作り直し）
+- [ ] Supabaseで `daytrade-bot/supabase_schema.sql` を実行（`daytrade_settings`・`daytrade_trades` テーブル作成）
+- [ ] `daytrade-bot/scripts/hash_password.py` でパスワードハッシュを生成 → `.env`/Streamlit Secretsに設定
+- [ ] 設定画面をローカル確認 or Streamlit Community Cloudにデプロイ
+- [ ] 設定画面で `guardrails.md` の数値（購入件数上限・予算額・利確損切り%等）を入力
 - [ ] `guardrails.md` の信用取引固有項目（保証金率・追証ライン・日計り手数料）をeスマート証券の案内で確認して記入
 - [ ] `guardrails.md` の残りの数値（購入件数上限・市場フィルタ初期値・1銘柄あたりの予算額・買い指値の置き方・
       利確%・損切り%・ギャップ許容・キルスイッチ・週損失上限）を確定

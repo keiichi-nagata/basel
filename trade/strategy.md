@@ -20,13 +20,16 @@
 | 11:15ごろ（前場引けの少し前） | 利確・損切りどちらも当たっていない建玉を、**成行で決済**（v1.1は前場のみで完結・オーバーナイトなし。設定上は後場15:15決済も選べる作りにするが、当面は前場固定で運用し、実績を見てから検討） |
 | 随時 | 当日の損失合計が `guardrails.md` の「1日の最大損失額」に達したら、残る建玉をすべて成行決済して当日終了（キルスイッチ） |
 
-## 設定ファイル（GitHub管理・`投資/daytrade-bot/` 側の実体）
+## 購入条件の設定画面（`投資/daytrade-bot/` 側の実体）
 
 毎朝9:00に bot が読み込む。値の変更は社長が行う（`docs/decisions/0005` の絶対ルール）。
-実体は `投資/daytrade-bot/config/settings.yaml`（2026-09-12 スキャフォールド作成済み）。
-`mode: log_only/paper/live` の3段階を持ち、`scripts/validate_config.py` が
-paper/live 移行前に全項目確定済みかを検証する（未確定のままでは発注段階に進めない安全弁）。
-GitHub上での編集手順は `投資/daytrade-bot/README.md` 参照。
+**stock-appの管理画面と同じ方式**（Streamlit + Supabaseのフォーム画面）で設定する
+（GitHub上のファイル直接編集ではない。2026-09-12訂正: 当初YAMLファイル方式で作ったが、
+社長の想定と違ったためWeb画面に作り直した）。実体は `投資/daytrade-bot/pages/1_設定.py`、
+データは Supabase の `daytrade_settings` テーブル。
+`mode: log_only/paper/live` の3段階を持ち、`common/validate.py` が
+paper/live 移行前に全項目確定済みかを検証し、未確定なら保存をブロックする（安全弁）。
+セットアップ手順は `投資/daytrade-bot/README.md` 参照。
 
 | 項目 | 内容 | 備考 |
 |---|---|---|
@@ -93,4 +96,7 @@ GitHub上での編集手順は `投資/daytrade-bot/README.md` 参照。
 | 2026-09-12 | 三菱UFJ eスマート証券の口座開設完了、信用取引口座を申込み中。当初「bot v1は現物取引」と記録したが誤りで、**bot v1の売買区分は信用取引（日計り＝同日新規→同日返済）**に訂正。追証・レバレッジなど信用固有のリスクを`guardrails.md`に追加 |
 | 2026-09-12 | 信用取引口座開設・kabuステーションのインストール・API有効化・利用規定の通読が完了 |
 | 2026-09-12 | 社長方針で **v1.1** に更新: (1) 1銘柄→**複数銘柄**（購入件数・市場フィルタを設定可能）、(2) 決済セッションを前場(11:15)/後場(15:15)から**選べる作りにしつつ当面は前場に固定**、(3) 株数は**1銘柄あたりの予算額から逆算**（100株単位切り捨て）、(4) 購入条件・売買履歴を**GitHub（daytrade-bot側）で管理**。指値の呼値丸めは要検証として残す |
-| 2026-09-12 | `投資/daytrade-bot/` にスキャフォールド作成: `config/settings.yaml`（GitHub編集で条件変更）・`scripts/validate_config.py`（paper/live移行前に未確定項目が残っていないか検証）。次は`guardrails.md`の数値を確定してこのYAMLに転記 |
+| 2026-09-12 | `投資/daytrade-bot/` にスキャフォールド作成: 当初`config/settings.yaml`（GitHub編集）で作ったが、
+社長の想定は「Web画面で設定」だったため**stock-app方式（Streamlit+Supabaseの設定画面）に作り直し**。
+`pages/1_設定.py`・`daytrade_settings`テーブル・`common/validate.py`（paper/live移行前の未確定項目チェック）。
+次はSupabaseテーブル作成・パスワード設定・デプロイ → `guardrails.md`の数値を設定画面に入力 |
