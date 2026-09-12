@@ -90,7 +90,10 @@
 - [ ] PCを平日8:30〜11:45は起動・kabuステーション常駐に（スリープ／自動更新再起動に注意）
 - [ ] 税理士に所得区分（事業所得 / 譲渡所得）を相談
 - [ ] `finance/trade-pnl.csv` を作成（列: date,realized_pnl_jpy,fees_jpy,memo）
-- [ ] `daytrade-bot/` を実装（まず発注しないログモード → 最小ロット実発注）→ `trade/journal/` に日誌
+- [x] `daytrade-bot/` Stage A（発注しないログモード。yfinanceでシミュレーション）を実装（2026-09-13）
+      → `migrations/2026-09-13_trade_log_columns.sql` をSupabase SQL Editorで実行
+      → `python scripts/run_daily.py --date 2026-09-12` で動作確認
+- [ ] Stage B: kabuステーション検証用APIで`common/kabu_client.py`（未検証ドラフト）の動作確認 → 最小ロット実発注（Stage C）→ `trade/journal/` に日誌
 - [ ] 開発1部 catalog #7-8（おすすめ株アプリの作り方 / デイトレ自動化のやり方）を執筆（免責は `sop/publish-note.md` の投資・トレード系note節）
 
 ---
