@@ -32,9 +32,21 @@ Instagramのフィードは**カルーセル（最大20枚）**が使える。�
 - **プロフィールのリンク（bio）** を note のマガジンURLに設定しておく
 - アフィリンクを含む回は末尾に「#PR」表記（`sop/disclosure.md`）。今は無し
 
+## 流入元計測（UTM）— 2026-09-12〜
+
+noteのダッシュボードはInstagramアプリ内ブラウザ経由だとリファラーを送らず「no referrer」に
+計上されがちで、実際のIG貢献度が見えにくい（詳細は `marketing/README.md`）。
+
+- **プロフィールのリンク（bio）**: 常に `?utm_source=instagram&utm_medium=bio` を付けたURLにしておく
+  （現状はマガジンのURLを想定）。フィード投稿はキャプション内リンクが押せないため、IG経由の流入は
+  基本この bio 経由でまとめて計測される
+- **ストーリーズのリンクスティッカー**: 投稿ごとに
+  `?utm_source=instagram&utm_medium=story&utm_campaign=<部-期間>`（例: `6-markets-2026-08`）を付けたURLを使う
+  → 個別のストーリーズ投稿の効果が計測できる
+
 ## ストーリーズ
 
-- 見出し画像（`assets/0X/eyecatch.png`）を1枚 → **リンクスティッカー**で note へ直リンク
+- 見出し画像（`assets/0X/eyecatch.png`）を1枚 → **リンクスティッカー**で note へ直リンク（UTM付きURLを使う）
 - カルーセル投稿後に「新しい投稿」のスタンプでフィードへ誘導
 
 ## 手動投稿の手順

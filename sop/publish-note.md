@@ -8,7 +8,9 @@
 - [ ] 画像に個人情報・APIキー・シークレットが写っていない
 - [ ] 見出し構造（H2/H3）が整っている
 - [ ] マガジンに追加（該当する場合）
-- [ ] タグ設定
+- [ ] タグ設定（記事内容に合うハッシュタグを3〜5個。note内検索・カテゴリページからの流入を作る）
+- [ ] タイトル・サムネイルが「内容が一目で伝わる／続きが気になる」ものになっているか（インプレッションに対してPVが薄い＝ここが弱い可能性。`marketing/README.md` の note内改善チェック参照）
+- [ ] 関連する自分の過去記事があれば本文中で相互リンク（例: 開発4部の温泉宿⇔お土産）
 - [ ] 公開後、URL を `published/` の記録ファイルに追記
 
 ## 無料マガジン記事（開発2・3・4部）
@@ -40,6 +42,9 @@
 ## 公開後
 
 - [ ] SNS文面を `marketing/threads/queue.md` へ
-- [ ] `marketing/threads/queue_to_pending.py` で threads-app の承認待ちに登録（社長が承認すると自動投稿）
+- [ ] `marketing/threads/queue_to_pending.py` で threads-app の承認待ちに登録（社長が承認すると自動投稿）。
+      **2026-09-12〜**: `--link` にnote URLを渡すとThreads計測用のUTM（`utm_source=threads`）が自動付与される
+      （`--no-utm` で無効化可）。詳しくは `marketing/README.md` の「流入元計測（UTM）」
+- [ ] Instagramで告知する場合は `marketing/instagram/README.md` の手順・UTM運用に従う
 - [ ] `finance/ledger.csv`（有料note初売上）/ `kpi.csv`（初速）に反映
 - [ ] git コミット（「publish: <部> <タイトル>」）
