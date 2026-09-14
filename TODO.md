@@ -58,7 +58,9 @@
       お土産 https://note.com/basel5/n/n6a1b0a003074。`published/2026-kumamoto-special.md`に記録）
 - [x] 熊本特別編: Instagram投稿完了（2026-09-15。温泉宿 https://www.instagram.com/p/DdRk4Gyj1Jh/／
       お土産 https://www.instagram.com/p/DdRlHIQD_j3/）
-- [ ] 熊本特別編: Threads 5本をthreads-appの承認待ちに登録済み（2026-09-15）。社長の承認待ち
+- [x] 熊本特別編: Threads投稿完了（2026-09-15。宿・お土産1本ずつ。温泉宿
+      https://www.threads.com/@basel_freedom/post/DdRmjtWmtX1／お土産
+      https://www.threads.com/@basel_freedom/post/DdRnEX3mtON）。残り2本は`queue.md`に持ち越しストックとして保持
 - [ ] 熊本特別編: 初速を両`published/2026-kumamoto-special.md`に記入（9/17ごろ）
 
 ### 開発6部（資産クラス別 月間リターンランキング・2026-09-11 新設）

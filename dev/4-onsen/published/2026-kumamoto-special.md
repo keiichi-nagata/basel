@@ -19,7 +19,8 @@
 
 ## 告知
 
-- Threads: `queue_to_pending.py`でthreads-appの承認待ちに登録済み（2026-09-15、5本）。社長の承認待ち
+- Threads（2026-09-15）: https://www.threads.com/@basel_freedom/post/DdRmjtWmtX1
+  （登録した5本のうち1本を投稿。残り2本は今後の持ち越しストックとして`queue.md`に残す）
 - Instagram（2026-09-15）: https://www.instagram.com/p/DdRk4Gyj1Jh/
 
 ## 初速（公開48時間後に記入）
