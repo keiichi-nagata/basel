@@ -1,0 +1,125 @@
+{
+  "month": "2026-09",
+  "area": "熊本",
+  "special_edition": "2026年7月の令和8年熊本地震 復興支援 特別編（熊本県単独・アフィリエイトなし・寄付リンク掲載。社長指示で2016年熊本地震10年の枠組みから変更、2026-09-14）",
+  "collected_at": "2026-09-14",
+  "methodology": "独自採点 = 楽天トラベル総合評価 + じゃらん総合評価（各5点満点）の単純平均。両サイトとも口コミ20件以上の宿のみ対象。通常回は『九州』エリア単位だが、本特別編のみ熊本県単独で選出（社長指示、2026-09-14）。",
+  "items": [
+    {
+      "rank": 1,
+      "name": "黒川温泉 歴史の宿 御客屋",
+      "location": "黒川温泉（南小国町）",
+      "score": 4.87,
+      "rakuten": {"score": 4.93, "review_count": 475, "url": "https://travel.rakuten.co.jp/HOTEL/80591/review.html", "checked_at": "2026-09-14"},
+      "jalan": {"score": 4.80, "review_count": 2598, "url": "https://www.jalan.net/yad328302/", "checked_at": "2026-09-14"},
+      "price_from_yen": null,
+      "good_points_summary": "享保七年（1722年）創業、黒川温泉で唯一「御客屋」の名を継ぐ老舗。スタッフの丁寧な接客・気配りと、自家農園の野菜や地元食材を使った無添加の会席料理を評価する声が多い。古い建物ながら隅々まで清掃が行き届いている点への言及も目立つ。",
+      "concerns_summary": "古い建物のため階段が多く急勾配で、高齢者や身体に負担がある客には不便という指摘が複数見られる。まれに部屋の設備（冷蔵庫等）の不具合や、部屋によって眺望が期待と異なるという声もある。",
+      "recommended_for": "黒川温泉らしい歴史ある宿構えと、地元食材を活かした丁寧な食事を重視したい人",
+      "recovery_plan": {
+        "summary": "黒川温泉観光旅館協同組合が、公式サイト（kurokawaonsen.or.jp）経由の宿泊予約（2026年8月1日〜9月30日申込分）について宿泊料金の5%相当を令和8年熊本地震の被災地支援に充当する取り組みを実施しており、御客屋はこの対象宿に含まれる。",
+        "source_url": "https://hotelbank.jp/lifestyle/kurokawa-onsen-quake-impact-status-202608/",
+        "note": "一次情報は黒川温泉公式サイト（https://www.kurokawaonsen.or.jp/posts/free_page.php?intKey=340）だが直接アクセスは403で確認不可のため、内容を伝える二次情報（HotelBank記事、2026-08-15付）とWeb検索結果を併用して確認（確認日2026-09-14）。【要確認: 一次ページの直接確認】"
+      }
+    },
+    {
+      "rank": 2,
+      "name": "黒川温泉 お宿 野の花",
+      "location": "黒川温泉（南小国町）",
+      "score": 4.86,
+      "rakuten": {"score": 4.92, "review_count": 267, "url": "https://travel.rakuten.co.jp/HOTEL/129963/review.html", "checked_at": "2026-09-14"},
+      "jalan": {"score": 4.80, "review_count": 586, "url": "https://www.jalan.net/yad375222/", "checked_at": "2026-09-14"},
+      "price_from_yen": null,
+      "good_points_summary": "奥黒川の自然に囲まれた離れ宿で、地元食材を使った丁寧な料理と、部屋ごとの露天風呂を源泉かけ流しでゆっくり楽しめる点を評価する声が多い。研修中のスタッフも含め接客の丁寧さへの言及が目立つ。",
+      "concerns_summary": "自然に囲まれた立地ゆえに浴槽に虫が入っていたという報告や、部屋のシャワーの水圧が低いという指摘が一部に見られる。",
+      "recommended_for": "静けさと部屋付き露天風呂でのプライベートな滞在を重視したい人",
+      "recovery_plan": null
+    },
+    {
+      "rank": 3,
+      "name": "黒川温泉 山の宿 新明館",
+      "location": "黒川温泉（南小国町）",
+      "score": 4.64,
+      "rakuten": {"score": 4.67, "review_count": 365, "url": "https://travel.rakuten.co.jp/HOTEL/80794/review.html", "checked_at": "2026-09-14"},
+      "jalan": {"score": 4.60, "review_count": 900, "url": "https://www.jalan.net/yad308320/", "checked_at": "2026-09-14"},
+      "price_from_yen": null,
+      "good_points_summary": "黒川温泉の観光カリスマが10年かけて手掘りしたという「洞窟風呂」が名物で、複数の入浴施設を巡れる点への評価が高い。囲炉裏を囲む炭火料理と、スタッフの丁寧な接客を評価する声も多い。",
+      "concerns_summary": "明治創業の建物のため老朽化に伴う不便さ（鴨居に頭が当たる等）や、道幅が狭く現地までのアクセスが分かりにくいという指摘が複数見られる。",
+      "recommended_for": "黒川温泉らしい趣ある湯めぐりと、名物の洞窟風呂を体験したい人",
+      "recovery_plan": {
+        "summary": "黒川温泉観光旅館協同組合の被災地支援プログラム（公式サイト経由予約の5%相当を被災地支援に充当、2026年8月1日〜9月30日申込分）の対象宿に新明館が含まれることが確認できた。",
+        "source_url": "https://hotelbank.jp/lifestyle/kurokawa-onsen-quake-impact-status-202608/",
+        "note": "一次情報（黒川温泉公式サイト）への直接アクセスは403のため、内容を伝える二次情報で確認（確認日2026-09-14）。【要確認: 一次ページの直接確認】"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "黒川温泉 ふもと旅館",
+      "location": "黒川温泉（南小国町）",
+      "score": 4.45,
+      "rakuten": {"score": 4.30, "review_count": 126, "url": "https://travel.rakuten.co.jp/HOTEL/54971/review.html", "checked_at": "2026-09-14"},
+      "jalan": {"score": 4.60, "review_count": 955, "url": "https://www.jalan.net/yad323983/", "checked_at": "2026-09-14"},
+      "price_from_yen": null,
+      "good_points_summary": "11の貸切風呂を巡れる点と、阿蘇あか牛・馬刺しなど地元食材を使った夕食・朝食のボリュームを評価する声が多い。温泉街中心部という立地の良さも支持されている。",
+      "concerns_summary": "「接客が微妙」「余裕がなさそう」という接客のばらつきを指摘する声や、朝食の味付けへの不満が一部に見られる。",
+      "recommended_for": "貸切風呂を何度も巡りたい人、温泉街の中心で滞在したい人",
+      "recovery_plan": {
+        "summary": "黒川温泉観光旅館協同組合の被災地支援プログラム（公式サイト経由予約の5%相当を被災地支援に充当）の対象宿にふもと旅館が含まれることが確認できた。あわせて、断水地域住民への露天風呂無料開放にも参加。",
+        "source_url": "https://hotelbank.jp/lifestyle/kurokawa-onsen-quake-impact-status-202608/",
+        "note": "一次情報（黒川温泉公式サイト）への直接アクセスは403のため、内容を伝える二次情報で確認（確認日2026-09-14）。【要確認: 一次ページの直接確認】"
+      }
+    },
+    {
+      "rank": 5,
+      "name": "阿蘇内牧温泉 湯巡追荘",
+      "location": "阿蘇内牧温泉（阿蘇市）",
+      "score": 4.28,
+      "rakuten": {"score": 4.25, "review_count": 1506, "url": "https://travel.rakuten.co.jp/HOTEL/52819/review.html", "checked_at": "2026-09-14"},
+      "jalan": {"score": 4.30, "review_count": 5143, "url": "https://www.jalan.net/yad321249/", "checked_at": "2026-09-14"},
+      "price_from_yen": null,
+      "good_points_summary": "品数豊富なバイキング（ライブキッチンでの調理実演含む）と、到着後すぐに入浴できる客室露天風呂・内風呂を評価する声が多い。カラオケや卓球など追加料金なしのサービスが充実している点も家族連れに支持されている。",
+      "concerns_summary": "「部屋風呂にカビ臭さがある」「水垢が見られた」といった清掃面の指摘や、客室Wi-Fiが弱い、コンセントが少ないという設備面の不満が一部に見られる。",
+      "recommended_for": "家族・グループでバイキングと無料サービスを気軽に楽しみたい人",
+      "recovery_plan": {
+        "summary": "阿蘇市観光協会による「阿蘇ふっこう割　阿蘇に泊まって支える！熊本応援キャンペーン」（対象期間2026年9月7日〜9月30日宿泊分、1人1泊1万円以上で5,000円引き・地域クーポン2,000円分を配布）の対象宿泊施設に湯巡追荘が含まれることを公式サイトで確認。ただし対象宿泊施設への直接予約に限り、楽天トラベル・じゃらん等のOTA経由の予約は対象外。",
+        "source_url": "https://www.asocity-kanko.jp/fukkouwari/",
+        "note": "確認日2026-09-14。予約は本特別編掲載時点でまだ利用できる可能性があるが、期間終了間際のため読者には公式サイトでの最新情報確認を促すこと。"
+      }
+    }
+  ],
+  "excluded": [
+    {"name": "地獄温泉 青風荘（南阿蘇村）", "reason": "楽天トラベルは4.56点／161件で条件を満たすが、じゃらん側は宿泊予約ページ（yad）ではなく観光地スポットページ（kankou、4.2点／129件）のみで、日帰り入浴客の口コミが混在する可能性があり他宿と同条件で比較できないため対象外。"},
+    {"name": "杖立温泉 葉隠館（小国町）", "reason": "楽天4.78点/878件、じゃらん4.3点/874件で条件は満たすが、独自採点は4.04点でTOP5には届かず。"},
+    {"name": "阿蘇内牧温泉 旅館金時（阿蘇市）", "reason": "楽天トラベルは4.30点／229件を確認できたが、じゃらん側の総合評価点を確認できなかったため対象外。"},
+    {"name": "日奈久温泉 あたらし屋旅館（八代市）", "reason": "楽天トラベルは4.13点／92件を確認できたが、じゃらん側のページにアクセスできず評価点を確認できなかったため対象外。"},
+    {"name": "日奈久温泉 金波楼（八代市）", "reason": "楽天トラベルは4.40点／66件を確認できたが、じゃらん側のページにアクセスできず評価点を確認できなかったため対象外。"},
+    {"name": "植木温泉 民宿一乃屋（熊本市北区）", "reason": "楽天トラベルの口コミ件数（77件）は確認できたが総合評価点の数値が確認できず、じゃらん側のデータも取得できなかったため対象外。"}
+  ],
+  "kumamoto_earthquake_context": {
+    "note_2016": "2026年4月で2016年熊本地震（前震4/14・本震4/16、最大震度7）から10年の節目を迎えた。",
+    "note_2026": "2026年7月28日16時27分頃、熊本県熊本地方を震源とするマグニチュード7.1の地震（令和8年熊本地震）が発生し、宇城市・氷川町で震度7を観測。本特別編の『ふっこう割』調査で見つかった宿泊割引・寄付の取り組みは、主にこの2026年7月の地震に対する復興支援であり、2016年の地震そのものへの現在進行系の宿泊割引ではない点に注意。",
+    "sources": [
+      "https://www.jma.go.jp/jma/menu/20260728_kumamoto_jishin.html",
+      "https://ja.wikipedia.org/wiki/%E7%86%8A%E6%9C%AC%E5%9C%B0%E9%9C%87_(2026%E5%B9%B4)"
+    ],
+    "prefecture_wide_travel_support": {
+      "name": "九州ふっこう応援割（熊本県分）",
+      "summary": "2026年10月1日宿泊分から開始予定（予約受付は2026年9月15日10時から順次開始）。熊本県分は宿泊料金の60%割引、上限は宿泊単体/交通付き1泊で1人2万円、2泊以上で3万円、周遊型で3.5万円。令和8年熊本地震（2026年7月）による観光需要減少への対策。",
+      "source_url": "https://www.needstour.com/kyushu/fukko-oenwari/",
+      "checked_at": "2026-09-14"
+    }
+  },
+  "donation_selected": {
+    "name": "楽天クラッチ募金「令和8年熊本地震被害支援募金」",
+    "operator": "楽天グループ株式会社",
+    "url": "https://corp.rakuten.co.jp/donation/kumamoto_2026_ja/kumamoto_2026_ja.html",
+    "confirmed": "2026年7月28日の地震（住居・建物被害、インフラ被害）への支援を目的とした緊急募金。受付期間2026年7月29日〜9月30日。楽天ポイント・クレジットカード・銀行振込（楽天銀行）に対応。確認日2026-09-14。社長指示で採用（2026-09-14）。",
+    "note": "受付終了日(9/30)が近いため、公開前に受付継続を再確認すること"
+  },
+  "donation_candidates_not_used": [
+    {"name": "日本赤十字社「令和8年熊本地震災害義援金」", "url": "https://www.jrc.or.jp/contribute/help/20260731/"},
+    {"name": "中央共同募金会・赤い羽根共同募金「令和8年熊本地震」（ボラサポ）", "url": "https://www.akaihane.or.jp/saigai/2026kumamoto_earthquake/"},
+    {"name": "熊本市「令和8年熊本地震災害義援金」", "url": "https://www.city.kumamoto.jp/kiji00372180/index.html"},
+    {"name": "（参考・2016年10年特集）ふるさとチョイス「熊本地震から10年」特集ふるさと納税", "url": "https://www.furusato-tax.jp/feature/a/2026_kumamoto_jishin"}
+  ]
+}
