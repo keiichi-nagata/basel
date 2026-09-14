@@ -56,7 +56,9 @@
 - [x] 【特別編】令和8年熊本地震(2026-07-28)復興支援・熊本県単独・広告なし の温泉宿＋お土産を公開
       （2026-09-15。温泉宿 https://note.com/basel5/n/nb857cdd2ab15／
       お土産 https://note.com/basel5/n/n6a1b0a003074。`published/2026-kumamoto-special.md`に記録）
-- [ ] 熊本特別編: Threads/Instagram告知（`queue.md`に5本用意済み。`queue_to_pending.py`で承認待ちへ）
+- [x] 熊本特別編: Instagram投稿完了（2026-09-15。温泉宿 https://www.instagram.com/p/DdRk4Gyj1Jh/／
+      お土産 https://www.instagram.com/p/DdRlHIQD_j3/）
+- [ ] 熊本特別編: Threads 5本をthreads-appの承認待ちに登録済み（2026-09-15）。社長の承認待ち
 - [ ] 熊本特別編: 初速を両`published/2026-kumamoto-special.md`に記入（9/17ごろ）
 
 ### 開発6部（資産クラス別 月間リターンランキング・2026-09-11 新設）
