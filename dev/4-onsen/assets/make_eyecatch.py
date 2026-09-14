@@ -24,6 +24,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import matplotlib.patheffects as pe  # noqa: E402
 import numpy as np  # noqa: E402
 from matplotlib import font_manager  # noqa: E402
+from PIL import Image  # noqa: E402
 
 for _name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic",
               "Meiryo", "Yu Gothic", "MS Gothic", "Hiragino Sans"):
@@ -91,36 +92,57 @@ def _hokkaido_bottom(ax) -> None:
 MOTIFS = {"hokkaido": (_hokkaido_side, _hokkaido_bottom)}
 
 
-def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=None) -> None:
+def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=None, bg_path=None) -> None:
     if size == "ig":
         W, H = 1080, 1350
         y_series, y_tick, y_label, y_sub, y_tag = 0.905, 0.815, 0.745, 0.645, 0.545
         fs_label, fs_sub, fs_tag = 24, 34, 15
         tagline = tagline_ig or "楽天トラベル×じゃらんの独自採点"
         motif_idx = 1
+        panel_w = 1.0  # AI背景では下部に帯を敷くため使わない（テキストY座標のみ利用）
     else:  # note
         W, H = 1280, 670
         y_series, y_tick, y_label, y_sub, y_tag = 0.775, 0.715, 0.60, 0.45, 0.22
         fs_label, fs_sub, fs_tag = 20, 25, 12
         tagline = tagline_note or "楽天トラベル×じゃらん 独自採点 ｜ 宿ランキングTOP5"
         motif_idx = 0
+        panel_w = 0.62  # AI背景では左側に半透明パネルを敷いてテキストを読みやすくする
+
+    if bg_path is not None:
+        # AI背景モードは幅固定のパネルに収める必要があるため、長い文字列は自動で縮小する
+        if len(subtitle) > 9:
+            fs_sub = int(fs_sub * 0.72)
+        if tagline and len(tagline) > 18:
+            fs_tag = int(fs_tag * 0.82)
 
     fig = plt.figure(figsize=(W / 200, H / 200), dpi=200)
     ax = fig.add_axes([0, 0, 1, 1])
     ax.axis("off")
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-    ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=BG))
-    if motif in MOTIFS:
-        MOTIFS[motif][motif_idx](ax)
-    ax.add_patch(plt.Rectangle((0, 0), 1, 0.015, color=ACCENT))
-    ax.add_patch(plt.Rectangle((0.075, y_tick), 0.06, 0.012, color=ACCENT))
 
-    ax.text(0.075, y_series, SERIES, fontsize=13, color=MUTE, va="center")
-    ax.text(0.075, y_label, label, fontsize=fs_label, color=ACCENT, fontweight="bold", va="center")
-    t = ax.text(0.075, y_sub, subtitle, fontsize=fs_sub, color=TITLE, fontweight="bold", va="center")
+    if bg_path is not None:
+        # ハイブリッド方式: OpenAI生成の背景画像の上に、文字だけプログラムで重ねる
+        img = np.asarray(Image.open(bg_path).convert("RGB"))
+        ax.imshow(img, extent=[0, 1, 0, 1], aspect="auto", zorder=0)
+        if size == "ig":
+            # 縦長は上部に帯を敷いてテキストを乗せる（テキストは上半分に配置されるため。画像下部はそのまま見せる）
+            ax.add_patch(plt.Rectangle((0, 0.50), 1, 0.50, color=BG, alpha=0.82, zorder=1))
+        else:
+            # 横長は左側に半透明パネル（画像は右側に見せる）
+            ax.add_patch(plt.Rectangle((0, 0), panel_w, 1, color=BG, alpha=0.82, zorder=1))
+    else:
+        ax.add_patch(plt.Rectangle((0, 0), 1, 1, color=BG))
+        if motif in MOTIFS:
+            MOTIFS[motif][motif_idx](ax)
+    ax.add_patch(plt.Rectangle((0, 0), 1, 0.015, color=ACCENT, zorder=2))
+    ax.add_patch(plt.Rectangle((0.075, y_tick), 0.06, 0.012, color=ACCENT, zorder=2))
+
+    ax.text(0.075, y_series, SERIES, fontsize=13, color=MUTE, va="center", zorder=3)
+    ax.text(0.075, y_label, label, fontsize=fs_label, color=ACCENT, fontweight="bold", va="center", zorder=3)
+    t = ax.text(0.075, y_sub, subtitle, fontsize=fs_sub, color=TITLE, fontweight="bold", va="center", zorder=3)
     t.set_path_effects([pe.withStroke(linewidth=1.3, foreground=TITLE)])
-    ax.text(0.075, y_tag, tagline, fontsize=fs_tag, color=MUTE, va="center")
+    ax.text(0.075, y_tag, tagline, fontsize=fs_tag, color=MUTE, va="center", zorder=3)
 
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=200, facecolor=BG)
@@ -129,19 +151,24 @@ def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=Non
 
 
 def eyecatch(label: str, subtitle: str, out_dir: Path, motif: str | None = None,
-             kind: str = "onsen") -> None:
+             kind: str = "onsen", bg_note: Path | None = None, bg_ig: Path | None = None,
+             tagline_note: str | None = None, tagline_ig: str | None = None) -> None:
     """note用（eyecatch.png）とInstagram用（eyecatch-ig.png）を両方生成する。
 
     kind="omiyage" にすると、タグラインを「お土産ランキング」向けに差し替える
     （マガジンは温泉宿ランキングと共通のため SERIES 表記はそのまま）。
+    bg_note/bg_ig を指定すると、`scripts/ai_image.py` で生成した背景画像の上に
+    文字を重ねるハイブリッド方式になる（motifは使われない）。tagline_note/tagline_ig で
+    タグラインを個別に上書きできる（kindによる既定より優先）。
     """
     if kind == "omiyage":
-        tn = "楽天市場×Amazon 独自採点 ｜ お土産ランキングTOP5"
-        ti = "楽天市場×Amazonのレビュー独自採点"
+        tn = tagline_note or "楽天市場×Amazon 独自採点 ｜ お土産ランキングTOP5"
+        ti = tagline_ig or "楽天市場×Amazonのレビュー独自採点"
     else:
-        tn = ti = None
-    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note", tn, ti)
-    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig", tn, ti)
+        tn = tagline_note
+        ti = tagline_ig
+    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note", tn, ti, bg_path=bg_note)
+    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig", tn, ti, bg_path=bg_ig)
 
 
 if __name__ == "__main__":

@@ -20,9 +20,10 @@
 
 ### マーケ部・画像生成の自動化（2026-09-12〜）
 - [x] `scripts/ai_image.py`（OpenAI APIで背景アート生成→matplotlibで文字を上重ね、のハイブリッド方式）を用意
-- [ ] platform.openai.com で支払い方法を登録 → APIキーを発行（**ChatGPT Plusとは別課金・社長のみ実施可**）
-- [ ] ルート `.env` に `OPENAI_API_KEY` を設定（`.env.example` 参照）
-- [ ] キー設定後、どこか1部（例: 開発6部か開発4部）で試験生成 → 各部の `make_eyecatch.py` に組み込むか判断
+- [x] platform.openai.com で支払い方法を登録・APIキー発行・`.env`設定済み（社長対応）
+- [x] 開発4部・熊本特別編で初の試験生成（2026-09-14）: `dev/4-onsen/assets/make_eyecatch.py` に
+      `bg_path`対応を追加（AI背景の上に半透明パネル+文字を重ねる）。宿・お土産とも note用/IG用の
+      4枚を生成、見た目良好で採用。今後の号（開発2/4/6部）に展開するかは反応を見て判断
 
 ### 開発3部（ドラマ）
 - [x] 2周目（2026-W36）公開＋Threads/Instagram告知（2026-09-09 https://note.com/basel5/n/n373dc87cf1de、PR #3 マージ済み）
