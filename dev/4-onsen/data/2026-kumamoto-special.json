@@ -8,7 +8,7 @@
     {
       "rank": 1,
       "name": "黒川温泉 歴史の宿 御客屋",
-      "location": "黒川温泉（南小国町）",
+      "location": "南小国町",
       "score": 4.87,
       "rakuten": {"score": 4.93, "review_count": 475, "url": "https://travel.rakuten.co.jp/HOTEL/80591/review.html", "checked_at": "2026-09-14"},
       "jalan": {"score": 4.80, "review_count": 2598, "url": "https://www.jalan.net/yad328302/", "checked_at": "2026-09-14"},
@@ -25,7 +25,7 @@
     {
       "rank": 2,
       "name": "黒川温泉 お宿 野の花",
-      "location": "黒川温泉（南小国町）",
+      "location": "南小国町",
       "score": 4.86,
       "rakuten": {"score": 4.92, "review_count": 267, "url": "https://travel.rakuten.co.jp/HOTEL/129963/review.html", "checked_at": "2026-09-14"},
       "jalan": {"score": 4.80, "review_count": 586, "url": "https://www.jalan.net/yad375222/", "checked_at": "2026-09-14"},
@@ -42,7 +42,7 @@
     {
       "rank": 3,
       "name": "黒川温泉 山の宿 新明館",
-      "location": "黒川温泉（南小国町）",
+      "location": "南小国町",
       "score": 4.64,
       "rakuten": {"score": 4.67, "review_count": 365, "url": "https://travel.rakuten.co.jp/HOTEL/80794/review.html", "checked_at": "2026-09-14"},
       "jalan": {"score": 4.60, "review_count": 900, "url": "https://www.jalan.net/yad308320/", "checked_at": "2026-09-14"},
@@ -59,7 +59,7 @@
     {
       "rank": 4,
       "name": "黒川温泉 ふもと旅館",
-      "location": "黒川温泉（南小国町）",
+      "location": "南小国町",
       "score": 4.45,
       "rakuten": {"score": 4.30, "review_count": 126, "url": "https://travel.rakuten.co.jp/HOTEL/54971/review.html", "checked_at": "2026-09-14"},
       "jalan": {"score": 4.60, "review_count": 955, "url": "https://www.jalan.net/yad323983/", "checked_at": "2026-09-14"},
@@ -76,7 +76,7 @@
     {
       "rank": 5,
       "name": "阿蘇内牧温泉 湯巡追荘",
-      "location": "阿蘇内牧温泉（阿蘇市）",
+      "location": "阿蘇市",
       "score": 4.28,
       "rakuten": {"score": 4.25, "review_count": 1506, "url": "https://travel.rakuten.co.jp/HOTEL/52819/review.html", "checked_at": "2026-09-14"},
       "jalan": {"score": 4.30, "review_count": 5143, "url": "https://www.jalan.net/yad321249/", "checked_at": "2026-09-14"},
