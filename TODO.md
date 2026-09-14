@@ -96,9 +96,10 @@
 - [x] Stage B: kabuステーション検証用APIで`common/kabu_client.py`の動作確認完了（2026-09-13）。
       token/board/positions/ordersは本番で実機確認、sendorderもDelivType修正後Result:0を確認。
       検証用環境はOrderId=null等で実際の約定はシミュレートせず、検証はここが天井と判断
-- [ ] Stage C: 月曜（平日）に本番でごく小さく試す（予算額を一時的に30万円に）。
-      `daytrade-bot/scripts/run_live_once.py`で買いのみ自動化・利確損切り/強制決済は
-      kabuステーション画面から手動のハイブリッド運用。結果を`trade/journal/`に記録
+- [x] Stage C 初回トライアル実施（2026-09-14）→ **発注失敗（Code:100368「株式信用新規の注文は
+      抑止されております」）。信用取引口座開設直後の審査・待機期間の可能性。実害無し**
+- [ ] eスマート証券に信用新規注文が抑止されている理由・解除時期を確認
+- [ ] 制限解除後、あらためて`run_live_once.py`で本番トライアルを再実施
 - [ ] 開発1部 catalog #7-8（おすすめ株アプリの作り方 / デイトレ自動化のやり方）を執筆（免責は `sop/publish-note.md` の投資・トレード系note節）
 
 ---
