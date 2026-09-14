@@ -30,7 +30,13 @@
 - [ ] W36 の初速を `published/2026-W36.md` に記入（9/11ごろ）
 - [x] `/schedule` ルーチン `drama-weekly-analysis` を作成（毎週月曜8:30 JST、cron `30 23 * * 0`、
       trig_01NSjEFvcB9YmbPstbaWC8s8）。Action収集 → ルーチンが分析執筆＋IG画像＋PR仕上げ
-- [ ] 初回自動実行（2026-09-14 8:30 JST、W37）の結果をレビュー → 問題なければ運用に乗せる
+- [x] 初回自動実行（2026-09-14 8:30 JST、W37）は`git push`の権限確認で2回とも停止（1回目は放置され
+      abandoned、2回目は社長が承認しPR #4へ反映完了）。**再現性あり＝毎回この権限確認で止まる**
+- [ ] **要対応**: [drama-weekly-analysisルーチンの設定画面](https://claude.ai/code/routines/trig_01NSjEFvcB9YmbPstbaWC8s8)
+      で、`git push`が自動承認されない権限設定を見直す（次回実行は2026-09-20 8:30 JST。放置すると
+      また誰も見ていない状態でabandonedになる）
+- [ ] PR #4（https://github.com/keiichi-nagata/basel/pull/4）をレビュー→公開。9位「Sai」の自動照合
+      誤り（誤: インドの別作品→正: 2025年WOWOW「災」）を修正済み。10月クール新番組情報は要確認のまま
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
 ### 開発2部（車）— アフィリエイト
