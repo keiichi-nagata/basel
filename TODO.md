@@ -53,6 +53,11 @@
 - [ ] お土産9月号: 温泉宿と同じマガジン「エリア別 温泉宿ランキング（月刊）」に追加
 - [ ] お土産9月号の初速を `omiyage/published/2026-09.md` に記入（9/13ごろ）
 - [ ] 10月号: 東北エリアのリサーチ・執筆（温泉宿＋お土産の2本。9月下旬〜10月初旬に着手）
+- [x] 【特別編】令和8年熊本地震(2026-07-28)復興支援・熊本県単独・広告なし の温泉宿＋お土産を公開
+      （2026-09-15。温泉宿 https://note.com/basel5/n/nb857cdd2ab15／
+      お土産 https://note.com/basel5/n/n6a1b0a003074。`published/2026-kumamoto-special.md`に記録）
+- [ ] 熊本特別編: Threads/Instagram告知（`queue.md`に5本用意済み。`queue_to_pending.py`で承認待ちへ）
+- [ ] 熊本特別編: 初速を両`published/2026-kumamoto-special.md`に記入（9/17ごろ）
 
 ### 開発6部（資産クラス別 月間リターンランキング・2026-09-11 新設）
 - [x] 企画I-002を採用 → 開発6部を新設（`dev/6-markets/` 一式・`universe.json`・`collect.py`・`docs/decisions/0006`・
