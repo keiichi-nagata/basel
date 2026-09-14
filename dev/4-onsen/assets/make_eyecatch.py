@@ -92,18 +92,25 @@ def _hokkaido_bottom(ax) -> None:
 MOTIFS = {"hokkaido": (_hokkaido_side, _hokkaido_bottom)}
 
 
-def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=None, bg_path=None) -> None:
+def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=None, bg_path=None,
+            cheer=None) -> None:
     if size == "ig":
         W, H = 1080, 1350
-        y_series, y_tick, y_label, y_sub, y_tag = 0.905, 0.815, 0.745, 0.645, 0.545
-        fs_label, fs_sub, fs_tag = 24, 34, 15
+        if cheer and bg_path is not None:
+            # 応援メッセージ分の行を追加するため、パネルを広げてやや詰めて配置
+            y_series, y_tick, y_label, y_sub, y_cheer, y_tag = 0.92, 0.845, 0.775, 0.685, 0.615, 0.55
+            panel_h = 0.47  # このY座標より下を画像として見せる（=パネルは 1-panel_h から上）
+        else:
+            y_series, y_tick, y_label, y_sub, y_cheer, y_tag = 0.905, 0.815, 0.745, 0.645, None, 0.545
+            panel_h = 0.50
+        fs_label, fs_sub, fs_cheer, fs_tag = 24, 34, 20, 15
         tagline = tagline_ig or "楽天トラベル×じゃらんの独自採点"
         motif_idx = 1
         panel_w = 1.0  # AI背景では下部に帯を敷くため使わない（テキストY座標のみ利用）
     else:  # note
         W, H = 1280, 670
-        y_series, y_tick, y_label, y_sub, y_tag = 0.775, 0.715, 0.60, 0.45, 0.22
-        fs_label, fs_sub, fs_tag = 20, 25, 12
+        y_series, y_tick, y_label, y_sub, y_cheer, y_tag = 0.775, 0.715, 0.60, 0.45, 0.335, 0.22
+        fs_label, fs_sub, fs_cheer, fs_tag = 20, 25, 16, 12
         tagline = tagline_note or "楽天トラベル×じゃらん 独自採点 ｜ 宿ランキングTOP5"
         motif_idx = 0
         panel_w = 0.62  # AI背景では左側に半透明パネルを敷いてテキストを読みやすくする
@@ -127,7 +134,7 @@ def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=Non
         ax.imshow(img, extent=[0, 1, 0, 1], aspect="auto", zorder=0)
         if size == "ig":
             # 縦長は上部に帯を敷いてテキストを乗せる（テキストは上半分に配置されるため。画像下部はそのまま見せる）
-            ax.add_patch(plt.Rectangle((0, 0.50), 1, 0.50, color=BG, alpha=0.82, zorder=1))
+            ax.add_patch(plt.Rectangle((0, 1 - panel_h), 1, panel_h, color=BG, alpha=0.82, zorder=1))
         else:
             # 横長は左側に半透明パネル（画像は右側に見せる）
             ax.add_patch(plt.Rectangle((0, 0), panel_w, 1, color=BG, alpha=0.82, zorder=1))
@@ -142,6 +149,8 @@ def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=Non
     ax.text(0.075, y_label, label, fontsize=fs_label, color=ACCENT, fontweight="bold", va="center", zorder=3)
     t = ax.text(0.075, y_sub, subtitle, fontsize=fs_sub, color=TITLE, fontweight="bold", va="center", zorder=3)
     t.set_path_effects([pe.withStroke(linewidth=1.3, foreground=TITLE)])
+    if cheer and y_cheer is not None:
+        ax.text(0.075, y_cheer, cheer, fontsize=fs_cheer, color=ACCENT, fontweight="bold", va="center", zorder=3)
     ax.text(0.075, y_tag, tagline, fontsize=fs_tag, color=MUTE, va="center", zorder=3)
 
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -152,14 +161,16 @@ def _render(label, subtitle, out, motif, size, tagline_note=None, tagline_ig=Non
 
 def eyecatch(label: str, subtitle: str, out_dir: Path, motif: str | None = None,
              kind: str = "onsen", bg_note: Path | None = None, bg_ig: Path | None = None,
-             tagline_note: str | None = None, tagline_ig: str | None = None) -> None:
+             tagline_note: str | None = None, tagline_ig: str | None = None,
+             cheer: str | None = None) -> None:
     """note用（eyecatch.png）とInstagram用（eyecatch-ig.png）を両方生成する。
 
     kind="omiyage" にすると、タグラインを「お土産ランキング」向けに差し替える
     （マガジンは温泉宿ランキングと共通のため SERIES 表記はそのまま）。
     bg_note/bg_ig を指定すると、`scripts/ai_image.py` で生成した背景画像の上に
     文字を重ねるハイブリッド方式になる（motifは使われない）。tagline_note/tagline_ig で
-    タグラインを個別に上書きできる（kindによる既定より優先）。
+    タグラインを個別に上書きできる（kindによる既定より優先）。cheer を指定すると、
+    タイトルの下に応援メッセージ（例:「みんなで応援」）を1行追加する。
     """
     if kind == "omiyage":
         tn = tagline_note or "楽天市場×Amazon 独自採点 ｜ お土産ランキングTOP5"
@@ -167,8 +178,8 @@ def eyecatch(label: str, subtitle: str, out_dir: Path, motif: str | None = None,
     else:
         tn = tagline_note
         ti = tagline_ig
-    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note", tn, ti, bg_path=bg_note)
-    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig", tn, ti, bg_path=bg_ig)
+    _render(label, subtitle, out_dir / "eyecatch.png", motif, "note", tn, ti, bg_path=bg_note, cheer=cheer)
+    _render(label, subtitle, out_dir / "eyecatch-ig.png", motif, "ig", tn, ti, bg_path=bg_ig, cheer=cheer)
 
 
 if __name__ == "__main__":
