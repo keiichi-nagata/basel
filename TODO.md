@@ -49,8 +49,9 @@
 - [x] PR #4マージ・W37をnote公開（2026-09-16 https://note.com/basel5/n/ne1fb51722b1f）。
       `published/2026-W37.md`にURL記入済み。9位「Sai」の自動照合誤り（誤: インドの別作品→
       正: 2025年WOWOW「災」）は修正済み公開。10月クール新番組情報は要確認のまま
-- [ ] W37: Threads/Instagram告知（`queue.md`・`instagram/queue.md`に用意済み。投稿・
-      `queue_to_pending.py`で承認待ちへ）
+- [x] W37: Instagram投稿完了（2026-09-16 https://www.instagram.com/p/DdURzsWDxQy/）。
+      Threadsは`queue_to_pending.py`でthreads-appの承認待ちに登録済み（2026-09-16）。社長の承認待ち
+- [ ] W37の初速を`published/2026-W37.md`に記入（9/18ごろ）
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
 ### 開発2部（車）— アフィリエイト
