@@ -28,8 +28,8 @@ DOWN = "#b23b3b"         # 下落（赤）
 def _jp_font() -> str | None:
     from matplotlib import font_manager
 
-    for name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic", "IPAGothic",
-                 "TakaoPGothic", "Yu Gothic", "Meiryo", "MS Gothic", "Hiragino Sans"):
+    for name in ("Yu Gothic", "Meiryo", "MS Gothic", "IPAexGothic", "IPAGothic",
+                 "TakaoPGothic", "Hiragino Sans", "Noto Sans CJK JP", "Noto Sans JP"):
         try:
             if font_manager.findfont(name, fallback_to_default=False):
                 return name

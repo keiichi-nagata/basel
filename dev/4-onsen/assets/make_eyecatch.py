@@ -26,8 +26,8 @@ import numpy as np  # noqa: E402
 from matplotlib import font_manager  # noqa: E402
 from PIL import Image  # noqa: E402
 
-for _name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic",
-              "Meiryo", "Yu Gothic", "MS Gothic", "Hiragino Sans"):
+for _name in ("Yu Gothic", "Meiryo", "MS Gothic", "IPAexGothic",
+              "Hiragino Sans", "Noto Sans CJK JP", "Noto Sans JP"):
     try:
         if font_manager.findfont(_name, fallback_to_default=False):
             matplotlib.rcParams["font.family"] = _name
