@@ -711,8 +711,11 @@ def render_draft(wk: dict, items: list[dict]) -> str:
 def _jp_font() -> str | None:
     from matplotlib import font_manager
 
-    for name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic", "IPAGothic",
-                 "TakaoPGothic", "Yu Gothic", "Meiryo", "MS Gothic", "Hiragino Sans"):
+    # 「Noto Sans JP」は可変フォント(VF)で配布されており、matplotlibがウェイト軸を
+    # 正しく解決できず常にThin(100)にフォールバックしてしまう（2026-09-16判明。
+    # 表の文字が薄く見える原因だった）。ウェイト固定の静的フォントを優先する。
+    for name in ("Yu Gothic", "Meiryo", "MS Gothic", "IPAexGothic", "IPAGothic",
+                 "TakaoPGothic", "Hiragino Sans", "Noto Sans CJK JP", "Noto Sans JP"):
         try:
             if font_manager.findfont(name, fallback_to_default=False):
                 return name
@@ -763,8 +766,10 @@ def render_png(wk: dict, items: list[dict], out_path: Path) -> bool:
                 cell.set_text_props(color="white", fontweight="bold")
             else:
                 if col == 1:
-                    cell.set_text_props(ha="left")
+                    cell.set_text_props(ha="left", color="#111111")
                     cell.PAD = 0.03
+                else:
+                    cell.set_text_props(color="#111111")
                 cell.set_facecolor("#ffffff" if r % 2 else "#f4f6f8")
         fig.text(0.5, 0.02,
                  "TVer週間 / Netflix Japan Top10 / Google トレンドの合成指標（横断視聴数ではありません）",
