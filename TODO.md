@@ -50,7 +50,7 @@
       `published/2026-W37.md`にURL記入済み。9位「Sai」の自動照合誤り（誤: インドの別作品→
       正: 2025年WOWOW「災」）は修正済み公開。10月クール新番組情報は要確認のまま
 - [x] W37: Instagram投稿完了（2026-09-16 https://www.instagram.com/p/DdURzsWDxQy/）。
-      Threadsは`queue_to_pending.py`でthreads-appの承認待ちに登録済み（2026-09-16）。社長の承認待ち
+      Threads投稿完了（2026-09-16 https://www.threads.com/@basel_freedom/post/DdUSMcDmBgV）
 - [ ] W37の初速を`published/2026-W37.md`に記入（9/18ごろ）
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
