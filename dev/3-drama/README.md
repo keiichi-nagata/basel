@@ -24,13 +24,20 @@ TVer週間 + Netflix Japan Top10 + Google検索トレンド を各0〜100正規�
 - `pipeline/collect.py` — 自動収集スクリプト（+ `requirements.txt`）
 - `data/` — 週次の生データ＋スコア内訳（`YYYY-Www.json`）
 - `data/inputs/` — 自動取得が失敗したときの手動フォールバック（`inputs/README.md`）
-- `drafts/` — `YYYY-Www.md`（本文下書き、`ranking-writer` が分析を追記）＋ `YYYY-Www.png`（note/SNS貼付用のランキング表画像）
+- `drafts/` — `YYYY-Www.md`（本文下書き、`ranking-writer` が分析を追記）＋ `YYYY-Www.png`（note/SNS貼付用のランキング表画像）＋ `YYYY-Www-ig.png`（Instagram用TOP10表）
 - `published/` — `YYYY-Www.md`（公開済みのメタ記録）
+- `assets/make_eyecatch.py` — サムネイル画像（note用 `assets/YYYY-Www/eyecatch.png` 1280x670・
+  IG用 `eyecatch-ig.png` 1080x1350）。背景はOpenAI画像生成の固定背景（`eyecatch-bg-note.png`／
+  `eyecatch-bg-ig.png`。テレビ・映画好きの部屋をイメージした暗い配色、週替わりで作り直さない）に
+  週番号・今週1位の作品名をmatplotlibで重ねるハイブリッド方式（開発4部と同じ手法。2026-09-16導入）
+- `assets/make_cover.py` — マガジン表紙画像（`assets/magazine-cover.png`）
 
 ## note への貼り方
 
-- ランキング表は `drafts/YYYY-Www.png` を画像として貼る（Markdownの表はnoteで崩れる）。同じ画像を Threads/Instagram にも流用。
+- ランキング表は `drafts/YYYY-Www.png` を画像として貼る（Markdownの表はnoteで崩れる）。
 - 各作品の詳細・アフィリリンクは `drafts/YYYY-Www.md` の各作品セクションをそのまま本文に。
+- 記事のサムネイルには `assets/YYYY-Www/eyecatch.png` を設定する。Instagram投稿には
+  `eyecatch-ig.png`（サムネ）または `drafts/YYYY-Www-ig.png`（TOP10表）を使う。
 - 冒頭の「本記事はアフィリエイト広告（PR）を含みます」は、アフィリリンクを含む号では景表法（ステマ規制）上**必須**。テンプレに常時入れておく。
 
 ## 実行（毎週自動・2段構え）
