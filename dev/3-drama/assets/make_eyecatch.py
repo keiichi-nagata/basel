@@ -34,11 +34,12 @@ for _name in ("Noto Sans CJK JP", "Noto Sans JP", "IPAexGothic",
         continue
 
 HERE = Path(__file__).parent
-BG = "#14171d"
-ACCENT = "#e5484d"
-TITLE = "#f5f7fa"
-SUB = "#aeb7c4"
-MUTE = "#79828f"
+# 2026-09-16: 暗い配色から、明るく温かみのある配色に変更（社長フィードバック）
+BG = "#fdf6ea"
+ACCENT = "#e8a33d"
+TITLE = "#2b2118"
+SUB = "#6b5d4a"
+MUTE = "#9c8f7a"
 SERIES = "話題のドラマ総合ランキング（週刊）"
 DEFAULT_TAGLINE = "TVer×Netflix×Google検索トレンド ｜ 独自の話題度指標"
 
@@ -60,6 +61,8 @@ def _render(week_label: str, period: str, top_line: str, out: Path, size: str,
         fs_sub = int(fs_sub * 0.8)
     if size == "ig" and len(tagline) > 20:
         fs_tag = int(fs_tag * 0.78)
+    if size == "note" and len(tagline) > 18:
+        fs_tag = int(fs_tag * 0.82)
 
     fig = plt.figure(figsize=(W / 200, H / 200), dpi=200)
     ax = fig.add_axes([0, 0, 1, 1])
