@@ -46,8 +46,11 @@
 - [ ] **要対応**: [drama-weekly-analysisルーチンの設定画面](https://claude.ai/code/routines/trig_01NSjEFvcB9YmbPstbaWC8s8)
       で、`git push`が自動承認されない権限設定を見直す（次回実行は2026-09-20 8:30 JST。放置すると
       また誰も見ていない状態でabandonedになる）
-- [ ] PR #4（https://github.com/keiichi-nagata/basel/pull/4）をレビュー→公開。9位「Sai」の自動照合
-      誤り（誤: インドの別作品→正: 2025年WOWOW「災」）を修正済み。10月クール新番組情報は要確認のまま
+- [x] PR #4マージ・W37をnote公開（2026-09-16 https://note.com/basel5/n/ne1fb51722b1f）。
+      `published/2026-W37.md`にURL記入済み。9位「Sai」の自動照合誤り（誤: インドの別作品→
+      正: 2025年WOWOW「災」）は修正済み公開。10月クール新番組情報は要確認のまま
+- [ ] W37: Threads/Instagram告知（`queue.md`・`instagram/queue.md`に用意済み。投稿・
+      `queue_to_pending.py`で承認待ちへ）
 - [ ] もしもアフィリエイト・afb に申請（U-NEXT / Amazon Prime Video 用）
 
 ### 開発2部（車）— アフィリエイト
