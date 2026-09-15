@@ -23,7 +23,13 @@
 - [x] platform.openai.com で支払い方法を登録・APIキー発行・`.env`設定済み（社長対応）
 - [x] 開発4部・熊本特別編で初の試験生成（2026-09-14）: `dev/4-onsen/assets/make_eyecatch.py` に
       `bg_path`対応を追加（AI背景の上に半透明パネル+文字を重ねる）。宿・お土産とも note用/IG用の
-      4枚を生成、見た目良好で採用。今後の号（開発2/4/6部）に展開するかは反応を見て判断
+      4枚を生成、見た目良好で採用
+- [x] 開発3部（ドラマ）にも展開（2026-09-16）: `dev/3-drama/assets/make_eyecatch.py`を新規作成。
+      背景は週替わりで作り直さず固定（`eyecatch-bg-note.png`/`eyecatch-bg-ig.png`）で使い回し、
+      週番号・1位の作品名だけ重ねる設計。2026-W37分を生成・`published/2026-W37.md`に反映済み。
+      `/schedule`ルーチン`drama-weekly-analysis`のプロンプトにも生成ステップを追加し、次回（9/20）
+      以降は自動生成される
+- [ ] 開発2・6部にも展開するか、反応を見て判断
 
 ### 開発3部（ドラマ）
 - [x] 2周目（2026-W36）公開＋Threads/Instagram告知（2026-09-09 https://note.com/basel5/n/n373dc87cf1de、PR #3 マージ済み）
