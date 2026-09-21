@@ -84,7 +84,7 @@
         },
         {
           "name": "Amazon Prime Video",
-          "affiliate": "pending"
+          "affiliate": "linked"
         },
         {
           "name": "Disney+",
@@ -273,7 +273,7 @@
       "providers_jp": [
         {
           "name": "Amazon Prime Video",
-          "affiliate": "pending"
+          "affiliate": "linked"
         }
       ],
       "first_air_date": "2026-07-24"
