@@ -1,0 +1,409 @@
+{
+  "week": "2026-W38",
+  "range": {
+    "from": "2026-09-14",
+    "to": "2026-09-20"
+  },
+  "collected_at": "2026-09-21T07:46:31+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-09-21T07:46:31+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-09-21T07:46:31+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 12,
+      "fetched_at": "2026-09-21T07:46:31+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-09-21T07:46:31+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "ラヴ上等",
+      "matched": "ラヴ上等",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "スーパーの裏でヤニ吸うふたり",
+      "matched": "スーパーの裏でヤニ吸うふたり",
+      "reason": "アニメ"
+    },
+    {
+      "title": "ふつつかな悪女ではございますが ～雛宮蝶鼠とりかえ伝～",
+      "matched": "ふつつかな悪女ではございますが ～雛宮蝶鼠とりかえ伝～",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 90.0,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 15,
+          "score": 80.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 8,
+        "total": 21,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "告白ー25年目の秘密ー",
+      "source_title": "告白―25年目の秘密―",
+      "broadcaster": "日テレ",
+      "composite_score": 46.7,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 7,
+          "weeks": 3,
+          "score": 40.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326063,
+      "matched_title": "告白ー25年目の秘密ー",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "一人の女性に、幼い頃から25年間、片想いし続けてきた主人公。\n\nそれは、「純愛」なのか、それとも執着という名の「狂気」なのか。\n\n陰から彼女を追い続ける理由。\n\nその裏側には、25年前に起きた凄惨な事件と\n\nそれぞれが抱える秘密が深く関係している。\n\n長きにわたる沈黙を破り、彼女と接点を持ったその日から、\n\n日常がスリリングに動き始める。\n\n人は好きな人のことならなんでも知りたい。\n\nだけど、それはどこまでなら許されるのか。\n\nもしも、この愛が全て仕組まれたものだとしたら・・・。\n\n最も無垢で、最も危険なラブサスペンスが幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-11"
+    },
+    {
+      "rank": 3,
+      "title": "Tシャツが乾くまで",
+      "source_title": "Until the T-shirt Dries",
+      "broadcaster": null,
+      "composite_score": 45.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 10,
+          "score": 90.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 322570,
+      "matched_title": "Tシャツが乾くまで",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "ある夏の日、二組の夫婦がとある事故に巻き込まれてしまう。それがきっかけで、当たり前に続いていくと思っていた二組の夫婦の幸せな日常が、突如として崩れ去っていくことに。さらに、その事故が暴いたのは、愛する人の“第３金曜日の秘密”だった——。第３金曜日、行方不明、Ｔシャツ…これらのワードが意味することとは？あらすじさえ語れない、「二組の夫婦の喪失から始まる“愛”と“秘密”の物語」がこの夏、幕を開ける。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-10"
+    },
+    {
+      "rank": 4,
+      "title": "大空港～GATE24～",
+      "source_title": "大空港～GATE24～",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 43.8,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 8,
+          "score": 50.0
+        },
+        "C_trends": 1.5
+      },
+      "tmdb_id": 323579,
+      "matched_title": "大空港～GATE24～",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "密輸、偽造パスポート、人身売買、テロ――。国際犯罪を水際で防ぐ“国の最終防衛ライン”である空港。その要となるのが《税関》と《入管》。人の心を読むのは苦手だが、モノには鋭い観察眼を持つ税関職員・森万智（趣里）をはじめ、超エリートの入国審査官・早見圭一郎（眞栄田郷敦）、たたき上げの税関職員・松山篤志（板垣李光人）…など各省庁から寄せ集められた個性あふれるメンバーが、スペシャルユニット《GATE24》を結成！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-23"
+    },
+    {
+      "rank": 5,
+      "title": "ラストノート",
+      "source_title": "ラストノート",
+      "broadcaster": "フジテレビ",
+      "composite_score": 39.9,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 9.7
+      },
+      "tmdb_id": 324581,
+      "matched_title": "ラストノート",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 11,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "香料会社の営業部で働く主人公・一瀬葵は、結婚や離婚、仕事での挫折など、49年の人生でさまざまなことを経験していくうちに、あらゆることにしがみつくことをやめ、「これ以上、変化もサプライズもいらない」と、現状維持の日常を送っていた。そんな時、親友に起こったトラブルをきっかけに、夢を諦めてしまった青年、樋口澄晴と出会う。澄晴は、厳しい周囲の環境に打ちのめされた暗い過去があり、自分の本当の想いにフタをしてしまい、流れのままに人生を生きていた。 年齢も、過ごしてきた環境も全く違う二人に、恋の香りがただよう予感なんてなかった。しかし、今の人生を受け入れていたはずの二人がお互いの本当の想いに触れあったとき、隠しきれない本音や、諦めきれない思いがあふれていく。そして、それがまるで香水の最後に香る余韻“ラストノート”のように、お互いの心に溶け合い、二人の運命を変えていく。\n\n20歳近い年の差や、二人を取り巻くさまざまな人間関係など、乗り越えられない壁に何度も襲われる葵と澄晴。しかし、どんなに過酷な現実に阻まれても、大人ぶることをやめた大人たちは、どうしても惹かれ合っていく…。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-07-09"
+    },
+    {
+      "rank": 6,
+      "title": "リーガルビート –逆転の法廷–",
+      "source_title": "リーガルビート -逆転の法廷-",
+      "broadcaster": "テレ東",
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 326139,
+      "matched_title": "リーガルビート –逆転の法廷–",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "声をあげられない人たちの力になりたいと思い、弁護士になった泰地空（鈴鹿央士）。しかし、司法試験に一発合格したにもかかわらず、就職活動の面接では吃音のためうまく話せず、全滅。そんな彼がたどり着いたのは、一風変わった弱小弁護士事務所だった。彼を引き入れたのは「法律で人は救えない」と言う所長の雪村明日実（小雪）と、「勝てない勝負はしない」と豪語する偏屈エリートの星秀幸（稲垣吾郎）。 凸凹すぎる弱小チームが挑むのは、現代社会の闇が潜む難案件ばかり。言葉に詰まり何度も悔しい思いをしてきた泰地だが、彼には「ラップのリズムに乗れば、吃音の症状が出ずに思いのまま話せる」という武器があった。依頼人の‟心の声“を拾い、ラップの爆発力で法廷の絶体絶命なピンチをひっくり返す！個性派弁護士たちが真実を導き出す、痛快逆転リーガルドラマ！",
+      "providers_jp": [
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        }
+      ],
+      "first_air_date": "2026-07-24"
+    },
+    {
+      "rank": 7,
+      "title": "Tokyo middle 30",
+      "source_title": "Tokyo middle 30",
+      "broadcaster": "フジテレビ",
+      "composite_score": 25.0,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 325124,
+      "matched_title": "Tokyo middle 30",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 9,
+        "total": 9,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": "2026-07-22"
+    },
+    {
+      "rank": 8,
+      "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2",
+      "source_title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 20.0,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": null,
+      "matched_title": null,
+      "match_confidence": "low",
+      "episodes": {
+        "season": null,
+        "aired": null,
+        "total": null,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": ""
+    },
+    {
+      "rank": 9,
+      "title": "GTO",
+      "source_title": "GTO",
+      "broadcaster": "カンテレ",
+      "composite_score": 15.0,
+      "components": {
+        "A_tver": {
+          "rank": 8,
+          "score": 30.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 325022,
+      "matched_title": "GTO",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "反町隆史主演のカンテレ・フジテレビ系全国ネット・月曜10時ドラマ『GTO』(7月20日スタート)。先日、主人公・鬼塚英吉(反町隆史)が今作で新たに赴任し、担任を務めることになる“私立誠進学園”1年B組の生徒役キャスト・全28名が一挙に解禁され、瞬く間にYahoo！ニューストピックスの「主要」に掲載されるなど、大きな話題を呼んでいる。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-07-20"
+    },
+    {
+      "rank": 10,
+      "title": "監査役 野崎修平",
+      "source_title": "Nozaki Shuhei Auditor of Bank",
+      "broadcaster": null,
+      "composite_score": 15.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 8,
+          "weeks": 1,
+          "score": 30.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 79054,
+      "matched_title": "監査役 野崎修平",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": true
+      },
+      "overview": "おおぞら銀行地蔵通り支店長である野崎修平（織田裕二）は、正義感と人情味あるその人柄から行員や街の人々に好かれているものの、出世コースとは程遠い行員生活を送っていた。そんなある日、支店が閉鎖されることになると知らされる。出向を覚悟していた野崎の元に人事異動がくだる。その異動先はなんと役員昇進である監査役への就任であった。\n\n監査役になった野崎は銀行内での不正を目の当りにし、この銀行を変えると決意する。そして、銀行が抱える「究極の闇」に辿り着く。\n\nそこには、現おおぞら銀行頭取・京極雅彦（古谷一行）の影が…。野崎に対抗すべく、京極が出向先から呼び戻した剛腕の行員・武田真吾（岸谷五朗）や、おおぞら銀行初の女性役員を目指す立川祥子（松嶋菜々子）も加わり、銀行内で熾烈な戦いが繰り広げられる。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Cinefil Wow Plus",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2018-01-04"
+    }
+  ]
+}
