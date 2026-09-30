@@ -21,7 +21,8 @@
     判断して本文には含めていない
   - '84夏の出火原因（純の不注意）は一次的な記述に近い情報源を採用したが、念のため
     要ダブルチェック
-- **SNS**:
+- **SNS**: Threads https://www.threads.com/@basel_freedom/post/Dd63uK_kqm3 ／
+  Instagram https://www.instagram.com/p/Dd63SfND62j/
 - **レビューで見る点**:
   - 各回の「倉本聰さんが伝えたかったこと」が編集部の読み解きである旨が読者に伝わるか
   - 訃報という機微な内容を扱う記事のトーンが適切か
