@@ -260,7 +260,7 @@
       },
       "tmdb_id": 2663,
       "matched_title": "A Case for the Court",
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": null,
         "aired": null,
@@ -288,7 +288,7 @@
       },
       "tmdb_id": 226769,
       "matched_title": "The Scandals That Shocked Scotland",
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
         "aired": 6,
@@ -316,7 +316,7 @@
       },
       "tmdb_id": 81953,
       "matched_title": "イアリー 見えない顔",
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
         "aired": 6,
