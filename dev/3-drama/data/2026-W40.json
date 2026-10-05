@@ -1,0 +1,367 @@
+{
+  "week": "2026-W40",
+  "range": {
+    "from": "2026-09-28",
+    "to": "2026-10-04"
+  },
+  "collected_at": "2026-10-05T08:40:57+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-10-05T08:40:57+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-10-05T08:40:57+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 11,
+      "fetched_at": "2026-10-05T08:40:57+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-10-05T08:40:57+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "天久鷹央の推理カルテ",
+      "matched": "天久鷹央の推理カルテ",
+      "reason": "アニメ"
+    },
+    {
+      "title": "スーパーの裏でヤニ吸うふたり",
+      "matched": "スーパーの裏でヤニ吸うふたり",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 86.7,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 17,
+          "score": 60.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 8,
+        "total": 25,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "ダウンタイム",
+      "source_title": "Plastic Beauty",
+      "broadcaster": null,
+      "composite_score": 80.8,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 1,
+          "weeks": 2,
+          "score": 100.0
+        },
+        "C_trends": 61.7
+      },
+      "tmdb_id": 298008,
+      "matched_title": "ダウンタイム",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "天才的なオペ技術を持つ救急外科医・文は、不本意ながら美容医療の世界へ転身する。カリスマ美容外科医・凜と対立するなかで、華やかな表舞台の裏に潜む金への欲望と人々の美への渇望が暴かれていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-09-17"
+    },
+    {
+      "rank": 3,
+      "title": "はだかんぼうたち",
+      "source_title": "はだかんぼうたち",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 48.1,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.3
+      },
+      "tmdb_id": 333068,
+      "matched_title": "はだかんぼうたち",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "惹かれるままに女性と無邪気に夜を重ねる靴職人の鯖崎\n\n10歳年上の歯科医・桃に都合の良い“恋人もどきの関係”を求める一方、\n\n桃の親友で3児の母・響子にも興味を持ち――\n\n危険で赤裸々な大人の三角関係が幕を開ける",
+      "providers_jp": [],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 4,
+      "title": "A Case",
+      "source_title": "A Case",
+      "broadcaster": null,
+      "composite_score": 45.4,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 2,
+          "score": 90.0
+        },
+        "C_trends": 0.7
+      },
+      "tmdb_id": 2663,
+      "matched_title": "A Case for the Court",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": null,
+        "aired": null,
+        "total": 0,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": ""
+    },
+    {
+      "rank": 5,
+      "title": "ダウト -15年目の復讐-",
+      "source_title": "ダウト ‐15年目の復讐‐",
+      "broadcaster": "読売テレビ",
+      "composite_score": 40.1,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.2
+      },
+      "tmdb_id": 334325,
+      "matched_title": "ダウト -15年目の復讐-",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 2,
+        "uncertain": false
+      },
+      "overview": "臨床心理士・安堂楓（仁村紗和）は、15年前、“コウモリ”によって両親を殺害された被害者遺族のひとり。彼女自身も両親とともに事件に巻き込まれ、半年間、暗闇の中に監禁されていた。視覚を奪われた極限状態の中、周囲の状況を知るために頼れるのは“音”だけ。その環境で、彼女の聴覚は研ぎ澄まされ、他人のわずかな呼吸の変化や心臓の鼓動まで聞き分けられるほどの、“人並外れた聴力”を持つようになった。事件から15年。彼女はその卓越した“聴力”を武器に、相手のわずかな変化から“心の内を見抜く”臨床心理士として、警察の捜査にも協力している。しかし、その本当の目的は別にあった。“コウモリ”を見つけ出し、復讐を果たすこと――。また彼女には、血のつながらない弟・奥沢雪路（佐藤大樹）がいる。雪路もまた、父親を殺され、“コウモリ”によって人生を狂わされたひとり。「親を殺したコウモリを捕まえ、罪を償わせたい」――その一心で刑事となり、若くして神奈川県警・捜査一課に配属され、捜査の最前線に立っている。コウモリに復讐したい姉。コウモリを捕まえ、罪を償わせたい弟。連続殺人犯“コウモリ”に親を奪われた姉弟。15年の時を経て、止まっていた事件が再び動き出す―総勢20名を超える容疑者候補！嘘にまみれた真実…真犯人“コウモリ”は誰だ！？",
+      "providers_jp": [
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-01"
+    },
+    {
+      "rank": 6,
+      "title": "The Scandal",
+      "source_title": "The Scandal",
+      "broadcaster": null,
+      "composite_score": 40.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 1,
+          "score": 80.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 226769,
+      "matched_title": "The Scandals That Shocked Scotland",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 6,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": "2019-11-28"
+    },
+    {
+      "rank": 7,
+      "title": "まめとむぎ",
+      "source_title": "まめとむぎ",
+      "broadcaster": "テレ東",
+      "composite_score": 36.1,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 2.3
+      },
+      "tmdb_id": 333357,
+      "matched_title": "まめとむぎ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 2,
+        "uncertain": false
+      },
+      "overview": "ファッション誌の編集者・清水麦（齋藤飛鳥）は、編集長になることを夢見て仕事に邁進していた。しかしワンマンな性格が仇となり周囲から孤立し、編集長の座も後輩に奪われてしまう。さらに、自身の社内不倫が発覚したことで退職に追い込まれ、キャリアも夢も失い人生のどん底へ――。失意の麦が再訪したのは、かつて通っていた小さな居酒屋＜大豆堂＞。そこで店を切り盛りしていたのは、発酵料理を愛するも集客に悩む23歳の米田まめ（富田望生）だった。最初は暇つぶしで店を手伝い始めた麦だったが、編集者時代のスキルを生かし、店のプロデュースに奮闘していく。\n\n仕事、友情、恋愛、そして過去の失敗――。時間をかけてゆっくりと味わいを深めていく“発酵”のように、悩みや失敗を抱えた二人が、自分らしい人生と新たな“居場所”を見つけだす心とお腹に効く、人生再起の物語。",
+      "providers_jp": [],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 8,
+      "title": "イアリー 見えない顔",
+      "source_title": "Eerie: Invisible Face",
+      "broadcaster": null,
+      "composite_score": 35.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 1,
+          "score": 70.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 81953,
+      "matched_title": "イアリー 見えない顔",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 6,
+        "uncertain": true
+      },
+      "overview": "オダギリジョーを主演に迎えた新・都市型スリラー「連続ドラマＷ　イアリー 見えない顔」を放送する。描かれるのは、日常生活がじわじわと侵食されていく恐怖…。原作は映画化された「クリーピー」でも隣家に住み着いた脅威を描いた前川裕の同名小説。本作もオダギリジョー演じる大学教授・広川誠司の家の周囲で起きる不審な近隣トラブルが、やがて一見、何の関係もないはずの大学総長選挙の暗闘に絡みついていくという異色の展開だ。そして、広川の妻の妹で広川と深い関係に陥る大学の人気講師・水島麗役に仲里依紗、ホストクラブにはまり借金を負ってしまう看護師・六道菜々美役に黒島結菜、カリスマ性を帯びた弁護士・土田律子役に元宝塚のトップスター真琴つばさ、広川の冴えない同僚教授・仏上健治郎役にイッセー尾形、他にも映画『ミスミソウ』（内藤瑛亮監督）主演で注目の若手・山田杏奈、田中要次、猫背椿、筧利夫ら個性あふれるキャストがそろった。従来の「ジャパニーズホラー」でも「スプラッター」でもない、アーバンスリラーの世界",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        }
+      ],
+      "first_air_date": "2018-08-04"
+    },
+    {
+      "rank": 9,
+      "title": "再生のウズメ",
+      "source_title": "再生のウズメ",
+      "broadcaster": "フジテレビ",
+      "composite_score": 30.6,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 1.2
+      },
+      "tmdb_id": 334373,
+      "matched_title": "再生のウズメ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "元子役の田村ウズメは、28歳の時、ある出来事がきっかけで家にこもるように……それから12年。同級生たちが家庭を築く中、家で自堕落な日々を送るウズメを見かねた母・咲子は「便利屋」を呼び、部屋の片付けを依頼する。やってきたのは便利屋・救ちゃんの代表・興梠。この出会いがウズメの人生を大きく変えていくことになる。",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 10,
+      "title": "妻を引退します",
+      "source_title": "妻を引退します",
+      "broadcaster": "テレ東",
+      "composite_score": 26.1,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 2.3
+      },
+      "tmdb_id": 334319,
+      "matched_title": "妻を引退します",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": null,
+        "aired": null,
+        "total": 1,
+        "uncertain": true
+      },
+      "overview": "かつて天才子役として一世を風靡するも、現在は芸能界を引退し一児の母として幸せな結婚生活を送っていた鮎川穂奈未(朝日奈央)。芸能事務所を運営する夫・蓮也の勧めで娘・美由を子役デビューさせるが、旬の人気俳優・泉舞花(新川優愛)とのCM撮影中に、スタジオの階段から転落し、意識不明の重体に陥ってしまう。偶然事故現場に居合わせた穂奈未の幼馴染で人気俳優の和久井昴から、娘の事故の原因が“夫の不倫”だと聞かされる。娘の事故と夫の裏切り――――。絶望の淵に立たされた穂奈未は真実を突き止めるため、スター俳優に返り咲くことを決意。「妻」を引退し復讐の鬼と化した穂奈未の復讐劇は、やがて芸能界全体を巻き込んでいく。",
+      "providers_jp": [],
+      "first_air_date": "2026-10-05"
+    }
+  ]
+}
