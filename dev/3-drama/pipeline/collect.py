@@ -311,16 +311,43 @@ def fetch_tver(week: str) -> list[dict]:
     return load_manual(week, "tver") or []
 
 
+def _trends_query_term(title: str) -> str:
+    """Google トレンドへ送るクエリ語を無害化する。
+
+    2026-10-06判明: 半角ハイフン(-)を含む語（例:「ダウト -15年目の復讐-」）をバッチに
+    含めると、Googleが除外演算子と解釈するらしく、そのバッチ全体がCode:400で失敗する
+    （2026-W40で発覚。このタイトル1件のせいで同じバッチの他4件まで巻き添えで
+    取得できなくなっていた）。クエリ送信時だけ全角ハイフンに置き換える
+    （結果は`fetch_trends`側で元のタイトルにマッピングし直すので、表示用のタイトル
+    表記には影響しない）。
+    """
+    return title.replace("-", "－")
+
+
 def fetch_trends(titles: list[str], week: str) -> dict[str, float]:
     """Google トレンド（過去7日, geo=JP）の相対関心度を 0-100 で返す。
 
     pytrends は 5 語/バッチ制限があるため、先頭語をアンカーに複数バッチを連結する。
     Google のレート制限で落ちやすいので、失敗時は手動入力へフォールバック。
     キーワードは日本語タイトルで渡すこと（英題だと検索ボリュームがほぼ出ない）。
+
+    2026-10-06判明・修正（その1）: 以前は「最初のバッチ(bi==0)」でアンカーの基準値
+    (anchor_ref)を確立する実装だったため、そのバッチだけがGoogle側のレート制限等で
+    失敗すると、anchor_refが永遠にNoneのまま → 後続の全バッチの正規化係数(factor)が
+    0になり、実際には取得できていた値まで一律0.0に化けてしまう不具合があった
+    （2026-W40で発生。1〜5位のバッチが失敗してNone、6〜10位のバッチは成功していたのに
+    全部0.0になっていた）。「bi==0か」ではなく「アンカー基準値をまだ確立できていないか」
+    で判定するよう変更し、最初に成功したバッチがアンカーを確立するようにした。
+
+    2026-10-06判明・修正（その2）: 上記の原因をさらに追うと、1〜5位のバッチが失敗して
+    いたのは一時的なレート制限ではなく、「ダウト -15年目の復讐-」という語の半角ハイフンが
+    原因と判明（`_trends_query_term`参照）。クエリ送信時だけ語を無害化するようにした。
     """
     titles = [t for t in dict.fromkeys(t.strip() for t in titles) if t]
     if not titles:
         return {}
+    query_terms = {t: _trends_query_term(t) for t in titles}
+    term_to_title = {q: t for t, q in query_terms.items()}
     try:
         from pytrends.request import TrendReq
 
@@ -335,10 +362,11 @@ def fetch_trends(titles: list[str], week: str) -> dict[str, float]:
         raw: dict[str, float] = {}
         anchor_ref: float | None = None
         for bi, batch in enumerate(batches):
+            batch_q = [query_terms[t] for t in batch]
             df = None
             for attempt in range(3):
                 try:
-                    pt.build_payload(batch, timeframe="now 7-d", geo="JP")
+                    pt.build_payload(batch_q, timeframe="now 7-d", geo="JP")
                     df = pt.interest_over_time()
                     break
                 except Exception as exc:  # noqa: BLE001
@@ -346,8 +374,9 @@ def fetch_trends(titles: list[str], week: str) -> dict[str, float]:
                     time.sleep(12)
             if df is None or df.empty:
                 continue
-            means = {k: float(df[k].mean()) for k in batch if k in df.columns}
-            if bi == 0:
+            means = {term_to_title[k]: float(df[k].mean()) for k in batch_q if k in df.columns}
+            if anchor_ref is None:
+                # 最初に成功したバッチがアンカーの基準値を確立する（bi==0とは限らない）
                 anchor_ref = means.get(anchor) or 1.0
                 raw.update(means)
             else:
