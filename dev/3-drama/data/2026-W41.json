@@ -1,0 +1,390 @@
+{
+  "week": "2026-W41",
+  "range": {
+    "from": "2026-10-05",
+    "to": "2026-10-11"
+  },
+  "collected_at": "2026-10-12T09:04:00+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-10-12T09:04:00+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-10-12T09:04:00+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 15,
+      "fetched_at": "2026-10-12T09:04:00+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-10-12T09:04:00+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "LV999の村人",
+      "matched": "LV999の村人",
+      "reason": "アニメ"
+    },
+    {
+      "title": "野生のラスボスが現れた！",
+      "matched": "野生のラスボスが現れた！",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 73.3,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 9,
+          "weeks": 18,
+          "score": 20.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 9,
+        "total": 25,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "ダウンタイム",
+      "source_title": "Plastic Beauty",
+      "broadcaster": null,
+      "composite_score": 65.5,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 1,
+          "weeks": 3,
+          "score": 100.0
+        },
+        "C_trends": 30.9
+      },
+      "tmdb_id": 298008,
+      "matched_title": "ダウンタイム",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "天才的なオペ技術を持つ救急外科医・文は、不本意ながら美容医療の世界へ転身する。カリスマ美容外科医・凜と対立するなかで、華やかな表舞台の裏に潜む金への欲望と人々の美への渇望が暴かれていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-09-17"
+    },
+    {
+      "rank": 3,
+      "title": "俺たちの箱根駅伝",
+      "source_title": "俺たちの箱根駅伝",
+      "broadcaster": "日テレ",
+      "composite_score": 51.6,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 13.2
+      },
+      "tmdb_id": 311955,
+      "matched_title": "俺たちの箱根駅伝",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "「箱根駅伝」。その本選出場をかけた運命の予選大会。注目は、2年連続で本選出場を逃し、3年ぶりの“箱根復帰”を目指す古豪・明誠学院大学。ケガから復帰した4年生エースが本来の力を発揮できさえすれば、本選出場はほぼ確実──そう誰もが考えていた。しかしレース当日、明誠学院の前に立ちはだかったのは、幾度となくチームの夢を打ち破いてきた「箱根の魔物」。果たして、明誠学院大学は、再び箱根駅伝本選のスタートラインに立つことはできるのか。一方、放送まで3カ月を切った「箱根駅伝中継」を担う大日テレビ・スポーツ局。チーフプロデューサーの徳重亮は、編成局長から突きつけられた無理難題に頭を抱えていた。次々と押し寄せる不測の事態の中で、徳重は決断を迫られ責任を背負いながら、放送当日へと突き進んでいく。持てる力のすべてを振り絞って走る選手たちと、それを一瞬も逃すまいと届けようとするテレビ中継スタッフたち。箱根にすべてをかける者たちの、熱き闘いの幕が上がる!!",
+      "providers_jp": [
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-10"
+    },
+    {
+      "rank": 4,
+      "title": "はだかんぼうたち",
+      "source_title": "はだかんぼうたち",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 42.4,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 4.7
+      },
+      "tmdb_id": 333068,
+      "matched_title": "はだかんぼうたち",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 2,
+        "total": 3,
+        "uncertain": false
+      },
+      "overview": "惹かれるままに女性と無邪気に夜を重ねる靴職人の鯖崎\n\n10歳年上の歯科医・桃に都合の良い“恋人もどきの関係”を求める一方、\n\n桃の親友で3児の母・響子にも興味を持ち――\n\n危険で赤裸々な大人の三角関係が幕を開ける",
+      "providers_jp": [
+        {
+          "name": "TELASA",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 5,
+      "title": "ポリティカルパン",
+      "source_title": "ポリティカルパン",
+      "broadcaster": "フジテレビ",
+      "composite_score": 40.1,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 10.3
+      },
+      "tmdb_id": 332261,
+      "matched_title": "ポリティカルパン",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 9,
+        "uncertain": false
+      },
+      "overview": "これは政界を舞台にした「怪盗エンターテイメント」物語である。物語は架空の国を舞台に、「史上最強の女ルパン」として知られる如月弥生（石原さとみ）が、激動の政界に潜入し、エリート政治家たちを出し抜き、怪しげな「政治資金」を暴き出し、華々しく盗み出す姿を描く。一方、政界の混乱に巻き込まれた政治家の娘、雅（河合由美）との間に、繊細で予測不可能な関係が芽生えていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 6,
+      "title": "Boss",
+      "source_title": "Boss",
+      "broadcaster": null,
+      "composite_score": 33.7,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 1,
+          "score": 60.0
+        },
+        "C_trends": 7.4
+      },
+      "tmdb_id": 38922,
+      "matched_title": "Boss",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 2,
+        "aired": 10,
+        "total": 18,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2011-10-21"
+    },
+    {
+      "rank": 7,
+      "title": "再生のウズメ",
+      "source_title": "再生のウズメ",
+      "broadcaster": "フジテレビ",
+      "composite_score": 30.6,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 1.1
+      },
+      "tmdb_id": 334373,
+      "matched_title": "再生のウズメ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "元子役の田村ウズメは、28歳の時、ある出来事がきっかけで家にこもるように……それから12年。同級生たちが家庭を築く中、家で自堕落な日々を送るウズメを見かねた母・咲子は「便利屋」を呼び、部屋の片付けを依頼する。やってきたのは便利屋・救ちゃんの代表・興梠。この出会いがウズメの人生を大きく変えていくことになる。",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 8,
+      "title": "メリーベリーラブ",
+      "source_title": "メリーベリーラブ",
+      "broadcaster": "日テレ",
+      "composite_score": 28.4,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.8
+      },
+      "tmdb_id": 305551,
+      "matched_title": "メリーベリーラブ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "韓国の売れっ子空間プランナーイ・ユビンは、すべてを失い日本の島へ向かう。その島で暮らす白浜夏凛は、ある病気を抱えながらもいちごを育てたくましく生きる農業女子。国籍も生い立ちも違う二人の男女は、思わぬ誤解から関わるようになり…。美しい島で繰り広げられる甘酸っぱい日韓ラブコメディ「メリーベリーラブ」。",
+      "providers_jp": [],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 9,
+      "title": "イアリー 見えない顔",
+      "source_title": "Eerie: Invisible Face",
+      "broadcaster": null,
+      "composite_score": 25.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 2,
+          "score": 50.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 81953,
+      "matched_title": "イアリー 見えない顔",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 6,
+        "uncertain": true
+      },
+      "overview": "オダギリジョーを主演に迎えた新・都市型スリラー「連続ドラマＷ　イアリー 見えない顔」を放送する。描かれるのは、日常生活がじわじわと侵食されていく恐怖…。原作は映画化された「クリーピー」でも隣家に住み着いた脅威を描いた前川裕の同名小説。本作もオダギリジョー演じる大学教授・広川誠司の家の周囲で起きる不審な近隣トラブルが、やがて一見、何の関係もないはずの大学総長選挙の暗闘に絡みついていくという異色の展開だ。そして、広川の妻の妹で広川と深い関係に陥る大学の人気講師・水島麗役に仲里依紗、ホストクラブにはまり借金を負ってしまう看護師・六道菜々美役に黒島結菜、カリスマ性を帯びた弁護士・土田律子役に元宝塚のトップスター真琴つばさ、広川の冴えない同僚教授・仏上健治郎役にイッセー尾形、他にも映画『ミスミソウ』（内藤瑛亮監督）主演で注目の若手・山田杏奈、田中要次、猫背椿、筧利夫ら個性あふれるキャストがそろった。従来の「ジャパニーズホラー」でも「スプラッター」でもない、アーバンスリラーの世界",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        }
+      ],
+      "first_air_date": "2018-08-04"
+    },
+    {
+      "rank": 10,
+      "title": "ハイド＆シーク 0秒前の彼女",
+      "source_title": "ハイド＆シーク 0秒前の彼女",
+      "broadcaster": "日テレ",
+      "composite_score": 20.0,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 333064,
+      "matched_title": "ハイド＆シーク 0秒前の彼女",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "国家を揺るがす爆弾事件の濡れ衣を着せられたフリージャーナリスト。逃亡する彼のもとに届いたのは、爆弾事件で命を落としたはずの恋人からの着信だった──。謎を追うと見えてくる恋人の別人としての顔。裏切りと騙し合いの果てにたどり着く真実とは何か？",
+      "providers_jp": [
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-04"
+    }
+  ]
+}
