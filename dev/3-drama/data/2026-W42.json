@@ -211,20 +211,20 @@
       "matched_title": "あにいもうと",
       "match_confidence": "ok",
       "episodes": {
-        "season": null,
-        "aired": null,
-        "total": 1,
+        "season": 1,
+        "aired": 1,
+        "total": null,
         "uncertain": true
       },
       "overview": "《医師》と《患者の兄》の禁断愛。 消えない罪。消せない恋。封印したはずの愛と疑惑が、３年の時を経て再び…２組の《兄・妹》の切ない運命が交錯する禁断のラブ・サスペンスが開幕！",
       "providers_jp": [],
-      "first_air_date": "2026-10-24"
+      "first_air_date": "2026-10-17"
     },
     {
       "rank": 6,
       "title": "Boss",
       "source_title": "Boss",
-      "broadcaster": null,
+      "broadcaster": "フジテレビ",
       "composite_score": 33.1,
       "components": {
         "A_tver": null,
@@ -235,23 +235,23 @@
         },
         "C_trends": 6.2
       },
-      "tmdb_id": 38922,
-      "matched_title": "Boss",
-      "match_confidence": "low",
+      "tmdb_id": 45884,
+      "matched_title": "BOSS",
+      "match_confidence": "ok",
       "episodes": {
-        "season": 2,
-        "aired": 10,
-        "total": 18,
-        "uncertain": true
+        "season": 1,
+        "aired": 11,
+        "total": 11,
+        "uncertain": false
       },
-      "overview": "",
+      "overview": "アメリカ研修帰りの異色の女性キャリア官僚・大澤絵里子（天海祐希）が、警視庁に新設された「特別犯罪対策室」の室長に就任。各部署から厄介者扱いされてきた個性的な刑事たちとチームを組み、難事件に挑む刑事ドラマ。2009年にフジテレビ「木曜劇場」で放送された第1シーズン（全11話）が、2026年9月30日からNetflixで配信中。",
       "providers_jp": [
         {
           "name": "Netflix",
           "affiliate": "none"
         }
       ],
-      "first_air_date": "2011-10-21"
+      "first_air_date": "2009-04-16"
     },
     {
       "rank": 7,
