@@ -1,0 +1,397 @@
+{
+  "week": "2026-W42",
+  "range": {
+    "from": "2026-10-12",
+    "to": "2026-10-18"
+  },
+  "collected_at": "2026-10-23T03:00:35+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-10-19T07:40:33+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-10-19T07:40:33+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 15,
+      "fetched_at": "2026-10-19T07:40:33+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-10-19T07:40:33+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "LV999の村人",
+      "matched": "LV999の村人",
+      "reason": "アニメ"
+    },
+    {
+      "title": "野生のラスボスが現れた！",
+      "matched": "野生のラスボスが現れた！",
+      "reason": "アニメ"
+    },
+    {
+      "title": "無職転生 ～異世界行ったら本気だす～",
+      "matched": "無職転生 ～異世界行ったら本気だす～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 100.0,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": null,
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 11,
+        "total": 24,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "ポリティカルパン",
+      "source_title": "ポリティカルパン",
+      "broadcaster": "フジテレビ",
+      "composite_score": 100.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 1,
+          "weeks": 2,
+          "score": 100.0
+        },
+        "C_trends": 100.0
+      },
+      "tmdb_id": 332261,
+      "matched_title": "ポリティカルパン",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 2,
+        "total": 9,
+        "uncertain": true
+      },
+      "overview": "脚本は野木亜紀子（石原さとみとは「アンナチュラル」以来8年ぶりのタッグ）。架空の国家「ニッポニア」を舞台に、「史上最強の女ルパン」如月弥生（石原さとみ）が政界に潜入し、使途不明な政治資金を奪い取っていく怪盗エンターテインメント。与党の金庫番を務めるエリート議員役で高橋一生が共演。元総理大臣で与党のキングメーカーである大物政治家の娘・小早川雅役に河合優実（本作がフジテレビ系連続ドラマ初出演）。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 3,
+      "title": "LOST10",
+      "source_title": "LOST10",
+      "broadcaster": "TBS",
+      "composite_score": 54.6,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 1,
+          "score": 70.0
+        },
+        "C_trends": 3.7
+      },
+      "tmdb_id": 329490,
+      "matched_title": "LOST10",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "物語の舞台は、北海道の壮大で過酷な大自然。登山ツアー中に起こった遭難事故、通称「支樺岳事件」の真相を追うことから、すべては始まる。食い違う関係者の証言、裏切り、巨大権力、試される絆･･････幾重もの「ロスト」から導き出される真実から、彼らは何を掴み取るのか――？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-16"
+    },
+    {
+      "rank": 4,
+      "title": "俺たちの箱根駅伝",
+      "source_title": "俺たちの箱根駅伝",
+      "broadcaster": "日テレ",
+      "composite_score": 40.3,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": {
+          "rank": 8,
+          "weeks": 1,
+          "score": 30.0
+        },
+        "C_trends": 10.9
+      },
+      "tmdb_id": 311955,
+      "matched_title": "俺たちの箱根駅伝",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 2,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "「箱根駅伝」。その本選出場をかけた運命の予選大会。注目は、2年連続で本選出場を逃し、3年ぶりの“箱根復帰”を目指す古豪・明誠学院大学。ケガから復帰した4年生エースが本来の力を発揮できさえすれば、本選出場はほぼ確実──そう誰もが考えていた。しかしレース当日、明誠学院の前に立ちはだかったのは、幾度となくチームの夢を打ち破いてきた「箱根の魔物」。果たして、明誠学院大学は、再び箱根駅伝本選のスタートラインに立つことはできるのか。一方、放送まで3カ月を切った「箱根駅伝中継」を担う大日テレビ・スポーツ局。チーフプロデューサーの徳重亮は、編成局長から突きつけられた無理難題に頭を抱えていた。次々と押し寄せる不測の事態の中で、徳重は決断を迫られ責任を背負いながら、放送当日へと突き進んでいく。持てる力のすべてを振り絞って走る選手たちと、それを一瞬も逃すまいと届けようとするテレビ中継スタッフたち。箱根にすべてをかける者たちの、熱き闘いの幕が上がる!!",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-10"
+    },
+    {
+      "rank": 5,
+      "title": "ダウンタイム",
+      "source_title": "Plastic Beauty",
+      "broadcaster": null,
+      "composite_score": 38.6,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 5,
+          "weeks": 5,
+          "score": 60.0
+        },
+        "C_trends": 17.3
+      },
+      "tmdb_id": 298008,
+      "matched_title": "ダウンタイム",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "天才的なオペ技術を持つ救急外科医・文は、不本意ながら美容医療の世界へ転身する。カリスマ美容外科医・凜と対立するなかで、華やかな表舞台の裏に潜む金への欲望と人々の美への渇望が暴かれていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-09-17"
+    },
+    {
+      "rank": 6,
+      "title": "あにいもうと",
+      "source_title": "あにいもうと",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 36.9,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 3.8
+      },
+      "tmdb_id": 334856,
+      "matched_title": "あにいもうと",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "《医師》と《患者の兄》の禁断愛。 消えない罪。消せない恋。封印したはずの愛と疑惑が、３年の時を経て再び…２組の《兄・妹》の切ない運命が交錯する禁断のラブ・サスペンスが開幕！",
+      "providers_jp": [],
+      "first_air_date": "2026-10-17"
+    },
+    {
+      "rank": 7,
+      "title": "ハートにチャージして",
+      "source_title": "ハートにチャージして",
+      "broadcaster": null,
+      "composite_score": 32.8,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 7,
+          "weeks": 1,
+          "score": 40.0
+        },
+        "C_trends": 25.5
+      },
+      "tmdb_id": 289423,
+      "matched_title": "ハートにチャージして",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 10,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "韓国発のNetflixオリジナル恋愛コメディ。人工心臓を抱える財閥御曹司と、体に電流を宿す\"電気人間\"の女性が「心臓の充電契約」を交わしたことから始まる物語。キム・ヨングァンとチェ・スビンが主演。全10話が2026年10月9日に一挙配信された。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-09"
+    },
+    {
+      "rank": 8,
+      "title": "ボーダーズ 警視庁特殊事件対策班",
+      "source_title": "ボーダーズ　警視庁特殊事件対策班",
+      "broadcaster": "テレ東",
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": 335174,
+      "matched_title": "ボーダーズ 警視庁特殊事件対策班",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 2,
+        "uncertain": false
+      },
+      "overview": "加速度的に広域化・複雑化する現代社会。犯罪捜査も、従来の「縦割り」の警察組織では限界をきたしている。そこで、既存の組織では対応しきれないサイバー犯罪絡みの殺人事件や、国際的な薬物取引事件などあらゆる“境界線の事件”を扱うために設立された部署が、警視総監直属の特命部署「SCU（特殊事件対策班）」。SCUに集められたのは、それぞれ異なる特殊技能を持つ5人のプロフェッショナル。元公安でどこか謎めいたキャップ・結城新次郎を筆頭に、特別な「眼」を持つ元捜査一課・八神佑、女性初の刑事部長を目指す野心家・朝比奈由宇、最年少でIT技術に精通する最上功太、経験豊富な格闘の達人・綿谷亮介が所属している。サイバー犯罪絡みの殺人事件や国際的な薬物密輸など、ひとつの部署だけでは対応が難しく、従来の捜査ではこぼれ落ちてしまう“境界線の事件”に対し、5人はそれぞれの能力を駆使して真相を追う。個性も能力も異なるメンバーが、ときに衝突しながらも力を掛け合わせ、難事件を痛快に解決していく―。",
+      "providers_jp": [
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        }
+      ],
+      "first_air_date": "2026-10-16"
+    },
+    {
+      "rank": 9,
+      "title": "はだかんぼうたち",
+      "source_title": "はだかんぼうたち",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 26.3,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 2.6
+      },
+      "tmdb_id": 333068,
+      "matched_title": "はだかんぼうたち",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 3,
+        "total": 3,
+        "uncertain": false
+      },
+      "overview": "惹かれるままに女性と無邪気に夜を重ねる靴職人の鯖崎\n\n10歳年上の歯科医・桃に都合の良い“恋人もどきの関係”を求める一方、\n\n桃の親友で3児の母・響子にも興味を持ち――\n\n危険で赤裸々な大人の三角関係が幕を開ける",
+      "providers_jp": [
+        {
+          "name": "TELASA",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 10,
+      "title": "波うららかに、めおと日和",
+      "source_title": "波うららかに、めおと日和",
+      "broadcaster": "フジテレビ",
+      "composite_score": 24.1,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 8.1
+      },
+      "tmdb_id": 287338,
+      "matched_title": "波うららかに、めおと日和",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 1,
+        "total": 12,
+        "uncertain": false
+      },
+      "overview": "昭和11年を舞台に交際ゼロ日婚からスタートする歯がゆくも愛らしい\"新婚夫婦の甘酸つばい時間\"を丁寧に描いたハートフル・昭和新婚ラブコメ!\n\n昨今、コスパ・タイバ重視される現代社会\n\nしかし本作は、そんな時代とは打って変わり、新婚夫婦の\"大切なひととき\"を緩やかに紡ぐ\n\nその時間は心地よくもどこか懐かしく・・・\n\n令和の時代だからこそ今見たくなる\n\n心温まる「ハートフル・昭和新婚ラブコメ」がこの春、誕生!",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2025-04-24"
+    }
+  ],
+  "notes": [
+    "2026-10-23 Claude修正: 自動収集時点(2026-10-19 07:40)でNetflix Tudumの対象週(10/12-10/18)データが未公開で前週(W41)の値を誤って採用していたため、公開済みの正しいNetflixデータでB_netflixと合成スコアを再計算。これに伴いVIVANT/Bossのnetflix値を補正・削除し、Boss/イアリー見えない顔はNetflix圏外になりランキングから除外、新たにポリティカルパン/ハートにチャージして/ドクターX～白衣のマフィア～がランクイン。TVer・Googleトレンドは元の収集値を維持（再取得すると計測期間がずれるため）。"
+  ]
+}
