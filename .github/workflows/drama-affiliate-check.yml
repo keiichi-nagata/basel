@@ -1,0 +1,50 @@
+name: drama-affiliate-check
+
+# 開発3部（ドラマ）の週次ランキング記事で、提携済み(linked)のアフィリンクが
+# 本文から抜け落ちていないかを自動チェックする安全網。
+#
+# 背景: 2026-W39・W40・W42と3週連続で、本文作成時に「今号は広告表記なしの方針」という
+# 存在しない方針が自己流に作られ、広告表記・[PR]リンクが本文から消える事故が起きた。
+# dev/3-drama/pipeline/check_affiliate_links.py による手動チェックの徹底だけでは
+# 防ぎきれなかったため、drama/auto-collect ブランチへの push と、そのブランチが絡む
+# PR の両方で機械的に再実行し、問題があれば CI を失敗させて気づけるようにする。
+on:
+  push:
+    branches:
+      - "drama/auto-collect"
+  pull_request:
+    branches:
+      - "main"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    # drama/auto-collect からの push、または drama/auto-collect を head とする PR のみ対象。
+    if: >-
+      github.ref == 'refs/heads/drama/auto-collect' ||
+      github.head_ref == 'drama/auto-collect'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check affiliate links for every week with data + draft
+        run: |
+          set -e
+          status=0
+          shopt -s nullglob
+          for data_file in dev/3-drama/data/*.json; do
+            week=$(basename "$data_file" .json)
+            draft_file="dev/3-drama/drafts/${week}.md"
+            if [ -f "$draft_file" ]; then
+              echo "::group::${week}"
+              python dev/3-drama/pipeline/check_affiliate_links.py "$week" || status=1
+              echo "::endgroup::"
+            fi
+          done
+          exit $status
