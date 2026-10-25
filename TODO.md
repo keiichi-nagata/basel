@@ -403,7 +403,7 @@
       正しい単月データで分析執筆済み（`drafts/2026-09.md`。TOP5が軽自動車4台＋ヤリスに。
       タント・ムーヴがNEW）
 - [x] 開発2部 — 9月号を公開（2026-10-25 https://note.com/basel5/n/nec0cf2758cd0）
-- [ ] 開発2部 — 9月号のThreads・Instagram告知
+- [x] 開発2部 — 9月号のThreads・Instagram告知（2026-10-25）
 - [ ] 開発2部 — 9月号の初速を `published/2026-09.md` に記入
 - [ ] 経理 — 8月PL締め（`sop/weekly-close.md` 月次）→ `finance/reports/2026-08.md`。会計ソフト導入の判断
 - [x] Instagram — プロアカウント化（@basel_freed）
