@@ -13,7 +13,6 @@
 
 ## キュー
 
-- [ ] 未定（note公開済み・投稿待ち） | 誘導 | 開発7部 | 【月5万円】子育て世代の王道資産形成、第2回公開しました。証券口座の開設方法、NISA・iDeCoの賢い使い分け、クレカ積立や自動振替で「意志の力に頼らない仕組み」を作る具体的な手順を解説しています。第2回も無料です。（PR） | https://note.com/basel5/n/nc8537f34a0ef | dev/7-assets/assets/02/eyecatch.png
 - [ ] 未定（note公開済み・投稿待ち） | 誘導 | 開発7部 | NISAは「いつでも引き出せる」、iDeCoは「60歳まで引き出せないが節税効果が大きい」。性格が違う2つの制度、教育資金はNISA・老後資金はiDeCoで使い分けるのが王道です。（PR） | https://note.com/basel5/n/nc8537f34a0ef | dev/7-assets/assets/02/eyecatch-ig.png
 - [ ] 未定（note公開済み・投稿待ち） | 誘導 | 開発7部 | 暴落が来ても積立を止めないほうがいい理由。毎月同じ金額を買い続ける積立投資は自動的に「ドル・コスト平均法」になり、暴落は「同じ金額でより多く買える期間」でもあります。慌てて解約するのがいちばんもったいない。（PR） | https://note.com/basel5/n/nc8537f34a0ef | dev/7-assets/assets/02/eyecatch.png
 - [ ] 未定（note公開済み・投稿待ち） | 誘導 | 開発2部 | タント・ムーヴが8月にTOP5から消えたのは、ダイハツの生産拠点が地震対応で動いていなかったから。9月に供給が戻った途端、2台揃って返り咲きました。「需要はあったのに作って渡せなかっただけ」という話。（PR） | https://note.com/basel5/n/nec0cf2758cd0 | dev/2-cars/drafts/2026-09.png
@@ -46,6 +45,8 @@
 - [ ] 未定（note公開済み・投稿待ち） | 誘導 | 開発4部 | 次点だったのは福島・高湯温泉「旅館 玉子湯」と岩手・花巻温泉郷「山の神温泉 優香苑」（ともに独自採点4.5）。僅差でTOP5入りを逃しましたが、東北の名湯として要チェックです。（PR） | https://note.com/basel5/n/n15359df21490 | dev/4-onsen/assets/2026-10/eyecatch.png
 
 ## 消化済み（直近のみ残す）
+
+- [x] 2026-10-26 投稿 | 誘導 | 開発7部 | 【月5万円】子育て世代の王道資産形成、第2回公開しました。証券口座の開設方法、NISA・iDeCoの賢い使い分け、クレカ積立や自動振替で「意志の力に頼らない仕組み」を作る具体的な手順を解説しています。第2回も無料です。（PR） | 記事 https://note.com/basel5/n/nc8537f34a0ef ／ 投稿 https://www.threads.com/@basel_freedom/post/De7SIEmEroI
 
 - [x] 2026-10-25 投稿 | 誘導 | 開発2部 | 2026年9月の新車販売台数ランキング（総合TOP5）、5台中4台が軽自動車に。1位N-BOX・2位スペーシアは8月から約4割増、前月圏外だったダイハツのタント・ムーヴが4位・5位に返り咲きました。（PR） | 記事 https://note.com/basel5/n/nec0cf2758cd0 ／ 投稿 https://www.threads.com/@basel_freedom/post/De6Oz8bEo85
 - [x] 2026-10-25 投稿 | 誘導 | 開発4部（お土産） | 東北エリアの定番お土産ランキングTOP5（楽天市場×Amazonのレビュー独自採点）。1位は福島の「ままどおる」（三万石）、2位は仙台銘菓「萩の月」。温泉宿ランキングと対の記事です。（PR） | 記事 https://note.com/basel5/n/nd267ccee3fe6 ／ 投稿 https://www.threads.com/@basel_freedom/post/De5haU7ktCw
