@@ -258,8 +258,9 @@
 - [x] 10月号（東北）: 温泉宿を公開（2026-10-25 https://note.com/basel5/n/n15359df21490）
 - [ ] 10月号（東北）: 温泉宿のThreads・Instagram告知
 - [ ] 10月号（東北）: 温泉宿の初速を`published/2026-10.md`に記入
-- [ ] 10月号（東北）: お土産のドラフトは完成・個別リンク反映済み（`omiyage/drafts/2026-10.md`）。
-      社長レビュー後に公開
+- [x] 10月号（東北）: お土産を公開（2026-10-25 https://note.com/basel5/n/nd267ccee3fe6）
+- [ ] 10月号（東北）: お土産のThreads・Instagram告知
+- [ ] 10月号（東北）: お土産の初速を`omiyage/published/2026-10.md`に記入
 - [x] 【特別編】令和8年熊本地震(2026-07-28)復興支援・熊本県単独・広告なし の温泉宿＋お土産を公開
       （2026-09-15。温泉宿 https://note.com/basel5/n/nb857cdd2ab15／
       お土産 https://note.com/basel5/n/n6a1b0a003074。`published/2026-kumamoto-special.md`に記録）
