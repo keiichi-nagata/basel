@@ -1,0 +1,142 @@
+{
+  "month": "2026-10",
+  "area": "東北",
+  "collected_at": "2026-10-25",
+  "methodology": "独自採点 = 楽天トラベル総合評価 + じゃらん総合評価（各5点満点）の単純平均。両サイトとも口コミ20件以上の宿のみ対象。",
+  "items": [
+    {
+      "rank": 1,
+      "name": "蔵王・和歌（うた）の宿 わかまつや",
+      "location": "蔵王温泉",
+      "score": 4.78,
+      "rakuten": {
+        "score": 4.75,
+        "review_count": 823,
+        "url": "https://travel.rakuten.co.jp/HOTEL/12587/review.html"
+      },
+      "jalan": {
+        "score": 4.8,
+        "review_count": 1136,
+        "url": "https://www.jalan.net/yad334773/"
+      },
+      "price_from_yen": null,
+      "good_points_summary": "温泉の質・食事・スタッフの対応の丁寧さを評価する声が多い。蔵王中央ロープウェイやスキー場への近さを挙げる声も目立つ。",
+      "concerns_summary": "プランによっては夕食の品数が少なく感じたという声や、スキー用品を玄関で預ける際の手間を指摘する声も見られる。",
+      "recommended_for": "蔵王のロープウェイ・スキー場へのアクセスと複数の浴場を両方楽しみたい人"
+    },
+    {
+      "rank": 2,
+      "name": "旅館大沼",
+      "location": "東鳴子温泉",
+      "score": 4.65,
+      "rakuten": {
+        "score": 4.6,
+        "review_count": 623,
+        "url": "https://travel.rakuten.co.jp/HOTEL/106139/review.html"
+      },
+      "jalan": {
+        "score": 4.7,
+        "review_count": 384,
+        "url": "https://www.jalan.net/yad342408/"
+      },
+      "price_from_yen": null,
+      "good_points_summary": "明治期から続く湯治場の老舗で、源泉かけ流しの内湯7つと裏山の貸切露天風呂「母里の湯」の開放感、丁寧な接客を評価する声が多い。",
+      "concerns_summary": "貸切露天風呂は1つのみで予約制・時間制限があり、利用しづらいタイミングもあるという指摘が見られる。",
+      "recommended_for": "湯治場らしい複数の内湯と静かな貸切露天風呂の両方を楽しみたい人"
+    },
+    {
+      "rank": 3,
+      "name": "深山荘 高見屋",
+      "location": "蔵王温泉",
+      "score": 4.64,
+      "rakuten": {
+        "score": 4.58,
+        "review_count": 663,
+        "url": "https://travel.rakuten.co.jp/HOTEL/38534/review.html"
+      },
+      "jalan": {
+        "score": 4.7,
+        "review_count": 425,
+        "url": "https://www.jalan.net/yad321744/"
+      },
+      "price_from_yen": null,
+      "good_points_summary": "1716年創業、蔵王温泉街の高台に立つ老舗。七つの湯舟に掛け流す温泉の質と、蔵王牛を使った会席料理を評価する声が多い。",
+      "concerns_summary": "玄関前に石段があり車が玄関まで入れないなど、立地・アクセス面の不便さを指摘する声がある。",
+      "recommended_for": "老舗旅館の湯・景観を重視し、石段や徒歩移動に抵抗がない人"
+    },
+    {
+      "rank": 4,
+      "name": "岩清水料理の宿 季の里",
+      "location": "蔵王温泉",
+      "score": 4.63,
+      "rakuten": {
+        "score": 4.65,
+        "review_count": 453,
+        "url": "https://travel.rakuten.co.jp/HOTEL/18758/review.html"
+      },
+      "jalan": {
+        "score": 4.6,
+        "review_count": 690,
+        "url": "https://www.jalan.net/yad314797/"
+      },
+      "price_from_yen": null,
+      "good_points_summary": "「岩清水料理」と呼ばれる山形の郷土料理・山形牛を使った食事と、スタッフの接客対応を評価する声が多い。",
+      "concerns_summary": "最寄りのバスターミナルから離れており、アクセス面をやや不便と感じる声がある。",
+      "recommended_for": "温泉そのものより郷土料理・会席料理を重視したい人"
+    },
+    {
+      "rank": 5,
+      "name": "休暇村 乳頭温泉郷",
+      "location": "乳頭温泉郷",
+      "score": 4.56,
+      "rakuten": {
+        "score": 4.52,
+        "review_count": 567,
+        "url": "https://travel.rakuten.co.jp/HOTEL/72803/review.html"
+      },
+      "jalan": {
+        "score": 4.6,
+        "review_count": 797,
+        "url": "https://www.jalan.net/yad322452/"
+      },
+      "price_from_yen": null,
+      "good_points_summary": "乳頭温泉郷では数少ないホテル形式の宿。2種類の自家源泉（乳白色の田沢湖高原の湯、茶褐色の乳頭温泉）と、秋田の郷土料理（きりたんぽ鍋・だまこ鍋など）を取り入れたビュッフェを評価する声が多い。",
+      "concerns_summary": "ビュッフェの料理スペースがやや狭く混み合うことがあるという指摘が見られる。",
+      "recommended_for": "旅館形式より設備が整ったホテル形式で、郷土料理ビュッフェも楽しみたい人"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "乳頭温泉郷 妙乃湯",
+      "reason": "じゃらんの総合評価点を直接確認できず、独自採点を算出できないため対象外"
+    },
+    {
+      "name": "乳頭温泉郷 鶴の湯別館 山の宿",
+      "reason": "楽天トラベルの総合評価点を直接確認できず、独自採点を算出できないため対象外"
+    },
+    {
+      "name": "銀山温泉 旅館藤屋",
+      "reason": "楽天トラベル・じゃらんいずれも総合評価点を直接確認できず、独自採点を算出できないため対象外"
+    },
+    {
+      "name": "青根温泉 湯元不忘閣",
+      "reason": "じゃらんの総合評価点を直接確認できず、独自採点を算出できないため対象外（楽天トラベルは4.45点・181件）"
+    },
+    {
+      "name": "花巻温泉郷 大沢温泉 山水閣",
+      "reason": "じゃらんの総合評価点を直接確認できず、独自採点を算出できないため対象外"
+    },
+    {
+      "name": "酸ヶ湯温泉旅館",
+      "reason": "じゃらんの総合評価点を直接確認できず、独自採点を算出できないため対象外"
+    },
+    {
+      "name": "高湯温泉 旅館 玉子湯",
+      "reason": "両サイトとも口コミ20件以上で独自採点4.48点（楽天4.46点/1,028件・じゃらん4.5点/1,411件）を算出したが、TOP5には次点で届かず（取得日2026-10-25）"
+    },
+    {
+      "name": "花巻温泉郷 山の神温泉 優香苑",
+      "reason": "両サイトとも口コミ20件以上で独自採点4.52点（楽天4.44点/1,798件・じゃらん4.6点/2,039件）を算出したが、TOP5には次点で届かず（取得日2026-10-25）"
+    }
+  ]
+}

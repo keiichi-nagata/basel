@@ -65,7 +65,7 @@ def render_png(data: dict, out_path: Path) -> bool:
         tbl.auto_set_font_size(False)
         tbl.set_fontsize(11)
         tbl.scale(1, 1.7)
-        widths = [0.06, 0.30, 0.14, 0.1, 0.20, 0.20]
+        widths = [0.05, 0.37, 0.12, 0.08, 0.19, 0.19]
         for (r, col), cell in tbl.get_celld().items():
             cell.set_width(widths[col])
             cell.set_edgecolor("#d0d0d0")
