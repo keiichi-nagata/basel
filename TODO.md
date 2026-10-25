@@ -399,6 +399,12 @@
 - [x] 開発2部 — 8月号: collect.py で自動取得＋分析執筆済み（`drafts/2026-08.md`。TOP5にカローラNEW）
 - [x] 開発2部 — 8月号を公開（2026-09-09 https://note.com/basel5/n/na441df85b797）＋Threads/IG告知＋マガジン追加
 - [ ] 開発2部 — 8月号の初速を `published/2026-08.md` に記入（9/11ごろ）
+- [x] 開発2部 — 9月号: 自動収集パイプラインの累計/単月誤取得バグを発見・修正（`collect.py`）、
+      正しい単月データで分析執筆済み（`drafts/2026-09.md`。TOP5が軽自動車4台＋ヤリスに。
+      タント・ムーヴがNEW）
+- [x] 開発2部 — 9月号を公開（2026-10-25 https://note.com/basel5/n/nec0cf2758cd0）
+- [ ] 開発2部 — 9月号のThreads・Instagram告知
+- [ ] 開発2部 — 9月号の初速を `published/2026-09.md` に記入
 - [ ] 経理 — 8月PL締め（`sop/weekly-close.md` 月次）→ `finance/reports/2026-08.md`。会計ソフト導入の判断
 - [x] Instagram — プロアカウント化（@basel_freed）
 - [ ] Instagram — Facebookページ連携（開発3部が軌道に乗ったら。プロアカウント化は済）
