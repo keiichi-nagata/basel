@@ -1,0 +1,81 @@
+{
+  "month": "2026-09",
+  "collected_at": "2026-10-25",
+  "sources": {
+    "registered": {
+      "url": "https://www.jada.or.jp/pages/340/"
+    },
+    "kei": {
+      "url": "https://www.zenkeijikyo.or.jp/statistics/tushosoku"
+    },
+    "prices": "dev/2-cars/prices.json"
+  },
+  "price_needs_check": [],
+  "items": [
+    {
+      "model": "N-BOX",
+      "maker": "ホンダ",
+      "units": 19105,
+      "yoy_pct": -12.0,
+      "segment": "軽",
+      "rank": 1,
+      "price_from_yen": 1769000,
+      "price_as_of": "2026-07",
+      "price_source": "honda.co.jp（7月一部改良後）",
+      "prev_rank": 1,
+      "rank_change": 0
+    },
+    {
+      "model": "スペーシア",
+      "maker": "スズキ",
+      "units": 16088,
+      "yoy_pct": -1.9,
+      "segment": "軽",
+      "rank": 2,
+      "price_from_yen": 1530000,
+      "price_as_of": "2026-07",
+      "price_source": "suzuki.co.jp",
+      "prev_rank": 2,
+      "rank_change": 0
+    },
+    {
+      "model": "ヤリス",
+      "maker": "トヨタ",
+      "units": 14230,
+      "yoy_pct": 4.1,
+      "segment": "登録車",
+      "rank": 3,
+      "price_from_yen": 1697000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": 3,
+      "rank_change": 0
+    },
+    {
+      "model": "タント",
+      "maker": "ダイハツ",
+      "units": 12158,
+      "yoy_pct": 6.1,
+      "segment": "軽",
+      "rank": 4,
+      "price_from_yen": 1496000,
+      "price_as_of": "2026-08",
+      "price_source": "2026-08-31一部改良後の最安グレードL（税込表記あり）。kuruma-news.jp",
+      "prev_rank": null,
+      "rank_change": "NEW"
+    },
+    {
+      "model": "ムーヴ",
+      "maker": "ダイハツ",
+      "units": 12119,
+      "yoy_pct": -10.3,
+      "segment": "軽",
+      "rank": 5,
+      "price_from_yen": 1369500,
+      "price_as_of": "2026-07",
+      "price_source": "2026-07-29一部改良後の最安グレード（税込と推定）。car.watch.impress.co.jp",
+      "prev_rank": null,
+      "rank_change": "NEW"
+    }
+  ]
+}
