@@ -298,6 +298,12 @@
       Threads/Instagram告知も完了（Threads https://www.threads.com/@basel_freedom/post/DdeufDuEolt
       ／ Instagram https://www.instagram.com/p/DdeuM7EE-Xm/）。`published/01.md`に記録済み
 - [ ] 公開48時間後（9/22ごろ）に初速を`published/01.md`に記入し、開発7部としての反応を見る
+- [x] 第2回「複利の力を最大限に生かす、失敗しにくい王道投資」を執筆・公開
+      （2026-10-26 https://note.com/basel5/n/nc8537f34a0ef）。証券口座開設（SBI証券・楽天証券）、
+      NISA/iDeCoの使い分け、自動化の手順、年1回の見直しを解説。無料公開（社長判断・金商法の
+      投資助言業非該当の方針を維持）。アフィリンクは楽天証券・楽天カードの2本（TrafficGate）
+- [ ] 第2回のThreads・Instagram告知
+- [ ] 第2回の初速を`published/02.md`に記入
 - [ ] 第2回・第3回の価格・無料範囲を社長と決定してから執筆
 
 ### トレード部（自動デイトレード・2026-09-10 新設）
