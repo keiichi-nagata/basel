@@ -149,13 +149,28 @@ _YOY_KEYS = ("前年対比", "前年同月比", "前年比")
 _MAKER_KEYS = ("メーカー", "ブランド名", "銘柄", "会社名")
 
 
-def _parse_ranking_xlsx(xbytes: bytes, is_index_yoy: bool = True) -> list[dict]:
+def _parse_ranking_xlsx(xbytes: bytes, is_index_yoy: bool = True,
+                         prefer_title: str | None = None) -> list[dict]:
     """通称名別ランキングの表を含むシートを探し、行を取り出す（xlsx/xls 両対応）。
 
     ヘッダー行（通称名 と 台数/当月 を含む行）を検出し、列名でマッピングする。
     前年対比は「前年＝100 の指数」で入っていることが多い → is_index_yoy なら -100 する。
+
+    2026-10-25判明・修正: 自販連の「ブランド通称名別ランキング」xlsxは単月シート
+    （例:「2026年9月」）だけでなく、年度累計・半期累計シート（例:「2026年4月～9月」）も
+    含んでおり、ワークブック内ではこの累計シートが単月シートより前に並んでいる。
+    累計シートのヘッダーも「台数」列を含むため、シートを順番に試す従来の実装だと
+    累計シート（単月の5〜6倍の数値）を誤って採用してしまっていた（2026-09号で、
+    登録車の台数が実際の単月値の約5倍になり、軽自動車が総合TOP5から全滅する事故が発生）。
+    `prefer_title`（例:"2026年9月"）を渡すと、まずタイトルが完全一致するシートを優先的に
+    探す。見つからなければ従来通り先頭から順に探す（フォールバック）。
     """
-    for _title, raw_rows in _workbook_rows(xbytes):
+    sheets = _workbook_rows(xbytes)
+    if prefer_title:
+        preferred = [s for s in sheets if s[0].strip() == prefer_title]
+        others = [s for s in sheets if s[0].strip() != prefer_title]
+        sheets = preferred + others
+    for _title, raw_rows in sheets:
         rows = [[("" if c is None else c) for c in r] for r in raw_rows]
 
         def norm(c: object) -> str:
@@ -239,7 +254,9 @@ def fetch_jada(month: str) -> list[dict]:
             return []
         xbytes = _http_get(urljoin(JADA_PAGE, href))
         _save_raw(f"jada_{month}.xlsx", xbytes)
-        rows = _parse_ranking_xlsx(xbytes, is_index_yoy=True)
+        y, mo = month.split("-")
+        prefer_title = f"{y}年{int(mo)}月"
+        rows = _parse_ranking_xlsx(xbytes, is_index_yoy=True, prefer_title=prefer_title)
         if not rows:
             _dump_structure(f"jada_{month}_structure.txt", xbytes)
             print("[jada] 解析0件。構造ダンプ（data/raw/）を確認 → 列の探し方を調整")
