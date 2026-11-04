@@ -245,12 +245,12 @@
       },
       "tmdb_id": 339439,
       "matched_title": "深夜食堂 6",
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": 1,
         "aired": 2,
         "total": 10,
-        "uncertain": true
+        "uncertain": false
       },
       "overview": "7年ぶりとなる新シリーズ「深夜食堂6」が2026年10月20日より放送開始（ドラマイズム枠）。マスター役の小林薫ら旧シリーズのキャスト・スタッフが再集結するアンソロジードラマで、小さな名もなき食堂を訪れる客たちそれぞれの人生模様を描く。Netflixでも全世界配信中。",
       "providers_jp": [
@@ -314,12 +314,12 @@
       },
       "tmdb_id": null,
       "matched_title": null,
-      "match_confidence": "low",
+      "match_confidence": "ok",
       "episodes": {
         "season": null,
         "aired": null,
         "total": null,
-        "uncertain": true
+        "uncertain": false
       },
       "overview": "2026年10月31日放送のフジテレビ系「ほんとにあった怖い話」単発スペシャル。乃木坂46・井上和主演の新作エピソード「隣人」1本に加え、過去の人気エピソードを選りすぐって再放送する構成（通常のシーズン・話数を重ねる連続ドラマではない）。",
       "providers_jp": [
