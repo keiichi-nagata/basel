@@ -1,0 +1,403 @@
+{
+  "week": "2026-W44",
+  "range": {
+    "from": "2026-10-26",
+    "to": "2026-11-01"
+  },
+  "collected_at": "2026-11-04T16:05:58+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-11-04T16:05:58+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-11-04T16:05:58+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 14,
+      "fetched_at": "2026-11-04T16:05:58+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-11-04T16:05:58+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "薬屋のひとりごと",
+      "matched": "薬屋のひとりごと",
+      "reason": "アニメ"
+    },
+    {
+      "title": "あいの里",
+      "matched": "あいの里",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "ホタルの嫁入り",
+      "matched": "ホタルの嫁入り",
+      "reason": "アニメ"
+    },
+    {
+      "title": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～",
+      "matched": "追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。 ～俺は武器だけじゃなく、あらゆるものに『強化ポイント』を付与できるし、俺の意思でいつでも効果を解除できるけど、残った人たち大丈夫？～",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 100.0,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": null,
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 12,
+        "total": 25,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "LOST10",
+      "source_title": "LOST10",
+      "broadcaster": "TBS",
+      "composite_score": 58.2,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 3,
+          "score": 80.0
+        },
+        "C_trends": 4.7
+      },
+      "tmdb_id": 329490,
+      "matched_title": "LOST10",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 3,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "物語の舞台は、北海道の壮大で過酷な大自然。登山ツアー中に起こった遭難事故、通称「支樺岳事件」の真相を追うことから、すべては始まる。食い違う関係者の証言、裏切り、巨大権力、試される絆･･････幾重もの「ロスト」から導き出される真実から、彼らは何を掴み取るのか――？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-16"
+    },
+    {
+      "rank": 3,
+      "title": "俺たちの箱根駅伝",
+      "source_title": "俺たちの箱根駅伝",
+      "broadcaster": "日テレ",
+      "composite_score": 43.0,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 6.0
+      },
+      "tmdb_id": 311955,
+      "matched_title": "俺たちの箱根駅伝",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 4,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "「箱根駅伝」。その本選出場をかけた運命の予選大会。注目は、2年連続で本選出場を逃し、3年ぶりの“箱根復帰”を目指す古豪・明誠学院大学。ケガから復帰した4年生エースが本来の力を発揮できさえすれば、本選出場はほぼ確実──そう誰もが考えていた。しかしレース当日、明誠学院の前に立ちはだかったのは、幾度となくチームの夢を打ち破いてきた「箱根の魔物」。果たして、明誠学院大学は、再び箱根駅伝本選のスタートラインに立つことはできるのか。一方、放送まで3カ月を切った「箱根駅伝中継」を担う大日テレビ・スポーツ局。チーフプロデューサーの徳重亮は、編成局長から突きつけられた無理難題に頭を抱えていた。次々と押し寄せる不測の事態の中で、徳重は決断を迫られ責任を背負いながら、放送当日へと突き進んでいく。持てる力のすべてを振り絞って走る選手たちと、それを一瞬も逃すまいと届けようとするテレビ中継スタッフたち。箱根にすべてをかける者たちの、熱き闘いの幕が上がる!!",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-10"
+    },
+    {
+      "rank": 4,
+      "title": "あにいもうと",
+      "source_title": "あにいもうと",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 36.5,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 2.9
+      },
+      "tmdb_id": 334856,
+      "matched_title": "あにいもうと",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 3,
+        "total": 3,
+        "uncertain": false
+      },
+      "overview": "《医師》と《患者の兄》の禁断愛。 消えない罪。消せない恋。封印したはずの愛と疑惑が、３年の時を経て再び…２組の《兄・妹》の切ない運命が交錯する禁断のラブ・サスペンスが開幕！",
+      "providers_jp": [],
+      "first_air_date": "2026-10-17"
+    },
+    {
+      "rank": 5,
+      "title": "はだかんぼうたち",
+      "source_title": "はだかんぼうたち",
+      "broadcaster": "テレビ朝日",
+      "composite_score": 30.8,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 1.5
+      },
+      "tmdb_id": 333068,
+      "matched_title": "はだかんぼうたち",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": 5,
+        "uncertain": false
+      },
+      "overview": "惹かれるままに女性と無邪気に夜を重ねる靴職人の鯖崎\n\n10歳年上の歯科医・桃に都合の良い“恋人もどきの関係”を求める一方、\n\n桃の親友で3児の母・響子にも興味を持ち――\n\n危険で赤裸々な大人の三角関係が幕を開ける",
+      "providers_jp": [
+        {
+          "name": "TELASA",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 6,
+      "title": "深夜食堂6",
+      "source_title": "Midnight Diner: Season 6",
+      "broadcaster": null,
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 8,
+          "weeks": 1,
+          "score": 30.0
+        },
+        "C_trends": null
+      },
+      "tmdb_id": 339439,
+      "matched_title": "深夜食堂 6",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 1,
+        "aired": 2,
+        "total": 10,
+        "uncertain": true
+      },
+      "overview": "7年ぶりとなる新シリーズ「深夜食堂6」が2026年10月20日より放送開始（ドラマイズム枠）。マスター役の小林薫ら旧シリーズのキャスト・スタッフが再集結するアンソロジードラマで、小さな名もなき食堂を訪れる客たちそれぞれの人生模様を描く。Netflixでも全世界配信中。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-20"
+    },
+    {
+      "rank": 7,
+      "title": "ポリティカルパン",
+      "source_title": "PoliticaLupin",
+      "broadcaster": null,
+      "composite_score": 27.9,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 4,
+          "score": 50.0
+        },
+        "C_trends": 5.9
+      },
+      "tmdb_id": 332261,
+      "matched_title": "ポリティカルパン",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 4,
+        "total": 9,
+        "uncertain": false
+      },
+      "overview": "これは政界を舞台にした「怪盗エンターテイメント」物語である。物語は架空の国を舞台に、「史上最強の女ルパン」として知られる如月弥生（石原さとみ）が、激動の政界に潜入し、エリート政治家たちを出し抜き、怪しげな「政治資金」を暴き出し、華々しく盗み出す姿を描く。一方、政界の混乱に巻き込まれた政治家の娘、雅（河合由美）との間に、繊細で予測不可能な関係が芽生えていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 8,
+      "title": "ほんとにあった怖い話",
+      "source_title": "ほんとにあった怖い話",
+      "broadcaster": "フジテレビ",
+      "composite_score": 25.2,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.4
+      },
+      "tmdb_id": null,
+      "matched_title": null,
+      "match_confidence": "low",
+      "episodes": {
+        "season": null,
+        "aired": null,
+        "total": null,
+        "uncertain": true
+      },
+      "overview": "2026年10月31日放送のフジテレビ系「ほんとにあった怖い話」単発スペシャル。乃木坂46・井上和主演の新作エピソード「隣人」1本に加え、過去の人気エピソードを選りすぐって再放送する構成（通常のシーズン・話数を重ねる連続ドラマではない）。",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-31"
+    },
+    {
+      "rank": 9,
+      "title": "再生のウズメ",
+      "source_title": "再生のウズメ",
+      "broadcaster": "フジテレビ",
+      "composite_score": 20.1,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.1
+      },
+      "tmdb_id": 334373,
+      "matched_title": "再生のウズメ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "元子役の田村ウズメは、28歳の時、ある出来事がきっかけで家にこもるように……それから12年。同級生たちが家庭を築く中、家で自堕落な日々を送るウズメを見かねた母・咲子は「便利屋」を呼び、部屋の片付けを依頼する。やってきたのは便利屋・救ちゃんの代表・興梠。この出会いがウズメの人生を大きく変えていくことになる。",
+      "providers_jp": [
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 10,
+      "title": "ダウンタイム",
+      "source_title": "Plastic Beauty",
+      "broadcaster": null,
+      "composite_score": 14.8,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 9,
+          "weeks": 7,
+          "score": 20.0
+        },
+        "C_trends": 9.5
+      },
+      "tmdb_id": 298008,
+      "matched_title": "ダウンタイム",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "天才的なオペ技術を持つ救急外科医・文は、不本意ながら美容医療の世界へ転身する。カリスマ美容外科医・凜と対立するなかで、華やかな表舞台の裏に潜む金への欲望と人々の美への渇望が暴かれていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-09-17"
+    }
+  ]
+}
