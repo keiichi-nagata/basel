@@ -56,7 +56,7 @@ def render_png(data: dict, out_path: Path) -> bool:
             ])
 
         y, m = data["month"].split("-")
-        fig, ax = plt.subplots(figsize=(10.5, 1.3 + 0.6 * len(rows)))
+        fig, ax = plt.subplots(figsize=(12.5, 1.3 + 0.6 * len(rows)))
         ax.axis("off")
         ax.set_title(f"【{y}年{int(m)}月】{data['area']}のお土産ランキングTOP5",
                      fontsize=15, fontweight="bold", pad=18, loc="left")
