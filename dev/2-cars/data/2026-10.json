@@ -1,0 +1,81 @@
+{
+  "month": "2026-10",
+  "collected_at": "2026-11-08",
+  "sources": {
+    "registered": {
+      "url": "https://www.jada.or.jp/pages/340/"
+    },
+    "kei": {
+      "url": "https://www.zenkeijikyo.or.jp/statistics/tushosoku"
+    },
+    "prices": "dev/2-cars/prices.json"
+  },
+  "price_needs_check": [],
+  "items": [
+    {
+      "model": "ヤリス",
+      "maker": "トヨタ",
+      "units": 15157,
+      "yoy_pct": -11.1,
+      "segment": "登録車",
+      "rank": 1,
+      "price_from_yen": 1697000,
+      "price_as_of": "2026-07",
+      "price_source": "toyota.jp",
+      "prev_rank": 3,
+      "rank_change": 2
+    },
+    {
+      "model": "N-BOX",
+      "maker": "ホンダ",
+      "units": 14832,
+      "yoy_pct": 16.0,
+      "segment": "軽",
+      "rank": 2,
+      "price_from_yen": 1769000,
+      "price_as_of": "2026-07",
+      "price_source": "honda.co.jp（7月一部改良後）",
+      "prev_rank": 1,
+      "rank_change": -1
+    },
+    {
+      "model": "スペーシア",
+      "maker": "スズキ",
+      "units": 13474,
+      "yoy_pct": -6.6,
+      "segment": "軽",
+      "rank": 3,
+      "price_from_yen": 1530000,
+      "price_as_of": "2026-07",
+      "price_source": "suzuki.co.jp",
+      "prev_rank": 2,
+      "rank_change": -1
+    },
+    {
+      "model": "タント",
+      "maker": "ダイハツ",
+      "units": 12361,
+      "yoy_pct": -13.2,
+      "segment": "軽",
+      "rank": 4,
+      "price_from_yen": 1496000,
+      "price_as_of": "2026-08",
+      "price_source": "2026-08-31一部改良後の最安グレードL（税込、記事内で税込表記あり）。kuruma-news.jp掲載。daihatsu.comでの一次確認が取れればそちらに置き換え",
+      "prev_rank": 4,
+      "rank_change": 0
+    },
+    {
+      "model": "ムーヴ",
+      "maker": "ダイハツ",
+      "units": 11713,
+      "yoy_pct": -26.9,
+      "segment": "軽",
+      "rank": 5,
+      "price_from_yen": 1369500,
+      "price_as_of": "2026-07",
+      "price_source": "2026-07-29一部改良後の最安グレード（税込とは明記されていないが、総額表示が原則のため税込と推定）。car.watch.impress.co.jp掲載。daihatsu.comでの一次確認が取れればそちらに置き換え",
+      "prev_rank": 5,
+      "rank_change": 0
+    }
+  ]
+}
