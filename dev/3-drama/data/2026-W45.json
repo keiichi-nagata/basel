@@ -1,0 +1,400 @@
+{
+  "week": "2026-W45",
+  "range": {
+    "from": "2026-11-02",
+    "to": "2026-11-08"
+  },
+  "collected_at": "2026-11-09T09:11:55+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-11-09T09:11:55+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-11-09T09:11:55+09:00"
+    },
+    "google_trends": {
+      "timeframe": "now 7-d",
+      "geo": "JP",
+      "count": 14,
+      "fetched_at": "2026-11-09T09:11:55+09:00"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-11-09T09:11:55+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "薬屋のひとりごと",
+      "matched": "薬屋のひとりごと",
+      "reason": "アニメ"
+    },
+    {
+      "title": "あいの里",
+      "matched": "あいの里",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "ホタルの嫁入り",
+      "matched": "ホタルの嫁入り",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "VIVANT",
+      "broadcaster": "TBS",
+      "composite_score": 100.0,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": null,
+        "C_trends": 100.0
+      },
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 13,
+        "total": 25,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "LOST10",
+      "source_title": "LOST10",
+      "broadcaster": "TBS",
+      "composite_score": 53.6,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 3,
+          "score": 80.0
+        },
+        "C_trends": 0.8
+      },
+      "tmdb_id": 329490,
+      "matched_title": "LOST10",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 4,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "物語の舞台は、北海道の壮大で過酷な大自然。登山ツアー中に起こった遭難事故、通称「支樺岳事件」の真相を追うことから、すべては始まる。食い違う関係者の証言、裏切り、巨大権力、試される絆･･････幾重もの「ロスト」から導き出される真実から、彼らは何を掴み取るのか――？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-16"
+    },
+    {
+      "rank": 3,
+      "title": "俺のこと、なんか言ってた？",
+      "source_title": "Did Someone Happen to Mention Me?",
+      "broadcaster": null,
+      "composite_score": 46.3,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 2,
+          "score": 90.0
+        },
+        "C_trends": 2.6
+      },
+      "tmdb_id": 300527,
+      "matched_title": "俺のこと、なんか言ってた？",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "日本を代表する大物俳優、高瀬川玄は、ある日突然、世界から忘れ去られる。すべてを失った\"承認欲求の塊\"のような男が、強制リセットされた人生で再起をはかるヒューマンコメディ。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-22"
+    },
+    {
+      "rank": 4,
+      "title": "俺たちの箱根駅伝",
+      "source_title": "俺たちの箱根駅伝",
+      "broadcaster": "日テレ",
+      "composite_score": 45.5,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.9
+      },
+      "tmdb_id": 311955,
+      "matched_title": "俺たちの箱根駅伝",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "「箱根駅伝」。その本選出場をかけた運命の予選大会。注目は、2年連続で本選出場を逃し、3年ぶりの“箱根復帰”を目指す古豪・明誠学院大学。ケガから復帰した4年生エースが本来の力を発揮できさえすれば、本選出場はほぼ確実──そう誰もが考えていた。しかしレース当日、明誠学院の前に立ちはだかったのは、幾度となくチームの夢を打ち破いてきた「箱根の魔物」。果たして、明誠学院大学は、再び箱根駅伝本選のスタートラインに立つことはできるのか。一方、放送まで3カ月を切った「箱根駅伝中継」を担う大日テレビ・スポーツ局。チーフプロデューサーの徳重亮は、編成局長から突きつけられた無理難題に頭を抱えていた。次々と押し寄せる不測の事態の中で、徳重は決断を迫られ責任を背負いながら、放送当日へと突き進んでいく。持てる力のすべてを振り絞って走る選手たちと、それを一瞬も逃すまいと届けようとするテレビ中継スタッフたち。箱根にすべてをかける者たちの、熱き闘いの幕が上がる!!",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-10"
+    },
+    {
+      "rank": 5,
+      "title": "南田南弁護士は天才肌",
+      "source_title": "南田南弁護士は天才肌",
+      "broadcaster": "カンテレ",
+      "composite_score": 44.1,
+      "components": {
+        "A_tver": {
+          "rank": 8,
+          "score": 30.0
+        },
+        "B_netflix": {
+          "rank": 1,
+          "weeks": 2,
+          "score": 100.0
+        },
+        "C_trends": 2.2
+      },
+      "tmdb_id": 332713,
+      "matched_title": "南田南弁護士は天才肌",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 3,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "芦田愛菜演じる自閉症スペクトラム症の新人弁護士･南田南が、周囲の人々を巻き込みながら弁護士として奮闘するハートフル法廷ドラマ！同僚や友人、家族とのつながりを通して、弁護士として、そして一人の人間として成長していく姿にご注目！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-19"
+    },
+    {
+      "rank": 6,
+      "title": "再生のウズメ",
+      "source_title": "再生のウズメ",
+      "broadcaster": "フジテレビ",
+      "composite_score": 35.0,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.1
+      },
+      "tmdb_id": 334373,
+      "matched_title": "再生のウズメ",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 1,
+        "total": 1,
+        "uncertain": false
+      },
+      "overview": "元子役の田村ウズメは、28歳の時、ある出来事がきっかけで家にこもるように……それから12年。同級生たちが家庭を築く中、家で自堕落な日々を送るウズメを見かねた母・咲子は「便利屋」を呼び、部屋の片付けを依頼する。やってきたのは便利屋・救ちゃんの代表・興梠。この出会いがウズメの人生を大きく変えていくことになる。",
+      "providers_jp": [
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-03"
+    },
+    {
+      "rank": 7,
+      "title": "ポリティカルパン",
+      "source_title": "ポリティカルパン",
+      "broadcaster": "フジテレビ",
+      "composite_score": 34.0,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 4,
+          "score": 50.0
+        },
+        "C_trends": 2.0
+      },
+      "tmdb_id": 332261,
+      "matched_title": "ポリティカルパン",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": 9,
+        "uncertain": false
+      },
+      "overview": "これは政界を舞台にした「怪盗エンターテイメント」物語である。物語は架空の国を舞台に、「史上最強の女ルパン」として知られる如月弥生（石原さとみ）が、激動の政界に潜入し、エリート政治家たちを出し抜き、怪しげな「政治資金」を暴き出し、華々しく盗み出す姿を描く。一方、政界の混乱に巻き込まれた政治家の娘、雅（河合由美）との間に、繊細で予測不可能な関係が芽生えていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 8,
+      "title": "修学旅行で仲良くないグループに入りました２",
+      "source_title": "修学旅行で仲良くないグループに入りました２",
+      "broadcaster": "ABCテレビ",
+      "composite_score": 30.0,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "tmdb_id": null,
+      "matched_title": null,
+      "match_confidence": "low",
+      "episodes": {
+        "season": null,
+        "aired": null,
+        "total": null,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": ""
+    },
+    {
+      "rank": 9,
+      "title": "波うららかに、めおと日和",
+      "source_title": "波うららかに、めおと日和",
+      "broadcaster": "フジテレビ",
+      "composite_score": 20.6,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 1.2
+      },
+      "tmdb_id": 287338,
+      "matched_title": "波うららかに、めおと日和",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 4,
+        "total": 20,
+        "uncertain": false
+      },
+      "overview": "昭和11年を舞台に交際ゼロ日婚からスタートする歯がゆくも愛らしい\"新婚夫婦の甘酸つばい時間\"を丁寧に描いたハートフル・昭和新婚ラブコメ!\n\n昨今、コスパ・タイバ重視される現代社会\n\nしかし本作は、そんな時代とは打って変わり、新婚夫婦の\"大切なひととき\"を緩やかに紡ぐ\n\nその時間は心地よくもどこか懐かしく・・・\n\n令和の時代だからこそ今見たくなる\n\n心温まる「ハートフル・昭和新婚ラブコメ」がこの春、誕生!",
+      "providers_jp": [
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2025-04-24"
+    },
+    {
+      "rank": 10,
+      "title": "深夜食堂 6",
+      "source_title": "Midnight Diner",
+      "broadcaster": null,
+      "composite_score": 15.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 8,
+          "weeks": 1,
+          "score": 30.0
+        },
+        "C_trends": 0.0
+      },
+      "tmdb_id": 339439,
+      "matched_title": "深夜食堂 6",
+      "match_confidence": "low",
+      "episodes": {
+        "season": 6,
+        "aired": 3,
+        "total": 7,
+        "uncertain": true
+      },
+      "overview": "",
+      "providers_jp": [],
+      "first_air_date": "2026-10-20"
+    }
+  ]
+}
