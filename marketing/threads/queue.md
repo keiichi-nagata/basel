@@ -67,6 +67,8 @@
 
 ## 消化済み（直近のみ残す）
 
+- [x] 2026-11-10 投稿 | 誘導 | 開発3部 | 話題のドラマ総合ランキングW45（11/2〜11/8）。1位はVIVANT、TBS日曜劇場シーズン2が通算第24話で最終回を迎え、TVer週間1位・検索トレンド満点のまま有終の美を飾りました。役所広司×宮藤官九郎のNetflix「俺のこと、なんか言ってた？」が3位に新規ランクイン、濵田雅功さんの16年ぶりのドラマ出演も話題です。（PR） | 記事 https://note.com/basel5/n/n6a2da241b078 ／ 投稿 https://www.threads.com/@basel_freedom/post/DfioPpAEki5
+  （注: キュー下書き5件とは文面が異なり、Instagram用キャプションがそのまま投稿された）
 - [x] 2026-11-09 投稿 | 誘導 | 開発4部（お土産） | 北関東のお土産ランキング11月号、1位は群馬「ガトーフェスタ ハラダ」のグーテ・デ・ロワ中缶R2。独自採点4.6で、個包装で配りやすいラスクとして評価されていました。温泉宿ランキングと対になる記事です。（PR） | 記事 https://note.com/basel5/n/necc4aa93f518 ／ 投稿 https://www.threads.com/@basel_freedom/post/DfgeD81EnqX
 - [x] 2026-11-09 投稿 | 誘導 | 開発4部 | 北関東温泉宿ランキング11月号、1位は猿ヶ京温泉の全5室「料理旅館 樋口」。独自採点4.9は過去の北海道・東北号を上回る高さで、完全貸切制の温泉が口コミで評価されていました。（PR） | 記事 https://note.com/basel5/n/ne862e4ccb85c ／ 投稿 https://www.threads.com/@basel_freedom/post/DfgdsTXkkBv
 - [x] 2026-11-06 投稿 | 誘導 | 開発3部 | 話題のドラマ総合ランキングW44（10/26〜11/1）、1位はVIVANT。TVer週間1位・検索トレンド満点ながらNetflix週間Top10には入らない、完全な「地上波で見て検索する」リアタイ型でした。11/8の最終回（通算第24話予定）まで駆け込みます。（PR） | 記事 https://note.com/basel5/n/n85fe90895c1f ／ 投稿 https://www.threads.com/@basel_freedom/post/DfXrujeElk8
