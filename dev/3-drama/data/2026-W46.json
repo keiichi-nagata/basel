@@ -1,0 +1,434 @@
+{
+  "week": "2026-W46",
+  "range": {
+    "from": "2026-11-09",
+    "to": "2026-11-15"
+  },
+  "collected_at": "2026-11-18T13:36:13+09:00",
+  "sources": {
+    "tver": {
+      "count": 10,
+      "fetched_at": "2026-11-18T13:36:13+09:00"
+    },
+    "netflix": {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "count": 10,
+      "fetched_at": "2026-11-18T13:36:13+09:00"
+    },
+    "google_trends": {
+      "timeframe": "2026-11-09 2026-11-15",
+      "geo": "JP",
+      "count": 10,
+      "fetched_at": "2026-11-18T14:20:00+09:00",
+      "note": "collect.py既定の'now 7-d'（収集時点からの直近7日）は、本号は定例の月曜朝ではなく2026-11-18(水)に収集したため対象週(11/9〜11/15)と3日分ずれる（11/16のエピソード公開等、対象週外の出来事を含んでしまう）。そのためpytrendsに明示的な日付指定(2026-11-09〜2026-11-15)を渡して再取得し、この値を採用した。"
+    },
+    "tmdb": {
+      "attribution": "This product uses the TMDB API and JustWatch data but is not endorsed or certified by TMDB or JustWatch.",
+      "fetched_at": "2026-11-18T13:36:13+09:00"
+    }
+  },
+  "excluded": [
+    {
+      "title": "Last One Standing",
+      "matched": "Last One Standing",
+      "reason": "リアリティ"
+    },
+    {
+      "title": "薬屋のひとりごと",
+      "matched": "薬屋のひとりごと",
+      "reason": "アニメ"
+    },
+    {
+      "title": "異世界黙示録マイノグーラ ～破滅の文明で始める世界征服～",
+      "matched": "異世界黙示録マイノグーラ ～破滅の文明で始める世界征服～",
+      "reason": "アニメ"
+    },
+    {
+      "title": "BLACK TORCH",
+      "matched": "BLACK TORCH",
+      "reason": "アニメ"
+    },
+    {
+      "title": "ホタルの嫁入り",
+      "matched": "ホタルの嫁入り",
+      "reason": "アニメ"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "title": "VIVANT",
+      "source_title": "Vivant",
+      "broadcaster": null,
+      "composite_score": 70.0,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 7,
+          "weeks": 19,
+          "score": 40.0
+        },
+        "C_trends": 100.0
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 218038,
+      "matched_title": "VIVANT",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 2,
+        "aired": 14,
+        "total": 25,
+        "uncertain": false
+      },
+      "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        },
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2023-07-16"
+    },
+    {
+      "rank": 2,
+      "title": "南田南弁護士は天才肌",
+      "source_title": "南田南弁護士は天才肌",
+      "broadcaster": "カンテレ",
+      "composite_score": 64.2,
+      "components": {
+        "A_tver": {
+          "rank": 1,
+          "score": 100.0
+        },
+        "B_netflix": {
+          "rank": 2,
+          "weeks": 4,
+          "score": 90.0
+        },
+        "C_trends": 2.6
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 332713,
+      "matched_title": "南田南弁護士は天才肌",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 4,
+        "total": 10,
+        "uncertain": false,
+        "note": "TMDBのlast_episode_to_airは第5話（2026-11-16放送）まで反映していたが、11-16は対象週(11/9〜11/15)の外。報道(realsound.jp 2026-11-10/thetv.jp)で2026-11-09放送分が「第4話」と確認できたため、対象週末時点の話数として4話に補正した。"
+      },
+      "overview": "芦田愛菜演じる自閉症スペクトラム症の新人弁護士･南田南が、周囲の人々を巻き込みながら弁護士として奮闘するハートフル法廷ドラマ！同僚や友人、家族とのつながりを通して、弁護士として、そして一人の人間として成長していく姿にご注目！",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-19"
+    },
+    {
+      "rank": 3,
+      "title": "救命病棟24時",
+      "source_title": "救命病棟24時",
+      "broadcaster": "フジテレビ",
+      "composite_score": 46.9,
+      "components": {
+        "A_tver": {
+          "rank": 2,
+          "score": 90.0
+        },
+        "B_netflix": null,
+        "C_trends": 3.8
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 36409,
+      "matched_title": "救命病棟24時",
+      "match_confidence": "low",
+      "match_note": "TMDBのoverview・話数はシリーズ全体（1999〜2011年の旧シリーズ）を指しており、2026年10月12日開始の新シリーズ（第6シリーズ、江口洋介・松嶋菜々子W主演）の内容を反映していない。あらすじはciatr.jp・thetv.jp（2026年8〜11月）を基に手動で書き直した。話数はTMDBのlast_episode_to_air（第6話＝2026-11-16放送）が対象週（11/9〜11/15）の外のため、thetv.jp番組表で確認できる2026-11-09放送分「第5話」に補正した。",
+      "episodes": {
+        "season": 6,
+        "aired": 5,
+        "total": null,
+        "uncertain": true
+      },
+      "overview": "2026年10月12日スタートのフジテレビ系月曜21時枠。13年ぶりとなる第6シリーズで、江口洋介・松嶋菜々子が16年ぶりに再共演しW主演。「変わりゆく時代の中で失ってはいけないもの」をテーマに、救命救急センターの医師・進藤一生（江口）と小島楓（松嶋）が再タッグを組み、シフト制や医師の働き方をめぐる上級医・鳥羽野との対立、若手医師・看護師との価値観の違いなどを描く医療ドラマ。",
+      "providers_jp": [
+        {
+          "name": "Amazon Prime Video",
+          "affiliate": "linked"
+        },
+        {
+          "name": "Disney+",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "1999-01-05"
+    },
+    {
+      "rank": 4,
+      "title": "LOST10",
+      "source_title": "LOST10",
+      "broadcaster": "TBS",
+      "composite_score": 44.7,
+      "components": {
+        "A_tver": {
+          "rank": 6,
+          "score": 50.0
+        },
+        "B_netflix": {
+          "rank": 3,
+          "weeks": 5,
+          "score": 80.0
+        },
+        "C_trends": 4.1
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 329490,
+      "matched_title": "LOST10",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "物語の舞台は、北海道の壮大で過酷な大自然。登山ツアー中に起こった遭難事故、通称「支樺岳事件」の真相を追うことから、すべては始まる。食い違う関係者の証言、裏切り、巨大権力、試される絆･･････幾重もの「ロスト」から導き出される真実から、彼らは何を掴み取るのか――？",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-16"
+    },
+    {
+      "rank": 5,
+      "title": "いろはの恋は時代をかける",
+      "source_title": "いろはの恋は時代をかける",
+      "broadcaster": "TBS",
+      "composite_score": 40.3,
+      "components": {
+        "A_tver": {
+          "rank": 3,
+          "score": 80.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.6
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 334678,
+      "matched_title": "いろはの恋は時代をかける",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 5,
+        "total": null,
+        "uncertain": true,
+        "note": "TMDBはaired=6/total=6（放送完結扱い）だったが、第6話の放送日は2026-11-17で対象週(11/9〜11/15)の外（thetv.jp・terukosan.comで第5話=11/10放送を確認）。対象週末時点の話数を5話に補正。また全話数はTMDB=6話、MyDramaList=10話と情報源間で不一致があり未確定のため【要確認】とした。"
+      },
+      "overview": "令和の小学校教師に江戸娘の魂がタイムスリップ！？",
+      "providers_jp": [
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-13"
+    },
+    {
+      "rank": 6,
+      "title": "俺のこと、なんか言ってた？",
+      "source_title": "Did Someone Happen to Mention Me?",
+      "broadcaster": null,
+      "composite_score": 36.3,
+      "components": {
+        "A_tver": null,
+        "B_netflix": {
+          "rank": 4,
+          "weeks": 4,
+          "score": 70.0
+        },
+        "C_trends": 2.6
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 300527,
+      "matched_title": "俺のこと、なんか言ってた？",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 8,
+        "total": 8,
+        "uncertain": false
+      },
+      "overview": "日本を代表する大物俳優、高瀬川玄は、ある日突然、世界から忘れ去られる。すべてを失った\"承認欲求の塊\"のような男が、強制リセットされた人生で再起をはかるヒューマンコメディ。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        }
+      ],
+      "first_air_date": "2026-10-22"
+    },
+    {
+      "rank": 7,
+      "title": "妻を引退します",
+      "source_title": "妻を引退します",
+      "broadcaster": "テレ東",
+      "composite_score": 35.0,
+      "components": {
+        "A_tver": {
+          "rank": 4,
+          "score": 70.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.0
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 334319,
+      "matched_title": "妻を引退します",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": null,
+        "uncertain": true,
+        "note": "TMDBはaired=4/total=4（完結扱い）だったが、テレビ東京公式サイト（tv-tokyo.co.jp/tsumaintai）の番組表で第6話が2026-11-09、第7話が2026-11-16に放送済みと確認できており、TMDBのデータが古く信頼できない。対象週末（11/15）時点の話数を6話に補正。全話数は公式サイトで明記箇所を確認できず【要確認】。"
+      },
+      "overview": "かつて天才子役として一世を風靡するも、現在は芸能界を引退し一児の母として幸せな結婚生活を送っていた鮎川穂奈未(朝日奈央)。芸能事務所を運営する夫・蓮也の勧めで娘・美由を子役デビューさせるが、旬の人気俳優・泉舞花(新川優愛)とのCM撮影中に、スタジオの階段から転落し、意識不明の重体に陥ってしまう。偶然事故現場に居合わせた穂奈未の幼馴染で人気俳優の和久井昴から、娘の事故の原因が“夫の不倫”だと聞かされる。娘の事故と夫の裏切り――――。絶望の淵に立たされた穂奈未は真実を突き止めるため、スター俳優に返り咲くことを決意。「妻」を引退し復讐の鬼と化した穂奈未の復讐劇は、やがて芸能界全体を巻き込んでいく。",
+      "providers_jp": [
+        {
+          "name": "U-NEXT",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-05"
+    },
+    {
+      "rank": 8,
+      "title": "kiDnap GAME",
+      "source_title": "kiDnap GAME",
+      "broadcaster": "フジテレビ",
+      "composite_score": 30.1,
+      "components": {
+        "A_tver": {
+          "rank": 5,
+          "score": 60.0
+        },
+        "B_netflix": null,
+        "C_trends": 0.3
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 320513,
+      "matched_title": "kiDnap GAME",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 11,
+        "uncertain": false
+      },
+      "overview": "アジア7都市で同時多発誘拐事件が発生するところから物語は始まる。東京、ソウル、マニラ、バンコク、台北、シンガポール、那覇、世界中で事件がセンセーショナルに報道される中、被害者の家族のもとに1通のメールが届く。「kiDnap GAMEにエントリーされました。愛する人を救うために、どこまでできますか？救われるのは一人だけ」。このゲームの出場者にはそれぞれ異なる指令が出され、大切な人を救うためには、他の出場者より先に指令をクリアしなければならない。国籍も経歴も宗教も違う7人は、なぜゲームの出場者になってしまったのか？このサバイバルゲームを主催しているのは誰なのか？その目的は…？極限状態の中で繰り広げられる“命懸け”のゲーム「kiDnap GAME」が開幕―――。",
+      "providers_jp": [],
+      "first_air_date": "2026-10-06"
+    },
+    {
+      "rank": 9,
+      "title": "ポリティカルパン",
+      "source_title": "ポリティカルパン",
+      "broadcaster": "フジテレビ",
+      "composite_score": 24.7,
+      "components": {
+        "A_tver": {
+          "rank": 9,
+          "score": 20.0
+        },
+        "B_netflix": {
+          "rank": 6,
+          "weeks": 6,
+          "score": 50.0
+        },
+        "C_trends": 4.1
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 332261,
+      "matched_title": "ポリティカルパン",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 9,
+        "uncertain": false
+      },
+      "overview": "これは政界を舞台にした「怪盗エンターテイメント」物語である。物語は架空の国を舞台に、「史上最強の女ルパン」として知られる如月弥生（石原さとみ）が、激動の政界に潜入し、エリート政治家たちを出し抜き、怪しげな「政治資金」を暴き出し、華々しく盗み出す姿を描く。一方、政界の混乱に巻き込まれた政治家の娘、雅（河合由美）との間に、繊細で予測不可能な関係が芽生えていく。",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "FOD",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-07"
+    },
+    {
+      "rank": 10,
+      "title": "俺たちの箱根駅伝",
+      "source_title": "俺たちの箱根駅伝",
+      "broadcaster": "日テレ",
+      "composite_score": 22.1,
+      "components": {
+        "A_tver": {
+          "rank": 7,
+          "score": 40.0
+        },
+        "B_netflix": null,
+        "C_trends": 4.3
+      },
+      "_C_trends_source": "pytrends timeframe=2026-11-09 2026-11-15 geo=JP（対象週に合わせて明示的に再取得。手動検証値）",
+      "tmdb_id": 311955,
+      "matched_title": "俺たちの箱根駅伝",
+      "match_confidence": "ok",
+      "episodes": {
+        "season": 1,
+        "aired": 6,
+        "total": 10,
+        "uncertain": false
+      },
+      "overview": "「箱根駅伝」。その本選出場をかけた運命の予選大会。注目は、2年連続で本選出場を逃し、3年ぶりの“箱根復帰”を目指す古豪・明誠学院大学。ケガから復帰した4年生エースが本来の力を発揮できさえすれば、本選出場はほぼ確実──そう誰もが考えていた。しかしレース当日、明誠学院の前に立ちはだかったのは、幾度となくチームの夢を打ち破いてきた「箱根の魔物」。果たして、明誠学院大学は、再び箱根駅伝本選のスタートラインに立つことはできるのか。一方、放送まで3カ月を切った「箱根駅伝中継」を担う大日テレビ・スポーツ局。チーフプロデューサーの徳重亮は、編成局長から突きつけられた無理難題に頭を抱えていた。次々と押し寄せる不測の事態の中で、徳重は決断を迫られ責任を背負いながら、放送当日へと突き進んでいく。持てる力のすべてを振り絞って走る選手たちと、それを一瞬も逃すまいと届けようとするテレビ中継スタッフたち。箱根にすべてをかける者たちの、熱き闘いの幕が上がる!!",
+      "providers_jp": [
+        {
+          "name": "Netflix",
+          "affiliate": "none"
+        },
+        {
+          "name": "Hulu",
+          "affiliate": "pending"
+        }
+      ],
+      "first_air_date": "2026-10-10"
+    }
+  ]
+}
