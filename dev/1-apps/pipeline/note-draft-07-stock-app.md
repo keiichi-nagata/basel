@@ -23,6 +23,9 @@
 ![アプリ画面イメージ](assets/stockapp-screen-mockup.png)
 ※画面はイメージです（すべてサンプルデータ・実際の選定結果ではありません）
 
+![管理画面イメージ](assets/stockapp-admin-mockup.png)
+※画面はイメージです（すべてサンプル値です）
+
 毎朝アプリを開くと、このように順位・前日終値・利確/損切りの目安・AIによる選定理由が
 一覧表示され、過去のおすすめの結果履歴や月次・年次の勝率もあわせて確認できます。
 
@@ -134,7 +137,15 @@ REST APIを指定時刻に呼び出す方式にすることで、指定時刻に
 
 ### ① GitHubアカウントを作る
 
-[https://github.com](https://github.com) で無料アカウントを作成します（すでにお持ちの場合は不要）。
+すでにお持ちの方はこの手順は不要です。ログインして②の手順に進んでください。
+
+1. パソコンかスマホのブラウザで[https://github.com/signup](https://github.com/signup)を開きます
+2. メールアドレス・パスワード・ユーザー名を入力します。ユーザー名は公開URLの一部になります
+   （例：ユーザー名が`taro`なら、あとで`https://taro.github.io/...`になります）。半角英数字と
+   ハイフンのみです
+3. 表示される簡単なクイズ（人間確認）に答えます
+4. 届いた確認メールのコードを入力すれば完了です
+5. プラン選択を聞かれたら「Free」で問題ありません
 
 ### ② 公開用リポジトリを複製する
 
@@ -152,39 +163,112 @@ REST APIを指定時刻に呼び出す方式にすることで、指定時刻に
 Supabaseは、このアプリが「今日のおすすめ銘柄」や「設定」を保存しておくためのデータベース
 サービスです。難しい設定は不要で、画面の指示に沿って進めれば数分で使えます。
 
-1. [https://supabase.com](https://supabase.com) を開き、「Start your project」等から無料アカウントを
-   作成します（GitHubアカウントでログインすると楽です）
-2. ログイン後、「New project」で新規プロジェクトを作成します（プロジェクト名は何でもよく、
-   パスワードは自動生成でも構いません。リージョンは `Northeast Asia (Tokyo)` を選ぶと多少
-   応答が速くなりますが、どのリージョンでも動作に支障はありません）。作成完了まで1〜2分かかります
-3. プロジェクトが出来たら、画面左側の縦に並んだアイコンの中から「SQL Editor」を選びます
+1. [https://supabase.com](https://supabase.com)を開き、「Start your project」→GitHubアカウントで
+   サインインします
+2. ダッシュボードで「New project」を押します
+3. 初回は組織（Organization）の作成を求められます。名前は`personal`などでOK、プランは
+   Freeを選びます
+4. プロジェクトの設定を入力します
+   - **GitHub (optional)**：接続不要です
+   - **Project name**：`stock-app`など任意
+   - **Database Password**：「Generate a password」で生成します。この記事の手順
+     （SQLエディタ・ブラウザ認証でのデプロイ）では使いませんが、将来データベースに直接
+     つなぐときに必要になるので、控えておくと安心です
+   - **Region**：都市名ではなく`Auto`・`Americas`・`Europe`・`Asia-Pacific`の4択です。
+     `Auto`または`Asia-Pacific`を選択してください
+   - **Data access**：チェックボックスが3つあります。次のようにします
+     - **Enable Data API**（初期：ON）→ ONのまま（変更しない）。アプリはこのAPI経由で
+       データベースにアクセスするため、OFFにすると画面が一切動きません
+     - **Grant API access to new tables automatically**（初期：OFF）→ **ONにしてください**。
+       OFFのままだと、次の手順で作るテーブルがAPI経由でまったく公開されず、アプリが
+       データを読み書きできません
+     - **Enable RLS on new tables automatically**（初期：OFF）→ **OFFのまま（ONにしないでください）**。
+       このアプリのSQL（次の手順で流す`supabase_schema.sql`）は、テーブルに行レベル
+       セキュリティ（RLS）をかけない前提で書かれています。ここをONにすると、新しく
+       作ったテーブルに自動でRLSがかかり、ポリシー（許可ルール）が1つも無い状態になるため、
+       後述の`anon public`キーからの読み書きがすべて拒否され、アプリが動かなくなります
+   - 一番下の「ADVANCED CONFIGURATION」は開かなくて大丈夫です
+5. 「Create new project」を押します。2分ほどで準備完了です
+6. プロジェクトが出来たら、画面左側の縦に並んだアイコンの中から「SQL Editor」を選びます
    （虫眼鏡アイコンの少し下、四角いアイコンです。画面上部に検索欄がある場合はそこに
    「SQL Editor」と入力して探しても見つかります）
-4. 「New query」を押し、リポジトリ内の `stock-app/supabase_schema.sql` というファイルを開いて
-   中身を全選択・コピーし、SQL Editorの空欄に貼り付けます。貼り付けたら右下（または画面上部）の
-   「Run」ボタンを押すと実行されます（`settings`・`recommendations`・`results`の3テーブルが
-   作成されます。`recommendations`にはAI選定の理由を保存する`ai_reason`列、どちらの方式で
-   選ばれたかを記録する`selection_method`列も含まれています）。「Success」等のメッセージが
-   出れば完了です
-5. 画面左下の歯車アイコン（「Project Settings」）→「API」を開きます。ここに表示されている
-   `Project URL`（`https://xxxxx.supabase.co`の形）と、`Project API keys`の中の
-   `anon` `public`というラベルがついた長い文字列を、後で使うのでメモ帳などに控えておいてください
-   （環境変数 `SUPABASE_URL` / `SUPABASE_KEY` に使います。`anon public`の方だけを使い、
-   `service_role`というキーは**使いません**。こちらは権限が強く、外部に漏らすと危険なためです）
+7. 「SQL Editor」を開くと、最初から空白のSQL入力欄が表示されています。ここに、②でForkした
+   自分のリポジトリの中身を貼り付けます
+   - 別のタブで、②でForkした自分のリポジトリ（`https://github.com/（あなたのGitHubユーザー名）/ai-stock`）
+     を開きます
+   - ファイル一覧の中から`supabase_schema.sql`を探してクリックします（リポジトリの直下にあります）
+   - ファイルの中身が表示されたら、その中身をドラッグしてすべて選択し、Ctrl+C（Macは⌘+C）で
+     コピーします（「Copy raw file」はファイルがダウンロードされてしまうので使いません）
+   - Supabaseのタブに戻り、空白のSQL入力欄にCtrl+V（Macは⌘+V）で貼り付けます
+   - 貼り付けたら右下（または画面上部）の「Run」ボタンを押します
+   - 「Cancel」「Run without RLS」「Run and enable RLS」という3つのボタンが出た場合は、
+     **「Run without RLS」**を選んでください（前の手順で説明したとおり、このアプリのテーブルは
+     RLSをかけない前提で作られています）。これで`settings`・`recommendations`・`results`の
+     3テーブルが作成されます（`recommendations`にはAI選定の理由を保存する`ai_reason`列、
+     どちらの方式で選ばれたかを記録する`selection_method`列も含まれています）。「Success」等の
+     メッセージが出れば完了です
+8. 画面左下の歯車アイコン（「Project Settings」）を開き、次の2箇所をメモ帳などに
+   控えておいてください（環境変数`SUPABASE_URL` / `SUPABASE_KEY`に使います）
+   - 左メニューの「INTEGRATIONS」欄にある**「Data API」**を開き、「API URL」に表示されている
+     文字列（`https://xxxxx.supabase.co/rest/v1/`の形）の、末尾の`/rest/v1/`を除いた部分
+     （`https://xxxxx.supabase.co`）をコピーします。これが`SUPABASE_URL`です
+   - 「Project Settings」→**「API Keys」**を開き、「Publishable key」の欄に
+     表示されている`sb_publishable_`から始まる文字列をコピーします。これが`SUPABASE_KEY`です。
+     **「Secret keys」欄の`sb_secret_`から始まるキーは使いません**。こちらは権限が強く、
+     外部に漏らすと危険なためです
 
 ### ④ J-Quants APIキーを取得する
 
-1. [J-Quants](https://jpx-jquants.com/) でFreeプランに登録
-2. ダッシュボードの「設定 > APIキー」からAPIキーを発行する
-   （2026年6月にV1が終了しV2に統合されており、リフレッシュトークン方式ではなく**APIキー方式**です。
-   `x-api-key` ヘッダーで送信する形式のため、画面の表記が変わっていないか確認してください）
+1. [J-Quants](https://jpx-jquants.com/)を開き、プラン一覧の中から**Free**プランの
+   「無料で始める」を押します
+2. ユーザー登録画面で、メールアドレス・パスワード・パスワード確認を入力し、
+   「個人情報の取扱いに同意して、サインアップします。」にチェックを入れて「サインアップ」を
+   押します
+3. 登録したメールアドレスに確認コードが届きます。「メールアドレスを確認」画面に確認コードを
+   入力し、「確認」を押します
+4. 「MFA設定が必要です」という画面が出ます。「メールアドレスによるOTP」（ログイン時に
+   メールアドレスへ届く確認コードを使う方式）を選んだまま「設定する」を押します
+   （Google Authenticatorなどの認証アプリをお持ちの場合は「認証アプリによるMFA」でも構いません）
+5. ダッシュボードに移動したら、画面左のメニューから**「API Keys」**をクリックします。
+   まだプランを選んでいないため、代わりにプラン選択画面（「あなたに合ったプランを
+   選択しましょう」）が表示されます。ここでFreeプランの「無料で登録」を押します
+6. 連絡先情報・請求詳細の入力画面が出ます（Freeプランで料金は¥0ですが、入力は必要です）。
+   国名で「日本」を選び、住所等を入力し、「株式会社JPX総研の利用規約およびプライバシーポリシーに
+   同意します。」にチェックを入れて「登録」を押します
+7. 登録が完了すると、ダッシュボードの「Subscription」画面でFreeプランが「ご利用中」と
+   表示されます
+8. 画面左のメニューから改めて**「API Keys」**を開きます（今度はAPI Keyの管理画面が
+   表示されます）。**「API Keyを発行」**ボタンを押します。
+   発行されたAPI Keyを「コピー」ボタンでコピーし、後で使うのでメモ帳などに控えておいてください
+   （環境変数`JQUANTS_API_KEY`に使います。2026年6月にV1が終了しV2に統合されており、
+   リフレッシュトークン方式ではなく**APIキー方式**です。`x-api-key`ヘッダーで送信する形式です。
+   このキーは共有・公開しないでください）
 
 ### ⑤ Anthropic APIキーを取得する（AI選定に使用）
 
-1. [Anthropic Console](https://console.anthropic.com/) でアカウントを作成
-2. 「Billing」から支払い方法を登録し、クレジットをチャージする（従量課金。前払いクレジット
-   方式の場合は、最初は少額（数百円〜）で様子を見ることをおすすめします）
-3. 「API Keys」からAPIキーを発行する（環境変数 `ANTHROPIC_API_KEY` に使います）
+> ⚠️ 手順1〜4（アカウント作成・Billing）はおおよその内容です。画面の項目名・順番は
+> 変更されることがあるため、実際の画面の案内に沿って進めてください。
+
+1. [Anthropic Console](https://console.anthropic.com/)を開き、メールアドレス（または
+   Googleアカウントなど）でアカウントを作成します
+2. 届いた確認コード・確認リンクでメールアドレスを認証します
+3. 組織（Organization）の作成を求められた場合は、名前は`personal`などでOKです
+4. 画面左のメニューから「Billing」（または「Plans & Billing」）を開き、支払い方法
+   （クレジットカード）を登録し、クレジットをチャージします（前払い＋従量課金の方式です。
+   最初は少額（数百円〜）で様子を見ることをおすすめします）
+5. 画面左のメニューから**「API キー」**を開き、右上の**「＋ キーを作成」**を押します
+6. 「Claude API に接続」という画面が出て「コードはどこで実行されますか？」と聞かれます。
+   4つの選択肢の中から**「その他の場所」**（APIキーを使用。APIキーが必要なツールでも
+   使用できます）を選びます
+7. 「APIキーを作成」の入力画面が出ます
+   - **名前**：`stock-app`など任意
+   - **有効期限**：「なし」のままでOKです（長期間有効なキーはセキュリティ上のリスクが
+     あるという注意書きが出ますが、この記事の用途では「なし」のままで問題ありません）
+   - **連携済みアカウント**・**スコープ**（デフォルトワークスペース）：そのままでOKです
+   - **「キーを作成」**を押します
+8. 発行されたキーは、その場でしか全体を表示できないことが多いため、必ずその場でコピーして
+   メモ帳などに控えておいてください（環境変数`ANTHROPIC_API_KEY`に使います。このキーは
+   共有・公開しないでください）
 
 このキーを設定しなければ、アプリはAIを使わず、手順③までの機械的な絞り込みだけで動作します
 （その場合は課金も発生しません）。
@@ -242,13 +326,12 @@ URL（`https://github.com/あなたのアカウント名/...git` の形）をコ
 
 ```
 git clone <自分のリポジトリURL>
-cd investment-apps/stock-app
+cd ai-stock
 ```
 
 `cd` は「このフォルダの中に移動する」という意味のコマンドです。これ以降の手順は、すべて
-この`stock-app`フォルダの中で作業することになります（リポジトリ構成によっては
-`cd stock-app` のみで届く場合もあります。`cd`した後に`dir`（Windows）または`ls`（Mac）と
-入力し、`app.py`というファイルが見えていれば正しい場所にいます）。
+この`ai-stock`フォルダの中で作業することになります（`cd`した後に`dir`（Windows）または
+`ls`（Mac）と入力し、`app.py`というファイルが見えていれば正しい場所にいます）。
 
 #### ⑥-4. 必要なライブラリをインストールする
 
@@ -256,11 +339,18 @@ cd investment-apps/stock-app
 インターネット環境により数十秒〜数分かかります。
 
 ```
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
+（`pip install ...`ではなく`python -m pip install ...`を使っています。パソコンに
+Pythonが複数入っている場合、単に`pip`と打つと`python`コマンドと別のPythonにインストール
+されてしまうことがあり、次の手順で「ModuleNotFoundError」というエラーになる原因になります。
+`python -m pip install ...`なら、必ず今使っている`python`と同じ場所にインストールされます）
+
 途中で赤い文字がいくつか出ても、最後に`Successfully installed ...`のような行が出ていれば
-成功です。
+成功です。最後に`[notice] A new release of pip is available: ...`
+`[notice] To update, run: ...`のような表示が出ることがありますが、これはpip自体の
+アップデートを促す案内であり、エラーではありません。無視して次に進んで構いません。
 
 #### ⑥-5. 設定ファイル（.env）を作る
 
@@ -327,6 +417,10 @@ python scripts/fetch_and_recommend.py --dry-run
 python -m streamlit run app.py
 ```
 
+このPCで初めてStreamlitを実行する場合、`Email:`の入力を求められることがあります。これは
+利用統計メールの案内で、**入力せずそのままEnterキーを押して空欄で進めて問題ありません**
+（一度だけ表示される案内で、このあとは出てきません）。
+
 実行すると、`Local URL: http://localhost:8501` のような表示が出て、自動的にブラウザが
 開きます（開かない場合は、表示されたURLを手でコピーしてブラウザに貼り付けてください）。
 ⑥-6で決めたユーザー画面用パスワードでログインできれば成功です。
@@ -337,8 +431,43 @@ python -m streamlit run app.py
 ### ⑦ Streamlit Community Cloudにデプロイする
 
 1. [https://share.streamlit.io](https://share.streamlit.io) にGitHubアカウントでログイン
-2. 「New app」から、②で複製したリポジトリを選択し、Main file pathに `app.py` を指定してデプロイ
-3. デプロイ後、アプリ右下あたりの「Settings」→「Secrets」を開きます。ここに⑥の`.env`の内容を
+2. 初めてログインする場合、**「Set up your account」**という登録画面が表示されます
+   （Streamlit Community Cloudの運営元であるSnowflakeのアカウント設定画面です）
+   - **First name**・**Last name**：任意の名前を入力
+   - **Primary email**：GitHubのメールアドレスが自動入力されています（そのままでOK）
+   - **What's your functional area?**・**What stage of app development are you at?**：
+     プルダウンから近いものを選択（任意の項目でかまいません）
+   - **Country or region**：自動入力されていることが多いです（違っていれば選び直してください）
+   - 一番下のチェックボックス（Streamlitからのメール配信）は、不要であればチェックを
+     入れないままでOKです
+   - 入力できたら**「Continue」**をクリックします
+3. 画面右上の**「Create app」**をクリックすると、**「You must be connected to GitHub to
+   deploy an app.」**という警告が表示される場合があります。**「Connect to GitHub」**を
+   クリックすると、GitHub側の**「Authorize Streamlit」**という権限確認画面に移動するので、
+   内容を確認して**「Authorize streamlit」**をクリックしてください。続けて**「Confirm
+   access」**というGitHubパスワードの再入力画面が出ることがあります（セキュリティのための
+   本人確認です）。パスワードを入力して**「Confirm」**をクリックしてください
+4. 「What would you like to do?」という選択画面が出たら、**「Deploy a public app from
+   GitHub」**の**「Deploy now」**をクリックします
+5. 「Deploy an app」という入力画面が出ます
+   - **Repository**：②で複製した自分のリポジトリを選びます（`ユーザー名/リポジトリ名`の形式。
+     候補が出ない場合は右上の「Paste GitHub URL」からリポジトリのURLを直接貼り付けてください）
+   - **Branch**：通常は`main`のままでOKです（②でフォーク・複製した直後であれば、既定の
+     ブランチ名が入っています）
+   - **Main file path**：`app.py` と入力します（入力欄の`streamlit_app.py`は単なる例の
+     表示で、実際の値ではありません）
+   - **App URL (optional)**：空欄のままで構いません（自動で`ランダムな文字列.streamlit.app`
+     のようなURLが割り当てられます。空欄でなければ好きな文字列を指定することもできます）
+   - **Advanced settings**：ここでは変更不要です（⑥で使う環境変数は、デプロイ後に
+     「Settings」→「Secrets」から設定します）
+   - 入力できたら**「Deploy」**をクリックします
+   - デプロイが完了すると、ブラウザのアドレスバーに表示されるURL
+     （`https://ランダムな文字列.streamlit.app`）が実際のアプリURLです。このURLは
+     [https://share.streamlit.io](https://share.streamlit.io) の「My apps」一覧でも
+     アプリ名の下に確認できます。後の手順で使うので控えておいてください
+6. デプロイ後、[https://share.streamlit.io](https://share.streamlit.io) の「My apps」一覧に
+   戻り、デプロイしたアプリの行の右端にある**「⋮」**→**「Settings」**→**「Secrets」**を
+   開きます。ここに⑥の`.env`の内容を
    そのままコピー＆ペーストしてしまうと**うまく動きません**。Streamlit側は`.env`とは少し書き方が
    違う形式（TOML形式）を使うため、次のように**値を`"`（ダブルクオーテーション）で囲み、
    `=`の前後にスペースを入れた形**に書き直して貼り付けてください。
@@ -352,8 +481,20 @@ python -m streamlit run app.py
    ADMIN_PASSWORD_HASH = "（⑥-6で生成した管理画面用ハッシュ値）"
    ```
 
-4. アプリの共有設定を**「This app is public and viewable by anyone」**にする
-   （限定公開のままだと、スマホなど別セッションからアクセスできません）
+   > ⚠️ 「Save changes」を押して**「Internal server error. Please retry...」**と表示される
+   > ことがあります。Streamlit側の一時的な不具合であることが多いため、少し時間をおいてから
+   > もう一度「Save changes」を押し直してみてください。
+
+7. 同じ「App settings」画面の**「Sharing」**タブを開き、**「Who can view this app」**の
+   プルダウンから**「This app is public and viewable by anyone」**を選んで
+   **「Save changes」**を押す
+   （「Only specific people can view this app」のままだと、スマホなど別セッションから
+   アクセスできません）
+
+   > ⚠️ Secretsの保存と同様、ここも「Save changes」が一時的なエラーで反映されていないことが
+   > あります。保存後は一度画面を更新して設定が残っているか確認し、さらにブラウザの
+   > プライベートウィンドウ（Streamlit/GitHubにログインしていない状態）でURLを開いて、
+   > 「You do not have access to this app」と表示されずに開けるか確認してください。
 
 ### ⑧ GitHub Actions用のSecretsを設定する
 
@@ -372,43 +513,106 @@ GitHub Actions自体に組み込まれている時刻起動機能（内蔵cron�
 指定時刻から数時間〜半日単位でずれて実行されることがあるため、代わりに外部のcronサービスから
 時刻どおりに呼び出す方式を使います。
 
+**フォークしたリポジトリでActionsを有効化する**
+
+②で複製（フォーク）したリポジトリには、もともとワークフローファイルが含まれているため、
+GitHub側が安全のため**Actionsの実行を初期状態で無効化**しています。これを先に有効にして
+おかないと、cron-job.orgから呼び出しても何も実行されません。
+
+1. 複製したリポジトリのページで**「Actions」**タブを開く
+2. 黄色い警告欄（「Workflows aren't being run on this forked repository」）の
+   **「I understand my workflows, go ahead and enable them」**をクリックする
+
+この操作は最初に1回だけ行えば十分です。
+
 **GitHubの個人アクセストークンを発行する**
 
-1. GitHubの右上の自分のアイコン→「Settings」→左メニュー一番下の「Developer settings」を開く
-2. 「Personal access tokens」→「Tokens (classic)」→「Generate new token」→
-   「Generate new token (classic)」を選ぶ
+1. ブラウザで直接 [https://github.com/settings/tokens](https://github.com/settings/tokens)
+   を開きます（リポジトリの「Settings」タブとは別の、GitHubアカウント個人の設定画面です）
+2. 「Generate new token」→「Generate new token (classic)」を選ぶ
 3. 「Note」に分かりやすい名前（例: `cron-job.org用`）を入力し、「Expiration」（有効期限）を
-   設定します（期限が切れると自動実行が止まるため、期限が近づいたら再発行してcron-job.org側の
-   設定も更新する必要があります）
-4. チェックボックスの一覧から **`repo`** と **`workflow`** にチェックを入れ、一番下の
-   「Generate token」を押す
+   設定します
+4. チェックボックスの一覧から**`workflow`**にチェックを入れます（`repo`は`workflow`に
+   連動して自動的にチェックが入り、グレーアウトします。個別にクリックする必要はありません）。
+   入れたら一番下の「Generate token」を押す
 5. 表示されたトークン（`ghp_`で始まる文字列）をその場でコピーしておきます。**この画面を
    閉じると二度と表示されないため**、メモ帳などに一時的に控えておいてください
 
+> ⚠️ **期限が切れたときの更新方法**：「Expiration」で期限を設定した場合、期限が切れると
+> cron-job.orgからの自動実行が止まります。切れる前に、上記の手順で新しいトークンを再発行し、
+> 下記「cron-job.orgでジョブを設定する」の**ヘッダーの`Authorization: Bearer`の値**を
+> 新しいトークンに書き換えて保存してください（URLやその他の設定はそのままで構いません）。
+
 **cron-job.orgでジョブを設定する**
 
-1. [cron-job.org](https://cron-job.org) で無料アカウントを作成
-2. 次の2つのジョブを作成します。「Create cronjob」から、それぞれ以下の内容で設定します
+1. [cron-job.org](https://cron-job.org) を開き、右上の**「SIGN UP」**をクリックする
+2. 「First name」「Last name」（任意の名前でOK）、「Email address」「Password」
+   「Password (repeat)」を入力し、**「I agree to the Terms of Service」**
+   **「I agree to the Privacy Policy」**の両方にチェックを入れて、
+   **「CREATE ACCOUNT」**をクリックする
+3. 「Your account has been created successfully.」と表示されたら、登録したメールアドレス宛に
+   届く確認メールを開き、本文中のリンクをクリックしてアカウントを有効化する
+   > ⚠️ 確認メールが届かない場合は、まず**迷惑メールフォルダ**を確認してください。それでも
+   > 無い場合は、一度サインイン画面を開くと「Your account has not been activated yet.」という
+   > 表示とともに**「RE-SEND ACTIVATION MAIL」**ボタンが出るので、それを押して再送信して
+   > ください。数分待っても届かない場合は、入力したメールアドレスに誤りがないか確認してください
+4. 有効化できたら、メールアドレスとパスワードで**「SIGN IN」**する
+5. 次の2つのジョブを作成します。「Create cronjob」から、それぞれ以下の内容で設定します
    - **URL**: `https://api.github.com/repos/<自分のアカウント>/<リポジトリ名>/actions/workflows/<ワークフローファイル名>/dispatches`
-   - **リクエスト方式**: `POST`
-   - **ヘッダー**: `Authorization: Bearer <上で発行した個人アクセストークン>` と
-     `Accept: application/vnd.github+json` の2つを追加
-   - **本文（Body）**: `{"ref": "main"}`
-   - 1つ目: 毎朝 **7:00**（Asia/Tokyo）に、ワークフローファイル名を
-     `stock-app-fetch-recommend.yml` にして実行（おすすめ選定）
-   - 2つ目: 毎朝 **6:50**（Asia/Tokyo、fetch-recommendより前）に、ワークフローファイル名を
-     `stock-app-update-results.yml` にして実行（前回のおすすめの結果確定。土日・祝日を
-     挟んでも「まだ結果が未確定の最新のおすすめ日」を自動判定するため、そのままで問題ありません）
-3. 保存後、各ジョブの「Test run」ボタンで即時実行し、GitHubリポジトリの「Actions」タブで
-   実行履歴が緑色の✓（成功）になっているか確認してください（赤い✕の場合は、トークンの
-   権限（`repo`・`workflow`両方にチェックが入っているか）とURL内のファイル名を見直してください）
+   - **リクエスト方式・ヘッダー・本文**：入力画面下部の**「ADVANCED」**タブを開きます
+     - **Request method**：`POST`を選択（初期値がPOSTになっていることが多いですが、
+       念のため確認してください）
+     - **Headers**：**「+ ADD」**ボタンを2回押して、欄を2行に増やし、それぞれ次のように
+       入力します
+       - 1行目：**Key**に`Authorization`、**Value**に`Bearer <上で発行した個人アクセス
+         トークン>`（`Bearer`の後ろに半角スペースを1つ入れてからトークンを貼り付けます）
+       - 2行目：**Key**に`Accept`、**Value**に`application/vnd.github+json`
+     - さらに下にある**「Advanced」**という小見出し内の**「Request body」**欄（「Request
+       method」のすぐ下にある入力欄）に`{"ref": "main"}`を入力します
+   - **Time zone**（「ADVANCED」タブ内）：**必ず「Asia/Tokyo」に変更してください**。初期値の
+     「UTC」のままだと、時刻指定が9時間ずれてしまいます（JST 7:00のつもりがUTC 7:00＝
+     JST 16:00に実行されてしまいます）
+   - **実行スケジュール**：「おすすめ選定」は株式市場が開いている**平日のみ**実行する必要が
+     あります（土日に実行すると、取引のない日の古い株価データをもとに「おすすめ」が
+     登録されてしまい、後続の結果確定処理がずれる原因になります）。「Execution schedule」で
+     **「Custom」**を選び、「Crontab expression」に直接入力してください
+   - 1つ目（おすすめ選定）: Crontab expressionに**`0 7 * * 1-5`**と入力（毎週月〜金の
+     7:00、Asia/Tokyo）。ワークフローファイル名は`stock-app-fetch-recommend.yml`
+   - 2つ目（結果確定）: Crontab expressionに**`50 6 * * 1-5`**と入力（毎週月〜金の
+     6:50、Asia/Tokyo、fetch-recommendより前）。ワークフローファイル名は
+     `stock-app-update-results.yml`（土日・祝日を挟んでも「まだ結果が未確定の最新の
+     おすすめ日」を自動判定するため、月〜金の指定で問題ありません）
+
+   > ⚠️ **実行時刻を変更する場合の注意**：「結果確定」は必ず「おすすめ選定」より**前**の
+   > 時刻に実行される必要があります。結果確定は「まだ結果が未確定の最新のおすすめ日」を
+   > 自動判定して確定させる仕組みのため、もし結果確定の方が後（または同時刻）になると、
+   > 前日分がまだ未確定のうちにその日の新しいおすすめが登録されてしまい、結果確定が
+   > 前日ではなくその日の分を（市場が開いたばかりの意味のないタイミングで）確定させて
+   > しまいます。どちらかの時刻を変更する場合は、必ず「結果確定 < おすすめ選定」の
+   > 順序を保ったまま、両方のジョブの時刻を調整してください。
+3. 画面右下の**「SAVE」**で保存します。動作確認したい場合は、保存前に隣の
+   **「TEST RUN」**ボタン（さらに左の「IMPORT FROM CURL」ではありません）で即時実行します
+4. 実行結果は、複製したリポジトリの**「Actions」タブ**→左の**「All workflows」**を開いて
+   確認します。一覧に「stock-app fetch and recommend」「stock-app update results」の
+   実行履歴が表示され、それぞれの行の左端に**緑色の✓**が付いていれば成功です
+   - **赤い✕**の場合は、その行をクリックすると詳細なエラーログが見られます。あわせて
+     次の3点を確認してください
+     - **Actionsが有効化されているか**：リポジトリの「Actions」タブを開き、黄色い警告欄
+       （「Workflows aren't being run...」）がまだ表示されていないか確認する（表示されて
+       いる場合は、前段の「フォークしたリポジトリでActionsを有効化する」がまだ済んでいません。
+       警告欄の中の**「I understand my workflows, go ahead and enable them」**を
+       クリックすれば有効化できます）
+     - **トークンの権限**：[https://github.com/settings/tokens](https://github.com/settings/tokens)
+       を開き、発行したトークンの名前をクリックすると、下部に`repo`・`workflow`両方に
+       チェックが入っているか表示されます
+     - **URL内のファイル名**：cron-job.orgの該当ジョブの「EDIT」画面でURL欄の末尾
+       （`.yml`の部分）を確認し、リポジトリの「Code」タブ→`.github/workflows`フォルダ内の
+       実際のファイル名と一致しているか見比べてください
 
 ### ⑩ 管理画面で条件を設定する
 
-アプリにログインし、管理画面から次の項目を自分の好みに設定します。
-
-![管理画面イメージ](assets/stockapp-admin-mockup.png)
-※画面はイメージです（すべてサンプル値です）
+⑦でデプロイしたアプリのURL（`https://（⑦で確認した文字列）.streamlit.app`）にブラウザで
+アクセスしてログインし、管理画面から次の項目を自分の好みに設定します。
 
 - おすすめ銘柄数（1〜5件）
 - 対象市場（プライム／スタンダード／グロース、複数選択可）
@@ -418,8 +622,31 @@ GitHub Actions自体に組み込まれている時刻起動機能（内蔵cron�
 
 ### ⑪ スマホのホーム画面に追加する
 
-StreamlitアプリのURLをスマホのブラウザで開き、「ホーム画面に追加」するとアプリのように
-毎朝タップ1つで確認できます。
+StreamlitアプリのURL（`https://（⑦で確認した文字列）.streamlit.app`）をスマホのブラウザで
+開き、「ホーム画面に追加」するとアプリのように毎朝タップ1つで確認できます。
+
+> ⚠️ スマホでURLを開くと、一時的に`https://share.streamlit.io/app/...`という別のURLに
+> 変わることがあります（Streamlit側のビューア画面を経由する仕様で、エラーではありません）。
+> ホーム画面に追加する際は、このリダイレクト後のURLではなく、**元の`streamlit.app`の
+> URL**を使ってください。
+
+**iPhone（Safari）の場合**
+
+1. Safariで上記のURLを開きます
+2. 画面下の中央にある**共有ボタン**（□に上矢印）をタップします
+3. メニューを下にスクロールして**「ホーム画面に追加」**をタップします
+4. 名前（「おすすめ株ナビ」など）を確認して**「追加」**をタップします
+5. ホーム画面にアイコンができ、タップすると全画面のアプリのように開きます
+
+**Android（Chrome）の場合**
+
+1. Chromeで上記のURLを開きます
+2. 画面右上の**⋮（メニュー）**をタップします
+3. **「ホーム画面に追加」**（機種やバージョンによっては「アプリをインストール」）をタップします
+4. 名前を確認して**「追加」**をタップします。ダイアログで「自動的に追加」か、アイコンを
+   ドラッグして置きます
+5. ホーム画面にアイコンができます。タップするとブラウザで開きます（Chromeのタブとして
+   開く機種もあります。動作はどちらでも変わりません）
 
 ## 4. 【応用】Claude Codeを使って自分好みに改造する手順
 
@@ -478,6 +705,26 @@ Streamlit Community Cloudは、複製したリポジトリの`main`ブランチ�
 
 ## 5. よくあるエラーとトラブルシューティング
 
+- **`ModuleNotFoundError: No module named 'supabase'`などのエラーが出る**: 原因は主に2つ
+  考えられます
+  1. **Windowsの「長いパス」制限**：⑥-4の`pip install`の実行結果に
+     `HINT: This error might have occurred since this system does not have Windows Long
+     Path support enabled.`という行が出ている場合はこれが原因です。最近のライブラリ
+     （`anthropic`など）は保存先のフォルダ階層が深く、Windowsの既定の260文字パス長制限に
+     引っかかってインストールが途中で失敗することがあります。次の手順で解消します
+     1. 「スタート」ボタンを押し`PowerShell`と入力して検索結果を**右クリックし、
+        「管理者として実行」**を選びます
+     2. 次のコマンドを実行します
+        ```
+        New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+        ```
+     3. パソコンを再起動します
+     4. ⑥-1の（管理者権限ではない）普段どおりのターミナルを開き直し、
+        `python -m pip install -r requirements.txt`をもう一度実行します
+  2. **パソコンにPythonが複数入っている場合のズレ**：`pip`コマンドが、今使っている`python`とは
+     別のPythonにライブラリをインストールしてしまっているケースです。⑥-4のコマンドを
+     `python -m pip install -r requirements.txt`に変えて（`python`の後ろに`-m pip`を挟む形）、
+     もう一度実行してください
 - **「おすすめなし」の日が続く**: まずcron-job.orgの実行履歴と、GitHub Actionsの実行履歴
   （リポジトリの「Actions」タブ）の両方を確認してください。cron-job.org側が失敗している場合は、
   GitHubの個人アクセストークンの期限切れが多い原因です。フィルター条件（株価範囲・最低出来高・
@@ -496,6 +743,18 @@ Streamlit Community Cloudは、複製したリポジトリの`main`ブランチ�
 - **想定より課金額が多い**: Anthropicコンソールの「Usage」画面で、日別・モデル別の利用量を
   確認できます。想定外に多い場合は、`common/ai_select.py`の`MAX_CANDIDATES_TO_AI`（AIに渡す
   候補数）を減らすと抑えられます
+- **公開後に元のリポジトリ側でバグ修正があったとき**: ②でフォークした自分のリポジトリに、
+  後から修正を取り込みたい場合は次の手順で反映できます
+  1. 自分がフォークしたリポジトリ（`github.com/自分のユーザー名/ai-stock`）をブラウザで開く
+  2. リポジトリ名の下あたりに**「This branch is N commits behind
+     basel5freedom/ai-stock:main.」**という表示と**「Sync fork」**ボタンが出ていたらクリックする
+  3. **「Update branch」**をクリックすると、元のリポジトリの最新コミットが反映される
+  4. Streamlit Community Cloudがこのリポジトリのmainブランチを監視しているため、
+     反映後は自動的に再デプロイされます（数分程度かかることがあります）
+  - 「4. 【応用】Claude Codeを使って自分好みに改造する手順」を使ってapp.pyなどを
+    改造済みの場合、同じ箇所を元のリポジトリ側も修正していると「Sync fork」がコンフリクトに
+    なることがあります。その場合は、エラー内容を見て手動で該当箇所を直すか、Claude Codeに
+    コンフリクトの内容を貼り付けて解決してもらってください
 
 ## 6. 免責事項・注意事項
 
@@ -514,7 +773,6 @@ Streamlit Community Cloudは、複製したリポジトリの`main`ブランチ�
 - データのバックアップ: 設定・おすすめ履歴はSupabase側に保存されます。SupabaseプロジェクトのSQL
   Editorからいつでもエクスポート可能ですが、自動バックアップは行われないため、重要なデータは
   ご自身で定期的にエクスポートすることをおすすめします
-- 返金ポリシー: 【要確認：社長が決定】
 
 ---
 
